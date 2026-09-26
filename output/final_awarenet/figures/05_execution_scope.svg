@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>모델링에서 실제 실행까지 연결되는 구조</title>
+	<desc>경로 선택의 단위는 보유 VM의 경유 종점  |  기기의 접속망 전체를 제어한다는 가정을 두지 않는다 | OS-Ken 집행기는 별도 프로토타입  |  앱 완료 보고는 물리 경로 증명·OVS 설치 ACK·기기 인증과 구분</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="58" y="757" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 39px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1514) scale(1,-1)">모델링에서 실제 실행까지 연결되는 구조</text>
+			<text x="58" y="709" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1418) scale(1,-1)">경로 선택의 단위는 보유 VM의 경유 종점  |  기기의 접속망 전체를 제어한다는 가정을 두지 않는다</text>
+			<path d="M 58,690 L 1342,690 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="58" y="33" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,66) scale(1,-1)">OS-Ken 집행기는 별도 프로토타입  |  앱 완료 보고는 물리 경로 증명·OVS 설치 ACK·기기 인증과 구분</text>
+			<rect x="58" y="395" width="237" height="212" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="83" y="549" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="106" y="554" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,1108) scale(1,-1)">관측</text>
+			<text x="84" y="499" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,998) scale(1,-1)">연산·왕복 바이트</text>
+			<text x="84" y="461" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,922) scale(1,-1)">경로별 실효율</text>
+			<rect x="407" y="395" width="237" height="212" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="432" y="549" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(41%,33%,67%); fill-rule: evenodd;"/>
+			<text x="455" y="554" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1108) scale(1,-1)">공통 계획</text>
+			<text x="433" y="499" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,998) scale(1,-1)">공유 용량과 폭</text>
+			<text x="433" y="461" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,922) scale(1,-1)">전환 비용·한계</text>
+			<rect x="756" y="395" width="237" height="212" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="781" y="549" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="804" y="554" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1108) scale(1,-1)">전송 집행</text>
+			<text x="782" y="499" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,998) scale(1,-1)">양방향 분할</text>
+			<text x="782" y="461" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,922) scale(1,-1)">재조립·완료 보고</text>
+			<rect x="1105" y="395" width="237" height="212" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="1130" y="549" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="1153" y="554" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,1108) scale(1,-1)">학습·집계</text>
+			<text x="1131" y="499" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,998) scale(1,-1)">기울기 전달</text>
+			<text x="1131" y="461" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,922) scale(1,-1)">폭별 또는 LoRA 집계</text>
+			<path d="M 295,501 L 407,501 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="407 501, 392.5928 494.0406, 392.5928 507.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<path d="M 644,501 L 756,501 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="756 501, 741.5928 494.0406, 741.5928 507.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<path d="M 993,501 L 1105,501 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="1105 501, 1090.593 494.0406, 1090.593 507.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<path d="M 1223,367 L 1223,302 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1223,302 L 176,302 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="176 302, 190.4072 308.9594, 190.4072 295.0406" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<path d="M 176,302 L 176,395 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="176 395, 182.9594 380.5928, 169.0406 380.5928" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="519.015625" y="254" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 27px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,508) scale(1,-1)">측정 결과를 다음 계획에 반영</text>
+			<path d="M 58,199 L 1342,199 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="58" y="139" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 27px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,278) scale(1,-1)">기기 권한</text>
+			<text x="230" y="140" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 25px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,280) scale(1,-1)">일반 소켓·허용 종점 선택</text>
+			<text x="738" y="139" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 27px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,278) scale(1,-1)">운영팀 권한</text>
+			<text x="943" y="140" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 25px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,280) scale(1,-1)">보유 VM·브리지 범위</text>
+		</g>
+	</g>
+</svg>

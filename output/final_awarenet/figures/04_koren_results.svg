@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>KOREN 결합 시스템의 기존 실험 결과</title>
+	<desc>32개 논리 참여자  ·  조건별 3시드  ·  첫 4라운드 제외  ·  시드 평균의 평균 | 기존 결합 시스템 비교: 폭·출구·경로가 함께 변경  |  동일 정확도 효과 또는 새 network 정책 성능이 아님</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="58" y="757" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 39px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1514) scale(1,-1)">KOREN 결합 시스템의 기존 실험 결과</text>
+			<text x="58" y="709" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1418) scale(1,-1)">32개 논리 참여자  ·  조건별 3시드  ·  첫 4라운드 제외  ·  시드 평균의 평균</text>
+			<path d="M 58,690 L 1342,690 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="58" y="33" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,66) scale(1,-1)">기존 결합 시스템 비교: 폭·출구·경로가 함께 변경  |  동일 정확도 효과 또는 새 network 정책 성능이 아님</text>
+			<rect x="910" y="639" width="24" height="24" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(65%,70%,76%); fill-rule: evenodd;"/>
+			<text x="946" y="644" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1288) scale(1,-1)">기존 기준선</text>
+			<rect x="1130" y="639" width="24" height="24" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="1166" y="644" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1288) scale(1,-1)">결합 시스템</text>
+			<path d="M 278,612 L 278,116 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="272.4921875" y="88" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,176) scale(1,-1)">0</text>
+			<path d="M 473,612 L 473,116 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="461.984375" y="88" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,176) scale(1,-1)">30</text>
+			<path d="M 668,612 L 668,116 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="656.984375" y="88" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,176) scale(1,-1)">60</text>
+			<path d="M 863,612 L 863,116 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="851.984375" y="88" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,176) scale(1,-1)">90</text>
+			<path d="M 1058,612 L 1058,116 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="1041.4765625" y="88" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,176) scale(1,-1)">120</text>
+			<text x="65" y="545" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1090) scale(1,-1)">정상</text>
+			<rect x="278" y="561" width="410.7273083333333" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(65%,70%,76%); fill-rule: evenodd;"/>
+			<rect x="278" y="518" width="309.6834" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="700.7273083333333" y="572" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1144) scale(1,-1)">63.19 s</text>
+			<text x="599.6834" y="528" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1056) scale(1,-1)">47.64 s</text>
+			<text x="1164.734375" y="543" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 32px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1086) scale(1,-1)">-24.6%</text>
+			<text x="65" y="425" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,850) scale(1,-1)">트래픽 몰림</text>
+			<rect x="278" y="441" width="711.7989666666666" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(65%,70%,76%); fill-rule: evenodd;"/>
+			<rect x="278" y="398" width="408.68522499999995" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="1001.7989666666666" y="452" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,904) scale(1,-1)">109.51 s</text>
+			<text x="698.685225" y="408" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,816) scale(1,-1)">62.87 s</text>
+			<text x="1164.734375" y="423" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 32px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,846) scale(1,-1)">-42.6%</text>
+			<text x="65" y="305" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,610) scale(1,-1)">연산 느림</text>
+			<rect x="278" y="321" width="514.253675" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(65%,70%,76%); fill-rule: evenodd;"/>
+			<rect x="278" y="278" width="307.1742916666666" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="804.253675" y="332" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,664) scale(1,-1)">79.12 s</text>
+			<text x="597.1742916666666" y="288" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,576) scale(1,-1)">47.26 s</text>
+			<text x="1164.734375" y="303" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 32px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,606) scale(1,-1)">-40.3%</text>
+			<text x="65" y="185" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,370) scale(1,-1)">용량 변동</text>
+			<rect x="278" y="201" width="474.32319999999993" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(65%,70%,76%); fill-rule: evenodd;"/>
+			<rect x="278" y="158" width="347.60266666666666" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="764.3231999999999" y="212" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,424) scale(1,-1)">72.97 s</text>
+			<text x="637.6026666666667" y="168" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,336) scale(1,-1)">53.48 s</text>
+			<text x="1164.734375" y="183" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 32px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,366) scale(1,-1)">-26.7%</text>
+		</g>
+	</g>
+</svg>

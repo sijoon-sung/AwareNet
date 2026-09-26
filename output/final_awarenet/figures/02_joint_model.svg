@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>상호 보완 관계를 담은 시간 모형</title>
+	<desc>기존 CNN 폭 정책의 배치당 근사식  |  직렬 계산·전송 기준  |  LoRA rank에는 별도 프로파일 필요 | 근거: sfl/plan.py round_times · _t_one · opt_widths  |  폭 손실은 정확도 손실의 측정값이 아님</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="58" y="757" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 39px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1514) scale(1,-1)">상호 보완 관계를 담은 시간 모형</text>
+			<text x="58" y="709" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1418) scale(1,-1)">기존 CNN 폭 정책의 배치당 근사식  |  직렬 계산·전송 기준  |  LoRA rank에는 별도 프로파일 필요</text>
+			<path d="M 58,690 L 1342,690 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="58" y="33" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,66) scale(1,-1)">근거: sfl/plan.py round_times · _t_one · opt_widths  |  폭 손실은 정확도 손실의 측정값이 아님</text>
+			<text x="346.065849609375" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1184) scale(1,-1)">t</text>
+			<text x="360.668388671875" y="584.7800000000001" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21.659999999999997px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1169) scale(1,-1)">i</text>
+			<text x="368.612197265625" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1184) scale(1,-1)">(</text>
+			<text x="382.212783203125" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1184) scale(1,-1)">w</text>
+			<text x="412.438369140625" y="584.7800000000001" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21.659999999999997px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1169) scale(1,-1)">i</text>
+			<text x="420.38217773437503" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1184) scale(1,-1)">, S) = </text>
+			<text x="532.8421386718751" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1184) scale(1,-1)">c</text>
+			<text x="551.3597167968751" y="584.7800000000001" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21.659999999999997px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1169) scale(1,-1)">i</text>
+			<text x="559.303525390625" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1184) scale(1,-1)"> </text>
+			<text x="572.662900390625" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1184) scale(1,-1)">w</text>
+			<text x="602.888486328125" y="584.7800000000001" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21.659999999999997px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1169) scale(1,-1)">i</text>
+			<text x="602.888486328125" y="617.46" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21.659999999999997px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1234) scale(1,-1)">γ</text>
+			<text x="615.177998046875" y="614.4200000000001" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 13.68px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1228) scale(1,-1)">i</text>
+			<text x="623.1218066406251" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1184) scale(1,-1)">  +  8 </text>
+			<text x="739.2741503906251" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1184) scale(1,-1)">b</text>
+			<text x="763.0798144531251" y="584.7800000000001" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21.659999999999997px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1169) scale(1,-1)">i</text>
+			<text x="771.0236230468751" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1184) scale(1,-1)"> </text>
+			<text x="784.3829980468751" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1184) scale(1,-1)">w</text>
+			<text x="814.6085839843751" y="584.7800000000001" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21.659999999999997px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1169) scale(1,-1)">i</text>
+			<text x="822.552392578125" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1184) scale(1,-1)"> / </text>
+			<text x="865.951806640625" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1184) scale(1,-1)">R</text>
+			<text x="890.796533203125" y="584.7800000000001" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21.659999999999997px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1169) scale(1,-1)">i</text>
+			<text x="898.740341796875" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1184) scale(1,-1)">(S)  +  </text>
+			<text x="1028.2149511718749" y="592" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 38px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1184) scale(1,-1)">ε</text>
+			<text x="1045.9903417968749" y="584.7800000000001" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21.659999999999997px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1169) scale(1,-1)">i</text>
+			<text x="322.2890625" y="524" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 26px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1048) scale(1,-1)">폭에 따른 계산 시간</text>
+			<text x="636.1484375" y="524" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 26px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1048) scale(1,-1)">폭과 경로가 함께 정하는 전송 시간</text>
+			<text x="345.668681640625" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">J(w, S) = </text>
+			<text x="476.571025390625" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">max</text>
+			<text x="534.378154296875" y="428.10999999999996" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 17.669999999999998px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,856) scale(1,-1)">i</text>
+			<text x="540.726630859375" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)"> [ B · </text>
+			<text x="618.635322265625" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">t</text>
+			<text x="629.321845703125" y="428.10999999999996" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 17.669999999999998px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,856) scale(1,-1)">i</text>
+			<text x="635.6703222656249" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">(</text>
+			<text x="645.1156347656249" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">w</text>
+			<text x="667.9418066406249" y="428.10999999999996" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 17.669999999999998px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,856) scale(1,-1)">i</text>
+			<text x="674.2902832031249" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">, S) + </text>
+			<text x="761.7653808593749" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">δ</text>
+			<text x="780.2927246093749" y="428.10999999999996" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 17.669999999999998px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,856) scale(1,-1)">i</text>
+			<text x="786.6412011718749" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)"> ] + (λ/N) </text>
+			<text x="932.0293847656249" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">Σ</text>
+			<text x="948.3316308593749" y="428.10999999999996" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 17.669999999999998px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,856) scale(1,-1)">i</text>
+			<text x="954.6801074218748" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">(1 - </text>
+			<text x="1015.7113574218748" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">w</text>
+			<text x="1038.5375292968747" y="428.10999999999996" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 17.669999999999998px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,856) scale(1,-1)">i</text>
+			<text x="1044.8860058593748" y="434" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,868) scale(1,-1)">)</text>
+			<text x="92" y="347" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,694) scale(1,-1)">w_i: 정규화된 모델 폭       S: 모든 기기의 경로 배정       R_i(S): 공유 제약 아래 전송률</text>
+			<text x="92" y="302" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,604) scale(1,-1)">c_i·b_i: 전폭 계산 시간·왕복 바이트       γ_i: 계산 스케일 지수       ε_i: 관측 잔차</text>
+			<text x="92" y="257" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,514) scale(1,-1)">B: 라운드의 배치 수       δ_i: 경로 전환 비용       λ: 평균 폭 손실의 시간 단위 가격</text>
+			<text x="255.9375" y="154" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 29px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,308) scale(1,-1)">경로 개선  →  같은 폭의 전송 시간 감소  →  필요한 폭 축소량 감소</text>
+			<text x="219.42578125" y="104" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,208) scale(1,-1)">구현은 단계적 탐욕 계획과 히스테리시스  ·  전역 최적해나 정확도 보장으로 해석하지 않는다</text>
+		</g>
+	</g>
+</svg>

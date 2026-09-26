@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AwareNet 실증 — 분할 연합학습 라이브</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#F5F7F4;--ink:#1B2320;--muted:#5C6660;--line:#D6DDD7;--panel:#FFFFFF;--acc:#1F6F5B;--acc-soft:#DCEDE6;--warm:#B9651F;--warm-soft:#F7E6D6;--bad:#B23B3B;--grid:#E4EAE5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans KR","Noto Sans KR",sans-serif;font-size:14.5px;line-height:1.55}
+.top{display:flex;align-items:baseline;gap:16px;padding:16px 22px 10px;border-bottom:1px solid var(--line);background:var(--panel)}
+.top h1{font-size:18px;margin:0;font-weight:700}
+.top .sub{color:var(--muted);font-size:13px}
+.top .mode{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted)}
+.top .mode b{color:var(--acc)}
+.top a{color:var(--muted);font-size:12.5px;margin-left:14px}
+.wrap{padding:16px 22px 40px;display:grid;gap:16px;max-width:1240px;margin:0 auto}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 14px}
+.kpi .k{font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.kpi .v{font-size:24px;font-weight:600;font-family:"IBM Plex Mono",monospace;margin-top:2px}
+.kpi .v.ok{color:var(--acc)} .kpi .v.bad{color:var(--bad)}
+.kpi .s{font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.kpis{grid-template-columns:repeat(2,1fr)}}
+.dev{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 12px;display:grid;gap:6px;border-top:3px solid var(--line)}
+.dev.slow{border-top-color:var(--warm)} .dev.weak{border-top-color:#5B7FB5} .dev.ok{border-top-color:var(--acc)}
+.dev .h{display:flex;justify-content:space-between;align-items:baseline}
+.dev .id{font-family:"IBM Plex Mono",monospace;font-weight:600}
+.dev .ty{font-size:11.5px;color:var(--muted)}
+.dev .row{display:flex;justify-content:space-between;font-size:13px}
+.dev .row .l{color:var(--muted)}
+.dev .row .r{font-family:"IBM Plex Mono",monospace}
+.bar{height:6px;background:var(--grid);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--acc)}
+.bar.w i{background:var(--warm)}
+.tline{height:6px;background:var(--grid);border-radius:3px;position:relative;overflow:hidden}
+.tline i{display:block;height:100%;background:var(--acc)} .tline i.over{background:var(--bad)}
+.dev .btns{display:flex;gap:6px;margin-top:2px}
+button{font:inherit;font-size:11.5px;padding:3px 8px;border:1px solid var(--line);background:var(--panel);border-radius:4px;cursor:pointer;color:var(--ink)}
+button:hover{border-color:var(--warm);color:var(--warm)} button.on{background:var(--warm-soft);border-color:var(--warm);color:var(--warm)}
+button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.panel h2{font-size:13px;margin:0 0 6px;color:var(--muted);font-weight:600;letter-spacing:.04em}
+.charts{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+@media (max-width:980px){.charts{grid-template-columns:1fr}}
+svg{width:100%;height:auto;display:block}
+.edges{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.edge{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:13px}
+.edge b{font-family:"IBM Plex Mono",monospace}
+.edge .n{color:var(--muted);font-size:12px}
+.ev{font-size:12.5px;color:var(--muted);max-height:120px;overflow:auto;font-family:"IBM Plex Mono",monospace}
+.ev div{padding:2px 0;border-bottom:1px dashed var(--line)}
+.legend{font-size:12px;color:var(--muted);margin-top:4px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin:0 4px 0 10px}
+</style></head>
+<body>
+<div class="top"><h1>AwareNet 실증 — 분할 연합학습 라이브</h1><span class="sub">HPC 기기 8대 → KOREN 엣지 4개 → 서버 · ResNet-18 / CIFAR-10 · <span id="dtxt"></span></span>
+<span class="mode">모드 <b id="mode">-</b> · 팔 <span id="arm">-</span></span><a href="/platform">플랫폼 홈</a></div>
+<div class="wrap">
+  <div class="kpis">
+    <div class="kpi"><div class="k">이번 라운드</div><div class="v" id="k-ms">-</div><div class="s">초, 목표 <span id="k-d"></span>초</div></div>
+    <div class="kpi"><div class="k" id="k-meet-l">가장 느린 기기</div><div class="v" id="k-meet">-</div><div class="s" id="k-meet-s">초</div></div>
+    <div class="kpi"><div class="k">모델 크기 평균</div><div class="v" id="k-w">-</div><div class="s">1.0 = 하나도 안 줄임</div></div>
+    <div class="kpi"><div class="k">정확도</div><div class="v" id="k-acc">-</div><div class="s">라운드 <span id="k-r">-</span></div></div>
+  </div>
+  <div class="grid" id="devs"></div>
+  <div class="panel"><h2>엣지 (KOREN VM) — 용량을 줄여 보세요</h2><div class="edges" id="edges"></div></div>
+  <div class="charts">
+    <div class="panel"><h2>라운드 시간과 목표</h2><svg id="c1" viewBox="0 0 640 200"></svg><div class="legend"><i style="background:var(--acc)"></i>라운드 시간 <i style="background:var(--bad)"></i>목표 D <i style="background:var(--warm)"></i>교란 시점</div></div>
+    <div class="panel"><h2>모델 크기 평균</h2><svg id="c2" viewBox="0 0 320 200"></svg></div>
+    <div class="panel"><h2>정확도</h2><svg id="c3" viewBox="0 0 320 200"></svg></div>
+  </div>
+  <div class="panel"><h2>사건</h2><div class="ev" id="ev"></div><div style="margin-top:8px"><button id="reset">전부 복구</button></div></div>
+</div>
+<script>
+const D0 = __D__;
+const $ = id => document.getElementById(id);
+$('k-d').textContent = D0 ?? '없음';
+let cur = null;
+function cls(t){ return t==='계산 느림' ? 'slow' : (t==='회선 약함' ? 'weak' : 'ok'); }
+function pathTxt(p){ if(!p) return '-'; const s=String(p).split('+'); if(s.length===1) return '엣지 '+s[0]+' (한 가닥)'; return s[0]===s[1] ? '엣지 '+s[0]+' (두 가닥)' : '엣지 '+s[0]+' + '+s[1]+' (나눠 보냄)'; }
+async function post(kind, idx, factor){ await fetch('/perturb',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({kind,idx,factor})}); tick(); }
+function renderDevs(st){
+  const last = st.rows[st.rows.length-1]; const box=$('devs'); box.innerHTML='';
+  const n = st.types.length;
+  for(let i=0;i<n;i++){
+    const k='c'+i, d=last?last.devs[k]:null, ty=st.types[i];
+    const w=d?d.w:1, t=d?d.t:0, over=st.D?t>st.D:false;
+    const acc=st.acc[i], base=st.base_acc[i], cut=acc[0]<base[0];
+    const el=document.createElement('div'); el.className='dev '+cls(ty);
+    el.innerHTML=`<div class="h"><span class="id">${k}</span><span class="ty">${ty}${st.speeds[i]<1?' · 속도 '+st.speeds[i]:''}</span></div>
+      <div class="row"><span class="l">모델 폭</span><span class="r">${w.toFixed(2)}</span></div><div class="bar${w<1?' w':''}"><i style="width:${w*100}%"></i></div>
+      <div class="row"><span class="l">보내는 곳</span><span class="r">${d?pathTxt(d.path):'-'}</span></div>
+      <div class="row"><span class="l">라운드 시간</span><span class="r" style="${over?'color:var(--bad)':''}">${d?t.toFixed(1)+'s':'-'}</span></div>
+      <div class="tline"><i class="${over?'over':''}" style="width:${Math.min(100, t/(st.D||Math.max(1,st.rows.length?st.rows[st.rows.length-1].ms:1))*100)}%"></i></div>
+      <div class="row"><span class="l">회선 (유선/무선)</span><span class="r">${acc[0]}/${acc[1]} M</span></div>
+      <div class="btns"><button class="${cut?'on':''}" data-i="${i}" data-f="0.5">회선 절반</button><button data-i="${i}" data-f="1">복구</button></div>`;
+    box.appendChild(el);
+  }
+  box.querySelectorAll('button').forEach(b=>b.onclick=()=>post('access', +b.dataset.i, +b.dataset.f));
+  const eb=$('edges'); eb.innerHTML='';
+  st.caps.forEach((c,e)=>{ const cut=c<st.base_caps[e]; const el=document.createElement('div'); el.className='edge';
+    el.innerHTML=`엣지 <b>${e+1}</b> <span class="n">${c} M</span> <button class="${cut?'on':''}" data-e="${e}" data-f="0.5">용량 절반</button><button data-e="${e}" data-f="1">복구</button>`; eb.appendChild(el); });
+  eb.querySelectorAll('button').forEach(b=>b.onclick=()=>post('edge', +b.dataset.e, +b.dataset.f));
+}
+function line(svg, W, H, series, opt){
+  const pad={l:34,r:10,t:10,b:22}; const n=series.length; svg.innerHTML='';
+  if(!n) return;
+  const ymax = opt.ymax || Math.max(...series.map(s=>s.v), opt.ref||0)*1.15;
+  const x=i=>pad.l+(n<2?0:(W-pad.l-pad.r)*i/(n-1)), y=v=>H-pad.b-(H-pad.b-pad.t)*v/ymax;
+  let g='';
+  for(let k=0;k<=4;k++){ const v=ymax*k/4; g+=`<line x1="${pad.l}" x2="${W-pad.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--grid)"/><text x="${pad.l-4}" y="${y(v)+4}" text-anchor="end" font-size="10" fill="var(--muted)">${opt.fmt?opt.fmt(v):v.toFixed(0)}</text>`; }
+  if(opt.ref) g+=`<line x1="${pad.l}" x2="${W-pad.r}" y1="${y(opt.ref)}" y2="${y(opt.ref)}" stroke="var(--bad)" stroke-dasharray="4 3"/>`;
+  (opt.events||[]).forEach(r=>{ const i=series.findIndex(s=>s.r===r); if(i>=0) g+=`<line x1="${x(i)}" x2="${x(i)}" y1="${pad.t}" y2="${H-pad.b}" stroke="var(--warm)" stroke-dasharray="2 3"/>`; });
+  const pts=series.map((s,i)=>`${x(i)},${y(s.v)}`).join(' ');
+  g+=`<polyline points="${pts}" fill="none" stroke="${opt.color||'var(--acc)'}" stroke-width="2"/>`;
+  const l=series[n-1]; g+=`<circle cx="${x(n-1)}" cy="${y(l.v)}" r="3.5" fill="${opt.color||'var(--acc)'}"/>`;
+  g+=`<text x="${pad.l}" y="${H-6}" font-size="10" fill="var(--muted)">라운드 ${series[0].r}</text><text x="${W-pad.r}" y="${H-6}" text-anchor="end" font-size="10" fill="var(--muted)">${l.r}</text>`;
+  svg.innerHTML=g;
+}
+async function tick(){
+  try{ cur = await (await fetch('/state')).json(); }catch(e){ return; }
+  $('mode').textContent=cur.mode; $('arm').textContent=cur.arm||'-';
+  const rows=cur.rows, last=rows[rows.length-1];
+  if(last){
+    $('k-ms').textContent=last.ms.toFixed(1);
+    if(cur.D){ const meet=Object.values(last.devs).filter(d=>d.t<=cur.D).length; $('k-meet-l').textContent='목표 안에 든 기기'; $('k-meet').textContent=meet; $('k-meet-s').textContent='8대 중'; $('k-meet').className='v '+(meet===Object.keys(last.devs).length?'ok':''); }
+    else { const slow=Object.entries(last.devs).sort((a,b)=>b[1].t-a[1].t)[0]; $('k-meet').textContent=slow?slow[0]+' '+slow[1].t.toFixed(1):'-'; $('k-meet').className='v'; $('k-meet-s').textContent='초 (라운드를 정하는 기기)'; }
+    $('dtxt').textContent = cur.D ? ('라운드 목표 '+cur.D+'초') : ('결합 최적화 · 정확도 가격 λ='+(cur.lam??'-'));
+    $('k-ms').className='v '+(cur.D ? (last.ms<=cur.D?'ok':'bad') : 'ok');
+    $('k-w').textContent=last.wsum!=null?last.wsum.toFixed(2):'-';
+    $('k-acc').textContent=last.acc!=null?(100*last.acc).toFixed(1)+'%':'-'; $('k-r').textContent=last.r;
+  }
+  renderDevs(cur);
+  const ev=cur.events.map(e=>e.r);
+  line($('c1'),640,200,rows.map(r=>({r:r.r,v:r.ms})),{ref:cur.D||null,events:ev,fmt:v=>v.toFixed(0)+'s'});
+  line($('c2'),320,200,rows.map(r=>({r:r.r,v:r.wsum||0})),{ymax:1.1,color:'var(--warm)',fmt:v=>v.toFixed(2)});
+  line($('c3'),320,200,rows.map(r=>({r:r.r,v:100*(r.acc||0)})),{ymax:60,fmt:v=>v.toFixed(0)+'%'});
+  $('ev').innerHTML=cur.events.slice().reverse().map(e=>`<div>R${e.r} · ${e.txt}</div>`).join('') || '<div>아직 교란 없음 — 카드의 버튼을 눌러 보세요</div>';
+}
+$('reset').onclick=()=>post('reset',0,1);
+tick(); setInterval(tick, 2000);
+</script>
+</body></html>

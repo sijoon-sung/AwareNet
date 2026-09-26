@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="610" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 610" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="610"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-610)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="610" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="70" y="562" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1124) scale(1,-1)">(a) Capacity drop / R2–R4</text>
+			<text x="70" y="528" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,1056) scale(1,-1)">Total seconds = transfer + probes</text>
+			<path d="M 110,180 L 635,180 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="85.984375" y="172.0" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,344) scale(1,-1)">0</text>
+			<path d="M 110,238.333333 L 635,238.333333 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="85.984375" y="230.33333333333331" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,460) scale(1,-1)">5</text>
+			<path d="M 110,296.666667 L 635,296.666667 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="74.96875" y="288.66666666666663" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,577) scale(1,-1)">10</text>
+			<path d="M 110,355 L 635,355 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="74.96875" y="347.0" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,694) scale(1,-1)">15</text>
+			<path d="M 110,413.333333 L 635,413.333333 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="74.96875" y="405.3333333333333" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,810) scale(1,-1)">20</text>
+			<path d="M 110,471.666667 L 635,471.666667 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="74.96875" y="463.6666666666667" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,927) scale(1,-1)">25</text>
+			<rect x="145" y="180.0" width="95" height="254.62196334166669" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="145" y="434.6219633416666" width="95" height="26.68202610500009" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,90%); fill-rule: evenodd;"/>
+			<text x="160.2490234375" y="469.3039894466667" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,938) scale(1,-1)">24.11</text>
+			<text x="163.619873046875" y="141" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,282) scale(1,-1)">Single</text>
+			<text x="168.439208984375" y="109" style="font-family: Malgun Gothic, sans-serif; font-size: 19px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,218) scale(1,-1)">n = 3</text>
+			<rect x="320" y="180.0" width="95" height="107.45116485833313" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="320" y="287.45116485833313" width="95" height="26.803480145555966" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,90%); fill-rule: evenodd;"/>
+			<text x="335.2490234375" y="322.2546450038891" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,644) scale(1,-1)">11.51</text>
+			<text x="318.732421875" y="141" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,282) scale(1,-1)">Fixed dual</text>
+			<text x="343.439208984375" y="109" style="font-family: Malgun Gothic, sans-serif; font-size: 19px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,218) scale(1,-1)">n = 3</text>
+			<rect x="495" y="179.99999999999997" width="95" height="55.488208303889024" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="495" y="235.48820830388897" width="95" height="26.99092873944457" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,90%); fill-rule: evenodd;"/>
+			<text x="517.493896484375" y="270.47913704333354" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,540) scale(1,-1)">7.07</text>
+			<text x="476.43408203125" y="141" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,282) scale(1,-1)">Adaptive dual</text>
+			<text x="518.439208984375" y="109" style="font-family: Malgun Gothic, sans-serif; font-size: 19px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,218) scale(1,-1)">n = 3</text>
+			<text x="205.7421875" y="58" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,116) scale(1,-1)">Bars: mean · independent repeats: 1</text>
+			<text x="770" y="562" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1124) scale(1,-1)">(b) Shared bottleneck / R1–R2</text>
+			<text x="770" y="528" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,1056) scale(1,-1)">Total seconds = transfer + probes</text>
+			<path d="M 810,180 L 1335,180 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="785.984375" y="172.0" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,344) scale(1,-1)">0</text>
+			<path d="M 810,237.272727 L 1335,237.272727 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="785.984375" y="229.27272727272725" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,458) scale(1,-1)">2</text>
+			<path d="M 810,294.545455 L 1335,294.545455 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="785.984375" y="286.54545454545456" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,573) scale(1,-1)">4</text>
+			<path d="M 810,351.818182 L 1335,351.818182 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="785.984375" y="343.8181818181818" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,687) scale(1,-1)">6</text>
+			<path d="M 810,409.090909 L 1335,409.090909 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="785.984375" y="401.0909090909091" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,802) scale(1,-1)">8</text>
+			<path d="M 810,466.363636 L 1335,466.363636 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="774.96875" y="458.3636363636364" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,916) scale(1,-1)">10</text>
+			<rect x="845" y="180.00000000000003" width="95" height="172.01873251022639" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="845" y="352.0187325102264" width="95" height="44.19062592954515" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,90%); fill-rule: evenodd;"/>
+			<text x="867.493896484375" y="404.20935843977156" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,808) scale(1,-1)">7.55</text>
+			<text x="863.619873046875" y="141" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,282) scale(1,-1)">Single</text>
+			<text x="868.439208984375" y="109" style="font-family: Malgun Gothic, sans-serif; font-size: 19px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,218) scale(1,-1)">n = 2</text>
+			<rect x="1020" y="179.99999999999997" width="95" height="200.50122089454626" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1020" y="380.5012208945463" width="95" height="44.38687936295395" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,90%); fill-rule: evenodd;"/>
+			<text x="1042.493896484375" y="432.88810025750024" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,865) scale(1,-1)">8.55</text>
+			<text x="1018.732421875" y="141" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,282) scale(1,-1)">Fixed dual</text>
+			<text x="1043.439208984375" y="109" style="font-family: Malgun Gothic, sans-serif; font-size: 19px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,218) scale(1,-1)">n = 2</text>
+			<rect x="1195" y="180.0" width="95" height="196.19830689136433" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="1195" y="376.1983068913643" width="95" height="44.882336734772025" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 1; fill: rgb(86%,89%,90%); fill-rule: evenodd;"/>
+			<text x="1217.493896484375" y="429.08064362613635" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,858) scale(1,-1)">8.42</text>
+			<text x="1176.43408203125" y="141" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,282) scale(1,-1)">Adaptive dual</text>
+			<text x="1218.439208984375" y="109" style="font-family: Malgun Gothic, sans-serif; font-size: 19px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,218) scale(1,-1)">n = 2</text>
+			<text x="905.7421875" y="58" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,116) scale(1,-1)">Bars: mean · independent repeats: 1</text>
+			<rect x="350" y="12" width="24" height="18" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(86%,89%,90%); fill-rule: evenodd;"/>
+			<text x="386" y="16" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,32) scale(1,-1)">probe cost included</text>
+			<text x="770" y="16" style="font-family: Malgun Gothic, sans-serif; font-size: 20px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,32) scale(1,-1)">144/144 payload hashes matched</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-26",
+  "pdf_pages": 10,
+  "pdf_bookmarks": 10,
+  "png_figures": 9,
+  "svg_figures": 9,
+  "png_size": [
+    2400,
+    1440
+  ],
+  "source_hashes_verified": 39,
+  "report_local_links_verified": 22,
+  "visual_review": "all ten pages inspected; equation indices and LoRA arrow routing corrected",
+  "new_hardware_experiment": false
+}

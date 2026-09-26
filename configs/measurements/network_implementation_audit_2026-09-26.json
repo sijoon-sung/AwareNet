@@ -1,0 +1,163 @@
+{
+  "date": "2026-09-26",
+  "cached_refs_only": true,
+  "refs": {
+    "origin/awarenet": "b3ec4aa14f984edbd990af6f56e657d061e7092b",
+    "origin/main": "b8dab8a10eb611861338a8bf42de54abac4079a7",
+    "origin/deploy": "2c3476c3d3533c1953166e34f58d5ea0ddd306ad",
+    "origin/OVS_SDN": "49e5e556005ca6e5c8848a9ee83c832b79327679",
+    "origin/PPT": "cc8549550a95678e0593483c49e44ef3e2061180",
+    "origin/PPT_성시준": "4dab82e13be4de42a5632e9a6273635fb5eb29e9"
+  },
+  "current_sources": [
+    {
+      "path": "sfl/net/real_rig.sh",
+      "sha256": "99822fc0bf78e89dfdfddf6daa3947e09926718fd9576378f8d1fbce0a07c682"
+    },
+    {
+      "path": "sfl/net/hairpin_lo.sh",
+      "sha256": "e32f21914e871676488d19045c985d6736690dab2d89f92570f5132ee1d8475e"
+    },
+    {
+      "path": "sfl/policies.py",
+      "sha256": "772dd4fbc83221bf9fe0d504554c6b7faef81159edfa2a9e3c6fe5d29868e103"
+    },
+    {
+      "path": "sfl/mpsend.py",
+      "sha256": "630eb638ef5906e289ef6002121b24e7c68b0d7c27b177851352a13780f4e52b"
+    },
+    {
+      "path": "sfl/chunker.py",
+      "sha256": "12b38228d890f344656f5fe4d940c6ebfd58fa78d537ea588a7d167d3c83b173"
+    },
+    {
+      "path": "sfl/sdn/osken_controller.py",
+      "sha256": "953e5e539cb305053bcd94991caaa99448124057651b7a0fcfa6c393a3828045"
+    },
+    {
+      "path": "scripts/measurement/net_throughput.py",
+      "sha256": "c259fde1a6c448b047b0085096b85d3d55b4d233d8bd85b3ba4a8dc00def1354"
+    },
+    {
+      "path": "scripts/exp/run_scen32.sh",
+      "sha256": "1746d16c3bfa2a5de9d3ab5551f4c677ff382cc2d3eb54865a46cba5b51b1b9f"
+    },
+    {
+      "path": "out/rig_selftest_h5x.json",
+      "sha256": "c1542a966a5c97047f15ffccf76eb7136164180cf78a87cb53d49f7c2c64c6f2"
+    }
+  ],
+  "historical_sources": [
+    {
+      "ref": "origin/main",
+      "commit": "b8dab8a10eb611861338a8bf42de54abac4079a7",
+      "path": "scripts/deploy/pangyo_tc_agent.py",
+      "sha256": "e001b6a3c00da4a96add5639d7cd97bd4a11d1f99081d34666e09ce91da363af"
+    },
+    {
+      "ref": "origin/main",
+      "commit": "b8dab8a10eb611861338a8bf42de54abac4079a7",
+      "path": "scripts/deploy/ovs_setup_mode_b.sh",
+      "sha256": "37a362ce3216db6381213f9a352457b86c7b2b499397c9aa467d6c8f48643cd8"
+    },
+    {
+      "ref": "origin/OVS_SDN",
+      "commit": "49e5e556005ca6e5c8848a9ee83c832b79327679",
+      "path": "edge/ovs_setup.sh",
+      "sha256": "5972f4d0f1089a5e6e85e15783cfa3fac6410f9549fc7f7ebbe238c62f826888"
+    },
+    {
+      "ref": "origin/OVS_SDN",
+      "commit": "49e5e556005ca6e5c8848a9ee83c832b79327679",
+      "path": "central/bandwidth_executor.py",
+      "sha256": "5f886627264c256e1aaef5753a34fcd651dfdbb08a1c72f27ba081c77e141a7b"
+    },
+    {
+      "ref": "origin/OVS_SDN",
+      "commit": "49e5e556005ca6e5c8848a9ee83c832b79327679",
+      "path": "central/sdn_controller.py",
+      "sha256": "acb8787773453a4a328689ee7481b4dd401b8e15cdaaebc711592b5d5d253664"
+    }
+  ],
+  "findings": {
+    "current_kernel_configuration": "Linux tc/HTB/IFB/u32; experiment setup and perturbation",
+    "loopback_path_action": "replace IFB classification filters; not an underlay next-hop change",
+    "koren_path_action": "TCP relay endpoint selection; tc imposes experiment access/edge limits",
+    "tensor_split_layer": "application layer over multiple standard TCP sockets",
+    "tcp_changes": "connection reuse, blocking socket after connect, TCP_NODELAY, SO_SNDBUF request 262144 bytes",
+    "reliability": "range and duplicate validation, whole-tensor ACK, async ACK check and flush; no per-chunk received ACK",
+    "historical_ack_priority": "main: optional AWARENET_ACK_PROTECT=0 by default; IPv4 packet-length <128 priority classifier, not pure ACK identification",
+    "historical_ovs_caveat": "main moves shaping from virtual VXLAN port to actual container netdev due to possible no-op",
+    "custom_tcp_kernel_patch_found": false,
+    "negative_search_scope": "six cached branch tips, tracked .py/.sh/.c/.h/.conf/.patch/.diff files; not all historical/deleted/untracked files",
+    "standard_cc_selection": "net_throughput.py measurement socket can request TCP_CONGESTION; not a custom congestion algorithm",
+    "ai_controller_inference_measured": false,
+    "institution_delegation_verified": false
+  },
+  "analytic_examples": {
+    "packet_serialization": [
+      {
+        "rate_mbps": 56,
+        "bytes_per_packet": 1500,
+        "serialization_us": 214.28571428571428,
+        "packets_per_s": 4666.666666666667
+      },
+      {
+        "rate_mbps": 1000,
+        "bytes_per_packet": 1500,
+        "serialization_us": 12.0,
+        "packets_per_s": 83333.33333333333
+      }
+    ],
+    "hypothetical_stalled_output": [
+      {
+        "rate_mbps": 56,
+        "hypothetical_decision_ms": 1,
+        "bytes_arriving_if_output_stalls": 7000.0
+      },
+      {
+        "rate_mbps": 56,
+        "hypothetical_decision_ms": 10,
+        "bytes_arriving_if_output_stalls": 70000.0
+      },
+      {
+        "rate_mbps": 56,
+        "hypothetical_decision_ms": 50,
+        "bytes_arriving_if_output_stalls": 350000.0
+      },
+      {
+        "rate_mbps": 56,
+        "hypothetical_decision_ms": 100,
+        "bytes_arriving_if_output_stalls": 700000.0
+      },
+      {
+        "rate_mbps": 1000,
+        "hypothetical_decision_ms": 1,
+        "bytes_arriving_if_output_stalls": 125000.0
+      },
+      {
+        "rate_mbps": 1000,
+        "hypothetical_decision_ms": 10,
+        "bytes_arriving_if_output_stalls": 1250000.0
+      },
+      {
+        "rate_mbps": 1000,
+        "hypothetical_decision_ms": 50,
+        "bytes_arriving_if_output_stalls": 6250000.0
+      },
+      {
+        "rate_mbps": 1000,
+        "hypothetical_decision_ms": 100,
+        "bytes_arriving_if_output_stalls": 12500000.0
+      }
+    ],
+    "assumptions": "fixed 1500-byte packet, full stated bit rate, no L2 overhead; hypothetical stalled output; not measured latency, deadline, or observed queue growth"
+  },
+  "reference_urls": [
+    "https://www.rfc-editor.org/rfc/rfc7426.html",
+    "https://www.rfc-editor.org/rfc/rfc5681.html",
+    "https://docs.kernel.org/networking/ip-sysctl.html",
+    "https://man7.org/linux/man-pages/man7/socket.7.html"
+  ],
+  "new_kernel_deployment": false
+}

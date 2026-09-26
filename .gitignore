@@ -1,0 +1,70 @@
+# ════════════════════════════════════════════════════════════
+#  AwareNet — 배포 대상은 "재현에 필요한 것"만 남긴다
+# ════════════════════════════════════════════════════════════
+
+# ── 파이썬 / 가상환경 ───────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.venv_cuda/
+venv/
+env/
+.env
+.env.*
+!_archive/v2/.env.example
+
+# ── 비공개 정보 ────────────────────────────────────────────
+VM_INFO.md
+docs/private_*
+*.private
+*.pem
+*.key
+
+# ── 에디터 / 툴 ────────────────────────────────────────────
+.vscode/
+.idea/
+.claude/
+.aider*
+
+# ── 산출물 (재현 스크립트로 다시 만들 수 있다) ─────────────
+out/
+results/
+scratch/
+*.log
+*.tar.gz
+*.zip
+!output/final_awarenet/AwareNet_이미지팩.zip
+!output/prose_awarenet/AwareNet_구조도_조건그림.zip
+
+# ── 데이터셋 (EMNIST·FedScale은 스크립트가 내려받는다) ──────
+data/
+
+# ── 레거시 — 설계 v1~v6 시기의 코드. 이력은 git 히스토리에 있다
+archive_v6/
+old_code/
+root_archive/
+v3_code/
+_archive/
+tmp/
+dashboard-v3/
+deploy/*
+!deploy/remote/
+deploy/remote/awarenet_payload.tgz
+AwareNet_v2_프로젝트_통합보고서.pdf
+
+# ── 지난 버전 문서 (git 히스토리에 남아 있다) ──────────────
+docs/old/
+docs/old/pdf/
+
+# ── 백업본 ─────────────────────────────────────────────────
+*.bak
+*.bak.md
+*.bak.py
+
+# ── 안 쓰는 실행 스크립트 (기록용, 로컬에만) ──────────────
+scripts/old/
+
+# ── 외부 자료 (논문 PDF·타팀 자료: 저작권, 저장소에 넣지 않는다) ──
+docs/references/**/*.pdf
+docs/references/*.pdf

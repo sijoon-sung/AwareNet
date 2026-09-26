@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>모델 분할로 기기에 필요한 메모리를 낮춤</title>
+	<desc>KOREN VM CPU 프로파일  ·  batch 4 / sequence 256 / rank 16 / 앞 2층  ·  peak RSS | front 단독 프로파일이며 서버 메모리·통신·전체 학습 시간을 포함하지 않음  |  GB = 기록 MB / 1000</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="58" y="757" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 39px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1514) scale(1,-1)">모델 분할로 기기에 필요한 메모리를 낮춤</text>
+			<text x="58" y="709" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1418) scale(1,-1)">KOREN VM CPU 프로파일  ·  batch 4 / sequence 256 / rank 16 / 앞 2층  ·  peak RSS</text>
+			<path d="M 58,690 L 1342,690 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="58" y="33" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,66) scale(1,-1)">front 단독 프로파일이며 서버 메모리·통신·전체 학습 시간을 포함하지 않음  |  GB = 기록 MB / 1000</text>
+			<rect x="930" y="639" width="23" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(65%,70%,76%); fill-rule: evenodd;"/>
+			<text x="966" y="643" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1286) scale(1,-1)">로컬 전체 모델</text>
+			<rect x="1180" y="639" width="23" height="23" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="1216" y="643" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1286) scale(1,-1)">분할 front</text>
+			<path d="M 275,605 L 275,122 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="252.03125" y="88" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,176) scale(1,-1)">0 GB</text>
+			<path d="M 545.666667,605 L 545.666667,122 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="516.9147135416667" y="88" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,176) scale(1,-1)">10 GB</text>
+			<path d="M 816.333333,605 L 816.333333,122 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="787.5813802083334" y="88" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,176) scale(1,-1)">20 GB</text>
+			<path d="M 1087,605 L 1087,122 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="1058.248046875" y="88" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 21px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,176) scale(1,-1)">30 GB</text>
+			<text x="58" y="543" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1086) scale(1,-1)">0.5B</text>
+			<rect x="275" y="560" width="223.93336" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(65%,70%,76%); fill-rule: evenodd;"/>
+			<text x="510.93336" y="570" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1140) scale(1,-1)">8.27</text>
+			<rect x="275" y="517" width="41.59334666666666" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="328.59334666666666" y="527" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1054) scale(1,-1)">1.54</text>
+			<text x="58" y="423" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,846) scale(1,-1)">1.5B</text>
+			<rect x="275" y="440" width="405.65084" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(65%,70%,76%); fill-rule: evenodd;"/>
+			<text x="692.65084" y="450" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,900) scale(1,-1)">14.99</text>
+			<rect x="275" y="397" width="68.89278666666667" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="355.89278666666667" y="407" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,814) scale(1,-1)">2.55</text>
+			<text x="58" y="303" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,606) scale(1,-1)">3B</text>
+			<rect x="275" y="320" width="663.6746666666666" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(65%,70%,76%); fill-rule: evenodd;"/>
+			<text x="950.6746666666666" y="330" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,660) scale(1,-1)">24.52</text>
+			<rect x="275" y="277" width="91.74788000000001" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="378.74788" y="287" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,574) scale(1,-1)">3.39</text>
+			<text x="58" y="183" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 31px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,366) scale(1,-1)">7B</text>
+			<text x="275" y="207" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 25px;fill: rgb(73%,34%,12%); stroke:none;" transform="translate(0,414) scale(1,-1)">OOM  ·  원 실행에서 메모리 부족</text>
+			<rect x="275" y="157" width="174.41489333333334" height="32" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="461.41489333333334" y="167" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,334) scale(1,-1)">6.44</text>
+			<text x="1170.8671875" y="190" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,380) scale(1,-1)">7B front</text>
+			<text x="1155.6171875" y="145" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 32px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,290) scale(1,-1)">6.44 GB</text>
+		</g>
+	</g>
+</svg>

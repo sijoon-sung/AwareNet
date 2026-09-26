@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>폭과 네트워크를 하나의 학습 완료 목표로 연결</title>
+	<desc>기기 계산량과 전송 자원은 서로 다른 제어 변수이며 같은 배치의 완료 시간에 함께 작용한다 | 시스템 개념도  |  폭 고정 경로 실험은 효과 분리를 위한 대조군  |  기존 결합 정책과 함께 유지</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="58" y="757" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 39px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1514) scale(1,-1)">폭과 네트워크를 하나의 학습 완료 목표로 연결</text>
+			<text x="58" y="709" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1418) scale(1,-1)">기기 계산량과 전송 자원은 서로 다른 제어 변수이며 같은 배치의 완료 시간에 함께 작용한다</text>
+			<path d="M 58,690 L 1342,690 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="58" y="33" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,66) scale(1,-1)">시스템 개념도  |  폭 고정 경로 실험은 효과 분리를 위한 대조군  |  기존 결합 정책과 함께 유지</text>
+			<rect x="58" y="400" width="360" height="230" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="83" y="572" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(41%,33%,67%); fill-rule: evenodd;"/>
+			<text x="106" y="577" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1154) scale(1,-1)">학습 변수  w</text>
+			<text x="84" y="522" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1044) scale(1,-1)">모델 폭과 기기 계산량</text>
+			<text x="84" y="484" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,968) scale(1,-1)">activation·gradient 크기</text>
+			<text x="84" y="446" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,892) scale(1,-1)">폭 축소에 따른 학습 대가</text>
+			<rect x="982" y="400" width="360" height="230" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="1007" y="572" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="1030" y="577" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1154) scale(1,-1)">네트워크 변수  S</text>
+			<text x="1008" y="522" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1044) scale(1,-1)">허용된 경유 종점</text>
+			<text x="1008" y="484" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,968) scale(1,-1)">분할 비율과 공유 용량</text>
+			<text x="1008" y="446" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,892) scale(1,-1)">전환 비용과 완료 지연</text>
+			<rect x="505" y="405" width="390" height="190" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="530" y="537" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="553" y="542" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,1084) scale(1,-1)">공통 시간 모형</text>
+			<text x="531" y="487" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,974) scale(1,-1)">계산 시간 + 전송 시간</text>
+			<text x="531" y="449" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,898) scale(1,-1)">가장 늦는 참여자의 완료</text>
+			<path d="M 418,505 L 505,505 Z" style="stroke: rgb(41%,33%,67%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="505 505, 490.5928 498.0406, 490.5928 511.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(41%,33%,67%); fill-rule: evenodd;"/>
+			<path d="M 982,505 L 895,505 Z" style="stroke: rgb(0%,49%,47%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="895 505, 909.4072 511.9594, 909.4072 498.0406" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<path d="M 700,405 L 700,327 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="700 327, 693.0406 341.4072, 706.9594 341.4072" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<rect x="365" y="180" width="670" height="145" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="390" y="267" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="413" y="272" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,544) scale(1,-1)">결합 판단과 실행</text>
+			<text x="391" y="217" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,434) scale(1,-1)">망 개선으로 보존할 폭을 판단하고 남는 계산 부하를 조절</text>
+			<text x="311.06640624999994" y="113" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 26px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,226) scale(1,-1)">관측  →  시간 예측  →  경로·폭 계획  →  전송·학습  →  다시 관측</text>
+		</g>
+	</g>
+</svg>

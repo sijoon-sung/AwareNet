@@ -1,0 +1,20 @@
+/home/TaekyoungSeok/venvs/awarenet/lib/python3.12/site-packages/torch/cuda/__init__.py:384: UserWarning: Found GPU0 Orin which is of compute capability (CC) 8.7.
+The following list shows the CCs this version of PyTorch was built for and the hardware CCs it supports:
+- 8.0 which supports hardware CC >=8.0,<9.0 except {8.7}
+- 9.0 which supports hardware CC >=9.0,<10.0
+- 10.0 which supports hardware CC >=10.0,<11.0 except {10.1}
+- 11.0 which supports hardware CC >=11.0,<12.0
+- 12.0 which supports hardware CC >=12.0,<13.0
+  _warn_unsupported_code(d, device_cc, code_ccs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+디바이스: cuda (Orin)
+베이스 모델 로드 중: Qwen/Qwen2.5-0.5B ...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  18%|█▊        | 52/290 [00:00<00:00, 517.14it/s]Loading weights:  41%|████      | 119/290 [00:00<00:00, 600.45it/s]Loading weights:  62%|██████▏   | 180/290 [00:00<00:00, 516.79it/s]Loading weights:  80%|████████  | 233/290 [00:00<00:00, 400.00it/s]Loading weights:  96%|█████████▌| 277/290 [00:00<00:00, 358.63it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 415.35it/s]
+어댑터 페이로드: fp32 8.68 MB / fp16 4.36 MB
+스텝당 학습 시간 (배치 1 × 시퀀스 256, 워밍업 3 제외, n=30):
+  평균 903.6 ms ± 3.5 ms  (283 tokens/s)
+  중앙값 903.7 ms
+  앞 10회 905.5 ms / 뒤 10회 902.9 ms
+  후반 변화율 -0.3% / 스로틀링 의심: False
+  GPU 최대 메모리: 3.04 GB
+Saved: jetson/results/15w_b1_s256_anchor/lora_train_speed.json

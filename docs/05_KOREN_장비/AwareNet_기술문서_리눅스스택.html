@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>AwareNet 기술 문서 — 리눅스 네트워크 스택 (무엇을, 왜, 어떻게)</title>
+<style>
+@page { size: A4; margin: 15mm 14mm; }
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+       font-size: 10.8pt; line-height: 1.7; color: #1a1a2e;
+       max-width: 900px; margin: 0 auto; padding: 24px; }
+h1 { font-size: 18pt; border-bottom: 3px solid #16325c; padding-bottom: 8px; color: #16325c; }
+h2 { font-size: 13.5pt; color: #16325c; border-bottom: 1.5px solid #c9d4e8;
+     padding-bottom: 4px; margin-top: 32px; page-break-after: avoid; }
+h3 { font-size: 11.5pt; color: #2d4a80; margin-top: 18px; page-break-after: avoid; }
+p { margin: 8px 0; }
+ul, ol { margin: 8px 0 8px 24px; }
+li { margin: 4px 0; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 9.5pt; page-break-inside: avoid; }
+th, td { border: 1px solid #b9c4d8; padding: 5px 8px; text-align: left; vertical-align: top; }
+th { background: #eef2f9; color: #16325c; }
+tr:nth-child(even) td { background: #f8fafd; }
+b { color: #10264d; }
+.hl { color: #c2410c; font-weight: bold; }
+.note { border-left: 4px solid #d97706; background: #fff8ec; padding: 9px 14px; margin: 12px 0; page-break-inside: avoid; }
+.ok { border-left: 4px solid #15803d; background: #f1faf3; padding: 9px 14px; margin: 12px 0; page-break-inside: avoid; }
+pre { background: #10264d; color: #d9e4f5; padding: 12px 16px; border-radius: 6px;
+      font-size: 8.8pt; line-height: 1.6; overflow-x: auto; page-break-inside: avoid;
+      font-family: Consolas, 'D2Coding', monospace; }
+pre b { color: #ffd066; }
+code { background: #eef1f6; padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+figure { margin: 14px 0 18px 0; page-break-inside: avoid; }
+figure svg { width: 100%; border: 1px solid #dde4ef; border-radius: 5px; padding: 6px; }
+figcaption { font-size: 8.8pt; color: #4a5a75; margin-top: 6px; line-height: 1.55; }
+.sub { color: #4a5a75; font-size: 9.5pt; }
+</style>
+</head>
+<body>
+
+<h1>AwareNet 기술 문서 — 리눅스 네트워크 스택</h1>
+<p class="sub">이 시스템이 실제로 쓰는 리눅스 기술을 "무엇을 · 왜 이걸 · 어떻게" 순서로 설명한다 · 2026-08-10 · 검증 상태 표기 포함</p>
+
+<h2>0. 전체 그림 — 기술이 어디에 붙어 있나</h2>
+
+<figure>
+<svg viewBox="0 0 940 452" role="img" aria-label="AwareNet 물리 배치와 리눅스 기술 위치">
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><polygon points="0,1 9,5 0,9" fill="#1a1a2e"/></marker>
+    <marker id="a1w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><polygon points="0,1 9,5 0,9" fill="#d97706"/></marker>
+  </defs>
+  <rect x="20" y="50" width="320" height="300" rx="8" fill="none" stroke="#1a1a2e" stroke-width="1.6"/>
+  <text x="34" y="72" font-size="13" font-weight="bold">판교 KOREN VM — 게이트웨이 호스트</text>
+  <rect x="36" y="88" width="140" height="24" rx="3" fill="none" stroke="#d97706" stroke-width="1.6"/>
+  <text x="44" y="104" font-size="10" fill="#d97706">client-008 컨테이너</text>
+  <text x="44" y="119" font-size="8.5" fill="#b45309">netns + veth + tc-tbf 0.23Mbps</text>
+  <rect x="36" y="128" width="140" height="22" rx="3" fill="none" stroke="#1a1a2e" stroke-width="1"/>
+  <text x="44" y="143" font-size="10">client-002 컨테이너</text>
+  <text x="100" y="164" font-size="12" text-anchor="middle">⋮ (Docker × 100)</text>
+  <rect x="36" y="172" width="140" height="22" rx="3" fill="none" stroke="#1a1a2e" stroke-width="1"/>
+  <text x="44" y="187" font-size="10">client-100 컨테이너</text>
+  <text x="106" y="208" font-size="9" text-anchor="middle">노드별 대역폭 = 실측 트레이스 주입</text>
+  <rect x="192" y="88" width="90" height="52" rx="4" fill="none" stroke="#d97706" stroke-width="1.6"/>
+  <text x="237" y="106" font-size="10" text-anchor="middle" fill="#d97706">tc 에이전트</text>
+  <text x="237" y="120" font-size="9" text-anchor="middle" fill="#d97706">python·root</text>
+  <text x="237" y="134" font-size="9" text-anchor="middle" fill="#d97706">:9100 HTTP</text>
+  <line x1="192" y1="114" x2="180" y2="102" stroke="#d97706" stroke-width="1.4" marker-end="url(#a1w)"/>
+  <text x="237" y="158" font-size="9" text-anchor="middle" fill="#d97706">nsenter → tc qdisc replace</text>
+  <rect x="292" y="86" width="34" height="240" rx="4" fill="none" stroke="#1a1a2e" stroke-width="1.4"/>
+  <text transform="rotate(-90 309 206)" x="309" y="206" font-size="10.5" text-anchor="middle">OVS br0 (VXLAN 종단)</text>
+  <line x1="180" y1="240" x2="290" y2="240" stroke="#1a1a2e" stroke-width="1.2" marker-end="url(#a1)"/>
+  <text x="232" y="234" font-size="9" text-anchor="middle">veth</text>
+  <rect x="352" y="60" width="236" height="280" rx="8" fill="none" stroke="#1a1a2e" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6"/>
+  <text x="470" y="82" font-size="11.5" text-anchor="middle" font-weight="bold">KOREN 백본 · 판교↔대전 140km</text>
+  <text x="470" y="330" font-size="9.5" text-anchor="middle">실측: RTT 21.7~25.6ms · 백본 지터 ±0.17ms</text>
+  <line x1="616" y1="140" x2="328" y2="140" stroke="#d97706" stroke-width="2" marker-end="url(#a1w)"/>
+  <text x="470" y="130" font-size="10" text-anchor="middle" fill="#d97706" font-weight="bold">VXLAN VNI 100 — 제어 터널 (QoS 없음)</text>
+  <line x1="328" y1="262" x2="616" y2="262" stroke="#1a1a2e" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="470" y="252" font-size="10" text-anchor="middle" font-weight="bold">VXLAN VNI 200 — 데이터 터널 (tc-tbf 대상)</text>
+  <rect x="600" y="50" width="320" height="300" rx="8" fill="none" stroke="#1a1a2e" stroke-width="1.6"/>
+  <text x="614" y="72" font-size="13" font-weight="bold">대전 KOREN VM — 중앙</text>
+  <rect x="616" y="86" width="288" height="70" rx="5" fill="none" stroke="#d97706" stroke-width="1.6"/>
+  <text x="628" y="106" font-size="11" fill="#d97706" font-weight="bold">SDN 컨트롤러 :8080 (REST)</text>
+  <text x="628" y="123" font-size="9.5" fill="#b45309">배분 계산(softmax+유용성 캡) → 배치 전송</text>
+  <text x="628" y="139" font-size="9.5" fill="#b45309">총량 보존 로그 Σ ≤ 100Mbps</text>
+  <rect x="616" y="176" width="288" height="96" rx="5" fill="none" stroke="#1a1a2e" stroke-width="1.6"/>
+  <text x="628" y="196" font-size="11" font-weight="bold">Flower FL 서버 :8081 (gRPC)</text>
+  <text x="628" y="213" font-size="9.5">선택 · 마감 집계 · 도메인 평가 · 기록</text>
+  <text x="628" y="229" font-size="9.5">4비교군 스위치 (환경변수)</text>
+  <text x="628" y="245" font-size="9.5">워크로드 스위치 vision | lora</text>
+  <rect x="20" y="380" width="320" height="52" rx="6" fill="none" stroke="#1a1a2e" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="34" y="400" font-size="10.5" font-weight="bold">Mode A 실기기 (PC · 젯슨)</text>
+  <text x="34" y="417" font-size="9.5">실모델 학습 → gRPC 실회선 접속 (SSH 터널 가능)</text>
+</svg>
+<figcaption><b>그림 1.</b> 전체 배치와 기술 위치. 주황 = 제어 평면(터널에 QoS를 걸지 않아 배분 명령이 항상 먼저 간다), 검정 = 데이터 평면(노드별 tc-tbf 셰이핑 대상). 컨테이너 100개는 각자 독립된 네트워크 네임스페이스를 가지며, veth로 OVS 브리지에 붙는다.</figcaption>
+</figure>
+
+<table>
+<tr><th style="width:20%">계층</th><th style="width:28%">사용 기술</th><th>역할</th></tr>
+<tr><td>노드 격리</td><td>Docker + network namespace</td><td>100개 노드를 각각 독립 네트워크 공간으로</td></tr>
+<tr><td>배선</td><td>veth pair + Open vSwitch(br0)</td><td>컨테이너를 가상 스위치에 연결</td></tr>
+<tr><td>광역 연결</td><td>VXLAN 터널 × 2 (VNI 100/200)</td><td>판교↔대전을 잇는 제어/데이터 분리 오버레이</td></tr>
+<tr><td>대역폭 제어</td><td>tc-tbf (+ netem)</td><td>노드별 업로드 몫 셰이핑 / WAN 지연 재현</td></tr>
+<tr><td>원격 조작</td><td>nsenter + tc 에이전트(HTTP)</td><td>호스트에서 각 컨테이너 netns의 tc를 일괄 갱신</td></tr>
+<tr><td>응용</td><td>Flower(gRPC) + REST 컨트롤러</td><td>연합학습 라운드 / 배분 명령</td></tr>
+<tr><td>측정</td><td>ping · iperf3 · ss · TCP 핸드셰이크 RTT · SSH 터널</td><td>실측 체계 (4장)</td></tr>
+</table>
+
+<h2>1. network namespace + veth — "100개의 독립 노드"를 만드는 방법</h2>
+<p><b>무엇:</b> 네트워크 네임스페이스(netns)는 리눅스 커널이 제공하는 격리 기능이다. netns 하나가 자기만의 인터페이스·라우팅 테이블·qdisc(큐 규칙)를 가진다. Docker 컨테이너 하나 = netns 하나.</p>
+<p><b>왜:</b> 노드별로 <b>서로 다른 대역폭 제한</b>을 걸어야 하는데, netns가 분리되어 있으면 각 노드의 인터페이스에 독립적으로 tc를 걸 수 있다. VM 100대를 만드는 것보다 압도적으로 가볍다(노드당 CPU 0.5 제한으로 한 호스트에서 100개).</p>
+<p><b>어떻게:</b> 배포 스크립트가 컨테이너를 <code>network_mode: none</code>(네트워크 없이)으로 띄운 뒤, <b>veth pair</b>(가상 랜케이블 — 양 끝이 있는 파이프)를 만들어 한쪽 끝은 컨테이너 netns 안에(eth1), 반대쪽 끝은 호스트의 OVS 브리지에 꽂는다. (<code>attach_containers_to_ovs.sh</code>)</p>
+
+<h2>2. Open vSwitch + VXLAN — 제어와 데이터를 분리한 오버레이</h2>
+<p><b>무엇:</b> OVS는 소프트웨어 스위치다. VXLAN은 "L2 이더넷 프레임을 UDP에 싸서 IP 망 위로 보내는" 터널 기술로, VNI라는 번호로 터널을 구분한다.</p>
+<p><b>왜 이걸:</b> 원래 계획은 KOREN의 L2 전용선(L2VPN)과 T-SDN API였는데, <b>NOC 확인 결과 지원 불가</b>였다. 그래서 판교 VM과 대전 VM 사이에 우리가 직접 터널을 뚫었다. 터널을 <b>두 개</b> 만든 이유:</p>
+<ul>
+<li><b>VNI 100 (제어)</b>: 배분 명령이 다니는 길. <b>일부러 아무 QoS도 걸지 않는다.</b></li>
+<li><b>VNI 200 (데이터)</b>: 어댑터 업로드가 다니는 길. 셰이핑 대상.</li>
+</ul>
+<div class="ok"><b>분리가 필요한 이유는 실측했다 (8/10):</b> 13개 노드가 동시에 업로드하는 동안 같은 경로의 제어 지연이 P95 기준 <b>5.2배(86→448ms)</b> 악화됐고, 버스트가 끝나자 즉시 회복됐다. 한 길로 다니면 라운드가 시작될 때마다 배분 명령이 이 지연을 겪는다.</div>
+
+<h2>3. tc-tbf — 노드별 대역폭 몫을 실제로 거는 손잡이</h2>
+<p><b>무엇:</b> <code>tc</code>(traffic control)는 리눅스 커널의 패킷 스케줄링 도구이고, <b>tbf</b>(Token Bucket Filter)는 그중 "초당 rate만큼 토큰이 차고, 패킷은 토큰이 있어야 나가는" 방식의 대역폭 제한기다.</p>
+<pre>tc qdisc replace dev eth1 root tbf <b>rate 540kbit</b> <b>burst 32kbit</b> <b>latency 400ms</b>
+# rate    = 이 노드의 몫 (배분 파일 값, 예: 0.54Mbps 노드)
+# burst   = 순간적으로 한번에 내보낼 수 있는 양 (버킷 크기)
+# latency = 큐에서 최대 대기 시간 — 넘치면 드롭</pre>
+<p><b>어디에 거나:</b> <b>컨테이너 netns 안의 egress(나가는 방향)</b>. 업로드를 제한하고 싶으면 보내는 쪽 출구에서 조여야 한다. <code>replace</code>를 쓰기 때문에 같은 명령을 반복 실행해도 안전하다(멱등).</p>
+<div class="note"><b>왜 HTB가 아니라 tbf인가 — 시행착오 기록.</b> 처음엔 OVS의 VXLAN 터널 포트에 HTB 큐를 걸려고 했다. 그런데 터널 포트는 전용 네트워크 장치(netdev)가 없어서(커널 데이터패스에서는 <code>vxlan_sys_4789</code> 하나를 공유) 큐 설정이 <b>조용히 무시될 수 있다</b>(silent no-op — 에러도 안 나고 효과도 없음). 그래서 폐기하고, 각 컨테이너 netns 내부의 tbf로 통일했다. 초기 배분(배포 스크립트)과 라운드 중 동적 재배분(tc 에이전트)이 <b>같은 손잡이</b>를 잡는다는 점도 이 방식의 장점.</div>
+<div class="ok"><b>정밀도 검증 완료:</b> 몫 0.54~50Mbps 스윕에서 달성률 0.89~0.96으로 전 구간 선형(수신측 goodput 기준, TCP/IP 헤더 오버헤드 감안 시 정상). 대전 KOREN VM 커널(6.8)에서도 tbf 동작 확인.</div>
+
+<h2>4. netem — WAN을 책상 위로 가져오는 도구</h2>
+<p><b>무엇:</b> netem(network emulator)은 tc의 qdisc 중 하나로, 지연·지터·손실을 인공적으로 주입한다.</p>
+<p><b>왜:</b> 로컬 리허설에서 "KOREN 시간 스케일"을 재현하기 위해. KOREN 실측 RTT 22ms를 그대로 주입해 검증했다(재현 오차 1.3%).</p>
+<pre>tc qdisc replace dev eth0 root handle 8001: tbf rate 5000kbit burst 32kbit latency 400ms
+tc qdisc add     dev eth0 parent 8001: handle 8002: netem delay 22ms
+# tbf를 루트로, netem을 그 자식으로 — 대역폭 제한과 WAN 지연을 동시에</pre>
+<div class="note"><b>여기서 배운 실측 함정 두 개(중요):</b> ① 지연을 주입하면 TCP 송신 버퍼가 자동으로 커져서, 송신측 기준 완료 시간이 실제 도착보다 ~3초 이르게 찍힌다 → <code>iperf3 -w 128K</code>로 버퍼를 고정해 해결. ② TCP는 시작 직후 천천히 가속(slow start)하므로 짧은 전송(8.68MB)은 회선의 절반도 못 쓴다(벌크 55Mbps vs 실효 24Mbps) → <b>마감값은 계산이 아니라 실측으로 정해야 한다</b>는 운영 수칙의 기술적 이유.</div>
+
+<h2>5. nsenter + tc 에이전트 — 라운드 중 배분을 갱신하는 경로</h2>
+<p><b>무엇:</b> <code>nsenter</code>는 호스트의 root 프로세스가 다른 프로세스(컨테이너)의 네임스페이스에 "들어가서" 명령을 실행하게 해준다.</p>
+<pre># 판교 호스트에서 — client-042의 netns에 들어가 tc를 갱신
+PID=$(docker inspect -f '{{.State.Pid}}' client-042)
+nsenter -t $PID -n tc qdisc replace dev eth1 root tbf rate 25000kbit burst 32kbit latency 400ms</pre>
+<p><b>흐름:</b> 대전 컨트롤러가 배분 맵 <code>{client-001: 3.2Mbps, ..., client-100: 0.5Mbps}</code>을 HTTP <b>한 번</b>으로 판교의 tc 에이전트(:9100, root 데몬)에 보내면, 에이전트가 노드별로 nsenter+tc를 실행한다. 100노드 왕복 20ms.</p>
+<p><b>왜 병렬화하지 않았나:</b> 노드별 원격 호출을 병렬로 쏘다가 일부만 실패하면, 순간적으로 "배분 합계 > 총량"인 비원자 상태가 생길 수 있다. 그래서 일부러 <b>단일 배치 트랜잭션</b>(한 번에 전달, 순차 적용)을 택했다 — 속도보다 총량 보존의 원자성.</p>
+
+<h2>6. 응용 계층 — Flower(gRPC)와 REST 컨트롤러</h2>
+<ul>
+<li><b>Flower</b>: 오픈소스 FL 프레임워크. 서버↔클라이언트 통신은 gRPC(:8081). 우리는 전략(Strategy) 레벨에서 선택·마감 집계·비교군 스위치를 구현했다 — 프레임워크 자체는 표준 부품.</li>
+<li><b>SDN 컨트롤러</b>(:8080, REST): 서버가 보낸 원시 효용을 받아 softmax + 유용성 캡으로 몫을 계산하고, 총량 보존을 로그로 남긴 뒤 tc 에이전트에 전달.</li>
+<li><b>순서 보장</b>: 배분 REST 호출이 동기적으로 완료된 뒤에야 Flower가 학습 지시를 보낸다 — "제어가 데이터보다 늦는" 상황이 코드 순서상 불가능.</li>
+</ul>
+
+<h2>7. 측정 스택 — 오늘까지의 실측이 쓰는 도구들</h2>
+<table>
+<tr><th style="width:26%">도구/기법</th><th>용도</th><th>비고</th></tr>
+<tr><td><code>ping</code> (ICMP)</td><td>RTT·지터·손실 기본 측정</td><td>KOREN 방화벽이 ICMP를 막는 구간에서는 사용 불가 → 아래 대체</td></tr>
+<tr><td><b>TCP 핸드셰이크 RTT</b></td><td>ICMP 차단 시 RTT 대체 — 열린 포트에 TCP 연결을 맺는 시간을 잰다</td><td><code>socket.create_connection()</code> 소요 시간, 8/10 n=100 측정이 이 방식</td></tr>
+<tr><td><code>iperf3</code></td><td>처리량 측정 (서버/클라이언트)</td><td>-J(JSON) 파싱 · -n(바이트 지정) · -w(버퍼 고정) 활용. 포트당 동시 1테스트 제한 주의(리허설에서 포트 13개 사용)</td></tr>
+<tr><td><b>SSH 로컬 포워딩</b> (<code>ssh -L</code>)</td><td>방화벽이 SSH(26022)만 열어줄 때 서비스 포트(8080/8081/5201)를 로컬로 끌어옴</td><td><code>koren_tunnel.ps1</code> — 자택에서 Mode A 실험 가능하게 만든 경로</td></tr>
+<tr><td><b>SSH 파이프 처리량</b></td><td>iperf3 없이 처리량 측정 — 데이터를 ssh 표준입출력으로 흘리고 벽시계로 나눔</td><td>암호화 경유라 하한치로 라벨. 상행 55Mbps가 이 방식</td></tr>
+<tr><td><code>ss -tlnp</code> / <code>docker inspect</code></td><td>포트 리슨 확인 / 컨테이너 PID 조회</td><td>운영 확인용</td></tr>
+</table>
+
+<h2>8. 커널 요구사항과 검증 상태</h2>
+<table>
+<tr><th>환경</th><th>커널</th><th>tbf</th><th>netem</th><th>비고</th></tr>
+<tr><td>대전 KOREN VM (ubuntu)</td><td>6.8.0</td><td>✓ 확인(8/10)</td><td>✓ 확인(8/10)</td><td>더미 인터페이스로 직접 검증 — 본실험 스택 이식 보장</td></tr>
+<tr><td>로컬 Docker Desktop (WSL2)</td><td>WSL2 커널</td><td>✓ 달성률 0.89~0.96</td><td>✓ 오차 1.3%</td><td>리허설 환경으로 적합 판정</td></tr>
+<tr><td>판교 VM</td><td>배정 대기</td><td colspan="2">배정 즉시 <code>vm_selfcheck.sh</code>로 동일 검증</td><td>스크립트 준비 완료</td></tr>
+</table>
+
+<h2>9. 명령어 치트시트 (실제로 치는 것들)</h2>
+<pre># 배분 적용 상태 확인 (컨테이너 안)
+docker exec client-001 tc qdisc show dev eth0
+# → qdisc tbf 8001: root rate 540Kbit burst 4Kb lat 400ms
+
+# 판교 방식: 호스트에서 netns 진입 확인
+sudo nsenter -t $(docker inspect -f '{{.State.Pid}}' client-001) -n tc qdisc show
+
+# 배분 일괄 적용 / 검증 (배포 스크립트)
+sudo ./scripts/deploy/apply_client_tc.sh     # bandwidth_assignment.json → 전 노드 tbf
+sudo ./scripts/deploy/verify_client_tc.sh    # 목표 rate vs 실제 qdisc 대조
+
+# KOREN 실측 (이번 주 만든 도구)
+python scripts/measurement/measure_link_profile.py --label pc_to_daejeon --host 116.89.187.190 --tcp-port 26022
+python scripts/measurement/full_link_benchmark.py   # RTT 100회 + 처리량 + 어댑터 실전송 + 백본
+python scripts/measurement/burst_test.py            # 13노드 동시 업로드 버스트
+powershell -File scripts/measurement/koren_tunnel.ps1   # 서비스 포트 SSH 터널
+
+# 로컬 리허설
+python scripts/deploy/generate_local_compose.py --clients 20
+python scripts/measurement/local_round_emulation.py --wan-rtt 22 --tau 15.0</pre>
+
+<h2>10. 이 스택에서 나온 시행착오 요약 (질문 대비)</h2>
+<table>
+<tr><th>사건</th><th>기술적 원인</th><th>귀결</th></tr>
+<tr><td>HTB silent no-op</td><td>VXLAN 터널 포트에는 전용 netdev가 없어 큐가 무시됨</td><td>컨테이너 netns 내부 tbf로 통일</td></tr>
+<tr><td>배분 명령 무효</td><td>노드 ID가 3개 네임스페이스로 갈라져 매칭 실패</td><td>canonical ID 단일화 + E2E 검증</td></tr>
+<tr><td>iperf3 서버 잠김</td><td>타임아웃으로 죽은 클라이언트가 데몬을 busy로 남김</td><td>리허설에서 라운드마다 서버 재시작</td></tr>
+<tr><td>송신측 시간 왜곡</td><td>netem 지연 시 TCP 송신 버퍼 자동 확장</td><td><code>-w 128K</code> 고정 — 오차 3% 이내</td></tr>
+<tr><td>짧은 전송의 저효율</td><td>TCP slow start가 8.68MB 전송을 지배 (55→24Mbps)</td><td>마감 τ는 실측 기준 산정 수칙</td></tr>
+<tr><td>버스트 시 제어 지연</td><td>업링크 큐잉(버퍼블로트)으로 P95 5.2배</td><td>제어 터널 무QoS 분리의 실측 근거</td></tr>
+</table>
+
+<p class="sub" style="margin-top:24px">관련 파일: <code>scripts/deploy/</code>(OVS·veth·tc 배포), <code>scripts/measurement/</code>(측정 도구), <code>central/</code>(컨트롤러·서버), 원자료 <code>out/link_profile/</code></p>
+
+</body>
+</html>

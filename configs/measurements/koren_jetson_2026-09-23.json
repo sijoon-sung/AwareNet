@@ -1,0 +1,1122 @@
+{
+  "schema": 1,
+  "label": "KOREN/Jetson measurement-conditioned replay; not a new field measurement",
+  "source_manifest": [
+    {
+      "path": "_archive/v2/jetson/results/jetson_compute_anchor.json",
+      "sha256": "3bb8833904d3625a1b3fbe69bc097b18489c18c36220ffd1e22086333bd752d4",
+      "commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+      "original_path": "jetson/results/jetson_compute_anchor.json",
+      "git_blob_semantically_verified": true
+    },
+    {
+      "path": "out/line_scale_detail/n8_s1.0_tcp_batch_1788881912.json",
+      "sha256": "6e026d9b4464be5dc98ab439ac4a8433b9bb562498babdfdd56ba4c0a2321c77",
+      "kind": "recorded_echo_timing_not_physical_link_capacity"
+    },
+    {
+      "path": "out/line_scale_detail/n8_s1.0_tcp_burst_1788881939.json",
+      "sha256": "ca7c923772e4aff22c5a5ab603551b26079d4370c26c213757aef47f2740f31d",
+      "kind": "recorded_echo_timing_not_physical_link_capacity"
+    }
+  ],
+  "jetson": {
+    "generated_at": "2026-08-14T00:04:52.628676+09:00",
+    "hardware": "NVIDIA Jetson Orin Nano Super 8GB",
+    "software": {
+      "jetson_linux": "R39.2.1",
+      "cuda": "13.2",
+      "torch": "2.12.0+cu132"
+    },
+    "workload": {
+      "model": "Qwen/Qwen2.5-0.5B",
+      "precision": "fp32",
+      "lora": "r=32, q_proj/v_proj",
+      "batch": 1,
+      "seq_len": 256,
+      "warmup": 3,
+      "steps": 30
+    },
+    "power_modes": {
+      "MAXN_SUPER": {
+        "model": "Qwen/Qwen2.5-0.5B",
+        "lora": "r=32 q_proj,v_proj",
+        "batch": 1,
+        "seq_len": 256,
+        "device": "Orin",
+        "step_mean_ms": 556.1,
+        "step_std_ms": 3.9,
+        "step_median_ms": 554.1,
+        "first_10_mean_ms": 558.8,
+        "last_10_mean_ms": 555.5,
+        "slowdown_pct": -0.6,
+        "throttling_suspected": false,
+        "step_times_ms": [
+          558.381,
+          558.044,
+          556.464,
+          561.327,
+          558.023,
+          569.762,
+          557.523,
+          558.902,
+          556.326,
+          553.369,
+          553.33,
+          553.717,
+          556.998,
+          553.638,
+          553.637,
+          553.511,
+          554.361,
+          554.021,
+          553.923,
+          553.36,
+          566.309,
+          553.724,
+          553.671,
+          553.877,
+          553.764,
+          554.181,
+          553.388,
+          553.547,
+          557.777,
+          554.301
+        ],
+        "power_mode": "MAXN_SUPER",
+        "precision": "fp32",
+        "torch_version": "2.12.0+cu132",
+        "torch_cuda_version": "13.2",
+        "tokens_per_sec": 460,
+        "max_mem_gb": 3.04,
+        "adapter_bytes_fp32": 8684035,
+        "adapter_bytes_fp16": 4358659,
+        "warmup_excluded": 3,
+        "n_steps": 30,
+        "system_metrics": {
+          "system_ram_peak_mb": 6776,
+          "system_ram_total_mb": 7546,
+          "tj_peak_c": 50.906,
+          "gpu_peak_c": 50.906,
+          "vdd_in_average_mw": 11969,
+          "vdd_in_peak_mw": 19884
+        }
+      },
+      "25W": {
+        "model": "Qwen/Qwen2.5-0.5B",
+        "lora": "r=32 q_proj,v_proj",
+        "batch": 1,
+        "seq_len": 256,
+        "device": "Orin",
+        "step_mean_ms": 610.1,
+        "step_std_ms": 2.3,
+        "step_median_ms": 608.9,
+        "first_10_mean_ms": 612.1,
+        "last_10_mean_ms": 609.1,
+        "slowdown_pct": -0.5,
+        "throttling_suspected": false,
+        "step_times_ms": [
+          611.721,
+          611.183,
+          611.707,
+          616.851,
+          611.733,
+          611.831,
+          612.667,
+          610.917,
+          613.459,
+          608.935,
+          608.508,
+          608.856,
+          607.647,
+          608.821,
+          609.248,
+          608.421,
+          608.503,
+          608.084,
+          608.367,
+          613.539,
+          608.651,
+          608.686,
+          608.593,
+          608.266,
+          613.846,
+          608.988,
+          608.437,
+          608.908,
+          608.255,
+          608.005
+        ],
+        "power_mode": "25W",
+        "precision": "fp32",
+        "torch_version": "2.12.0+cu132",
+        "torch_cuda_version": "13.2",
+        "tokens_per_sec": 420,
+        "max_mem_gb": 3.04,
+        "adapter_bytes_fp32": 8684035,
+        "adapter_bytes_fp16": 4358659,
+        "warmup_excluded": 3,
+        "n_steps": 30,
+        "system_metrics": {
+          "system_ram_peak_mb": 6815,
+          "system_ram_total_mb": 7546,
+          "tj_peak_c": 49.25,
+          "gpu_peak_c": 49.25,
+          "vdd_in_average_mw": 10985,
+          "vdd_in_peak_mw": 17763
+        }
+      },
+      "15W": {
+        "model": "Qwen/Qwen2.5-0.5B",
+        "lora": "r=32 q_proj,v_proj",
+        "batch": 1,
+        "seq_len": 256,
+        "device": "Orin",
+        "step_mean_ms": 903.6,
+        "step_std_ms": 3.5,
+        "step_median_ms": 903.7,
+        "first_10_mean_ms": 905.5,
+        "last_10_mean_ms": 902.9,
+        "slowdown_pct": -0.29,
+        "throttling_suspected": false,
+        "step_times_ms": [
+          911.841,
+          908.148,
+          905.286,
+          911.622,
+          903.534,
+          905.788,
+          897.829,
+          904.87,
+          902.899,
+          903.293,
+          898.537,
+          905.7,
+          903.852,
+          904.639,
+          897.187,
+          905.626,
+          903.952,
+          903.553,
+          898.035,
+          904.473,
+          903.493,
+          903.553,
+          898.392,
+          904.966,
+          902.897,
+          903.393,
+          899.392,
+          904.813,
+          902.888,
+          904.875
+        ],
+        "power_mode": "15W",
+        "precision": "fp32",
+        "torch_version": "2.12.0+cu132",
+        "torch_cuda_version": "13.2",
+        "tokens_per_sec": 283,
+        "max_mem_gb": 3.04,
+        "adapter_bytes_fp32": 8684035,
+        "adapter_bytes_fp16": 4358659,
+        "warmup_excluded": 3,
+        "n_steps": 30,
+        "system_metrics": {
+          "system_ram_peak_mb": 6787,
+          "system_ram_total_mb": 7546,
+          "tj_peak_c": 46.812,
+          "gpu_peak_c": 46.343,
+          "vdd_in_average_mw": 8852,
+          "vdd_in_peak_mw": 13164
+        }
+      }
+    },
+    "comparisons": {
+      "25W_vs_MAXN_step_time_increase_pct": 9.71,
+      "15W_vs_25W_step_time_increase_pct": 48.11,
+      "15W_vs_MAXN_step_time_increase_pct": 62.49
+    },
+    "recommended_anchor": {
+      "power_mode": "25W",
+      "step_median_sec": 0.6089,
+      "reason": "bounded production power mode with stable 30-step timing"
+    }
+  },
+  "networks": {
+    "batch": {
+      "raw": {
+        "meta": {
+          "n": 8,
+          "shrink": 1.0,
+          "acc": "4000/4000",
+          "cap_mbps": 8000.0,
+          "exits": 2,
+          "proto": "tcp",
+          "pattern": "batch",
+          "up_mb": 4.2,
+          "dn_mb": 4.2,
+          "batches": 4,
+          "rounds": 3,
+          "batch_s_median": 0.4144749453116674,
+          "batch_s_p90": 0.5512251575128175,
+          "per_client_mbps_median": 162.213396194229,
+          "per_client_mbps_min": 115.26613766001432,
+          "ratio_to_cap": 0.020276674524278625,
+          "aggregate_mbps": 1297.707169553832,
+          "wall_s": 8.59105746995192,
+          "t_unix": 1788881912.0887167
+        },
+        "per": {
+          "c5": {
+            "spans": [
+              [
+                0.015,
+                0.441
+              ],
+              [
+                0.441,
+                0.697
+              ],
+              [
+                0.697,
+                1.038
+              ],
+              [
+                1.038,
+                1.41
+              ],
+              [
+                1.41,
+                1.672
+              ],
+              [
+                1.672,
+                2.015
+              ],
+              [
+                2.015,
+                2.413
+              ],
+              [
+                2.413,
+                2.771
+              ],
+              [
+                2.771,
+                3.143
+              ],
+              [
+                3.143,
+                3.452
+              ],
+              [
+                3.452,
+                3.753
+              ],
+              [
+                3.753,
+                4.135
+              ]
+            ],
+            "times": [
+              0.42520992003846914,
+              0.25629913597367704,
+              0.34084764192812145,
+              0.3719400359550491,
+              0.2619987749494612,
+              0.34372220700606704,
+              0.39766567200422287,
+              0.35823896108195186,
+              0.3717765489127487,
+              0.3086450039409101,
+              0.30159114103298634,
+              0.38153868506196886
+            ],
+            "edge": 2
+          },
+          "c7": {
+            "spans": [
+              [
+                0.016,
+                0.649
+              ],
+              [
+                0.649,
+                1.058
+              ],
+              [
+                1.058,
+                1.488
+              ],
+              [
+                1.488,
+                1.959
+              ],
+              [
+                1.959,
+                2.385
+              ],
+              [
+                2.385,
+                2.651
+              ],
+              [
+                2.651,
+                2.983
+              ],
+              [
+                2.983,
+                3.322
+              ],
+              [
+                3.322,
+                3.75
+              ],
+              [
+                3.75,
+                4.069
+              ],
+              [
+                4.069,
+                4.372
+              ],
+              [
+                4.372,
+                4.668
+              ]
+            ],
+            "times": [
+              0.633348815026693,
+              0.4087917379802093,
+              0.42976561409886926,
+              0.47172145603690296,
+              0.42577129998244345,
+              0.2663820270681754,
+              0.33185684704221785,
+              0.3388261650688946,
+              0.42782130697742105,
+              0.3194498389493674,
+              0.3026625571073964,
+              0.2960159849608317
+            ],
+            "edge": 4
+          },
+          "c1": {
+            "spans": [
+              [
+                0.015,
+                0.479
+              ],
+              [
+                0.479,
+                1.015
+              ],
+              [
+                1.015,
+                1.407
+              ],
+              [
+                1.407,
+                1.905
+              ],
+              [
+                1.905,
+                2.342
+              ],
+              [
+                2.342,
+                2.731
+              ],
+              [
+                2.731,
+                3.134
+              ],
+              [
+                3.134,
+                3.6
+              ],
+              [
+                3.6,
+                4.024
+              ],
+              [
+                4.024,
+                4.29
+              ],
+              [
+                4.29,
+                4.541
+              ],
+              [
+                4.541,
+                4.781
+              ]
+            ],
+            "times": [
+              0.4640750680118799,
+              0.5357061339309439,
+              0.39175856101792306,
+              0.49785282101947814,
+              0.436880192020908,
+              0.38892071100417525,
+              0.403098919079639,
+              0.46672216698061675,
+              0.4239522779826075,
+              0.2652987780747935,
+              0.25079010892659426,
+              0.24055499397218227
+            ],
+            "edge": 2
+          },
+          "c4": {
+            "spans": [
+              [
+                0.015,
+                0.463
+              ],
+              [
+                0.463,
+                0.99
+              ],
+              [
+                0.99,
+                1.409
+              ],
+              [
+                1.409,
+                1.797
+              ],
+              [
+                1.797,
+                2.255
+              ],
+              [
+                2.255,
+                2.621
+              ],
+              [
+                2.621,
+                3.08
+              ],
+              [
+                3.08,
+                3.43
+              ],
+              [
+                3.43,
+                3.837
+              ],
+              [
+                3.837,
+                4.273
+              ],
+              [
+                4.273,
+                4.684
+              ],
+              [
+                4.684,
+                5.121
+              ]
+            ],
+            "times": [
+              0.44744843197986484,
+              0.526962473988533,
+              0.4191089840605855,
+              0.3884233810240403,
+              0.4570333668962121,
+              0.3666766439564526,
+              0.45873653201851994,
+              0.3505268939770758,
+              0.40641239599790424,
+              0.4359886720776558,
+              0.41143408708740026,
+              0.4361991910263896
+            ],
+            "edge": 1
+          },
+          "c0": {
+            "spans": [
+              [
+                0.016,
+                0.628
+              ],
+              [
+                0.628,
+                1.292
+              ],
+              [
+                1.292,
+                2.267
+              ],
+              [
+                2.267,
+                3.319
+              ],
+              [
+                3.319,
+                4.215
+              ],
+              [
+                4.215,
+                4.997
+              ],
+              [
+                4.997,
+                5.52
+              ],
+              [
+                5.52,
+                5.931
+              ],
+              [
+                5.931,
+                6.33
+              ],
+              [
+                6.33,
+                6.704
+              ],
+              [
+                6.704,
+                7.085
+              ],
+              [
+                7.085,
+                7.464
+              ]
+            ],
+            "times": [
+              0.6125883549684659,
+              0.664013558998704,
+              0.9744001469807699,
+              1.0521348200272769,
+              0.8964895820245147,
+              0.7820470239967108,
+              0.5221394030377269,
+              0.41190254501998425,
+              0.3985744770616293,
+              0.37353470909874886,
+              0.3811327420407906,
+              0.3793374530505389
+            ],
+            "edge": 1
+          },
+          "c3": {
+            "spans": [
+              [
+                0.015,
+                0.797
+              ],
+              [
+                0.797,
+                1.522
+              ],
+              [
+                1.522,
+                2.711
+              ],
+              [
+                2.711,
+                3.888
+              ],
+              [
+                3.888,
+                4.804
+              ],
+              [
+                4.804,
+                5.465
+              ],
+              [
+                5.465,
+                5.923
+              ],
+              [
+                5.923,
+                6.397
+              ],
+              [
+                6.397,
+                6.783
+              ],
+              [
+                6.783,
+                7.154
+              ],
+              [
+                7.154,
+                7.511
+              ],
+              [
+                7.511,
+                7.911
+              ]
+            ],
+            "times": [
+              0.7820209830533713,
+              0.7244453880703077,
+              1.1890126869548112,
+              1.1775132149923593,
+              0.9160562889883295,
+              0.6607649310026318,
+              0.4579456161009148,
+              0.4738442850066349,
+              0.38628993299789727,
+              0.37040133494883776,
+              0.3573688679607585,
+              0.3999326099874452
+            ],
+            "edge": 4
+          },
+          "c6": {
+            "spans": [
+              [
+                0.016,
+                0.989
+              ],
+              [
+                0.989,
+                1.671
+              ],
+              [
+                1.671,
+                2.277
+              ],
+              [
+                2.277,
+                3.304
+              ],
+              [
+                3.304,
+                4.666
+              ],
+              [
+                4.666,
+                5.611
+              ],
+              [
+                5.611,
+                6.179
+              ],
+              [
+                6.179,
+                6.777
+              ],
+              [
+                6.777,
+                7.402
+              ],
+              [
+                7.402,
+                7.839
+              ],
+              [
+                7.839,
+                8.161
+              ],
+              [
+                8.161,
+                8.492
+              ]
+            ],
+            "times": [
+              0.9728695639641955,
+              0.6825900899711996,
+              0.6054208599962294,
+              1.0275353980250657,
+              1.361621499992907,
+              0.9447877509519458,
+              0.5684615130303428,
+              0.5975357410497963,
+              0.6256759830284864,
+              0.4362165640341118,
+              0.3224235241068527,
+              0.330633150995709
+            ],
+            "edge": 3
+          },
+          "c2": {
+            "spans": [
+              [
+                0.016,
+                1.295
+              ],
+              [
+                1.295,
+                1.93
+              ],
+              [
+                1.93,
+                2.796
+              ],
+              [
+                2.796,
+                4.057
+              ],
+              [
+                4.057,
+                5.189
+              ],
+              [
+                5.189,
+                5.898
+              ],
+              [
+                5.898,
+                6.459
+              ],
+              [
+                6.459,
+                7.112
+              ],
+              [
+                7.112,
+                7.654
+              ],
+              [
+                7.654,
+                7.996
+              ],
+              [
+                7.996,
+                8.326
+              ],
+              [
+                8.326,
+                8.591
+              ]
+            ],
+            "times": [
+              1.2785083090420812,
+              0.6353383470559493,
+              0.8665119879879057,
+              1.260686746914871,
+              1.132311335997656,
+              0.7088056579232216,
+              0.5607031410327181,
+              0.6532811030047014,
+              0.5417471739929169,
+              0.34203977801371366,
+              0.3294496509479359,
+              0.2654075260506943
+            ],
+            "edge": 3
+          }
+        }
+      },
+      "windows": [
+        {
+          "index": 0,
+          "start_s": 0.015,
+          "end_s": 4.057,
+          "duration_s": 4.042000000000001,
+          "counted_payload_bits": 2150400000.0,
+          "effective_service_bps": 532013854.5274616,
+          "scope": "overlapping_index_slice_not_a_capacity_measurement"
+        },
+        {
+          "index": 1,
+          "start_s": 1.41,
+          "end_s": 7.112,
+          "duration_s": 5.702,
+          "counted_payload_bits": 2150400000.0,
+          "effective_service_bps": 377130831.2872676,
+          "scope": "overlapping_index_slice_not_a_capacity_measurement"
+        },
+        {
+          "index": 2,
+          "start_s": 2.771,
+          "end_s": 8.591,
+          "duration_s": 5.819999999999999,
+          "counted_payload_bits": 2150400000.0,
+          "effective_service_bps": 369484536.0824743,
+          "scope": "overlapping_index_slice_not_a_capacity_measurement"
+        }
+      ]
+    },
+    "burst": {
+      "raw": {
+        "meta": {
+          "n": 8,
+          "shrink": 1.0,
+          "acc": "4000/4000",
+          "cap_mbps": 8000.0,
+          "exits": 2,
+          "proto": "tcp",
+          "pattern": "burst",
+          "up_mb": 4.2,
+          "dn_mb": 4.2,
+          "batches": 4,
+          "rounds": 3,
+          "batch_s_median": 1.1913558317464776,
+          "batch_s_p90": 1.985316480495385,
+          "per_client_mbps_median": 56.72541808471902,
+          "per_client_mbps_min": 33.065134198145,
+          "ratio_to_cap": 0.007090677260589877,
+          "aggregate_mbps": 453.80334467775214,
+          "wall_s": 23.874743660911918,
+          "t_unix": 1788881939.0167592
+        },
+        "per": {
+          "c7": {
+            "spans": [
+              [
+                0.012,
+                1.902
+              ],
+              [
+                7.616,
+                8.78
+              ],
+              [
+                15.812,
+                16.898
+              ]
+            ],
+            "times": [
+              0.47243582451483235,
+              0.2910269619897008,
+              0.27156589648802765
+            ],
+            "edge": 4
+          },
+          "c0": {
+            "spans": [
+              [
+                0.012,
+                1.277
+              ],
+              [
+                7.616,
+                8.967
+              ],
+              [
+                15.812,
+                17.028
+              ]
+            ],
+            "times": [
+              0.31634425700758584,
+              0.33775641876854934,
+              0.3039868694904726
+            ],
+            "edge": 1
+          },
+          "c4": {
+            "spans": [
+              [
+                0.012,
+                3.765
+              ],
+              [
+                7.616,
+                11.364
+              ],
+              [
+                15.812,
+                20.005
+              ]
+            ],
+            "times": [
+              0.9382688182522543,
+              0.9370572317566257,
+              1.0484113694983535
+            ],
+            "edge": 1
+          },
+          "c3": {
+            "spans": [
+              [
+                0.011,
+                4.895
+              ],
+              [
+                7.616,
+                11.852
+              ],
+              [
+                15.812,
+                20.391
+              ]
+            ],
+            "times": [
+              1.220884604001185,
+              1.059163534489926,
+              1.1448402279929724
+            ],
+            "edge": 4
+          },
+          "c1": {
+            "spans": [
+              [
+                0.012,
+                5.48
+              ],
+              [
+                7.616,
+                12.592
+              ],
+              [
+                15.812,
+                21.082
+              ]
+            ],
+            "times": [
+              1.3669662504980806,
+              1.2439417569839861,
+              1.317477807519026
+            ],
+            "edge": 2
+          },
+          "c5": {
+            "spans": [
+              [
+                0.012,
+                6.82
+              ],
+              [
+                7.616,
+                13.434
+              ],
+              [
+                15.812,
+                21.093
+              ]
+            ],
+            "times": [
+              1.70224293199135,
+              1.4546597092412412,
+              1.3203794007422403
+            ],
+            "edge": 2
+          },
+          "c2": {
+            "spans": [
+              [
+                0.012,
+                7.474
+              ],
+              [
+                7.616,
+                15.499
+              ],
+              [
+                15.812,
+                23.812
+              ]
+            ],
+            "times": [
+              1.865553353476571,
+              1.9707147350127343,
+              1.9999182259780355
+            ],
+            "edge": 3
+          },
+          "c6": {
+            "spans": [
+              [
+                0.012,
+                7.616
+              ],
+              [
+                7.616,
+                15.811
+              ],
+              [
+                15.811,
+                23.875
+              ]
+            ],
+            "times": [
+              1.9009927849983796,
+              2.0489402742532548,
+              2.015764232754009
+            ],
+            "edge": 3
+          }
+        }
+      },
+      "windows": [
+        {
+          "index": 0,
+          "start_s": 0.011,
+          "end_s": 7.616,
+          "duration_s": 7.6049999999999995,
+          "counted_payload_bits": 2150400000.0,
+          "effective_service_bps": 282761341.2228797,
+          "scope": "synchronized_echo_round"
+        },
+        {
+          "index": 1,
+          "start_s": 7.616,
+          "end_s": 15.811,
+          "duration_s": 8.195,
+          "counted_payload_bits": 2150400000.0,
+          "effective_service_bps": 262403904.82001218,
+          "scope": "synchronized_echo_round"
+        },
+        {
+          "index": 2,
+          "start_s": 15.811,
+          "end_s": 23.875,
+          "duration_s": 8.064,
+          "counted_payload_bits": 2150400000.0,
+          "effective_service_bps": 266666666.66666666,
+          "scope": "synchronized_echo_round"
+        }
+      ]
+    }
+  },
+  "assumptions": {
+    "schema": 1,
+    "label": "KOREN/Jetson measurement-conditioned replay; not a new field measurement",
+    "jetson_source": "_archive/v2/jetson/results/jetson_compute_anchor.json",
+    "jetson_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+    "jetson_original_path": "jetson/results/jetson_compute_anchor.json",
+    "network_sources": {
+      "batch": "out/line_scale_detail/n8_s1.0_tcp_batch_1788881912.json",
+      "burst": "out/line_scale_detail/n8_s1.0_tcp_burst_1788881939.json"
+    },
+    "clients": 8,
+    "modes": [
+      "MAXN_SUPER",
+      "MAXN_SUPER",
+      "MAXN_SUPER",
+      "MAXN_SUPER",
+      "25W",
+      "25W",
+      "15W",
+      "15W"
+    ],
+    "calibration_steps": 10,
+    "evaluation_steps": [
+      10,
+      30
+    ],
+    "tail_fractions_assumed": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "release_models_assumed": [
+      "all_ready",
+      "compute_ready"
+    ],
+    "capacity_scales": [
+      1.0,
+      0.1
+    ],
+    "tail_padding_fraction_assumed": 0.05,
+    "completion_error_s_assumed": 0.01,
+    "quantum_bytes": 65536,
+    "notes": [
+      "One measured Jetson is replicated into eight logical timing profiles; these are not eight measured boards.",
+      "The measured Qwen full step is partitioned by an assumed tail fraction. No Jetson SFL backward-only measurement exists in these inputs.",
+      "The 4.2 MB payload comes from the KOREN echo workload, not from a measured Qwen split activation.",
+      "The network rate is an effective aggregate round-trip payload service parameter derived from common wall intervals, not physical one-way link capacity.",
+      "The 0.1 capacity factor is a synthetic sensitivity case; compute/payload are unchanged and no 32-to-8 equivalence is asserted.",
+      "Network window 0 and Jetson steps 0-9 calibrate the policy; windows 1-2 and steps 10-29 evaluate it."
+    ]
+  }
+}

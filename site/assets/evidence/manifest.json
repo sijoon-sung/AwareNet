@@ -1,0 +1,2726 @@
+{
+  "version": 1,
+  "date": "2026-09-27",
+  "kind": "historical evidence publication; no new experiments",
+  "byte_preserving_copies": true,
+  "groups": [
+    {
+      "id": "E1",
+      "title": "KOREN 시나리오: 결합 시스템의 완료 시간",
+      "claim": "기존 기준선과 폭·경로 결합 시스템의 조건별 평균 라운드 시간을 재집계한다.",
+      "conditions": "HPC의 CPU 클라이언트 32프로세스·V100 서버, KOREN VM 2대·논리 엣지 4개. CIFAR-10 CNN, cut=2, 배치 32×4, 24라운드×3시드×4조건×2정책. 초기 4라운드를 제외한 시드별 평균을 다시 평균한다.",
+      "limits": "32대 물리 기기 실험이 아니다. tc 용량 교란과 연산 지연을 주입했다. 기준선과 결합 정책의 출구 수·폭·배정이 함께 달라 순수 경로 효과 및 동일 정확도 도달 시간을 입증하지 않는다. args.alpha=1.2는 지연 기준선 배율이며, 데이터 분할은 fed_client의 alpha-dir 기본값 0.5다. 로그의 mp 필드보다 실행 인자 및 출구 기록을 우선한다.",
+      "archive": "E1.zip",
+      "archive_sha256": "7a86f0fee91c469138f0962f51229881d32cb467bbbc4f9207e4b83b69d34400",
+      "files": [
+        {
+          "source_path": "out/scen32_smoke_s1_bothmp_perturb.log",
+          "public_path": "E1/out/scen32_smoke_s1_bothmp_perturb.log",
+          "bytes": 192,
+          "sha256": "f6ef134425de636b51b05ab4f055b089ffad4aa98ac5e43cabe268172d87a799"
+        },
+        {
+          "source_path": "out/scen32_traffic_s1_bothmp_perturb.log",
+          "public_path": "E1/out/scen32_traffic_s1_bothmp_perturb.log",
+          "bytes": 97,
+          "sha256": "fff41d23d1347bd081ee947097dfcff183d51c3037a629c347844b470c21e941"
+        },
+        {
+          "source_path": "out/scen32_traffic_s2_bothmp_perturb.log",
+          "public_path": "E1/out/scen32_traffic_s2_bothmp_perturb.log",
+          "bytes": 194,
+          "sha256": "11f19a0e3825d9f332016d87e5d9266d786ca5d710da2c7e17df47d942391abf"
+        },
+        {
+          "source_path": "out/scen32_traffic_s3_bothmp_perturb.log",
+          "public_path": "E1/out/scen32_traffic_s3_bothmp_perturb.log",
+          "bytes": 194,
+          "sha256": "1b11f5ef149ea77fb2bef26fc2c7d93520ab2b2e2b45d610b1242de2676573c5"
+        },
+        {
+          "source_path": "out/scen32_vary_s1_bothmp_perturb.log",
+          "public_path": "E1/out/scen32_vary_s1_bothmp_perturb.log",
+          "bytes": 586,
+          "sha256": "7626fab22cd134e7eb276202f0101c9688982fe0f434b30095ab5693e5438306"
+        },
+        {
+          "source_path": "out/scen32_vary_s2_bothmp_perturb.log",
+          "public_path": "E1/out/scen32_vary_s2_bothmp_perturb.log",
+          "bytes": 1172,
+          "sha256": "261d236a324f30b14b1d9a6eb4702e9c4a5b55f4427537c87d59ec15d62f2a0c"
+        },
+        {
+          "source_path": "out/scen32_vary_s3_bothmp_perturb.log",
+          "public_path": "E1/out/scen32_vary_s3_bothmp_perturb.log",
+          "bytes": 1172,
+          "sha256": "2782ca373f0f374d9109c70eb22bd19032fdb81d168085eede1fdbbe1cf1597a"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s1_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_normal_s1_bothmp_uniform.args.json",
+          "bytes": 869,
+          "sha256": "6e6fb0a1d8c3913266dbc4bdd3235e25c549d0caffe2fcab09aafa6b66c8689b"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s1_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_normal_s1_bothmp_uniform.jsonl",
+          "bytes": 268493,
+          "sha256": "1870d95058612728f87e773f32935bbe4955ac33110c99014482501d0e99c0c6"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s1_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_normal_s1_bothmp_uniform.profile.json",
+          "bytes": 2424,
+          "sha256": "aecf1ba265849620ceb09fb50af07ba49f4fd2a761de6e95cfe15b66df766780"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s1_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_normal_s1_bothmp_widthpath.args.json",
+          "bytes": 883,
+          "sha256": "24a9913ccbbb3bc94f8acc39454a8f4af2b1f16ab8ee349019dddc31c90942ff"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s1_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_normal_s1_bothmp_widthpath.jsonl",
+          "bytes": 300791,
+          "sha256": "3382bff2cb5a8495a4c6c59a28053a143a6832b0d7bf2e5b5f2b99d85597eb45"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s1_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_normal_s1_bothmp_widthpath.profile.json",
+          "bytes": 9785,
+          "sha256": "1ad17b49df452c1c3eee7e69a8f1704c748152896b325ee5e3df64a52855acd6"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s2_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_normal_s2_bothmp_uniform.args.json",
+          "bytes": 869,
+          "sha256": "c2dd07a71ffbeae33b4a3b321a96cfd5845875096b9e0833027ab02efc51cb48"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s2_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_normal_s2_bothmp_uniform.jsonl",
+          "bytes": 294386,
+          "sha256": "8d3a5bde97395e0b264a976daf4e27e6643a05ebcf85923858f9ddd2ca7cb108"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s2_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_normal_s2_bothmp_uniform.profile.json",
+          "bytes": 2445,
+          "sha256": "2cb89a4c7a6cb278f6da786f296e4a8c77440ac0a9969cce630238fce464dad9"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s2_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_normal_s2_bothmp_widthpath.args.json",
+          "bytes": 883,
+          "sha256": "d82f61855f14d6278dd14d85b7d8dd33b63fa3538c944a64fe36a49eac5a71be"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s2_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_normal_s2_bothmp_widthpath.jsonl",
+          "bytes": 352595,
+          "sha256": "8df1c01045878c17043d360b16ce6efc57214113afa770abed6be542c0cd8c54"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s2_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_normal_s2_bothmp_widthpath.profile.json",
+          "bytes": 9772,
+          "sha256": "c8cbc2c4abf58af0e863e84e6e4916b8d3d7e335d093248dae4cde4ee5b21e4e"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s3_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_normal_s3_bothmp_uniform.args.json",
+          "bytes": 869,
+          "sha256": "aab8a104c18eded1ba2cf5cc7614db4cfa0900db7c3f53307fb1e095430737fe"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s3_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_normal_s3_bothmp_uniform.jsonl",
+          "bytes": 294456,
+          "sha256": "74871a5fffc1e218811a107c264aae9388a91c493501693b61a20a679c112460"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s3_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_normal_s3_bothmp_uniform.profile.json",
+          "bytes": 2448,
+          "sha256": "5a1cdc35357733d2a36ccc128b9e0826990b1c8a2661699260b0fa1cb1d68dbe"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s3_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_normal_s3_bothmp_widthpath.args.json",
+          "bytes": 883,
+          "sha256": "379fcb78a7d68db11192a9a3fb3d90eb088a1233ac71ca22ca79530f7fa4f5fb"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s3_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_normal_s3_bothmp_widthpath.jsonl",
+          "bytes": 352843,
+          "sha256": "a139d527835639bd49f06413af2e3fab0a71193760826e9b4c310fdf697a1746"
+        },
+        {
+          "source_path": "out/wp_scen32_normal_s3_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_normal_s3_bothmp_widthpath.profile.json",
+          "bytes": 9765,
+          "sha256": "4b94727a2f9f3508e38d6a31d1f4c1a0bdc5b287b76be87e3b2e3890d5558ed0"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s1_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_slow_s1_bothmp_uniform.args.json",
+          "bytes": 867,
+          "sha256": "c10d8bec9d5c0031ef9c085c6e305ca7a9e576a2ae0474fb73a2c104189965b6"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s1_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_slow_s1_bothmp_uniform.jsonl",
+          "bytes": 268456,
+          "sha256": "f91b49b1143721f801b066ae3f4b057db47ad19593d04d0d06a062ddc5d286aa"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s1_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_slow_s1_bothmp_uniform.profile.json",
+          "bytes": 2444,
+          "sha256": "bc6ea4401857eaf63efffbcf0987d4fcfa03dc6b804ac92b964a8e21983310dd"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s1_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_slow_s1_bothmp_widthpath.args.json",
+          "bytes": 881,
+          "sha256": "1910d34db1d160e64036496c24ef673059aa858c687ed373f5a15e57f4275bd0"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s1_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_slow_s1_bothmp_widthpath.jsonl",
+          "bytes": 300732,
+          "sha256": "2c264d6ee39b7b5e98a97c7fac65b486002781acede5fd7aa1bbcec347b8615e"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s1_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_slow_s1_bothmp_widthpath.profile.json",
+          "bytes": 9769,
+          "sha256": "8e8b05c5451f58d9ff179d24ed070f3f8af1481ce226afe9f623ef62d6939f5e"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s2_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_slow_s2_bothmp_uniform.args.json",
+          "bytes": 867,
+          "sha256": "ded5619d6fac9a2956e048a0f67a8bfb34ec6e1902b5661c95ae778e94c6768a"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s2_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_slow_s2_bothmp_uniform.jsonl",
+          "bytes": 294391,
+          "sha256": "1dd1f449c1c8bfb7183ac2ec86fcd96d029cd692a2434016c10e2ae9560bdf27"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s2_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_slow_s2_bothmp_uniform.profile.json",
+          "bytes": 2442,
+          "sha256": "f28425f967431c2dcb5a9fc3584424be439f000cee135cd8f765c6f8874038c3"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s2_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_slow_s2_bothmp_widthpath.args.json",
+          "bytes": 881,
+          "sha256": "0ecfff4914d7a4c1d9049a6851ea98b4314635d46ddcc9a69cd52e033540505c"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s2_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_slow_s2_bothmp_widthpath.jsonl",
+          "bytes": 352723,
+          "sha256": "bb86545fa0719412ffe8d18144cd9c0ba79aa6deb5a7273251c5fab27837096f"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s2_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_slow_s2_bothmp_widthpath.profile.json",
+          "bytes": 9860,
+          "sha256": "12cc901bbdd5c2e91320a07877b6f2cc754a241d2e4e47d86312d811eae3036a"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s3_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_slow_s3_bothmp_uniform.args.json",
+          "bytes": 867,
+          "sha256": "a4d1b87735d9de6f79e0ed67208c2f8c47f5d93d8ee0564de0be375d1dd5d24c"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s3_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_slow_s3_bothmp_uniform.jsonl",
+          "bytes": 294357,
+          "sha256": "000c20ecfef4e33ff3d7962017b26c525b6a078c5f6f2c206fb1f53601710301"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s3_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_slow_s3_bothmp_uniform.profile.json",
+          "bytes": 2441,
+          "sha256": "99cf28186653232d33c312661177a4fbb0a5bd1bed6ef585167207651204848a"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s3_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_slow_s3_bothmp_widthpath.args.json",
+          "bytes": 881,
+          "sha256": "7eaab11e01dc9bd730551ccd09eca362042344b0c63b8e59c72116904697696e"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s3_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_slow_s3_bothmp_widthpath.jsonl",
+          "bytes": 352624,
+          "sha256": "fa2b0085abf52397019e41022643164908237ae75097ae8fe29ed004ffdf2ea3"
+        },
+        {
+          "source_path": "out/wp_scen32_slow_s3_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_slow_s3_bothmp_widthpath.profile.json",
+          "bytes": 9863,
+          "sha256": "abc509f3e894594671a76c06adfa26fe0716166d74cbc071346e92cb9bde378d"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s1_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_traffic_s1_bothmp_uniform.args.json",
+          "bytes": 870,
+          "sha256": "65c98f7e746a7f9de5871c56d703ac5a23dde1047e91cf55504f929d6838d6ba"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s1_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_traffic_s1_bothmp_uniform.jsonl",
+          "bytes": 268744,
+          "sha256": "854209250562053593541e65ef2571fb6dd7d057541fe2535296e3c6267f4ac8"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s1_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_traffic_s1_bothmp_uniform.profile.json",
+          "bytes": 2417,
+          "sha256": "086d45f529004eed8c8ab03afa1d961249476045409a9f67a063568bb21ede1b"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s1_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_traffic_s1_bothmp_widthpath.args.json",
+          "bytes": 884,
+          "sha256": "e02d67ab938103915dc02a2cac5dccefaacd5288783160891d057f7f6df0327e"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s1_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_traffic_s1_bothmp_widthpath.jsonl",
+          "bytes": 352346,
+          "sha256": "0bb6634df5abeadcfed26188dd5a742522b99e619c8889c4599979ef1e4067a3"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s1_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_traffic_s1_bothmp_widthpath.profile.json",
+          "bytes": 9809,
+          "sha256": "28228616fa5fa248c39f01309208083e2e84557b181a831e610057b6074669b6"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s2_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_traffic_s2_bothmp_uniform.args.json",
+          "bytes": 870,
+          "sha256": "ae24fd78da1d551d14f51824c6fe00a82aeadfc7cea12fdd983a0b8ec1584239"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s2_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_traffic_s2_bothmp_uniform.jsonl",
+          "bytes": 294623,
+          "sha256": "a184bf7df8bcaa3bd98d251bee712a0516cd736e4d5b60ca12e787653107ed3e"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s2_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_traffic_s2_bothmp_uniform.profile.json",
+          "bytes": 2476,
+          "sha256": "f3c2da780a8c8f37f95d858425ebcca4383225317209bd6e8880ce1fc9145c47"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s2_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_traffic_s2_bothmp_widthpath.args.json",
+          "bytes": 884,
+          "sha256": "94eca96bcc702b9fbbea98667c78812968151d0fc2aa6737b85cf4648e2b1e95"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s2_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_traffic_s2_bothmp_widthpath.jsonl",
+          "bytes": 352503,
+          "sha256": "f75bc57e17324a808135d2ece6fe899a6d9193da175d4431c626a00090ff3f5a"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s2_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_traffic_s2_bothmp_widthpath.profile.json",
+          "bytes": 9792,
+          "sha256": "30f83005446794e77e282acfae13bbfddaf0ed2209e746713dc3d551e2428dd3"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s3_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_traffic_s3_bothmp_uniform.args.json",
+          "bytes": 870,
+          "sha256": "46e81e6c4e16ee73aebe8c74bae265fff439b063c8bc1e3a283dfa7d961754c1"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s3_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_traffic_s3_bothmp_uniform.jsonl",
+          "bytes": 294670,
+          "sha256": "30dc20dd2ab9dd449c7558f3ff5c1ddaaacd10ac6f021c8fd4ba5bf6b7f7946c"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s3_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_traffic_s3_bothmp_uniform.profile.json",
+          "bytes": 2474,
+          "sha256": "cb939427fdd6fbde68e28b5cdad5637604e2a30edac35d3d1a967a5bb65bd95e"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s3_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_traffic_s3_bothmp_widthpath.args.json",
+          "bytes": 884,
+          "sha256": "7c2740c2e0fd0256d4a36f2112960e4c5b288a2663e80e8c0cf3a56fb57f92cc"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s3_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_traffic_s3_bothmp_widthpath.jsonl",
+          "bytes": 352368,
+          "sha256": "fa9751abad8ab6f5f271b47aec6b121c9a9c487b0e4aae753fe0959f81104d38"
+        },
+        {
+          "source_path": "out/wp_scen32_traffic_s3_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_traffic_s3_bothmp_widthpath.profile.json",
+          "bytes": 9806,
+          "sha256": "f4926f95f1174cfd8e6b434391bf3c85b5300b19898294c8c234e35ccc54355f"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s1_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_vary_s1_bothmp_uniform.args.json",
+          "bytes": 867,
+          "sha256": "a759f75752003256e112c1ab994fa8dbe457e8bb4e69ea75a1ada92672590c15"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s1_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_vary_s1_bothmp_uniform.jsonl",
+          "bytes": 268540,
+          "sha256": "d70b7bc9e8521d72748e13d4853c78627246db1823900b053a03afa59bf15961"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s1_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_vary_s1_bothmp_uniform.profile.json",
+          "bytes": 2454,
+          "sha256": "e841eed2907e8d948ca9ad3202159cfb467b6e7d9d947eb1fedfba018a835583"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s1_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_vary_s1_bothmp_widthpath.args.json",
+          "bytes": 881,
+          "sha256": "2f133ed269240078002aee6f479186da4548121f4d3f8555cb310d1f7704c397"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s1_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_vary_s1_bothmp_widthpath.jsonl",
+          "bytes": 352284,
+          "sha256": "4d53b8bf12a6b16a4681bd14a8edb20ced1841b83d73d2d7c0610b6e8072778e"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s1_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_vary_s1_bothmp_widthpath.profile.json",
+          "bytes": 9829,
+          "sha256": "aa6f09db354f3442959f81edd58873108d14440b0ca367b825333e8aee1ccd5a"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s2_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_vary_s2_bothmp_uniform.args.json",
+          "bytes": 867,
+          "sha256": "999809cc2f71f149e7a702b72db9791ba35cf043088a1543e4000d0ad75dc608"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s2_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_vary_s2_bothmp_uniform.jsonl",
+          "bytes": 294366,
+          "sha256": "feb2de455836ea1de064bf4dbf1530726f90cb4066f585f2d47e71c33e322cdb"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s2_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_vary_s2_bothmp_uniform.profile.json",
+          "bytes": 2466,
+          "sha256": "9010a351e7169c3c9aa00e65d89abf5032873c46feb55bdbb207c901a87a3f30"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s2_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_vary_s2_bothmp_widthpath.args.json",
+          "bytes": 881,
+          "sha256": "9ae36803422901227ffa030fdf3d6256719dfd910e911d54b8875c5425abbd38"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s2_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_vary_s2_bothmp_widthpath.jsonl",
+          "bytes": 352317,
+          "sha256": "751d64dc24400ad69b0d2c78372794b90dfe38f2b900ce1c3960c9580e48db9c"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s2_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_vary_s2_bothmp_widthpath.profile.json",
+          "bytes": 9797,
+          "sha256": "f7743dd99f4532abdf7ca3d167ca52672fbe5ec2111d1d5387f78651578af8cb"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s3_bothmp_uniform.args.json",
+          "public_path": "E1/out/wp_scen32_vary_s3_bothmp_uniform.args.json",
+          "bytes": 867,
+          "sha256": "d193a5dbc738b472e747ee35eaecc97c826808e5469702bf1822ae5d46826705"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s3_bothmp_uniform.jsonl",
+          "public_path": "E1/out/wp_scen32_vary_s3_bothmp_uniform.jsonl",
+          "bytes": 294374,
+          "sha256": "13f7482a377f370c670252a4428550be94cff32c0fee88994d2ee532d30d1c71"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s3_bothmp_uniform.profile.json",
+          "public_path": "E1/out/wp_scen32_vary_s3_bothmp_uniform.profile.json",
+          "bytes": 2468,
+          "sha256": "b96e85ad48c48c4ef67ce7939b5ae968c0cbf302eaf54c55c7cf97edddb6d1d1"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s3_bothmp_widthpath.args.json",
+          "public_path": "E1/out/wp_scen32_vary_s3_bothmp_widthpath.args.json",
+          "bytes": 881,
+          "sha256": "29929c85dd800152acd2867af97b7db7ec8e35f404200d73226bf8e597517080"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s3_bothmp_widthpath.jsonl",
+          "public_path": "E1/out/wp_scen32_vary_s3_bothmp_widthpath.jsonl",
+          "bytes": 352310,
+          "sha256": "ef57e29b13b5543e9dbe6109e31aa1ec79ae9e6067bfabb8cf09469a89e7660f"
+        },
+        {
+          "source_path": "out/wp_scen32_vary_s3_bothmp_widthpath.profile.json",
+          "public_path": "E1/out/wp_scen32_vary_s3_bothmp_widthpath.profile.json",
+          "bytes": 9824,
+          "sha256": "1be35692f51cf34fa27996e06a0b1d55b9c61c173d3deeadd80f7a28df11dbbe"
+        },
+        {
+          "source_path": "scripts/exp/cond.py",
+          "public_path": "E1/scripts/exp/cond.py",
+          "bytes": 7684,
+          "sha256": "89b068bb87e231b31760b7266436fa8f1482a2f2dd0a98997ce561d5ef721aad"
+        },
+        {
+          "source_path": "scripts/exp/conditions.json",
+          "public_path": "E1/scripts/exp/conditions.json",
+          "bytes": 92792,
+          "sha256": "fd087c4f05d55bb96834c1ccdefa526693328185afa4ef5d8864c8c6ceb5d5ed"
+        },
+        {
+          "source_path": "scripts/exp/run_real.sh",
+          "public_path": "E1/scripts/exp/run_real.sh",
+          "bytes": 5420,
+          "sha256": "060349e4e8125c57cca58307988b7a78264190e3422c09f0460ddc39f7f3b191"
+        },
+        {
+          "source_path": "scripts/exp/run_scen32.sh",
+          "public_path": "E1/scripts/exp/run_scen32.sh",
+          "bytes": 3883,
+          "sha256": "1746d16c3bfa2a5de9d3ab5551f4c677ff382cc2d3eb54865a46cba5b51b1b9f"
+        },
+        {
+          "source_path": "scripts/exp/scenario_perturb.sh",
+          "public_path": "E1/scripts/exp/scenario_perturb.sh",
+          "bytes": 1995,
+          "sha256": "260a09c864777f3090ef264690b90403342cb73a86141e0f8c54d805929bc600"
+        },
+        {
+          "source_path": "sfl/fed_client.py",
+          "public_path": "E1/sfl/fed_client.py",
+          "bytes": 25339,
+          "sha256": "9d148234547fcf2ea8a342cdf9e5bb42ef9fc5fc9e9d98266988e6f2bc8aa0f9"
+        },
+        {
+          "source_path": "sfl/fed_server.py",
+          "public_path": "E1/sfl/fed_server.py",
+          "bytes": 37443,
+          "sha256": "6b05d5eee89381b1998cc5de4424fd98676854d734aeb219724fa387e13f7008"
+        },
+        {
+          "source_path": "sfl/net/real_rig.sh",
+          "public_path": "E1/sfl/net/real_rig.sh",
+          "bytes": 11843,
+          "sha256": "99822fc0bf78e89dfdfddf6daa3947e09926718fd9576378f8d1fbce0a07c682"
+        }
+      ],
+      "statistics": [
+        {
+          "condition": "normal",
+          "uniform": {
+            "seed_means_s": [
+              63.32905,
+              63.1823,
+              63.0551
+            ],
+            "mean_s": 63.18881666666667
+          },
+          "widthpath": {
+            "seed_means_s": [
+              47.3453,
+              48.24835,
+              47.33715
+            ],
+            "mean_s": 47.6436
+          },
+          "reduction_pct": 24.60121503567747
+        },
+        {
+          "condition": "traffic",
+          "uniform": {
+            "seed_means_s": [
+              109.43684999999999,
+              109.59325,
+              109.49249999999999
+            ],
+            "mean_s": 109.50753333333333
+          },
+          "widthpath": {
+            "seed_means_s": [
+              63.16765,
+              63.069250000000004,
+              62.38705
+            ],
+            "mean_s": 62.87465
+          },
+          "reduction_pct": 42.58417837920435
+        },
+        {
+          "condition": "slow",
+          "uniform": {
+            "seed_means_s": [
+              78.8144,
+              79.1992,
+              79.33425
+            ],
+            "mean_s": 79.11595
+          },
+          "widthpath": {
+            "seed_means_s": [
+              47.290549999999996,
+              47.3461,
+              47.1361
+            ],
+            "mean_s": 47.25758333333333
+          },
+          "reduction_pct": 40.26794428514941
+        },
+        {
+          "condition": "vary",
+          "uniform": {
+            "seed_means_s": [
+              73.16485,
+              72.75245,
+              73.0011
+            ],
+            "mean_s": 72.97279999999999
+          },
+          "widthpath": {
+            "seed_means_s": [
+              53.44995,
+              53.59405,
+              53.388
+            ],
+            "mean_s": 53.477333333333334
+          },
+          "reduction_pct": 26.716073203531533
+        }
+      ]
+    },
+    {
+      "id": "E2",
+      "title": "Jetson: 장비 연산 프로파일",
+      "claim": "한 보드에서 측정한 전력 모드별 전체 학습 스텝 시간의 차이를 확인한다.",
+      "conditions": "Jetson Orin Nano Super 8GB 한 대. 2026-08-13~14 기록. Qwen2.5-0.5B FP32, LoRA r=32(q_proj/v_proj), batch=1, seq=256. 각 모드 warmup=3 제외 후 30스텝, 총 90스텝.",
+      "limits": "KOREN 32프로세스 실행에 Jetson을 연결한 통합 실험이 아니다. 전체 LoRA 스텝 시간을 CNN 폭별 비용이나 반환 후 연산 시간으로 그대로 사용할 수 없다. 소프트웨어 버전은 환경 로그의 기록값이다. 원시 스텝·tegrastats·환경·콘솔과 측정 스크립트를 함께 제공한다.",
+      "archive": "E2.zip",
+      "archive_sha256": "e242899a00f28e9362fdf936d6ec8f762c9a68e6fff7881d1b22bde484e3403e",
+      "files": [
+        {
+          "source_path": "_archive/v2/jetson/results/15w_b1_s256_anchor/console.log",
+          "public_path": "E2/_archive/v2/jetson/results/15w_b1_s256_anchor/console.log",
+          "bytes": 1722,
+          "sha256": "5ea2e44a5e0d8051ebc5f6eb71ddfb621cf0000bb3022abb9d8dbe1dc6175629",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/15w_b1_s256_anchor/console.log",
+          "sha256_lf_normalized": "5ea2e44a5e0d8051ebc5f6eb71ddfb621cf0000bb3022abb9d8dbe1dc6175629"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/15w_b1_s256_anchor/environment.txt",
+          "public_path": "E2/_archive/v2/jetson/results/15w_b1_s256_anchor/environment.txt",
+          "bytes": 965,
+          "sha256": "994ac65797025be4772cdbeaa755fb3d64db73f930844ca8af3c1ee2bbf47c53",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/15w_b1_s256_anchor/environment.txt",
+          "sha256_lf_normalized": "5573394feaaf11a1076114cc8836248a59d8436b7782167112f44ff7fdd5df9e"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/15w_b1_s256_anchor/lora_train_speed.json",
+          "public_path": "E2/_archive/v2/jetson/results/15w_b1_s256_anchor/lora_train_speed.json",
+          "bytes": 1041,
+          "sha256": "97346beefd02340d46f4095c569e1052c922cbf0a0f20b9861e2cdb9b810ba1c",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/15w_b1_s256_anchor/lora_train_speed.json",
+          "sha256_lf_normalized": "c1bbdba76bb60b3c3f069b80610c72cbec6610530b941c874ffb8a24bb40a597"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/15w_b1_s256_anchor/status.txt",
+          "public_path": "E2/_archive/v2/jetson/results/15w_b1_s256_anchor/status.txt",
+          "bytes": 17,
+          "sha256": "0ad91e5141287bf2972c96e1bb7b27bd4e24ca24cdf568360c1f910b24212c61",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/15w_b1_s256_anchor/status.txt",
+          "sha256_lf_normalized": "6d668f6fd5c1d4bc3b63c64d5cf509ee560fe0c83594de32b16ae382b5c53c0f"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/15w_b1_s256_anchor/system_summary.txt",
+          "public_path": "E2/_archive/v2/jetson/results/15w_b1_s256_anchor/system_summary.txt",
+          "bytes": 198,
+          "sha256": "f6e4fd23f4492bceefd8c99015ef183b4bbec8ef52d08e66ee3036b7c56ce75b",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/15w_b1_s256_anchor/system_summary.txt",
+          "sha256_lf_normalized": "a839a9225f91263c3c55a9b8e144487e0be616ee506ce0b266fa477b8a032b48"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/15w_b1_s256_anchor/tegrastats.log",
+          "public_path": "E2/_archive/v2/jetson/results/15w_b1_s256_anchor/tegrastats.log",
+          "bytes": 62260,
+          "sha256": "e87ce9a6375f25172fa54cf5f4cefb1ccbc2ddb8b9bd98ee6e65b7370eaac95b",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/15w_b1_s256_anchor/tegrastats.log",
+          "sha256_lf_normalized": "36e700ae0fe0c0f3724efbb3ca138cce78699b3cd4d83d9404089dd91dc7fdc3"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/25w_b1_s256_anchor/console.log",
+          "public_path": "E2/_archive/v2/jetson/results/25w_b1_s256_anchor/console.log",
+          "bytes": 1632,
+          "sha256": "40d73619f0a04eda814b8d872eb509d528bc0ce04cf631dd5e11bc8ee7eef3cf",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/25w_b1_s256_anchor/console.log",
+          "sha256_lf_normalized": "40d73619f0a04eda814b8d872eb509d528bc0ce04cf631dd5e11bc8ee7eef3cf"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/25w_b1_s256_anchor/environment.txt",
+          "public_path": "E2/_archive/v2/jetson/results/25w_b1_s256_anchor/environment.txt",
+          "bytes": 965,
+          "sha256": "d8daec8c9a6af753fd5c4decf8cc802c5008f2d146c5caeec4b062071aac1685",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/25w_b1_s256_anchor/environment.txt",
+          "sha256_lf_normalized": "694b402ec04bdb4b791e5d920246526e8c4151ae5f6fe23aed0b24ffce7ca811"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/25w_b1_s256_anchor/lora_train_speed.json",
+          "public_path": "E2/_archive/v2/jetson/results/25w_b1_s256_anchor/lora_train_speed.json",
+          "bytes": 1043,
+          "sha256": "bd486f854158f54049a52f1e370e390da7c46ee96ebdf4095191d64e95b721b8",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/25w_b1_s256_anchor/lora_train_speed.json",
+          "sha256_lf_normalized": "aec28d0c70b2a33216f2d3240cab356a81421a2389c6d973397fea9bf8a99ec8"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/25w_b1_s256_anchor/status.txt",
+          "public_path": "E2/_archive/v2/jetson/results/25w_b1_s256_anchor/status.txt",
+          "bytes": 17,
+          "sha256": "0ad91e5141287bf2972c96e1bb7b27bd4e24ca24cdf568360c1f910b24212c61",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/25w_b1_s256_anchor/status.txt",
+          "sha256_lf_normalized": "6d668f6fd5c1d4bc3b63c64d5cf509ee560fe0c83594de32b16ae382b5c53c0f"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/25w_b1_s256_anchor/system_summary.txt",
+          "public_path": "E2/_archive/v2/jetson/results/25w_b1_s256_anchor/system_summary.txt",
+          "bytes": 197,
+          "sha256": "9dc31ff9b598c619d8c9989f64dd7237f40bb9553725dd73d25858730feaf63f",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/25w_b1_s256_anchor/system_summary.txt",
+          "sha256_lf_normalized": "02b7dfd3f23a7ceff2e1bdc0476fa3e455033b38158ae5bdaa673e509abd5ee5"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/25w_b1_s256_anchor/tegrastats.log",
+          "public_path": "E2/_archive/v2/jetson/results/25w_b1_s256_anchor/tegrastats.log",
+          "bytes": 49884,
+          "sha256": "4c3ce65519cd2c778063e34d00f946ef74248628805b8e89cadb02547e088360",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/25w_b1_s256_anchor/tegrastats.log",
+          "sha256_lf_normalized": "2854cc7692d44f631035ed757eba36e30a343ca7723112976ffc354bce29672b"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/jetson_compute_anchor.json",
+          "public_path": "E2/_archive/v2/jetson/results/jetson_compute_anchor.json",
+          "bytes": 5338,
+          "sha256": "3bb8833904d3625a1b3fbe69bc097b18489c18c36220ffd1e22086333bd752d4",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/jetson_compute_anchor.json",
+          "sha256_lf_normalized": "d6070b132ddee6ad4267e98fc35ab05c761411a2a622c1726c5768d203203e22"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/maxn_super_b1_s256_anchor/console.log",
+          "public_path": "E2/_archive/v2/jetson/results/maxn_super_b1_s256_anchor/console.log",
+          "bytes": 1555,
+          "sha256": "a18ad48d3a5b14723da50233f6ffb975c9da6ef0d0b1fd0d9c7cabdd81d5d093",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/maxn_super_b1_s256_anchor/console.log",
+          "sha256_lf_normalized": "a18ad48d3a5b14723da50233f6ffb975c9da6ef0d0b1fd0d9c7cabdd81d5d093"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/maxn_super_b1_s256_anchor/environment.txt",
+          "public_path": "E2/_archive/v2/jetson/results/maxn_super_b1_s256_anchor/environment.txt",
+          "bytes": 611,
+          "sha256": "7b1ca78f04dc025f7b4ed53a232cd7af0a2138136299b4ebf3d7c4930b3a9389",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/maxn_super_b1_s256_anchor/environment.txt",
+          "sha256_lf_normalized": "2a3e35afd59d1639d38bfc9397113a75d976de63e9a929bd88fc603792a59539"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/maxn_super_b1_s256_anchor/lora_train_speed.json",
+          "public_path": "E2/_archive/v2/jetson/results/maxn_super_b1_s256_anchor/lora_train_speed.json",
+          "bytes": 1048,
+          "sha256": "d1ff57aeb7a818846cdf5b27d7c8d69377e29513767bf61aa73076f18c734a77",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/maxn_super_b1_s256_anchor/lora_train_speed.json",
+          "sha256_lf_normalized": "56b913e716771a2f7269db71eed16909d896b01d8b0961d77b0b460dbe28e21e"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/maxn_super_b1_s256_anchor/status.txt",
+          "public_path": "E2/_archive/v2/jetson/results/maxn_super_b1_s256_anchor/status.txt",
+          "bytes": 17,
+          "sha256": "0ad91e5141287bf2972c96e1bb7b27bd4e24ca24cdf568360c1f910b24212c61",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/maxn_super_b1_s256_anchor/status.txt",
+          "sha256_lf_normalized": "6d668f6fd5c1d4bc3b63c64d5cf509ee560fe0c83594de32b16ae382b5c53c0f"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/maxn_super_b1_s256_anchor/system_summary.txt",
+          "public_path": "E2/_archive/v2/jetson/results/maxn_super_b1_s256_anchor/system_summary.txt",
+          "bytes": 199,
+          "sha256": "b7ff5a56c348eb62f726e17c1893c405722d9940011c8e62bd7d6f686af9a660",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/maxn_super_b1_s256_anchor/system_summary.txt",
+          "sha256_lf_normalized": "f18fa66d1714832ae9161ee852df36eadde6eef003d1a22f61d7ac85c2e201a6"
+        },
+        {
+          "source_path": "_archive/v2/jetson/results/maxn_super_b1_s256_anchor/tegrastats.log",
+          "public_path": "E2/_archive/v2/jetson/results/maxn_super_b1_s256_anchor/tegrastats.log",
+          "bytes": 47095,
+          "sha256": "d151764ffa1828645061324f6c484b927637b36260ab5f1cff4e2c2e52833e4f",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/results/maxn_super_b1_s256_anchor/tegrastats.log",
+          "sha256_lf_normalized": "1b3b358526d3cc7da86f975b4763294a4495e63ce45d8449b1ac6a709c9b04e8"
+        },
+        {
+          "source_path": "_archive/v2/jetson/scripts/measure_lora_train_speed.py",
+          "public_path": "E2/_archive/v2/jetson/scripts/measure_lora_train_speed.py",
+          "bytes": 5883,
+          "sha256": "7244845f978f8329b1ace329e563ae340f2d2fd4b58b20a24549d4ad4b116a19",
+          "recovered_from_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+          "historical_path": "jetson/scripts/measure_lora_train_speed.py",
+          "sha256_lf_normalized": "297ec815b0522c3678161555fddd5318b64a3d155692ba636197635acbd11640"
+        },
+        {
+          "source_path": "docs/photo/HW2_Jetson_Orin_Nano.jpg",
+          "public_path": "E2/docs/photo/HW2_Jetson_Orin_Nano.jpg",
+          "bytes": 328472,
+          "sha256": "65edd1771577b9221e3a19f8e8066bfd2fcb74500f62a311f9f805fe8a20df71"
+        }
+      ],
+      "statistics": [
+        {
+          "mode": "MAXN_SUPER",
+          "n": 30,
+          "median_ms": 554.101,
+          "reported_median_ms": 554.1
+        },
+        {
+          "mode": "25W",
+          "n": 30,
+          "median_ms": 608.8820000000001,
+          "reported_median_ms": 608.9
+        },
+        {
+          "mode": "15W",
+          "n": 30,
+          "median_ms": 903.7025,
+          "reported_median_ms": 903.7
+        }
+      ],
+      "provenance_note": "복구 파일은 Windows CRLF 바이트를 그대로 공개한다. 실행 환경의 script_sha256=297ec815b0522c3678161555fddd5318b64a3d155692ba636197635acbd11640은 공개 측정 스크립트의 LF 정규화 해시와 일치한다. 원본 이력은 비공개이며 공개 저장소에는 해당 파일의 사본을 포함한다."
+    },
+    {
+      "id": "E3",
+      "title": "KOREN 전송: 실측값 주입의 입력",
+      "claim": "지연 주입 재현에 사용한 실제 TCP 왕복 전송 기록을 추적한다.",
+      "conditions": "n=8, shrink=1.0, TCP, 경유 종점 2개. 배치당 상행·하행 각각 4.2 MB, 4배치×3라운드. batch와 burst는 서로 다른 송신 패턴이다.",
+      "limits": "cap_mbps=8000은 설정값이며 물리 링크의 측정 용량이 아니다. aggregate_mbps 필드도 링크 용량으로 해석하지 않는다. 공통 측정 시간창 기반 처리율과 기기별 지연을 구분해야 한다. 이 입력의 재사용은 새로운 KOREN 실험을 의미하지 않는다.",
+      "archive": "E3.zip",
+      "archive_sha256": "b6e0e37fb2bb8db6f1d67312fb4f8e3effdb68ccc865093a502f3d68dcf3e4e2",
+      "files": [
+        {
+          "source_path": "configs/measurements/koren_jetson_2026-09-23.json",
+          "public_path": "E3/configs/measurements/koren_jetson_2026-09-23.json",
+          "bytes": 28352,
+          "sha256": "4df54fd1c9805ed30df1fa836e2e787a247f9c91f32b54a1959840f1fabe6427"
+        },
+        {
+          "source_path": "out/line_scale_detail/n8_s1.0_tcp_batch_1788881912.json",
+          "public_path": "E3/out/line_scale_detail/n8_s1.0_tcp_batch_1788881912.json",
+          "bytes": 4259,
+          "sha256": "6e026d9b4464be5dc98ab439ac4a8433b9bb562498babdfdd56ba4c0a2321c77"
+        },
+        {
+          "source_path": "out/line_scale_detail/n8_s1.0_tcp_burst_1788881939.json",
+          "public_path": "E3/out/line_scale_detail/n8_s1.0_tcp_burst_1788881939.json",
+          "bytes": 1686,
+          "sha256": "ca7c923772e4aff22c5a5ab603551b26079d4370c26c213757aef47f2740f31d"
+        },
+        {
+          "source_path": "scripts/measurement/line_scale.py",
+          "public_path": "E3/scripts/measurement/line_scale.py",
+          "bytes": 12310,
+          "sha256": "9db4a9217e53c0a42f16a9d8394bbcfc3cea33d2a3d083598817df44e301a215"
+        },
+        {
+          "source_path": "scripts/measurement/line_scale.sh",
+          "public_path": "E3/scripts/measurement/line_scale.sh",
+          "bytes": 3070,
+          "sha256": "c93d211bf8381824c291ee98f418ea92407dbbb34fa0c2ae1fb352bdc5687b04"
+        }
+      ]
+    },
+    {
+      "id": "E4",
+      "title": "LoRA: 분할 실행·집계·메모리",
+      "claim": "분산 배치에서 실제 학습과 어댑터 집계를 수행하고 메모리 제약을 확인했다.",
+      "conditions": "KOREN VM 2대의 논리 클라이언트 3개와 HPC. Qwen2.5-0.5B, cut=2, rank=16, 16라운드×30스텝. strict 판정이 적용된 18문항: 미학습 0, 단독 6, 연합 두 방식 각 12개 정답. 7B 분할 10스텝은 별도 실행이다.",
+      "limits": "소규모 자체 문답 실습이며 일반 벤치마크 또는 개인정보 보호의 입증이 아니다. 모델을 층으로 분할하는 SFL이며 특성 분할 VFL과 다르다. 앞부분 메모리 프로파일과 실제 분할 시스템 최대 메모리를 구분한다.",
+      "archive": "E4.zip",
+      "archive_sha256": "49ce8b4ce86fc595ff430d24fd3f292753c85f0d5ce02f899364220d93cd2a65",
+      "files": [
+        {
+          "source_path": "docs/02_실험/실험_대형모델_분할LoRA_사전등록_2026-09-13.md",
+          "public_path": "E4/docs/02_실험/실험_대형모델_분할LoRA_사전등록_2026-09-13.md",
+          "bytes": 6987,
+          "sha256": "29650df667ceec17c9df127ceb5dbda2c775293bbedb1c5554eee542be4bf92b"
+        },
+        {
+          "source_path": "docs/02_실험/실험_연합분할LoRA_문답증명_사전등록_2026-09-13.md",
+          "public_path": "E4/docs/02_실험/실험_연합분할LoRA_문답증명_사전등록_2026-09-13.md",
+          "bytes": 13091,
+          "sha256": "6847b0c760a9ca469ffc2c9395c3f5cc13d0ddae699f0194ee44a08fd4befe52"
+        },
+        {
+          "source_path": "out/fed_split/eval_0913v1.json",
+          "public_path": "E4/out/fed_split/eval_0913v1.json",
+          "bytes": 17736,
+          "sha256": "86392fc086858d17564a72fb750305f3ca52e21b1c2ee3e49e269f43356261b7"
+        },
+        {
+          "source_path": "out/fed_split/server_fed3_0913.jsonl",
+          "public_path": "E4/out/fed_split/server_fed3_0913.jsonl",
+          "bytes": 4012,
+          "sha256": "e2365d25b1ac1ea15f38859c1373631d804d2d6689bfbc9c0f95a760118b95f4"
+        },
+        {
+          "source_path": "out/fed_split/server_fed3v1_0913.jsonl",
+          "public_path": "E4/out/fed_split/server_fed3v1_0913.jsonl",
+          "bytes": 4861,
+          "sha256": "fdbd202aa7b3130d595a2424967f1daeb2eb7cedd713f7888eb6f07865128527"
+        },
+        {
+          "source_path": "out/fed_split/strict_0913v1.json",
+          "public_path": "E4/out/fed_split/strict_0913v1.json",
+          "bytes": 389,
+          "sha256": "666f539caf25ca1c8c52a8c912d3bccf946de2275a74aa18d0a46a8284fef908"
+        },
+        {
+          "source_path": "out/scale_lora/cost_llm_0913_vm.jsonl",
+          "public_path": "E4/out/scale_lora/cost_llm_0913_vm.jsonl",
+          "bytes": 3296,
+          "sha256": "33b6117f4e197af967e41ae4c7b83b37fb6d218645946722440b2b1bf3e3a578"
+        },
+        {
+          "source_path": "out/scale_lora/device_llm_0913_Qwen_Qwen2.5-0.5B.jsonl",
+          "public_path": "E4/out/scale_lora/device_llm_0913_Qwen_Qwen2.5-0.5B.jsonl",
+          "bytes": 5435,
+          "sha256": "cd68d1d77c5722eb505a5cf99458e6b3f8cf3a6f45839645ea23700e39425e39"
+        },
+        {
+          "source_path": "out/scale_lora/device_llm_0913_Qwen_Qwen2.5-3B.jsonl",
+          "public_path": "E4/out/scale_lora/device_llm_0913_Qwen_Qwen2.5-3B.jsonl",
+          "bytes": 3649,
+          "sha256": "9a0161ef17b6b1cc110c006bf13eacf09c77a931fd3276f4f8da4f95748f243a"
+        },
+        {
+          "source_path": "out/scale_lora/device_llm_0913_Qwen_Qwen2.5-7B.jsonl",
+          "public_path": "E4/out/scale_lora/device_llm_0913_Qwen_Qwen2.5-7B.jsonl",
+          "bytes": 1812,
+          "sha256": "87f5a833bd3b46b0e904850ebbb9e7953e8001175104ce7c5633f334a403c2fe"
+        },
+        {
+          "source_path": "sfl/experiments/run_fed_split_lora.py",
+          "public_path": "E4/sfl/experiments/run_fed_split_lora.py",
+          "bytes": 14296,
+          "sha256": "80d5eae60860fadfd81a968eee6b1410533b76339dd70e435ab53d6eebb8a4b8"
+        }
+      ]
+    },
+    {
+      "id": "E5",
+      "title": "가상 Linux 망: 커널·패킷·계측",
+      "claim": "tc 집행, 실제 TCP 조각 전송, 재조립 및 관측을 한 실행에서 확인했다.",
+      "conditions": "virtual-20260926T142615Z. QEMU Linux, 4네임스페이스, 8논리 클라이언트, 128 KiB/기기, 폭=1.0. 한 경로 감소와 공유 IFB 병목. 18라운드·144전송·35,058패킷. 각 정책에 프로브 비용 포함.",
+      "limits": "한 번의 로컬 가상 실행이며 라운드는 독립 반복이 아니다. 새 KOREN 측정·학습 성능이 아니다. raw tc 카운터의 포맷 문제와 정규화 기록을 보존한다. TCP 커널 알고리즘 패치는 하지 않았다.",
+      "archive": "E5.zip",
+      "archive_sha256": "bd052576c8e8424cb9cff780ed5cc17933dcefee52e004c2fa39800d72e9fd6d",
+      "files": [
+        {
+          "source_path": "site/assets/lab/awarenet.lua",
+          "public_path": "E5/site/assets/lab/awarenet.lua",
+          "bytes": 2340,
+          "sha256": "019e83b0fa419bba600ac9afcf4242b88a3e76f343e03fa92e9349a1a9f18c46"
+        },
+        {
+          "source_path": "site/assets/lab/capture.log",
+          "public_path": "E5/site/assets/lab/capture.log",
+          "bytes": 102,
+          "sha256": "84c32a1add8f01ef7452ed25602d670a1e9c6bbf17716ad33f2f76e6f3975c39"
+        },
+        {
+          "source_path": "site/assets/lab/capture.pcapng",
+          "public_path": "E5/site/assets/lab/capture.pcapng",
+          "bytes": 29540988,
+          "sha256": "9604ab128282d616d25cac7175c745f49fd6e249503fd0b6396d96b9a1749aff"
+        },
+        {
+          "source_path": "site/assets/lab/counter-normalization.json",
+          "public_path": "E5/site/assets/lab/counter-normalization.json",
+          "bytes": 5124,
+          "sha256": "0faedf98f4e5ed5125d44ab409e4d4e80c866b23db9322b30259bf0add68a49b"
+        },
+        {
+          "source_path": "site/assets/lab/dashboard.json",
+          "public_path": "E5/site/assets/lab/dashboard.json",
+          "bytes": 13187,
+          "sha256": "7266c334e3edfef9ea49f734bcadea230fc38fde462cbe8494a697deaad4fb46"
+        },
+        {
+          "source_path": "site/assets/lab/environment.json",
+          "public_path": "E5/site/assets/lab/environment.json",
+          "bytes": 4199,
+          "sha256": "aa822bd0f0d53ff124d417a30f68017c9432f1ab70c0258ccb50afb0cc486d54"
+        },
+        {
+          "source_path": "site/assets/lab/events.jsonl",
+          "public_path": "E5/site/assets/lab/events.jsonl",
+          "bytes": 48507,
+          "sha256": "8781505ba350cf2e821d4d983e3e9914a9ff689a1f5cba173a3b7525539f03f0"
+        },
+        {
+          "source_path": "site/assets/lab/executed-source.tgz",
+          "public_path": "E5/site/assets/lab/executed-source.tgz",
+          "bytes": 19923,
+          "sha256": "83149a23c1e276f87e9176564b8bac05c2ebb3ed15ad35e735a6adeb6cdaf9e9"
+        },
+        {
+          "source_path": "site/assets/lab/manifest.json",
+          "public_path": "E5/site/assets/lab/manifest.json",
+          "bytes": 3392,
+          "sha256": "23cc64fe9feadf95dba2785fab1950ef63605d36fef3451d0794792346f4fbd2"
+        },
+        {
+          "source_path": "site/assets/lab/packets.csv",
+          "public_path": "E5/site/assets/lab/packets.csv",
+          "bytes": 4271031,
+          "sha256": "abcb7175525165fcb249b3786e5fddc7580d30d6717792cd68c15d8d98144c13"
+        },
+        {
+          "source_path": "site/assets/lab/packets.json",
+          "public_path": "E5/site/assets/lab/packets.json",
+          "bytes": 730,
+          "sha256": "77d14e4ab18f1878c5301e1a8753aaf9e12ca139e5a9f818fad1a501ebc44d54"
+        },
+        {
+          "source_path": "site/assets/lab/prometheus-series.json",
+          "public_path": "E5/site/assets/lab/prometheus-series.json",
+          "bytes": 879640,
+          "sha256": "23eacf625eeab0dc26952dfb9d06e68be23244e934df65220fe2a906a19500c8"
+        },
+        {
+          "source_path": "site/assets/lab/raw-results.tar.gz",
+          "public_path": "E5/site/assets/lab/raw-results.tar.gz",
+          "bytes": 25740437,
+          "sha256": "f67d59eba4ee398f4971d1a170f452f3d28f3f59732fa0dd9b2c644d74878099"
+        },
+        {
+          "source_path": "site/assets/lab/reproduce.md",
+          "public_path": "E5/site/assets/lab/reproduce.md",
+          "bytes": 6477,
+          "sha256": "ada7208b5ca0b63b57ce0e225292ee28b8ae8d95f81ea3757cf56eca6f976675"
+        },
+        {
+          "source_path": "site/assets/lab/results.png",
+          "public_path": "E5/site/assets/lab/results.png",
+          "bytes": 90404,
+          "sha256": "273e9b8f5c0c35c4909ef480e2896417954044bdbfd0e41ce0a56012cabad8ba"
+        },
+        {
+          "source_path": "site/assets/lab/results.svg",
+          "public_path": "E5/site/assets/lab/results.svg",
+          "bytes": 12406,
+          "sha256": "5537381650575619bdbc4e0ca7cc4a78148c1a8bf82a80dd0623159ef5dcf4a2"
+        },
+        {
+          "source_path": "site/assets/lab/rounds.json",
+          "public_path": "E5/site/assets/lab/rounds.json",
+          "bytes": 55067,
+          "sha256": "55af1f306011693f7d3145092f238adc9e5cbf0274bd93461750c07d5e5652bb"
+        },
+        {
+          "source_path": "site/assets/lab/rounds.normalized.json",
+          "public_path": "E5/site/assets/lab/rounds.normalized.json",
+          "bytes": 57774,
+          "sha256": "3c703bdea739d708e36943ea708fbcf0fe054982259e5dfe19eacf6b3a72c95d"
+        },
+        {
+          "source_path": "site/assets/lab/station-verification.json",
+          "public_path": "E5/site/assets/lab/station-verification.json",
+          "bytes": 559,
+          "sha256": "ae1ca5b9537672eb596213ab6e046349bacbd3ea13a3a0f3a5c6349223650f1c"
+        },
+        {
+          "source_path": "site/assets/lab/summary.json",
+          "public_path": "E5/site/assets/lab/summary.json",
+          "bytes": 8135,
+          "sha256": "aef8fac439976c5c959ab618a7342b4eefd02a948c8d37e9f6718fa12ca71fe5"
+        },
+        {
+          "source_path": "site/assets/lab/topology.png",
+          "public_path": "E5/site/assets/lab/topology.png",
+          "bytes": 131535,
+          "sha256": "5a45970349e1380d67c4b7a948757a28ba4f94a435bf1311791b0c23e1c8d299"
+        },
+        {
+          "source_path": "site/assets/lab/topology.svg",
+          "public_path": "E5/site/assets/lab/topology.svg",
+          "bytes": 14476,
+          "sha256": "bdb3b8d8531f4acafe4d54f128f96a8b5a1c5b13071b539902033d8906e9553e"
+        }
+      ]
+    },
+    {
+      "id": "E6",
+      "title": "구현: 폭·경로·권한 경계",
+      "claim": "실제 코드로 구현 범위와 프로토타입 범위를 확인한다.",
+      "conditions": "계획기, TCP 전송·재조립, tc/IFB/HTB 스크립트 및 OS-Ken 확장을 제공한다.",
+      "limits": "관리하거나 권한을 위임받은 호스트가 집행 대상이다. KOREN 코어 경로 제어와 기관 간 위임은 검증하지 않았다. OS-Ken 코드 존재는 실제 OVS 적용 증거가 아니다. 패킷 처리는 커널과 고정 전송 코드가 담당하고 계획은 라운드 수준에서 수행한다.",
+      "archive": "E6.zip",
+      "archive_sha256": "4b80e2daac01d24c923c688a4534a1d124da631524be8581500072df1a49a8fc",
+      "files": [
+        {
+          "source_path": "configs/measurements/network_implementation_audit_2026-09-26.json",
+          "public_path": "E6/configs/measurements/network_implementation_audit_2026-09-26.json",
+          "bytes": 6353,
+          "sha256": "f74816e44715fe5320c55600ad7dc874560c15890f9a0d9352347c1d56eebfe0"
+        },
+        {
+          "source_path": "out/rig_selftest_h5x.json",
+          "public_path": "E6/out/rig_selftest_h5x.json",
+          "bytes": 1108,
+          "sha256": "c1542a966a5c97047f15ffccf76eb7136164180cf78a87cb53d49f7c2c64c6f2"
+        },
+        {
+          "source_path": "scripts/exp/run_scen32.sh",
+          "public_path": "E6/scripts/exp/run_scen32.sh",
+          "bytes": 3883,
+          "sha256": "1746d16c3bfa2a5de9d3ab5551f4c677ff382cc2d3eb54865a46cba5b51b1b9f"
+        },
+        {
+          "source_path": "scripts/measurement/net_throughput.py",
+          "public_path": "E6/scripts/measurement/net_throughput.py",
+          "bytes": 10926,
+          "sha256": "c259fde1a6c448b047b0085096b85d3d55b4d233d8bd85b3ba4a8dc00def1354"
+        },
+        {
+          "source_path": "sfl/chunker.py",
+          "public_path": "E6/sfl/chunker.py",
+          "bytes": 11310,
+          "sha256": "12b38228d890f344656f5fe4d940c6ebfd58fa78d537ea588a7d167d3c83b173"
+        },
+        {
+          "source_path": "sfl/mpsend.py",
+          "public_path": "E6/sfl/mpsend.py",
+          "bytes": 26152,
+          "sha256": "630eb638ef5906e289ef6002121b24e7c68b0d7c27b177851352a13780f4e52b"
+        },
+        {
+          "source_path": "sfl/net/hairpin_lo.sh",
+          "public_path": "E6/sfl/net/hairpin_lo.sh",
+          "bytes": 8264,
+          "sha256": "e32f21914e871676488d19045c985d6736690dab2d89f92570f5132ee1d8475e"
+        },
+        {
+          "source_path": "sfl/net/real_rig.sh",
+          "public_path": "E6/sfl/net/real_rig.sh",
+          "bytes": 11843,
+          "sha256": "99822fc0bf78e89dfdfddf6daa3947e09926718fd9576378f8d1fbce0a07c682"
+        },
+        {
+          "source_path": "sfl/plan.py",
+          "public_path": "E6/sfl/plan.py",
+          "bytes": 35145,
+          "sha256": "b722f89f187e7a0d0afbce477d5d5d5f0421a068329b2ab68c2823852d82b05d"
+        },
+        {
+          "source_path": "sfl/policies.py",
+          "public_path": "E6/sfl/policies.py",
+          "bytes": 17947,
+          "sha256": "772dd4fbc83221bf9fe0d504554c6b7faef81159edfa2a9e3c6fe5d29868e103"
+        },
+        {
+          "source_path": "sfl/proto.py",
+          "public_path": "E6/sfl/proto.py",
+          "bytes": 4162,
+          "sha256": "aa7d06901952df8f007077463ae31e3bea5239f929a41c185604a14f084e3466"
+        },
+        {
+          "source_path": "sfl/sdn/osken_controller.py",
+          "public_path": "E6/sfl/sdn/osken_controller.py",
+          "bytes": 4672,
+          "sha256": "953e5e539cb305053bcd94991caaa99448124057651b7a0fcfa6c393a3828045"
+        }
+      ]
+    },
+    {
+      "id": "E7",
+      "title": "축소 실험과 실측값 주입 재현",
+      "claim": "8프로세스 실행과 과거 측정값을 입력한 재현의 조건을 보존한다.",
+      "conditions": "r8mix 계열은 원래 파일명·args·profile로 실행을 구분한다. 200R 정확도 계열과 24R 시간 계열은 별개다. Jetson·KOREN 수치 주입은 2026-09-23 보고서의 가정과 집계에 따른다.",
+      "limits": "SHRiNK를 참고한 축소 구성은 32대 물리 시스템과의 동등성을 입증하지 않는다. OOM·CPU 제약 때문에 실행 크기를 줄인 것으로, 8개와 32개의 결과를 합산하지 않는다. 주입값을 사용한 모형·로컬 결과를 하드웨어 재측정으로 표기하지 않는다.",
+      "archive": "E7.zip",
+      "archive_sha256": "f86b8db7c876431759e2ff3de291f89b985504f93186f4eef659a5dd5564fa94",
+      "files": [
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s1_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s1_bothmp_uniform.args.json",
+          "bytes": 864,
+          "sha256": "00b541e2e66f8d1156de90e4f7b0e4f8b6bd738d770e610708316288a9d576b8"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s1_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s1_bothmp_uniform.jsonl",
+          "bytes": 625915,
+          "sha256": "b61781288ba6746709ca8041e832576841cdaa76cf6a10315038fac9786723e1"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s1_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s1_bothmp_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "2b2183ec9ca87142762c2a65f9911824a4f3890bc08e3da19a0a9f6d76c52f21"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s1_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s1_bothmp_widthpath.args.json",
+          "bytes": 886,
+          "sha256": "67e222165c29a164e0812cf4b94b76452cda6a92979ee5a5e28ccce52b64b274"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s1_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s1_bothmp_widthpath.jsonl",
+          "bytes": 740686,
+          "sha256": "73392e1acf1d79435b82736dbea5f4eeca00ed2dbd6133378eca4612c74e7abc"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s1_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s1_bothmp_widthpath.profile.json",
+          "bytes": 2688,
+          "sha256": "16dce5f637e386521a444eca14f1ce7e0d4ab90e3f46dbe56a63429bdca6b290"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s2_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s2_bothmp_uniform.args.json",
+          "bytes": 864,
+          "sha256": "3bbcfc8b2cb47dd6bccda1a5a0ae1d5c578f18c18a345eb72174b0a3cf812b8c"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s2_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s2_bothmp_uniform.jsonl",
+          "bytes": 625822,
+          "sha256": "655530b0fb1a0ecc3052e04000810558e2794bf9298958d327133f914b399bac"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s2_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s2_bothmp_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "103053b85686820abff51eabe7bd8b8b0c8ba595c7a5ca5b7a3a23bf7172ecb8"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s2_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s2_bothmp_widthpath.args.json",
+          "bytes": 886,
+          "sha256": "161c41ae496c7f0dbcb9a8d9efd46810e2a3ee0bc9ce274460d0774c4a58ab1f"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s2_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s2_bothmp_widthpath.jsonl",
+          "bytes": 740332,
+          "sha256": "55afbd073463373967ce51b65313c697ede4482ddb8a33a7236738366233e796"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l18_s2_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_l18_s2_bothmp_widthpath.profile.json",
+          "bytes": 2680,
+          "sha256": "e6ead24405ffc7d7578383ab2131ef9a276e071a3d8972c14058c3a4adb59351"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s1_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s1_bothmp_uniform.args.json",
+          "bytes": 864,
+          "sha256": "00b541e2e66f8d1156de90e4f7b0e4f8b6bd738d770e610708316288a9d576b8"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s1_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s1_bothmp_uniform.jsonl",
+          "bytes": 625915,
+          "sha256": "b61781288ba6746709ca8041e832576841cdaa76cf6a10315038fac9786723e1"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s1_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s1_bothmp_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "2b2183ec9ca87142762c2a65f9911824a4f3890bc08e3da19a0a9f6d76c52f21"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s1_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s1_bothmp_widthpath.args.json",
+          "bytes": 888,
+          "sha256": "7808279f3760f845729167a5afa323f65cf516f1112ee7e190669320a52d5c4c"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s1_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s1_bothmp_widthpath.jsonl",
+          "bytes": 742467,
+          "sha256": "0f9d08b9e04b7d8a5f2c71f11c9e6fed541b3e6840d7845f91127a6cb169ad91"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s1_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s1_bothmp_widthpath.profile.json",
+          "bytes": 2645,
+          "sha256": "c5773b766494019b02e143f5f279bfee3b6c5ab5bb423857d01e5c6c31f2697b"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s2_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s2_bothmp_uniform.args.json",
+          "bytes": 864,
+          "sha256": "3bbcfc8b2cb47dd6bccda1a5a0ae1d5c578f18c18a345eb72174b0a3cf812b8c"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s2_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s2_bothmp_uniform.jsonl",
+          "bytes": 625822,
+          "sha256": "655530b0fb1a0ecc3052e04000810558e2794bf9298958d327133f914b399bac"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s2_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s2_bothmp_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "103053b85686820abff51eabe7bd8b8b0c8ba595c7a5ca5b7a3a23bf7172ecb8"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s2_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s2_bothmp_widthpath.args.json",
+          "bytes": 888,
+          "sha256": "f8ad2c886a3a958f20c561f40708f54b3adf76a0059c0d805546ec55ee13332a"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s2_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s2_bothmp_widthpath.jsonl",
+          "bytes": 741718,
+          "sha256": "24ec9a27e3e6db4d934bf0f7e66ed691104e9e7b9cf58cc25f96c28dfd022c38"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_l280_s2_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_l280_s2_bothmp_widthpath.profile.json",
+          "bytes": 2635,
+          "sha256": "053d876ea355327db1bfbb990ab47444b9468aae3dfb6f151c8afc50fb5383e1"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s1_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_s1_bothmp_uniform.args.json",
+          "bytes": 864,
+          "sha256": "00b541e2e66f8d1156de90e4f7b0e4f8b6bd738d770e610708316288a9d576b8"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s1_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_s1_bothmp_uniform.jsonl",
+          "bytes": 625915,
+          "sha256": "b61781288ba6746709ca8041e832576841cdaa76cf6a10315038fac9786723e1"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s1_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_s1_bothmp_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "2b2183ec9ca87142762c2a65f9911824a4f3890bc08e3da19a0a9f6d76c52f21"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s1_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_s1_bothmp_widthpath.args.json",
+          "bytes": 882,
+          "sha256": "1c1473c19245bc23462d502e106552d0395b0258c2bcce5aa8da2d0852a7545d"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s1_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_s1_bothmp_widthpath.jsonl",
+          "bytes": 742154,
+          "sha256": "1d0600382321ef150379f580ffe1f3c3e2de20831b5dca98171fc4066747e629"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s1_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_s1_bothmp_widthpath.profile.json",
+          "bytes": 2688,
+          "sha256": "0fa925015b5133248d249c67169957e04febe88d9118eb40206542e67442b73f"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s2_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_s2_bothmp_uniform.args.json",
+          "bytes": 864,
+          "sha256": "3bbcfc8b2cb47dd6bccda1a5a0ae1d5c578f18c18a345eb72174b0a3cf812b8c"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s2_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_s2_bothmp_uniform.jsonl",
+          "bytes": 625822,
+          "sha256": "655530b0fb1a0ecc3052e04000810558e2794bf9298958d327133f914b399bac"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s2_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_s2_bothmp_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "103053b85686820abff51eabe7bd8b8b0c8ba595c7a5ca5b7a3a23bf7172ecb8"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s2_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_acc_s2_bothmp_widthpath.args.json",
+          "bytes": 882,
+          "sha256": "5624f7c59f11757fce1ea97c0c50c30f807b3c91467e75162f016bbb96b89d53"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s2_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_acc_s2_bothmp_widthpath.jsonl",
+          "bytes": 741611,
+          "sha256": "498ddd88c640363722ea33d467257fafd15c6cd0fc7139bed8b57375af208cc4"
+        },
+        {
+          "source_path": "out/wp_r8mix_acc_s2_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_acc_s2_bothmp_widthpath.profile.json",
+          "bytes": 2704,
+          "sha256": "1215352475e821f93e9899c55a0ce65fb0b432cef9bd032f51492cd3aa739475"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_both3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_both3_uniform.args.json",
+          "bytes": 813,
+          "sha256": "a691d718d53e387b5869dc27b7dce4f3a12590a704b04356f0eaf45e3c59e8ce"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_both3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_both3_uniform.jsonl",
+          "bytes": 74699,
+          "sha256": "4dcd9d7951cadf98cbfcb2d781278d0193a951be28d2633bde8057c00b6b9e9a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_both3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_both3_uniform.profile.json",
+          "bytes": 730,
+          "sha256": "bbdbde9360bb9b2f26bcfd57f4f240d3af13d7a540c3e9ed8e06d7750fbf90d0"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_both3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_both3_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "0efd677635b742db3160e7a30293788961f69634c2a1d2e7f8acdc3e879f1215"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_both3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_both3_widthpath.jsonl",
+          "bytes": 69054,
+          "sha256": "f6214d113284662d268597b6de76aef8b69d7d55499673ac63ba706041e18553"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_both3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_both3_widthpath.profile.json",
+          "bytes": 2388,
+          "sha256": "a6efe64499feb677c7b3fcf7a524476b7f12fb9060dd5b819f9df2e3f5669723"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmp_uniform.args.json",
+          "bytes": 813,
+          "sha256": "a691d718d53e387b5869dc27b7dce4f3a12590a704b04356f0eaf45e3c59e8ce"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmp_uniform.jsonl",
+          "bytes": 74699,
+          "sha256": "4dcd9d7951cadf98cbfcb2d781278d0193a951be28d2633bde8057c00b6b9e9a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmp_uniform.profile.json",
+          "bytes": 730,
+          "sha256": "bbdbde9360bb9b2f26bcfd57f4f240d3af13d7a540c3e9ed8e06d7750fbf90d0"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmp_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "d2fab23f76e635bb900e0adfb4f7111b8d22a593eaa9851d2f2cde0f63c8bfcc"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmp_widthpath.jsonl",
+          "bytes": 76750,
+          "sha256": "1adf522762e873f2660fc510ec59e81492829ae9ceb0922f77830a3145760e88"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmp_widthpath.profile.json",
+          "bytes": 2610,
+          "sha256": "46bc17e0dd6310fb10d086449a4c454ae96b722fa17c1d984f9d478dbfcda87e"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmpm_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmpm_uniform.args.json",
+          "bytes": 813,
+          "sha256": "a691d718d53e387b5869dc27b7dce4f3a12590a704b04356f0eaf45e3c59e8ce"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmpm_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmpm_uniform.jsonl",
+          "bytes": 74699,
+          "sha256": "4dcd9d7951cadf98cbfcb2d781278d0193a951be28d2633bde8057c00b6b9e9a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmpm_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmpm_uniform.profile.json",
+          "bytes": 730,
+          "sha256": "bbdbde9360bb9b2f26bcfd57f4f240d3af13d7a540c3e9ed8e06d7750fbf90d0"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmpm_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmpm_widthpath.args.json",
+          "bytes": 835,
+          "sha256": "37b27d4e6152a3821d96def2a1a0b7acc6f196e322e7574f1e1a36c5ab514e5a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmpm_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmpm_widthpath.jsonl",
+          "bytes": 77104,
+          "sha256": "daad99e0c48212bbd44b3997b3ba46800ab274dae48b569a6e206e99c555fd32"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_bothmpm_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_bothmpm_widthpath.profile.json",
+          "bytes": 2604,
+          "sha256": "bb2a23b7f05f083b6912634b647f990c2d453a0030b9c786efdeea7b09cfdd4b"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_mp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_mp_uniform.args.json",
+          "bytes": 813,
+          "sha256": "a691d718d53e387b5869dc27b7dce4f3a12590a704b04356f0eaf45e3c59e8ce"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_mp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_mp_uniform.jsonl",
+          "bytes": 74699,
+          "sha256": "4dcd9d7951cadf98cbfcb2d781278d0193a951be28d2633bde8057c00b6b9e9a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_mp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_mp_uniform.profile.json",
+          "bytes": 730,
+          "sha256": "bbdbde9360bb9b2f26bcfd57f4f240d3af13d7a540c3e9ed8e06d7750fbf90d0"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_mp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_mp_widthpath.args.json",
+          "bytes": 821,
+          "sha256": "b7e05b74667e6b4410fa297e27fbaaac133e7578f1ef84d383adf22546a63ebf"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_mp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_mp_widthpath.jsonl",
+          "bytes": 76838,
+          "sha256": "218eee97a2697a1cc063c0c199ce1a27d3792cd2f4e751125892f032622e3f4b"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_mp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_mp_widthpath.profile.json",
+          "bytes": 2589,
+          "sha256": "294fefe31986778a86dcb2285221b446b39e5b4b283144b6202b894e44fcb8a8"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_width3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_width3_uniform.args.json",
+          "bytes": 813,
+          "sha256": "a691d718d53e387b5869dc27b7dce4f3a12590a704b04356f0eaf45e3c59e8ce"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_width3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_width3_uniform.jsonl",
+          "bytes": 74699,
+          "sha256": "4dcd9d7951cadf98cbfcb2d781278d0193a951be28d2633bde8057c00b6b9e9a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_width3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_width3_uniform.profile.json",
+          "bytes": 730,
+          "sha256": "bbdbde9360bb9b2f26bcfd57f4f240d3af13d7a540c3e9ed8e06d7750fbf90d0"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_width3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_width3_widthpath.args.json",
+          "bytes": 835,
+          "sha256": "5cc8ded0067b149a1009dbb0d1b602baf26bb8b6f088135807033cd412df16ba"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_width3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_width3_widthpath.jsonl",
+          "bytes": 68969,
+          "sha256": "a9827e376b4e1196440d47d57638ede366bcdd20bfab67fc7c1d907c838f6439"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s1_width3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s1_width3_widthpath.profile.json",
+          "bytes": 2354,
+          "sha256": "15214a60bf9022a00a3a5f6615c67efae57cb51c7222e6720d499f6f97566726"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_both3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_both3_uniform.args.json",
+          "bytes": 813,
+          "sha256": "eea2d9864a4e42f7e6b4c906e8021a7d44a7cd19432ab2bc685bc32d61ff4a9d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_both3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_both3_uniform.jsonl",
+          "bytes": 74723,
+          "sha256": "f35535e1e9b2cc203cd1d60bd3a3386d641cfba92fad4f4fb32796763a4adc4a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_both3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_both3_uniform.profile.json",
+          "bytes": 728,
+          "sha256": "10fa2441be9df9f708efc665262c38bfc8839fa821ce9915782a404db38156d3"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_both3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_both3_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "d937272cd17f5737695751c5436f377abbc6305d64ec7c0c71f66474a705bac0"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_both3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_both3_widthpath.jsonl",
+          "bytes": 69093,
+          "sha256": "496db605595441c91e76019475df6ec5b87c0af46fdd1d8baed2c836d47ec6b9"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_both3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_both3_widthpath.profile.json",
+          "bytes": 2399,
+          "sha256": "5bd254566b2686455f22c3858017736d64249a58b52ceeec503402bc575a6e52"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmp_uniform.args.json",
+          "bytes": 813,
+          "sha256": "eea2d9864a4e42f7e6b4c906e8021a7d44a7cd19432ab2bc685bc32d61ff4a9d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmp_uniform.jsonl",
+          "bytes": 74723,
+          "sha256": "f35535e1e9b2cc203cd1d60bd3a3386d641cfba92fad4f4fb32796763a4adc4a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmp_uniform.profile.json",
+          "bytes": 728,
+          "sha256": "10fa2441be9df9f708efc665262c38bfc8839fa821ce9915782a404db38156d3"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmp_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "bbc5a9997e3f827f9fa0dcf4cce2465236f498f901c3bac67a7c129d97ee3d1e"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmp_widthpath.jsonl",
+          "bytes": 76777,
+          "sha256": "80de0658c36173698764b72cc3ed0f9ef6f5d58ff0b9f321a69f3e9ce7abb2de"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmp_widthpath.profile.json",
+          "bytes": 2618,
+          "sha256": "822ed94b795ee19a13741b09c9dd17098a3f2a370377c6ffc93f1029cdf25c0e"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmpm_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmpm_uniform.args.json",
+          "bytes": 813,
+          "sha256": "eea2d9864a4e42f7e6b4c906e8021a7d44a7cd19432ab2bc685bc32d61ff4a9d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmpm_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmpm_uniform.jsonl",
+          "bytes": 74723,
+          "sha256": "f35535e1e9b2cc203cd1d60bd3a3386d641cfba92fad4f4fb32796763a4adc4a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmpm_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmpm_uniform.profile.json",
+          "bytes": 728,
+          "sha256": "10fa2441be9df9f708efc665262c38bfc8839fa821ce9915782a404db38156d3"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmpm_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmpm_widthpath.args.json",
+          "bytes": 835,
+          "sha256": "4e29d9615d61cd61cf5aaa3c7d847ed3ef6f8aa4b8f39e22eec0c25b96f6e050"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmpm_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmpm_widthpath.jsonl",
+          "bytes": 77033,
+          "sha256": "3a8b973559b989aea2ac92d3b8bf017cc1443a77b3803918acd049fc5490f7a7"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_bothmpm_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_bothmpm_widthpath.profile.json",
+          "bytes": 2629,
+          "sha256": "2a1d83ad2861c1b27ab230805a29940c97f3a7df01dfa93b63f0ebb99584c2cf"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_mp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_mp_uniform.args.json",
+          "bytes": 813,
+          "sha256": "eea2d9864a4e42f7e6b4c906e8021a7d44a7cd19432ab2bc685bc32d61ff4a9d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_mp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_mp_uniform.jsonl",
+          "bytes": 74723,
+          "sha256": "f35535e1e9b2cc203cd1d60bd3a3386d641cfba92fad4f4fb32796763a4adc4a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_mp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_mp_uniform.profile.json",
+          "bytes": 728,
+          "sha256": "10fa2441be9df9f708efc665262c38bfc8839fa821ce9915782a404db38156d3"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_mp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_mp_widthpath.args.json",
+          "bytes": 821,
+          "sha256": "590cff2bbdaaffbebb7aa2847ad47ec79cd5b839d0916cda449010b61bac5cd2"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_mp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_mp_widthpath.jsonl",
+          "bytes": 76776,
+          "sha256": "0249d379143777b1d55c237981c26ffbc6e22d64175f1975e580ace85c37ee55"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_mp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_mp_widthpath.profile.json",
+          "bytes": 2603,
+          "sha256": "a791784340cd7f636c877d110ef166c3aef07ba4c07fb9c3087cecd132e3a781"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_width3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_width3_uniform.args.json",
+          "bytes": 813,
+          "sha256": "eea2d9864a4e42f7e6b4c906e8021a7d44a7cd19432ab2bc685bc32d61ff4a9d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_width3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_width3_uniform.jsonl",
+          "bytes": 74723,
+          "sha256": "f35535e1e9b2cc203cd1d60bd3a3386d641cfba92fad4f4fb32796763a4adc4a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_width3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_width3_uniform.profile.json",
+          "bytes": 728,
+          "sha256": "10fa2441be9df9f708efc665262c38bfc8839fa821ce9915782a404db38156d3"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_width3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_width3_widthpath.args.json",
+          "bytes": 835,
+          "sha256": "e32b512bf4bf1f5e994b30358e8a7ffcd57c3c219dba2930274abb501c040f64"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_width3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_width3_widthpath.jsonl",
+          "bytes": 69003,
+          "sha256": "63787c7d4b1c516fef34ac1e591565b29d817cd4794baf85135920b22de4b5d7"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho05_s2_width3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho05_s2_width3_widthpath.profile.json",
+          "bytes": 2372,
+          "sha256": "c3ad19af0cb75cbecfa544b1228e1b972037e35ad1c253f0ae41c796d87a74a4"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_both3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_both3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "06843b51846826a3e20ad52b82d15b98aca202c91136bacf92f7dcdf4544e782"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_both3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_both3_uniform.jsonl",
+          "bytes": 75188,
+          "sha256": "8b9256d793260833afc679ff2d6a470387c76b525f4cbdf89f8ec7570ad02fdf"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_both3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_both3_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "b3dff1523fe7487f0636e8d9dcb9a5c187f1cae33f522dbe8d7fbda82a51cfb5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_both3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_both3_widthpath.args.json",
+          "bytes": 833,
+          "sha256": "fc2ee724bd8188e9e695434480560646c686db2967d2d3cf4ea010da103b8715"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_both3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_both3_widthpath.jsonl",
+          "bytes": 68819,
+          "sha256": "5b7f6cf6e3caacf57ed3e127bbe890351672ea8c712ee01f76c586e1a1cf5b96"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_both3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_both3_widthpath.profile.json",
+          "bytes": 2388,
+          "sha256": "1f87bc236355e55f8efdbc9c9aa265479e0f275621bfd251aa96f629d7997256"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "06843b51846826a3e20ad52b82d15b98aca202c91136bacf92f7dcdf4544e782"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmp_uniform.jsonl",
+          "bytes": 75188,
+          "sha256": "8b9256d793260833afc679ff2d6a470387c76b525f4cbdf89f8ec7570ad02fdf"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmp_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "b3dff1523fe7487f0636e8d9dcb9a5c187f1cae33f522dbe8d7fbda82a51cfb5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmp_widthpath.args.json",
+          "bytes": 833,
+          "sha256": "6d992178ac19ed4d62484e15c8878bd232a7bccf93914abdde68651c437d020d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmp_widthpath.jsonl",
+          "bytes": 76675,
+          "sha256": "f93079c6674473e6e8e9e16756c5b8cb17a3e50b3f1f47d2f91f4f1d2acd88e9"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmp_widthpath.profile.json",
+          "bytes": 2592,
+          "sha256": "8456f42bace10e8edf283d26fa413c392b6c2451828e1717b8c45ac2e2d184cb"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmpm_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmpm_uniform.args.json",
+          "bytes": 812,
+          "sha256": "06843b51846826a3e20ad52b82d15b98aca202c91136bacf92f7dcdf4544e782"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmpm_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmpm_uniform.jsonl",
+          "bytes": 75188,
+          "sha256": "8b9256d793260833afc679ff2d6a470387c76b525f4cbdf89f8ec7570ad02fdf"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmpm_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmpm_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "b3dff1523fe7487f0636e8d9dcb9a5c187f1cae33f522dbe8d7fbda82a51cfb5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmpm_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmpm_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "b61550bf7e645f20f23652828bd2089bc66eac0c03cd26ff2c15d07aa233dd19"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmpm_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmpm_widthpath.jsonl",
+          "bytes": 77091,
+          "sha256": "bf636eeb48fd9a551a8d41766b97e26cd3c7d287de9231b920a7e1082242c94a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_bothmpm_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_bothmpm_widthpath.profile.json",
+          "bytes": 2603,
+          "sha256": "ecae9458568fc31f1af81372d0b3f8770c77edeb05aeb61b715e0c56fa5aedef"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_mp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_mp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "06843b51846826a3e20ad52b82d15b98aca202c91136bacf92f7dcdf4544e782"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_mp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_mp_uniform.jsonl",
+          "bytes": 75188,
+          "sha256": "8b9256d793260833afc679ff2d6a470387c76b525f4cbdf89f8ec7570ad02fdf"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_mp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_mp_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "b3dff1523fe7487f0636e8d9dcb9a5c187f1cae33f522dbe8d7fbda82a51cfb5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_mp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_mp_widthpath.args.json",
+          "bytes": 820,
+          "sha256": "daa0e55c6ade5a6c5b341d088a68f8469dd245f91793b156fed56f90f07da1ed"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_mp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_mp_widthpath.jsonl",
+          "bytes": 76943,
+          "sha256": "77255556d71307e6341c0135d8e057f053b8e98f1041965abc6eb2880dc35173"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_mp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_mp_widthpath.profile.json",
+          "bytes": 2630,
+          "sha256": "45824df46aa890c379662098ae7898691ea89e7226f57691ec003607df8c0624"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_width3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_width3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "06843b51846826a3e20ad52b82d15b98aca202c91136bacf92f7dcdf4544e782"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_width3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_width3_uniform.jsonl",
+          "bytes": 75188,
+          "sha256": "8b9256d793260833afc679ff2d6a470387c76b525f4cbdf89f8ec7570ad02fdf"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_width3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_width3_uniform.profile.json",
+          "bytes": 720,
+          "sha256": "b3dff1523fe7487f0636e8d9dcb9a5c187f1cae33f522dbe8d7fbda82a51cfb5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_width3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_width3_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "824700e4bffa7db6c061651431bec9e26f89d89375e5481638074c4a7959e27b"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_width3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_width3_widthpath.jsonl",
+          "bytes": 68413,
+          "sha256": "5aa228758aa6ba4531b513aac5b6315e40579c9ead44e8331032a0a7b717bd0c"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s1_width3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s1_width3_widthpath.profile.json",
+          "bytes": 2377,
+          "sha256": "d235c39c3db2105a73c73b9250895fc8edbef285195f340423b684af03e8c047"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_both3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_both3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "f4ba80caa201e5bfb6de7fc2337cb1263adee24d43996e5c1ee61ef8032cc697"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_both3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_both3_uniform.jsonl",
+          "bytes": 75211,
+          "sha256": "1740f63a2a7744e15516c485ca6f899432b0b4da372568a14303f1b77c6e9e63"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_both3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_both3_uniform.profile.json",
+          "bytes": 721,
+          "sha256": "a0b3031de6e9c414cd9e8c182a7ac98e38325e7d48a77b6d1cd1220fd4b48630"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_both3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_both3_widthpath.args.json",
+          "bytes": 833,
+          "sha256": "df374a9746fa4b8e8caaff82696118cea0aa4800de560620d1fd9120038a8ea1"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_both3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_both3_widthpath.jsonl",
+          "bytes": 69024,
+          "sha256": "78ee0380c0e34f3a1d1aa2cd7f0653d9e5d14c266434766470b84331eb30a5a1"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_both3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_both3_widthpath.profile.json",
+          "bytes": 2445,
+          "sha256": "0602986fae73461c13a9182c9faa99a7b91fc737dd9d04dddd3f8e139509405b"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "f4ba80caa201e5bfb6de7fc2337cb1263adee24d43996e5c1ee61ef8032cc697"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmp_uniform.jsonl",
+          "bytes": 75211,
+          "sha256": "1740f63a2a7744e15516c485ca6f899432b0b4da372568a14303f1b77c6e9e63"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmp_uniform.profile.json",
+          "bytes": 721,
+          "sha256": "a0b3031de6e9c414cd9e8c182a7ac98e38325e7d48a77b6d1cd1220fd4b48630"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmp_widthpath.args.json",
+          "bytes": 833,
+          "sha256": "c5de2b1991037cb44bd409d7d3cb52b9851c72df055ed6d32e9825fcad8954a3"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmp_widthpath.jsonl",
+          "bytes": 76688,
+          "sha256": "862128d10b6884c1cb1ca17673661fd60affdee25976f75ca48cb0aab6930bf0"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmp_widthpath.profile.json",
+          "bytes": 2631,
+          "sha256": "24e69ed0156bc84bef0f0ea932bb6c1a5f840993f6276aad559f10771edb43d1"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmpm_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmpm_uniform.args.json",
+          "bytes": 812,
+          "sha256": "f4ba80caa201e5bfb6de7fc2337cb1263adee24d43996e5c1ee61ef8032cc697"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmpm_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmpm_uniform.jsonl",
+          "bytes": 75211,
+          "sha256": "1740f63a2a7744e15516c485ca6f899432b0b4da372568a14303f1b77c6e9e63"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmpm_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmpm_uniform.profile.json",
+          "bytes": 721,
+          "sha256": "a0b3031de6e9c414cd9e8c182a7ac98e38325e7d48a77b6d1cd1220fd4b48630"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmpm_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmpm_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "f3961e5f1859b14efcaed67ad11a2b7eb26d594edee6b22c35ca3cb29ba0de3b"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmpm_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmpm_widthpath.jsonl",
+          "bytes": 77134,
+          "sha256": "ff345fb0c17a1ad0041b62d2c7288f800a18673ae800523aac105a1ffd5a12fd"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_bothmpm_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_bothmpm_widthpath.profile.json",
+          "bytes": 2671,
+          "sha256": "480d07389863843820809a05b76aa02da58b3fd3d006841164783e4a8628684d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_mp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_mp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "f4ba80caa201e5bfb6de7fc2337cb1263adee24d43996e5c1ee61ef8032cc697"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_mp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_mp_uniform.jsonl",
+          "bytes": 75211,
+          "sha256": "1740f63a2a7744e15516c485ca6f899432b0b4da372568a14303f1b77c6e9e63"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_mp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_mp_uniform.profile.json",
+          "bytes": 721,
+          "sha256": "a0b3031de6e9c414cd9e8c182a7ac98e38325e7d48a77b6d1cd1220fd4b48630"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_mp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_mp_widthpath.args.json",
+          "bytes": 820,
+          "sha256": "bc89d8bd2e8608dc4a1dd84ad3a549a576296fe60bb724bf8fed65352aa015b4"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_mp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_mp_widthpath.jsonl",
+          "bytes": 76847,
+          "sha256": "8edd50e525f4316338a7c1160ae9d259f47b148683852eceb9cc8cb0b0b97460"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_mp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_mp_widthpath.profile.json",
+          "bytes": 2592,
+          "sha256": "cd87c81b3919fb441b810cb3c572f5c89910291feaed2b7efde4f15a77549ac7"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_width3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_width3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "f4ba80caa201e5bfb6de7fc2337cb1263adee24d43996e5c1ee61ef8032cc697"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_width3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_width3_uniform.jsonl",
+          "bytes": 75211,
+          "sha256": "1740f63a2a7744e15516c485ca6f899432b0b4da372568a14303f1b77c6e9e63"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_width3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_width3_uniform.profile.json",
+          "bytes": 721,
+          "sha256": "a0b3031de6e9c414cd9e8c182a7ac98e38325e7d48a77b6d1cd1220fd4b48630"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_width3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_width3_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "8a326c1fef46905a80a2df6f672f6ccc8a20e4671b7f2469bb3928f06bb5e58d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_width3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_width3_widthpath.jsonl",
+          "bytes": 68698,
+          "sha256": "e06fa471874aa9de4c4f44c98d328fdad82dad178e3290afb1ef5c744f8834d9"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s2_width3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s2_width3_widthpath.profile.json",
+          "bytes": 2324,
+          "sha256": "892f39d2e9c2455a7d060986adb4624fb0c7bf86624d6581070b6a3523d3283d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_both3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_both3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "9d40a53d53461cd95631528c2a8928abeaf27c7ba56f42c8911ac6e71f539955"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_both3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_both3_uniform.jsonl",
+          "bytes": 75278,
+          "sha256": "5ae1d0a163108c473d15f46488cd3ffb91369f067becd776afc5ca8c8f1274d6"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_both3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_both3_uniform.profile.json",
+          "bytes": 722,
+          "sha256": "ca479f6142e967a518479f1a4fa262ea22b0b1782a6ef9cb4dc544657d56737f"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_both3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_both3_widthpath.args.json",
+          "bytes": 833,
+          "sha256": "378126c70d44091718848bc73163e98f92525c785fdb9afa21ee57b10631a56b"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_both3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_both3_widthpath.jsonl",
+          "bytes": 68964,
+          "sha256": "54b94828e7f6987d06c5a38c401147b6d73a0541fe102c098459dad91337a6d4"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_both3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_both3_widthpath.profile.json",
+          "bytes": 2435,
+          "sha256": "7c5fcb5a7fbe1f55c84c1889c24d880c4afeb1be87acf4dabeebb9ea38a5a42e"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "9d40a53d53461cd95631528c2a8928abeaf27c7ba56f42c8911ac6e71f539955"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmp_uniform.jsonl",
+          "bytes": 75278,
+          "sha256": "5ae1d0a163108c473d15f46488cd3ffb91369f067becd776afc5ca8c8f1274d6"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmp_uniform.profile.json",
+          "bytes": 722,
+          "sha256": "ca479f6142e967a518479f1a4fa262ea22b0b1782a6ef9cb4dc544657d56737f"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmp_widthpath.args.json",
+          "bytes": 833,
+          "sha256": "8f81f7f2ff5afd45332328638eb59a49aa3f0652c62d32472e8d1d75fe8cf1fe"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmp_widthpath.jsonl",
+          "bytes": 76674,
+          "sha256": "05fca81c514998fd9fd96d3ba17c4e42a320cf127668912252f6891fd4095c85"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmp_widthpath.profile.json",
+          "bytes": 2603,
+          "sha256": "e11b2f0b15a47ec7c24ffb78404cb40f51b6086ec6c49e01aa1552506bfb7a0d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmpm_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmpm_uniform.args.json",
+          "bytes": 812,
+          "sha256": "9d40a53d53461cd95631528c2a8928abeaf27c7ba56f42c8911ac6e71f539955"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmpm_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmpm_uniform.jsonl",
+          "bytes": 75278,
+          "sha256": "5ae1d0a163108c473d15f46488cd3ffb91369f067becd776afc5ca8c8f1274d6"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmpm_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmpm_uniform.profile.json",
+          "bytes": 722,
+          "sha256": "ca479f6142e967a518479f1a4fa262ea22b0b1782a6ef9cb4dc544657d56737f"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmpm_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmpm_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "da07ad19607419230b8fe0b4fa4bd3d3323077138f028d3f34e6d77a69a39359"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmpm_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmpm_widthpath.jsonl",
+          "bytes": 77126,
+          "sha256": "576240550fb3c391386e2621f50a3360b63f48a2220042d7b277afca5afc696b"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_bothmpm_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_bothmpm_widthpath.profile.json",
+          "bytes": 2615,
+          "sha256": "6d29d9d09c5cb72e97646044705496313db202e12de529ef96d2fabf951c56c4"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_mp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_mp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "9d40a53d53461cd95631528c2a8928abeaf27c7ba56f42c8911ac6e71f539955"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_mp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_mp_uniform.jsonl",
+          "bytes": 75278,
+          "sha256": "5ae1d0a163108c473d15f46488cd3ffb91369f067becd776afc5ca8c8f1274d6"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_mp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_mp_uniform.profile.json",
+          "bytes": 722,
+          "sha256": "ca479f6142e967a518479f1a4fa262ea22b0b1782a6ef9cb4dc544657d56737f"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_mp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_mp_widthpath.args.json",
+          "bytes": 820,
+          "sha256": "592c6411de1805dc8eba8485dd9e2fbaca3a7dbfab02f7dc3bc51a5c9ce75f1a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_mp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_mp_widthpath.jsonl",
+          "bytes": 76787,
+          "sha256": "ba3e9a58b3d587b83268e5bd94eb50f6fcfcfbd56fde106466998f27f9c234a5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_mp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_mp_widthpath.profile.json",
+          "bytes": 2600,
+          "sha256": "4cc43b1d1c0fddf6f6a93f0d7c134393c66f7c7d3751c7756ff7bca07460f0a8"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_width3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_width3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "9d40a53d53461cd95631528c2a8928abeaf27c7ba56f42c8911ac6e71f539955"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_width3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_width3_uniform.jsonl",
+          "bytes": 75278,
+          "sha256": "5ae1d0a163108c473d15f46488cd3ffb91369f067becd776afc5ca8c8f1274d6"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_width3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_width3_uniform.profile.json",
+          "bytes": 722,
+          "sha256": "ca479f6142e967a518479f1a4fa262ea22b0b1782a6ef9cb4dc544657d56737f"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_width3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_width3_widthpath.args.json",
+          "bytes": 834,
+          "sha256": "98a659f9e3d5a8c050db17014e6ccd28a1c9471456e67e491d798b20b0334716"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_width3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_width3_widthpath.jsonl",
+          "bytes": 68649,
+          "sha256": "479e9e802a96755b61ff2edca48c07276cb91657aeca86bf4b7477a2898a240a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s3_width3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s3_width3_widthpath.profile.json",
+          "bytes": 2364,
+          "sha256": "f99082ed01c97ede8f1b87f37cb1bafe024f7c4f438a9b4fec09a4a804e2ea36"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s9_bothmpm_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s9_bothmpm_uniform.args.json",
+          "bytes": 812,
+          "sha256": "4433f96d9359587f075130485eec2f018053580bbd5dcafa8879f8a730878831"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s9_bothmpm_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s9_bothmpm_uniform.jsonl",
+          "bytes": 6339,
+          "sha256": "1374892d6a28831353a944203941d90fc1037968d61b4bacfad0c46fe027bc14"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s9_bothmpm_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s9_bothmpm_uniform.profile.json",
+          "bytes": 642,
+          "sha256": "8ef49bf985b63186221bacd9b6ca4ec70927cc56a3f7d435afa2f0e99a5357ea"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s9_bothmpm_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s9_bothmpm_widthpath.args.json",
+          "bytes": 833,
+          "sha256": "8d78209719c2e92f9e1f9edde845e0a811512a5188d1ae2565f04f18b1d5eea8"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s9_bothmpm_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho1_s9_bothmpm_widthpath.jsonl",
+          "bytes": 6499,
+          "sha256": "fc8663eb07d580e7f27c5d780a2d4f25a4de5a36083b0f16ed29a9610fde419f"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho1_s9_bothmpm_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho1_s9_bothmpm_widthpath.profile.json",
+          "bytes": 2683,
+          "sha256": "243b436ee7f9ff83f95345a051d7d9563b387d9c697dfe2a9d8092073166bb0f"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_both3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_both3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "ff517c367c9fd74c13bc486869f9c2baa50678d62d4a170816f61e174dda16c7"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_both3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_both3_uniform.jsonl",
+          "bytes": 75474,
+          "sha256": "7cd1e88180e3b184ad70c3760c2c384d6f2cf5bab30dba2955793eedbe2023bc"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_both3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_both3_uniform.profile.json",
+          "bytes": 724,
+          "sha256": "446beef728d72c04b49fcee61e3077b0d320527dbfebce2186b06da63d6dbfb9"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_both3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_both3_widthpath.args.json",
+          "bytes": 829,
+          "sha256": "eaef94a7eb8180c907b5a05641ac0d5a53b699f9a85ca80b67908663ea16019d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_both3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_both3_widthpath.jsonl",
+          "bytes": 69013,
+          "sha256": "4e0d9189b1aa0de9205924e7e51fca0a136f84b1196ed398ea9a65f54b138e33"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_both3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_both3_widthpath.profile.json",
+          "bytes": 2457,
+          "sha256": "12ea50b6acbadabc8cb1eaff14457dda091914c0eed34180cb754f4af57a6b1c"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "ff517c367c9fd74c13bc486869f9c2baa50678d62d4a170816f61e174dda16c7"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmp_uniform.jsonl",
+          "bytes": 75474,
+          "sha256": "7cd1e88180e3b184ad70c3760c2c384d6f2cf5bab30dba2955793eedbe2023bc"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmp_uniform.profile.json",
+          "bytes": 724,
+          "sha256": "446beef728d72c04b49fcee61e3077b0d320527dbfebce2186b06da63d6dbfb9"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmp_widthpath.args.json",
+          "bytes": 829,
+          "sha256": "68bcd3d6489590d14a45039c4c2a6d3e67dbc3d853fc46582b5af309b587a50a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmp_widthpath.jsonl",
+          "bytes": 76621,
+          "sha256": "e45f69cc27fb355b47334ae03936de2403339ff2f073434c26426bfe19718e88"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmp_widthpath.profile.json",
+          "bytes": 2637,
+          "sha256": "61ca2a629a54f498c8324527dac4c9eeb0a1a5596def6567acaae9e7cf2f0175"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmpm_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmpm_uniform.args.json",
+          "bytes": 812,
+          "sha256": "ff517c367c9fd74c13bc486869f9c2baa50678d62d4a170816f61e174dda16c7"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmpm_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmpm_uniform.jsonl",
+          "bytes": 75474,
+          "sha256": "7cd1e88180e3b184ad70c3760c2c384d6f2cf5bab30dba2955793eedbe2023bc"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmpm_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmpm_uniform.profile.json",
+          "bytes": 724,
+          "sha256": "446beef728d72c04b49fcee61e3077b0d320527dbfebce2186b06da63d6dbfb9"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmpm_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmpm_widthpath.args.json",
+          "bytes": 830,
+          "sha256": "0f89ecf956494bf27b792c7e17c10f845646f77aab503065c08bfdde855dbf71"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmpm_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmpm_widthpath.jsonl",
+          "bytes": 76628,
+          "sha256": "0456705c775d6e2e4f60a723fadc579b72a61c786d4700f5576f0089c79c6e1a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_bothmpm_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_bothmpm_widthpath.profile.json",
+          "bytes": 2625,
+          "sha256": "56a193692f2dbabbadb803fc7d362fd13f215d7cde1f59509edd76e571f1a88a"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_mp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_mp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "ff517c367c9fd74c13bc486869f9c2baa50678d62d4a170816f61e174dda16c7"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_mp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_mp_uniform.jsonl",
+          "bytes": 75474,
+          "sha256": "7cd1e88180e3b184ad70c3760c2c384d6f2cf5bab30dba2955793eedbe2023bc"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_mp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_mp_uniform.profile.json",
+          "bytes": 724,
+          "sha256": "446beef728d72c04b49fcee61e3077b0d320527dbfebce2186b06da63d6dbfb9"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_mp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_mp_widthpath.args.json",
+          "bytes": 816,
+          "sha256": "b6305d1f7c77fa3719cafc3b0e834c10e7079d468efed907c40ee4ead55cf336"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_mp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_mp_widthpath.jsonl",
+          "bytes": 76456,
+          "sha256": "995d4e9c0db5a3ee9db01e597d24cb2b77fa86ca55e6220615735e45abb6aca5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_mp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_mp_widthpath.profile.json",
+          "bytes": 2616,
+          "sha256": "0114e9f959f6c6796e2763a944e0ccc8a154b4e757934df4077ee9b85e69da57"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_width3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_width3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "ff517c367c9fd74c13bc486869f9c2baa50678d62d4a170816f61e174dda16c7"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_width3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_width3_uniform.jsonl",
+          "bytes": 75474,
+          "sha256": "7cd1e88180e3b184ad70c3760c2c384d6f2cf5bab30dba2955793eedbe2023bc"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_width3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_width3_uniform.profile.json",
+          "bytes": 724,
+          "sha256": "446beef728d72c04b49fcee61e3077b0d320527dbfebce2186b06da63d6dbfb9"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_width3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_width3_widthpath.args.json",
+          "bytes": 830,
+          "sha256": "2ee8c5cf2298ae51fe37cf9958af6bf061a7dad71dc6e300a1b90b60c0c0da6b"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_width3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_width3_widthpath.jsonl",
+          "bytes": 68932,
+          "sha256": "752db1bd3e3d0e0eead7d7a7dfe8394ac046b0dd8dc0ce28ec45c64f20ae261d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s1_width3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s1_width3_widthpath.profile.json",
+          "bytes": 2361,
+          "sha256": "7e04eeadd61349dea898f543c86649d078d2908894b4c76a806bfab4ca106013"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_both3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_both3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "4eb2db9c164ab1e03abd7d49fa224fdd6d8fd092f9b148498a8a863fbf914b12"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_both3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_both3_uniform.jsonl",
+          "bytes": 75499,
+          "sha256": "1e1282666270599e24e20a5c2c3f4baca93744bfcbb257d4a1f6e3d962bc62c5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_both3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_both3_uniform.profile.json",
+          "bytes": 726,
+          "sha256": "b81720eaf6a2641412978d5623aff84aeb4ffa359ccdfb1d7c884c383d05a959"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_both3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_both3_widthpath.args.json",
+          "bytes": 829,
+          "sha256": "dd99306ebec3fa0c35878e04f7a74fe98f1ca93c3d45b30130871c4e3ce58588"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_both3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_both3_widthpath.jsonl",
+          "bytes": 69017,
+          "sha256": "5a306f897e5eb0cae34c914c85278b2f61d7c3e5f7e51024eed260f2897b1c5c"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_both3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_both3_widthpath.profile.json",
+          "bytes": 2404,
+          "sha256": "8364ba74c9cd1710c6982eb14c3f73012b8026f95d901d4e300f201b7709d810"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "4eb2db9c164ab1e03abd7d49fa224fdd6d8fd092f9b148498a8a863fbf914b12"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmp_uniform.jsonl",
+          "bytes": 75499,
+          "sha256": "1e1282666270599e24e20a5c2c3f4baca93744bfcbb257d4a1f6e3d962bc62c5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmp_uniform.profile.json",
+          "bytes": 726,
+          "sha256": "b81720eaf6a2641412978d5623aff84aeb4ffa359ccdfb1d7c884c383d05a959"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmp_widthpath.args.json",
+          "bytes": 829,
+          "sha256": "7acc10dcb1fe072aa075f994fb325873f7f623a01529070d5bee8933ad971e60"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmp_widthpath.jsonl",
+          "bytes": 76477,
+          "sha256": "d07b06aae1b3c551a25329039ce10b0e106eb6a6ee1fe848be4e5e2391f7c1ea"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmp_widthpath.profile.json",
+          "bytes": 2619,
+          "sha256": "4ec99c81d82a0233861ef9b808460bb9cfcdd912f0d9aca090878ce25f4c6516"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmpm_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmpm_uniform.args.json",
+          "bytes": 812,
+          "sha256": "4eb2db9c164ab1e03abd7d49fa224fdd6d8fd092f9b148498a8a863fbf914b12"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmpm_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmpm_uniform.jsonl",
+          "bytes": 75499,
+          "sha256": "1e1282666270599e24e20a5c2c3f4baca93744bfcbb257d4a1f6e3d962bc62c5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmpm_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmpm_uniform.profile.json",
+          "bytes": 726,
+          "sha256": "b81720eaf6a2641412978d5623aff84aeb4ffa359ccdfb1d7c884c383d05a959"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmpm_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmpm_widthpath.args.json",
+          "bytes": 830,
+          "sha256": "24116cf1a6749b0b6574e93188ec9e24025c12062f28d776d677e99b441c8579"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmpm_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmpm_widthpath.jsonl",
+          "bytes": 76671,
+          "sha256": "460b97eb116342304de74e2c2e63b787e2747640a8dc3c77dd0459c1cade0bdd"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_bothmpm_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_bothmpm_widthpath.profile.json",
+          "bytes": 2636,
+          "sha256": "ccd985bc9c54264e1e3932e3834af454d8ad4d7a3b4cdf2210e7ed53691e1fe6"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_mp_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_mp_uniform.args.json",
+          "bytes": 812,
+          "sha256": "4eb2db9c164ab1e03abd7d49fa224fdd6d8fd092f9b148498a8a863fbf914b12"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_mp_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_mp_uniform.jsonl",
+          "bytes": 75499,
+          "sha256": "1e1282666270599e24e20a5c2c3f4baca93744bfcbb257d4a1f6e3d962bc62c5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_mp_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_mp_uniform.profile.json",
+          "bytes": 726,
+          "sha256": "b81720eaf6a2641412978d5623aff84aeb4ffa359ccdfb1d7c884c383d05a959"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_mp_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_mp_widthpath.args.json",
+          "bytes": 816,
+          "sha256": "04a91772081e7b09021af16d60f5fa68867ef70f253381c0e9724a641033a927"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_mp_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_mp_widthpath.jsonl",
+          "bytes": 76504,
+          "sha256": "cc398bdde1e39e77dced9192aa51a97f393ea3c63ad0e02ef39c89ee9b649fe6"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_mp_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_mp_widthpath.profile.json",
+          "bytes": 2624,
+          "sha256": "6fc58488d22f9a8512a6b033e87fd602718ef083c6cc82e93efee9852b43d04d"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_width3_uniform.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_width3_uniform.args.json",
+          "bytes": 812,
+          "sha256": "4eb2db9c164ab1e03abd7d49fa224fdd6d8fd092f9b148498a8a863fbf914b12"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_width3_uniform.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_width3_uniform.jsonl",
+          "bytes": 75499,
+          "sha256": "1e1282666270599e24e20a5c2c3f4baca93744bfcbb257d4a1f6e3d962bc62c5"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_width3_uniform.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_width3_uniform.profile.json",
+          "bytes": 726,
+          "sha256": "b81720eaf6a2641412978d5623aff84aeb4ffa359ccdfb1d7c884c383d05a959"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_width3_widthpath.args.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_width3_widthpath.args.json",
+          "bytes": 830,
+          "sha256": "7983644d56160fedf914a36aab0bee9f43e560bd7ad9e692966e634fb5e3cf82"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_width3_widthpath.jsonl",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_width3_widthpath.jsonl",
+          "bytes": 68967,
+          "sha256": "62e1ea15b4d3f4a3620d88e38b10f891fce384890c5de209ef78e20bb042954b"
+        },
+        {
+          "source_path": "out/wp_r8mix_rho2_s2_width3_widthpath.profile.json",
+          "public_path": "E7/out/wp_r8mix_rho2_s2_width3_widthpath.profile.json",
+          "bytes": 2341,
+          "sha256": "0a8fad130cb8cac4ce377763802e4f147707984a5ab91dbdadf4167bf063a157"
+        },
+        {
+          "source_path": "docs/02_실험/measured_replay_2026-09-23.json",
+          "public_path": "E7/docs/02_실험/measured_replay_2026-09-23.json",
+          "bytes": 25606,
+          "sha256": "e813fa865da312c037600fb6ba382c613ffc61a06e4d8bcd053d3fa261112367"
+        },
+        {
+          "source_path": "docs/02_실험/실측주입_재현실험_2026-09-23.md",
+          "public_path": "E7/docs/02_실험/실측주입_재현실험_2026-09-23.md",
+          "bytes": 14594,
+          "sha256": "e0a489437380d79858ed8db35f47fe31e8543427e9c0978c05fb6c5ea54e6281"
+        },
+        {
+          "source_path": "scripts/exp/conditions.json",
+          "public_path": "E7/scripts/exp/conditions.json",
+          "bytes": 92792,
+          "sha256": "fd087c4f05d55bb96834c1ccdefa526693328185afa4ef5d8864c8c6ceb5d5ed"
+        }
+      ]
+    }
+  ]
+}

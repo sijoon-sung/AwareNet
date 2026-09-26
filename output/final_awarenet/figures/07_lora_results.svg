@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>분산 도메인의 학습 결과가 연합 모델에 반영</title>
+	<desc>엄격 판정 적용  ·  heldout 문형 18개  ·  B1 8개 / B2 3개 / B3 7개  ·  단일 소규모 실행 | 문형을 바꾼 알려진 사실 평가  |  새 지식 일반화·대규모 정확도·폭·경로 결합 성능을 입증하는 수치는 아님</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="58" y="757" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 39px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1514) scale(1,-1)">분산 도메인의 학습 결과가 연합 모델에 반영</text>
+			<text x="58" y="709" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1418) scale(1,-1)">엄격 판정 적용  ·  heldout 문형 18개  ·  B1 8개 / B2 3개 / B3 7개  ·  단일 소규모 실행</text>
+			<path d="M 58,690 L 1342,690 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="58" y="33" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,66) scale(1,-1)">문형을 바꾼 알려진 사실 평가  |  새 지식 일반화·대규모 정확도·폭·경로 결합 성능을 입증하는 수치는 아님</text>
+			<text x="58" y="574" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 27px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1148) scale(1,-1)">베이스</text>
+			<rect x="363" y="563" width="630" height="47" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="363" y="563" width="0" height="47" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(86%,89%,92%); fill-rule: evenodd;"/>
+			<text x="1025" y="575" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 34px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1150) scale(1,-1)">0/18</text>
+			<text x="363" y="530" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1060) scale(1,-1)">B1  0/8  ·  B2  0/3  ·  B3  0/7</text>
+			<text x="58" y="454" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 27px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,908) scale(1,-1)">단독 B1</text>
+			<rect x="363" y="443" width="630" height="47" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="363" y="443" width="210.0" height="47" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(41%,33%,67%); fill-rule: evenodd;"/>
+			<text x="1025" y="455" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 34px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,910) scale(1,-1)">6/18</text>
+			<text x="363" y="410" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,820) scale(1,-1)">B1  6/8  ·  B2  0/3  ·  B3  0/7</text>
+			<text x="58" y="334" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 27px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,668) scale(1,-1)">연합 뒷단 공유</text>
+			<rect x="363" y="323" width="630" height="47" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="363" y="323" width="420.0" height="47" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="1025" y="335" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 34px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,670) scale(1,-1)">12/18</text>
+			<text x="363" y="290" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,580) scale(1,-1)">B1  6/8  ·  B2  2/3  ·  B3  4/7</text>
+			<text x="58" y="214" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 27px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,428) scale(1,-1)">연합 앞·뒷단 평균</text>
+			<rect x="363" y="203" width="630" height="47" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="363" y="203" width="420.0" height="47" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="1025" y="215" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 34px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,430) scale(1,-1)">12/18</text>
+			<text x="363" y="170" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,340) scale(1,-1)">B1  4/8  ·  B2  2/3  ·  B3  6/7</text>
+			<text x="1205" y="575" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1150) scale(1,-1)">정답 수</text>
+			<text x="1205" y="466" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 26px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,932) scale(1,-1)">33.3%</text>
+			<text x="1205" y="346" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 26px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,692) scale(1,-1)">66.7%</text>
+			<text x="1205" y="226" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 26px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,452) scale(1,-1)">66.7%</text>
+		</g>
+	</g>
+</svg>

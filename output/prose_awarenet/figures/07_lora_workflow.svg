@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="575" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 575" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>LoRA 실행 구조</title>
+	<desc>KOREN VM 2대의 3개 논리 클라이언트와 HPC V100 서버. 활성값과 정답 토큰을 보내고 기울기를 반환받으며 라운드 끝에 LoRA 어댑터를 집계했다. / Qwen2.5-0.5B, cut 2, rank 16, 16라운드×30스텝. CNN 폭·경로 제어와 통합한 실험이 아니며, 서버는 기기별 순차 처리한다.</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="575"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-575)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="575" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="25" y="257" width="405" height="294" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="45" y="506" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,1012) scale(1,-1)">VM 1</text>
+			<rect x="25" y="29" width="405" height="202" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="45" y="186" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,372) scale(1,-1)">VM 2</text>
+			<text x="60" y="428" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,856) scale(1,-1)">c0 · B1</text>
+			<rect x="290" y="407" width="18" height="53" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="290" y="407" width="18" height="53" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="316" y="407" width="18" height="53" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="316" y="407" width="18" height="53" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="342" y="407" width="18" height="53" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="342" y="407" width="18" height="53" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<text x="60" y="317" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,634) scale(1,-1)">c1 · B2</text>
+			<rect x="290" y="296" width="18" height="53" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="290" y="296" width="18" height="53" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="316" y="296" width="18" height="53" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="316" y="296" width="18" height="53" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="342" y="296" width="18" height="53" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="342" y="296" width="18" height="53" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<text x="60" y="104" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,208) scale(1,-1)">c2 · B3</text>
+			<rect x="290" y="83" width="18" height="53" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="290" y="83" width="18" height="53" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="316" y="83" width="18" height="53" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="316" y="83" width="18" height="53" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="342" y="83" width="18" height="53" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="342" y="83" width="18" height="53" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="931" y="29" width="444" height="522" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="951" y="506" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,1012) scale(1,-1)">HPC · V100</text>
+			<rect x="1090" y="347" width="128" height="117" rx="5" ry="5" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="1102" y="430.0" width="104" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1193" cy="441.0" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1102" y="395.66666666666663" width="104" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1193" cy="406.66666666666663" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1102" y="361.3333333333333" width="104" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1193" cy="372.3333333333333" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 1110,340 L 1198,340 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<rect x="1110" y="226" width="18" height="67" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="1110" y="226" width="18" height="67" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="1136" y="226" width="18" height="67" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="1136" y="226" width="18" height="67" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="1162" y="226" width="18" height="67" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="1162" y="226" width="18" height="67" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="1188" y="226" width="18" height="67" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="1188" y="226" width="18" height="67" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<circle cx="1155" cy="108" r="35" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1143.95654296875" y="98" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 42px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,196) scale(1,-1)">Σ</text>
+			<text x="994.62646484375" y="133" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 27px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,266) scale(1,-1)">LoRA</text>
+			<path d="M 430,421 L 590,421 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 590,421 L 590,350 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 590,350 L 931,350 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="931 350, 918 355, 918 345" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 430,111 L 590,111 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 590,111 L 590,350 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="630.012939453125" y="373" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 29px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,746) scale(1,-1)">ACT + label</text>
+			<path d="M 931,256 L 654,256 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 654,256 L 654,300 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 654,300 L 430,300 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="430 300, 443 295, 443 305" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<path d="M 654,256 L 654,68 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 654,68 L 430,68 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="430 68, 443 63, 443 73" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<text x="751.3818359375" y="207" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,414) scale(1,-1)">GRAD</text>
+			<path d="M 720,108 L 1096,108 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<polygon points="1096 108, 1083 113, 1083 103" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<text x="736.10546875" y="61" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,122) scale(1,-1)">라운드 집계</text>
+		</g>
+	</g>
+</svg>

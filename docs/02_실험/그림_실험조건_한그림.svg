@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 820" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="13">
+  <rect width="1180" height="820" fill="#fbfbf8"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1f2937">실험 조건 한 그림 — 두 갈래(연산·네트워크)와 시너지 (2026-09-06, HPC 루프백 리그)</text>
+  <text x="24" y="54" fill="#6b7280">조건값은 전부 scripts/exp/conditions.json (값마다 출처). 실행 전 게이트: ① 규칙 시험(tests) ② 리그 자가 검사(처리량·지연 실측)</text>
+
+  <!-- 리그 토폴로지 -->
+  <rect x="24" y="72" width="560" height="300" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="40" y="96" font-size="15" font-weight="bold" fill="#111827">리그 (hairpin_lo.sh, 고친 판)</text>
+
+  <!-- devices -->
+  <g font-size="12">
+    <rect x="44" y="118" width="88" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/><text x="88" y="136" text-anchor="middle" font-weight="bold">c0</text><text x="88" y="151" text-anchor="middle" fill="#4b5563">기기</text>
+    <rect x="44" y="172" width="88" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/><text x="88" y="190" text-anchor="middle" font-weight="bold">c1</text><text x="88" y="205" text-anchor="middle" fill="#4b5563">기기</text>
+    <rect x="44" y="226" width="88" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/><text x="88" y="244" text-anchor="middle" font-weight="bold">c2</text><text x="88" y="259" text-anchor="middle" fill="#4b5563">기기</text>
+    <rect x="44" y="280" width="88" height="40" rx="6" fill="#eef2ff" stroke="#6366f1"/><text x="88" y="298" text-anchor="middle" font-weight="bold">c3</text><text x="88" y="313" text-anchor="middle" fill="#4b5563">기기</text>
+  </g>
+  <!-- access lines -->
+  <g stroke="#f59e0b" stroke-width="3">
+    <line x1="132" y1="138" x2="230" y2="138"/><line x1="132" y1="192" x2="230" y2="192"/><line x1="132" y1="246" x2="230" y2="246"/><line x1="132" y1="300" x2="230" y2="300"/>
+  </g>
+  <text x="181" y="128" text-anchor="middle" font-size="11" fill="#b45309">접속 회선 (기기별 하드 상한 a_i)</text>
+  <text x="181" y="330" text-anchor="middle" font-size="11" fill="#b45309">어느 경로를 골라도 상한은 그대로</text>
+  <!-- switch point -->
+  <circle cx="240" cy="219" r="8" fill="#fff" stroke="#374151" stroke-width="2"/>
+  <text x="240" y="205" text-anchor="middle" font-size="11" fill="#374151">엣지 선택(경로 1/2)</text>
+  <g stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="4 3"><line x1="230" y1="138" x2="240" y2="219"/><line x1="230" y1="192" x2="240" y2="219"/><line x1="230" y1="246" x2="240" y2="219"/><line x1="230" y1="300" x2="240" y2="219"/></g>
+  <!-- shared paths -->
+  <g stroke="#2563eb" stroke-width="6" stroke-linecap="round"><line x1="256" y1="175" x2="430" y2="175"/><line x1="256" y1="263" x2="430" y2="263"/></g>
+  <line x1="248" y1="219" x2="256" y2="175" stroke="#9ca3af" stroke-width="1.5"/><line x1="248" y1="219" x2="256" y2="263" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="343" y="164" text-anchor="middle" font-size="12" fill="#1d4ed8">공유 경로 1 (용량 c₁, 붙은 기기끼리 균등)</text>
+  <text x="343" y="285" text-anchor="middle" font-size="12" fill="#1d4ed8">공유 경로 2 (용량 c₂, 균등)</text>
+  <!-- server -->
+  <rect x="448" y="188" width="118" height="60" rx="8" fill="#ecfdf5" stroke="#059669"/>
+  <text x="507" y="212" text-anchor="middle" font-weight="bold">집계 서버</text><text x="507" y="230" text-anchor="middle" font-size="11" fill="#4b5563">V100, 뒷부분 계산</text>
+  <line x1="430" y1="175" x2="448" y2="205" stroke="#2563eb" stroke-width="3"/><line x1="430" y1="263" x2="448" y2="232" stroke="#2563eb" stroke-width="3"/>
+  <text x="40" y="352" font-size="11" fill="#374151">지연: 접속 편도 10ms + 경로 편도 5ms · 큐 = 지연 대기 + 1×BDP · 기기 연산 = --speed 로 감속(연산 고정) · 접속 상한은 왕복(올리기+내리기) 합산</text>
+  <text x="40" y="366" font-size="11" fill="#374151">공통: CIFAR-10 Dirichlet 0.5 · 절단점 2 · 라운드당 4배치 · 12라운드 · 시드 1·2·3 · 사다리 {0.5, 0.75, 1.0} · 기준선 α=1.2 · 불확도 10% · 스레드 4</text>
+
+  <!-- 손잡이 ↔ 병목 -->
+  <rect x="600" y="72" width="556" height="130" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="616" y="96" font-size="15" font-weight="bold" fill="#111827">손잡이 ↔ 병목 (규칙, 설계기록 §9)</text>
+  <g font-size="12">
+    <text x="616" y="120">연산 병목 (기기 느림)</text><text x="800" y="120">→</text><text x="820" y="120" font-weight="bold" fill="#7c3aed">폭 (학습량) 줄임</text>
+    <text x="616" y="142">공유 구간 혼잡</text><text x="800" y="142">→</text><text x="820" y="142" font-weight="bold" fill="#1d4ed8">경로 (엣지 서버) 바꿈 — 총 비용 최소</text>
+    <text x="616" y="164">접속 회선 병목 (어디로 가도 느림)</text><text x="800" y="164">→</text><text x="820" y="164" font-weight="bold" fill="#7c3aed">폭</text><text x="850" y="164" fill="#6b7280"> / 분할 전송 (후속)</text>
+    <text x="616" y="188" fill="#4b5563">폭 = "연산(고정) + 지금 망 시간이 기준선(중앙값×1.2) 안에 드는 가장 큰 폭", 매 라운드. 복귀는 2라운드 재확인.</text>
+  </g>
+
+  <!-- 조건 카드 3개 -->
+  <g>
+    <rect x="24" y="392" width="360" height="250" rx="10" fill="#f5f3ff" stroke="#7c3aed"/>
+    <text x="40" y="416" font-size="15" font-weight="bold" fill="#5b21b6">① 연산의 효과 — h5c (끝)</text>
+    <g font-size="12" fill="#1f2937">
+      <text x="40" y="440">기기 속도: c0 <tspan font-weight="bold">0.15</tspan> · c1 <tspan font-weight="bold">0.4</tspan> · c2 1 · c3 1</text>
+      <text x="40" y="458">접속 회선: 50 / 50 / 50 / 50 Mbps (전원 같음)</text>
+      <text x="40" y="476">공유 경로: 400 / 400 → 혼잡 없음 (망은 변수 아님)</text>
+      <text x="40" y="500">손잡이: <tspan font-weight="bold" fill="#5b21b6">폭만</tspan> (--max-moves 0)  vs 균등</text>
+      <text x="40" y="526" font-weight="bold">결과 (3시드 일치)</text>
+      <text x="40" y="544">라운드 12.2s → 9.0s  <tspan font-weight="bold" fill="#5b21b6">−26%</tspan></text>
+      <text x="40" y="562">c0만 폭 0.5~0.75, c1·c2·c3 는 1.0</text>
+      <text x="40" y="580">정확도 −0.6%p (시드 잡음)</text>
+      <text x="40" y="604" fill="#6b7280">출처: 속도 분포 Aergia(U 0.1~1.0) 범위, 접속 50 = KOREN 벌크·5G 실측</text>
+      <text x="40" y="622" fill="#6b7280">메모: c0 폭이 0.5↔0.75 를 몇 라운드 주기로 오감(경계)</text>
+    </g>
+  </g>
+  <g>
+    <rect x="410" y="392" width="360" height="250" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="426" y="416" font-size="15" font-weight="bold" fill="#1e40af">② 네트워크의 효과 — h5n (끝)</text>
+    <g font-size="12" fill="#1f2937">
+      <text x="426" y="440">기기 속도: 1 / 1 / 1 / 1 (연산은 변수 아님)</text>
+      <text x="426" y="458">접속 회선: 50 / 50 / <tspan font-weight="bold">10</tspan> / 50 Mbps (c2 = 접속 병목)</text>
+      <text x="426" y="476">공유 경로: <tspan font-weight="bold">60 / 60</tspan> → 전원 경로 1 이면 혼잡</text>
+      <text x="426" y="500">손잡이: <tspan font-weight="bold" fill="#1e40af">경로만</tspan> (--ladder 1.0)  vs 균등</text>
+      <text x="426" y="526" font-weight="bold">결과 (3시드 일치)</text>
+      <text x="426" y="544">기기 총비용 67s → 47s  <tspan font-weight="bold" fill="#1e40af">−29.5%</tspan></text>
+      <text x="426" y="562">c3·c0 → 경로 2 (혼잡 해소), c2 는 안 옮김 (옮겨도 무익)</text>
+      <text x="426" y="580">라운드 시간 0% — c2(접속 병목)가 라운드를 정함</text>
+      <text x="426" y="604" fill="#6b7280">출처: 접속 10~50 = 한국 모바일 업로드 중앙 24, LTE 38, 5G 47~84</text>
+      <text x="426" y="622" fill="#6b7280">경로 60/60 대칭 = 이득이 "용량 차"가 아니라 "혼잡 해소"에서만</text>
+    </g>
+  </g>
+  <g>
+    <rect x="796" y="392" width="360" height="250" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-dasharray="6 4"/>
+    <text x="812" y="416" font-size="15" font-weight="bold" fill="#9a3412">③ 시너지 — h5 (다음, 고친 리그로 재실행)</text>
+    <g font-size="12" fill="#1f2937">
+      <text x="812" y="440">기기 속도: c0 <tspan font-weight="bold">0.15</tspan> · 1 · 1 · 1</text>
+      <text x="812" y="458">접속 회선: 50 / 50 / <tspan font-weight="bold">10</tspan> / 50 — 공유 경로 60 / 60</text>
+      <text x="812" y="476">= ①과 ②의 병목을 한 집단에: c0 연산, c1·c3 혼잡, c2 접속</text>
+      <text x="812" y="500">팔: 균등 · 경로만 · 폭만 · <tspan font-weight="bold" fill="#9a3412">둘다</tspan> · (구판 비교)</text>
+      <text x="812" y="526" font-weight="bold">판정 (사전 등록)</text>
+      <text x="812" y="544">기기마다 맞는 손잡이가 갔는가 (c0 폭, c1/c3 경로, c2 폭)</text>
+      <text x="812" y="562">둘다 &lt; min(경로만, 폭만) — 라운드 시간 <tspan font-weight="bold">그리고</tspan> 총비용</text>
+      <text x="812" y="580">시너지의 정체: 경로가 혼잡을 풀면 c2 몫이 늘어 폭을 덜 깎아도 됨</text>
+      <text x="812" y="604" fill="#6b7280">1차(옛 리그) 결과는 리그 결함으로 대외 인용 금지 — §3-3</text>
+      <text x="812" y="622" fill="#6b7280">이후: 분할 전송 갈래, 연속 분포(6판), 부하 비율로 KOREN 실망</text>
+    </g>
+  </g>
+
+  <!-- 정확도 대가 -->
+  <rect x="24" y="662" width="1132" height="72" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="40" y="686" font-size="15" font-weight="bold" fill="#111827">④ 정확도 대가 — rw_long (진행 중, 밤샘)</text>
+  <text x="40" y="708" font-size="12">폭 0.25 / 0.5 / 0.75 / 1.0 × 시드 3 × 400라운드, 학습률 코사인 감쇠, 전원 같은 폭 · 답: "같은 라운드 수에서 최종 정확도 차이"와 "같은 정확도까지 걸린 시간"</text>
+  <text x="40" y="726" font-size="12" fill="#6b7280">출처: 400라운드 = HeteroFL(400/800)·FjORD(500) 규모. 첫 건: 폭 0.25 시드 1 → 400R 최종 74.2%, 한 건 5분</text>
+
+  <!-- 지표 -->
+  <rect x="24" y="750" width="1132" height="52" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="40" y="772" font-size="12"><tspan font-weight="bold">지표</tspan>  라운드 시간(makespan) = 가장 느린 기기 · 기기 총비용 = Σ(연산+전송) · 단위 작업당 = 폭으로 되갚은 값 · 정확도(12R, 잡음 ±5%p) · 기기별 결정 궤적(폭·배정)</text>
+  <text x="40" y="792" font-size="12"><tspan font-weight="bold">읽는 법</tspan>  폭의 효과는 라운드 시간에, 경로의 효과는 총비용에 나타난다. 둘이 겹치는 자리(③)에서만 "함께 정하면 따로보다 낫다"를 말할 수 있다.</text>
+</svg>

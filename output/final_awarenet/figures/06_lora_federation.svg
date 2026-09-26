@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>LoRA로 확인한 모델 분할과 연합 집계</title>
+	<desc>Qwen2.5 0.5B  ·  앞 2층 분할  ·  LoRA rank 16  ·  3개 논리 기기  ·  16라운드 | 실제 구현: activation과 labels 전송, gradient 반환  |  본 그림은 앞·뒷단 모두 평균하는 v1 대조 실행</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="58" y="757" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 39px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1514) scale(1,-1)">LoRA로 확인한 모델 분할과 연합 집계</text>
+			<text x="58" y="709" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1418) scale(1,-1)">Qwen2.5 0.5B  ·  앞 2층 분할  ·  LoRA rank 16  ·  3개 논리 기기  ·  16라운드</text>
+			<path d="M 58,690 L 1342,690 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="58" y="33" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,66) scale(1,-1)">실제 구현: activation과 labels 전송, gradient 반환  |  본 그림은 앞·뒷단 모두 평균하는 v1 대조 실행</text>
+			<rect x="58" y="491" width="356" height="144" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="83" y="577" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(41%,33%,67%); fill-rule: evenodd;"/>
+			<text x="106" y="582" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1164) scale(1,-1)">c0  /  도메인 B1</text>
+			<text x="84" y="527" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1054) scale(1,-1)">임베딩 + 앞 2층 + LoRA</text>
+			<path d="M 414,578 L 669,578 Z" style="stroke: rgb(41%,33%,67%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="669 578, 654.5928 571.0406, 654.5928 584.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(41%,33%,67%); fill-rule: evenodd;"/>
+			<path d="M 669,536 L 414,536 Z" style="stroke: rgb(41%,33%,67%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="414 536, 428.4072 542.9594, 428.4072 529.0406" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(41%,33%,67%); fill-rule: evenodd;"/>
+			<rect x="58" y="333" width="356" height="144" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="83" y="419" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="106" y="424" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,848) scale(1,-1)">c1  /  도메인 B2</text>
+			<text x="84" y="369" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,738) scale(1,-1)">임베딩 + 앞 2층 + LoRA</text>
+			<path d="M 414,420 L 669,420 Z" style="stroke: rgb(0%,49%,47%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="669 420, 654.5928 413.0406, 654.5928 426.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<path d="M 669,378 L 414,378 Z" style="stroke: rgb(0%,49%,47%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="414 378, 428.4072 384.9594, 428.4072 371.0406" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<rect x="58" y="175" width="356" height="144" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="83" y="261" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="106" y="266" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,532) scale(1,-1)">c2  /  도메인 B3</text>
+			<text x="84" y="211" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,422) scale(1,-1)">임베딩 + 앞 2층 + LoRA</text>
+			<path d="M 414,262 L 669,262 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="669 262, 654.5928 255.0406, 654.5928 268.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<path d="M 669,220 L 414,220 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="414 220, 428.4072 226.9594, 428.4072 213.0406" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<rect x="669" y="209" width="673" height="426" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="694" y="577" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="717" y="582" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,1164) scale(1,-1)">HPC에서 기기별 뒷단 학습</text>
+			<text x="695" y="527" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1054) scale(1,-1)">나머지 층과 출력층 + LoRA</text>
+			<text x="695" y="489" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,978) scale(1,-1)">기기별 어댑터와 optimizer 상태 보관</text>
+			<text x="695" y="451" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,902) scale(1,-1)">기기 차례에 해당 상태로 순전파·역전파</text>
+			<rect x="669" y="77" width="673" height="98" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="695" y="135" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,270) scale(1,-1)">라운드 끝 앞·뒷단 어댑터 평균</text>
+			<text x="695" y="95" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,190) scale(1,-1)">다음 라운드의 학습 상태로 공유</text>
+			<path d="M 1005,209 L 1005,175 Z" style="stroke: rgb(0%,49%,47%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="1005 175, 998.0406 189.4072, 1011.959 189.4072" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="463.0732421875" y="617" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 22px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1234) scale(1,-1)">ACT + labels</text>
+			<text x="471.57568359375" y="139" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 22px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,278) scale(1,-1)">GRAD 반환</text>
+		</g>
+	</g>
+</svg>

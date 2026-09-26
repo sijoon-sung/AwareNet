@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>실제 장비와 실제 회선에서 이어진 검증</title>
+	<desc>KOREN 실망 학습과 Jetson 보드 측정은 각자의 원시 기록을 가진 별도 실험이다 | KOREN VM 2대 ≠ 물리 클라이언트 32대  |  Jetson 1대의 모드별 표본 ≠ 다수 보드 동시 학습</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="58" y="757" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 39px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1514) scale(1,-1)">실제 장비와 실제 회선에서 이어진 검증</text>
+			<text x="58" y="709" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1418) scale(1,-1)">KOREN 실망 학습과 Jetson 보드 측정은 각자의 원시 기록을 가진 별도 실험이다</text>
+			<path d="M 58,690 L 1342,690 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="58" y="33" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,66) scale(1,-1)">KOREN VM 2대 ≠ 물리 클라이언트 32대  |  Jetson 1대의 모드별 표본 ≠ 다수 보드 동시 학습</text>
+			<rect x="58" y="388" width="385" height="240" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="83" y="570" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="106" y="575" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1150) scale(1,-1)">KOREN VM 두 대</text>
+			<text x="84" y="520" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1040) scale(1,-1)">실제 CPU·메모리 자원</text>
+			<text x="84" y="482" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,964) scale(1,-1)">LoRA: 논리 기기 3개</text>
+			<text x="84" y="444" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,888) scale(1,-1)">VM1 c0·c1 / VM2 c2</text>
+			<rect x="953" y="388" width="389" height="240" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="978" y="570" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="1001" y="575" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,1150) scale(1,-1)">HPC 학습 서버</text>
+			<text x="979" y="520" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1040) scale(1,-1)">서버측 모델과 역전파</text>
+			<text x="979" y="482" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,964) scale(1,-1)">V100 16GB / CPU 실행</text>
+			<text x="979" y="444" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,888) scale(1,-1)">라운드별 어댑터 집계</text>
+			<path d="M 443,542 L 953,542 Z" style="stroke: rgb(0%,49%,47%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="953 542, 938.5928 535.0406, 938.5928 548.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<path d="M 953,448 L 443,448 Z" style="stroke: rgb(41%,33%,67%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="443 448, 457.4072 454.9594, 457.4072 441.0406" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(41%,33%,67%); fill-rule: evenodd;"/>
+			<text x="514.328125" y="566" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1132) scale(1,-1)">KOREN 실회선과 역방향 SSH 경유</text>
+			<text x="595.703125" y="502" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 25px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1004) scale(1,-1)">activation + labels</text>
+			<text x="595.538330078125" y="410" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 25px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,820) scale(1,-1)">gradient / adapter</text>
+			<rect x="58" y="119" width="615" height="190" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="83" y="251" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(73%,34%,12%); fill-rule: evenodd;"/>
+			<text x="106" y="256" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(73%,34%,12%); stroke:none;" transform="translate(0,512) scale(1,-1)">Jetson Orin Nano 보드</text>
+			<text x="84" y="201" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,402) scale(1,-1)">MAXN / 25W / 15W에서 총 90스텝</text>
+			<text x="84" y="163" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,326) scale(1,-1)">전체 LoRA 스텝·메모리·OOM 기록</text>
+			<rect x="730" y="119" width="612" height="190" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="755" y="251" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="778" y="256" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,512) scale(1,-1)">실측값을 이용한 후속 재현</text>
+			<text x="756" y="201" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,402) scale(1,-1)">기존 전송 기록과 Jetson 시간값을 입력</text>
+			<text x="756" y="163" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,326) scale(1,-1)">시간 모형·로컬 TCP에서 설계 후보 비교</text>
+			<path d="M 674,215 L 730,215 Z" style="stroke: rgb(15%,40%,66%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 8, 6;"/>
+			<polygon points="730 215, 715.5928 208.0406, 715.5928 221.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

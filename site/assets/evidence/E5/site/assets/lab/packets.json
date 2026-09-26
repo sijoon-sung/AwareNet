@@ -1,0 +1,24 @@
+{
+  "packets": 35058,
+  "streams": 92,
+  "dissected_application_rows": 6631,
+  "paths": {
+    "e1": {
+      "packets": 21667,
+      "tcp_payload_bytes": 15564965,
+      "retransmission_flags": 734,
+      "ack_rtt_median_ms": 1261.7079019999999,
+      "ack_rtt_p95_ms": 8554.467084
+    },
+    "e2": {
+      "packets": 13391,
+      "tcp_payload_bytes": 10432825,
+      "retransmission_flags": 447,
+      "ack_rtt_median_ms": 475.008598,
+      "ack_rtt_p95_ms": 2004.1881429999999
+    }
+  },
+  "capture_point": "awn-client any; only TCP port 20500",
+  "rtt_definition": "Wireshark TCP ACK RTT; not end-to-end tensor latency",
+  "retransmission_definition": "Wireshark analysis flags; not an independently measured packet-loss rate"
+}

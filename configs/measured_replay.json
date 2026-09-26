@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "label": "KOREN/Jetson measurement-conditioned replay; not a new field measurement",
+  "jetson_source": "_archive/v2/jetson/results/jetson_compute_anchor.json",
+  "jetson_commit": "582b1d4e249918b2e1075d2a014acd00393ce1cb",
+  "jetson_original_path": "jetson/results/jetson_compute_anchor.json",
+  "network_sources": {
+    "batch": "out/line_scale_detail/n8_s1.0_tcp_batch_1788881912.json",
+    "burst": "out/line_scale_detail/n8_s1.0_tcp_burst_1788881939.json"
+  },
+  "clients": 8,
+  "modes": ["MAXN_SUPER", "MAXN_SUPER", "MAXN_SUPER", "MAXN_SUPER", "25W", "25W", "15W", "15W"],
+  "calibration_steps": 10,
+  "evaluation_steps": [10, 30],
+  "tail_fractions_assumed": [0.25, 0.5, 0.75],
+  "release_models_assumed": ["all_ready", "compute_ready"],
+  "capacity_scales": [1.0, 0.1],
+  "tail_padding_fraction_assumed": 0.05,
+  "completion_error_s_assumed": 0.01,
+  "quantum_bytes": 65536,
+  "notes": [
+    "One measured Jetson is replicated into eight logical timing profiles; these are not eight measured boards.",
+    "The measured Qwen full step is partitioned by an assumed tail fraction. No Jetson SFL backward-only measurement exists in these inputs.",
+    "The 4.2 MB payload comes from the KOREN echo workload, not from a measured Qwen split activation.",
+    "The network rate is an effective aggregate round-trip payload service parameter derived from common wall intervals, not physical one-way link capacity.",
+    "The 0.1 capacity factor is a synthetic sensitivity case; compute/payload are unchanged and no 32-to-8 equivalence is asserted.",
+    "Network window 0 and Jetson steps 0-9 calibrate the policy; windows 1-2 and steps 10-29 evaluate it."
+  ]
+}

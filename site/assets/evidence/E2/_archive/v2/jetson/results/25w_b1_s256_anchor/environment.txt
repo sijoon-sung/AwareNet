@@ -1,0 +1,22 @@
+timestamp: 2026-08-13T23:53:08+09:00
+git_commit: ccefd34bf2831c70138061a7eb61ee415865d5c6
+script_sha256: 297ec815b0522c3678161555fddd5318b64a3d155692ba636197635acbd11640  jetson/scripts/measure_lora_train_speed.py
+# R39 (release), REVISION: 2.1, GCID: 46758480, BOARD: generic, EABI: aarch64, DATE: Fri Aug  7 05:54:22 AM UTC 2026
+# KERNEL_VARIANT: oot
+TARGET_USERSPACE_LIB_DIR=nvidia
+TARGET_USERSPACE_LIB_DIR_PATH=usr/lib/aarch64-linux-gnu/nvidia
+NV Power Mode: 25W
+1
+cpu0:  Governor=schedutil MinFreq=1344000 MaxFreq=1344000 CurrentFreq=1344000 IdleStates: WFI=0 c7=0 
+GPU MinFreq=918000000 MaxFreq=918000000 CurrentFreq=918000000
+EMC MinFreq=3199000000 MaxFreq=3199000000 CurrentFreq=3199000000
+FAN Dynamic Speed Control=disabled hwmon0_pwm1=255
+FAN Dynamic Speed Control=disabled hwmon0_pwm1_enable=1
+NV Power Mode: 25W
+Python 3.12.3
+torch: 2.12.0+cu132
+torch_cuda: 13.2
+cuda_available: True
+transformers: 5.15.0
+peft: 0.20.0
+flwr: 1.33.0

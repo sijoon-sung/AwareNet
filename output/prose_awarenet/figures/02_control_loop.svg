@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="570" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 570" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>폭·경로 결합 제어</title>
+	<desc>계측, 공유 자원을 반영한 경로 평가, 폭 선택, 실행과 관측의 순서. 경로가 전송률을 바꾸고 모델 폭이 연산량과 전송 수요를 바꾼다. / 비용 모형에 기초한 단계적 휴리스틱이며 전역 최적해 보장은 없다.</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="570"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-570)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="570" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="124.03955078125" y="510" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1020) scale(1,-1)">(a) 계측</text>
+			<rect x="40" y="214" width="280" height="253" rx="3" ry="3" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="431.296142578125" y="510" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1020) scale(1,-1)">(b) 경로 평가</text>
+			<rect x="385" y="214" width="280" height="253" rx="3" ry="3" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="793.953125" y="510" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1020) scale(1,-1)">(c) 폭 선택</text>
+			<rect x="730" y="214" width="280" height="253" rx="3" ry="3" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1157.7529296875" y="510" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1020) scale(1,-1)">(d) 적용</text>
+			<rect x="1075" y="214" width="280" height="253" rx="3" ry="3" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="88" y="304.0" width="32" height="45.5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(34%,39%,43%); fill-rule: evenodd;"/>
+			<rect x="148" y="304.0" width="32" height="104.0" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="208" y="304.0" width="32" height="71.5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<path d="M 70,300 L 283,300 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="105.9765625" y="240" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,480) scale(1,-1)">시간 · 바이트</text>
+			<circle cx="428" cy="415" r="8" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 445,415 L 605,415 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="605 415, 592 420, 592 410" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="625" cy="415" r="8" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="428" cy="347" r="8" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 445,347 L 605,347 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="605 347, 592 352, 592 342" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="625" cy="347" r="8" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="428" cy="285" r="8" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 445,285 L 605,285 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="605 285, 592 290, 592 280" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="625" cy="285" r="8" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="475.518798828125" y="240" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,480) scale(1,-1)">S → R(S)</text>
+			<rect x="766" y="303" width="17" height="108" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="766" y="303" width="17" height="108" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="791" y="303" width="17" height="108" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="791" y="303" width="17" height="108" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="838" y="303" width="17" height="108" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="838" y="303.0" width="17" height="75.60000000000002" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="863" y="303" width="17" height="108" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="863" y="303.0" width="17" height="75.60000000000002" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="910" y="303" width="17" height="108" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="910" y="303.0" width="17" height="43.19999999999999" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="935" y="303" width="17" height="108" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="935" y="303.0" width="17" height="43.19999999999999" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<text x="774.89501953125" y="240" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,480) scale(1,-1)">w → 연산·전송량</text>
+			<rect x="1110" y="329" width="62" height="67" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 1118,339 L 1164,339 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1141,329 L 1141,320 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1126,320 L 1156,320 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1184,363 L 1250,363 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="1250 363, 1237 368, 1237 358" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1270" y="325" width="60" height="80" rx="5" ry="5" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="1282" y="371.0" width="36" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1305" cy="382.0" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1282" y="349.0" width="36" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1305" cy="360.0" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1282" y="327.0" width="36" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1305" cy="338.0" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 1290,318 L 1310,318 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="1191.8798828125" y="240" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,480) scale(1,-1)">w, S</text>
+			<path d="M 320,355 L 385,355 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="385 355, 372 360, 372 350" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+			<path d="M 665,355 L 730,355 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="730 355, 717 360, 717 350" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+			<path d="M 1010,355 L 1075,355 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="1075 355, 1062 360, 1062 350" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+			<path d="M 1215,214 L 1215,117 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<path d="M 1215,117 L 180,117 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<path d="M 180,117 L 180,214 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<polygon points="180 214, 175 201, 185 201" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<text x="627.75390625" y="63" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 27px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,126) scale(1,-1)">다음 라운드</text>
+		</g>
+	</g>
+</svg>

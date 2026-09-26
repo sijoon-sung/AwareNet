@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "note": "EXAMPLE ONLY. Replace capacities and path membership with measured/operator configuration. No claim about KOREN backbone topology.",
+  "shared_links": [
+    {"name": "vm1-uplink", "paths": ["1", "2"], "capacity_mbps": 100},
+    {"name": "vm2-uplink", "paths": ["3", "4"], "capacity_mbps": 100}
+  ]
+}

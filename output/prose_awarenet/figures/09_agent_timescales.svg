@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="735" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 735" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>계층별 제어와 시간 규모</title>
+	<desc>패킷은 커널의 설치된 규칙으로 계속 처리하고, 전송 에이전트는 조각을, 계획 에이전트는 라운드 계획을 다룬다. 위 시간선의 간격은 개념 표현이며 실측 주기가 아니다. / 아래의 1,500바이트 직렬화 시간과 출력 중단 시 유입량은 식으로 계산한 값이다. AI 추론 시간이나 실제 큐 증가량을 측정한 결과가 아니다.</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="735"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-735)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="735" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="30" y="651" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1302) scale(1,-1)">커널 · 패킷</text>
+			<path d="M 312,650 L 1362,650 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="30" y="524" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,1048) scale(1,-1)">전송 · 조각</text>
+			<path d="M 312,523 L 1362,523 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="30" y="397" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,794) scale(1,-1)">계획 · 라운드</text>
+			<path d="M 312,396 L 1362,396 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 328,665 L 328,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 354,665 L 354,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 380,665 L 380,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 406,665 L 406,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 432,665 L 432,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 458,665 L 458,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 484,665 L 484,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 510,665 L 510,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 536,665 L 536,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 562,665 L 562,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 588,665 L 588,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 614,665 L 614,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 640,665 L 640,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 666,665 L 666,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 692,665 L 692,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 718,665 L 718,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 744,665 L 744,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 770,665 L 770,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 796,665 L 796,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 822,665 L 822,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 848,665 L 848,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 874,665 L 874,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 900,665 L 900,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 926,665 L 926,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 952,665 L 952,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 978,665 L 978,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1004,665 L 1004,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1030,665 L 1030,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1056,665 L 1056,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1082,665 L 1082,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1108,665 L 1108,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1134,665 L 1134,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1160,665 L 1160,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1186,665 L 1186,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1212,665 L 1212,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1238,665 L 1238,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1264,665 L 1264,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1290,665 L 1290,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1316,665 L 1316,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1342,665 L 1342,635 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="346" y="504" width="58" height="38" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="473" y="504" width="58" height="38" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="600" y="504" width="58" height="38" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="727" y="504" width="58" height="38" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="854" y="504" width="58" height="38" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="981" y="504" width="58" height="38" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1108" y="504" width="58" height="38" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1235" y="504" width="58" height="38" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="346" cy="396" r="17" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<circle cx="838" cy="396" r="17" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<circle cx="1289" cy="396" r="17" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<text x="1187.6953125" y="706" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 24px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,1412) scale(1,-1)">시간 → (개념도)</text>
+			<path d="M 30,309 L 1370,309 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="32" y="259" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,518) scale(1,-1)">(a) 1,500B 직렬화</text>
+			<text x="318.4619140625" y="221" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,442) scale(1,-1)">Δ = 8L/C</text>
+			<text x="97.9453125" y="163" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,326) scale(1,-1)">1Gbps</text>
+			<rect x="202" y="155" width="15.0" height="27" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="233.0" y="164" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,328) scale(1,-1)">12μs</text>
+			<text x="78.02636718749999" y="87" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,174) scale(1,-1)">56Mbps</text>
+			<rect x="202" y="79" width="267.85714285714283" height="27" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="485.85714285714283" y="88" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,176) scale(1,-1)">214.3μs</text>
+			<path d="M 700,288 L 700,32 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="750" y="259" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,518) scale(1,-1)">(b) 출력 중단 가정</text>
+			<text x="1000.431640625" y="212" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,424) scale(1,-1)">Q = Cτ/8</text>
+			<text x="784" y="153" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,306) scale(1,-1)">τ = 50ms</text>
+			<text x="1010" y="153" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,306) scale(1,-1)">0.35MB</text>
+			<text x="1237" y="157" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 24px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,314) scale(1,-1)">56Mbps</text>
+			<text x="1010" y="78" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,156) scale(1,-1)">6.25MB</text>
+			<text x="1237" y="82" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 24px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,164) scale(1,-1)">1Gbps</text>
+		</g>
+	</g>
+</svg>

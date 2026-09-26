@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="595" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 595" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>KOREN 실험 결과</title>
+	<desc>기존 scen32 기록의 3시드 평균 라운드 시간. 초기 4라운드를 제외했다. 기준선은 전폭·고정 배정·출구 1개, 결합은 폭·배정 변경·출구 2개 허용이다. / 동일 정확도 도달 시간 비교가 아니며, 출구 수 차이도 감소율에 포함된다.</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="595"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-595)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="595" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="344" y="548" width="37" height="22" style="stroke: rgb(34%,39%,43%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="397" y="553" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1106) scale(1,-1)">기준선 · 1출구</text>
+			<rect x="709" y="548" width="37" height="22" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="762" y="553" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1106) scale(1,-1)">결합 · 2출구</text>
+			<path d="M 247,503 L 247,112 Z" style="stroke: rgb(87%,89%,91%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="240.115234375" y="73" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,146) scale(1,-1)">0</text>
+			<path d="M 469.75,503 L 469.75,112 Z" style="stroke: rgb(87%,89%,91%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="455.98046875" y="73" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,146) scale(1,-1)">30</text>
+			<path d="M 692.5,503 L 692.5,112 Z" style="stroke: rgb(87%,89%,91%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="678.73046875" y="73" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,146) scale(1,-1)">60</text>
+			<path d="M 915.25,503 L 915.25,112 Z" style="stroke: rgb(87%,89%,91%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="901.48046875" y="73" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,146) scale(1,-1)">90</text>
+			<path d="M 1138,503 L 1138,112 Z" style="stroke: rgb(87%,89%,91%); stroke-linecap: butt; stroke-width: 1.5;"/>
+			<text x="1117.345703125" y="73" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,146) scale(1,-1)">120</text>
+			<text x="159.0" y="453" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,906) scale(1,-1)">정상</text>
+			<rect x="247" y="465" width="469.17696375" height="23" style="stroke: rgb(34%,39%,43%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="247" y="433" width="353.75373" height="23" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="729.17696375" y="471" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,942) scale(1,-1)">63.19</text>
+			<text x="613.75373" y="439" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,878) scale(1,-1)">47.64</text>
+			<text x="1261.3134765625" y="449" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 30px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,898) scale(1,-1)">-24.6%</text>
+			<text x="65.15625" y="359" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,718) scale(1,-1)">트래픽 몰림</text>
+			<rect x="247" y="371" width="813.093435" height="23" style="stroke: rgb(34%,39%,43%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="247" y="339" width="466.84427625" height="23" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="1073.093435" y="377" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,754) scale(1,-1)">109.51</text>
+			<text x="726.84427625" y="345" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,690) scale(1,-1)">62.87</text>
+			<text x="1261.3134765625" y="355" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 30px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,710) scale(1,-1)">-42.6%</text>
+			<text x="93.15625" y="265" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,530) scale(1,-1)">연산 지연</text>
+			<rect x="247" y="277" width="587.4359287499999" height="23" style="stroke: rgb(34%,39%,43%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="247" y="245" width="350.88755625" height="23" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="847.4359287499999" y="283" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,566) scale(1,-1)">79.12</text>
+			<text x="610.88755625" y="251" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,502) scale(1,-1)">47.26</text>
+			<text x="1261.3134765625" y="261" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 30px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,522) scale(1,-1)">-40.3%</text>
+			<text x="93.15625" y="171" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,342) scale(1,-1)">용량 변동</text>
+			<rect x="247" y="183" width="541.8230399999999" height="23" style="stroke: rgb(34%,39%,43%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="247" y="151" width="397.0692" height="23" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="801.8230399999999" y="189" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,378) scale(1,-1)">72.97</text>
+			<text x="657.0692" y="157" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,314) scale(1,-1)">53.48</text>
+			<text x="1261.3134765625" y="167" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 30px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,334) scale(1,-1)">-26.7%</text>
+			<path d="M 247,112 L 1138,112 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="572.6396484375" y="19" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,38) scale(1,-1)">평균 라운드 시간 (s)</text>
+		</g>
+	</g>
+</svg>

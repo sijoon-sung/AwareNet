@@ -1,0 +1,7 @@
+# Current awarenet SFL runtime. Python 3.12; SDN/OVS runs separately on Linux.
+# CUDA 12.4, matching the repository's local/HPC torch generation:
+# python -m pip install -r requirements-sfl.txt --index-url https://download.pytorch.org/whl/cu124
+# For a CPU machine use https://download.pytorch.org/whl/cpu instead.
+torch==2.6.0
+torchvision==0.21.0
+numpy>=1.26,<3

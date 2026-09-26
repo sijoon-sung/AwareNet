@@ -1,0 +1,657 @@
+{
+  "date": "2026-09-22",
+  "branch": "awarenet",
+  "scope": "Research candidate; synthetic and local socket evidence; no new KOREN run",
+  "python": "3.12.14",
+  "results": {
+    "summary": {
+      "scope": "synthetic closed ready-gradient window; not KOREN measurement",
+      "config": {
+        "schema": 1,
+        "scope": "synthetic closed ready-gradient window; not KOREN measurement",
+        "seeds": 100,
+        "clients": 8,
+        "capacity_bps": 20000000,
+        "quantum_bytes": 65536,
+        "completion_error_s": 0.002,
+        "cases": [
+          "heterogeneous",
+          "homogeneous",
+          "inverted_estimate",
+          "wide_uncertainty",
+          "uncovered_drift",
+          "independent_links"
+        ],
+        "primary_metric": "max(gradient_completion_s + independent_local_tail_s)",
+        "secondary_metrics": [
+          "mean_gradient_completion_s",
+          "total_payload_bytes",
+          "regressions_vs_rr",
+          "interval_coverage"
+        ],
+        "decision_rule": "Retain only as a research candidate if heterogeneous gains survive FIFO/SJF comparisons. Report every negative case. Never claim global training speedup from this window model."
+      },
+      "summary": {
+        "heterogeneous": {
+          "runs": 100,
+          "interval_coverage": 1,
+          "interventions": 97,
+          "policies": {
+            "rr": {
+              "mean_barrier_s": 2.6722358663092343,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "fifo": {
+              "mean_barrier_s": 2.3683921844715474,
+              "mean_paired_gain_pct": 10.42195574810996,
+              "min_gain_pct": -20.1484997326973,
+              "max_gain_pct": 32.413998120605456,
+              "regressions": 22
+            },
+            "sjf": {
+              "mean_barrier_s": 2.400842968535494,
+              "mean_paired_gain_pct": 10.09231703793534,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 28.022487092865568,
+              "regressions": 0
+            },
+            "tail": {
+              "mean_barrier_s": 2.093330285836987,
+              "mean_paired_gain_pct": 20.81777396009283,
+              "min_gain_pct": 0.5399631862077703,
+              "max_gain_pct": 39.03021983773583,
+              "regressions": 0
+            },
+            "guarded": {
+              "mean_barrier_s": 2.0960009577878833,
+              "mean_paired_gain_pct": 20.682546886684076,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 39.03021983773583,
+              "regressions": 0
+            },
+            "oracle_tail": {
+              "mean_barrier_s": 2.0931445779697473,
+              "mean_paired_gain_pct": 20.825109476920897,
+              "min_gain_pct": 0.5399631862077703,
+              "max_gain_pct": 39.03021983773583,
+              "regressions": 0
+            }
+          }
+        },
+        "homogeneous": {
+          "runs": 100,
+          "interval_coverage": 1,
+          "interventions": 0,
+          "policies": {
+            "rr": {
+              "mean_barrier_s": 2.1512767999999993,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "fifo": {
+              "mean_barrier_s": 2.1512767999999993,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "sjf": {
+              "mean_barrier_s": 2.1512767999999993,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "tail": {
+              "mean_barrier_s": 2.1512767999999993,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "guarded": {
+              "mean_barrier_s": 2.1512767999999993,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "oracle_tail": {
+              "mean_barrier_s": 2.1512767999999993,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            }
+          }
+        },
+        "inverted_estimate": {
+          "runs": 100,
+          "interval_coverage": 1,
+          "interventions": 0,
+          "policies": {
+            "rr": {
+              "mean_barrier_s": 2.6722358663092343,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "fifo": {
+              "mean_barrier_s": 2.3683921844715474,
+              "mean_paired_gain_pct": 10.42195574810996,
+              "min_gain_pct": -20.1484997326973,
+              "max_gain_pct": 32.413998120605456,
+              "regressions": 22
+            },
+            "sjf": {
+              "mean_barrier_s": 2.400842968535494,
+              "mean_paired_gain_pct": 10.09231703793534,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 28.022487092865568,
+              "regressions": 0
+            },
+            "tail": {
+              "mean_barrier_s": 2.569793975742305,
+              "mean_paired_gain_pct": 2.5881561909935056,
+              "min_gain_pct": -34.45735538048411,
+              "max_gain_pct": 34.80677210008658,
+              "regressions": 46
+            },
+            "guarded": {
+              "mean_barrier_s": 2.6722358663092343,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "oracle_tail": {
+              "mean_barrier_s": 2.0931445779697473,
+              "mean_paired_gain_pct": 20.825109476920897,
+              "min_gain_pct": 0.5399631862077703,
+              "max_gain_pct": 39.03021983773583,
+              "regressions": 0
+            }
+          }
+        },
+        "wide_uncertainty": {
+          "runs": 100,
+          "interval_coverage": 1,
+          "interventions": 0,
+          "policies": {
+            "rr": {
+              "mean_barrier_s": 2.6722358663092343,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "fifo": {
+              "mean_barrier_s": 2.3683921844715474,
+              "mean_paired_gain_pct": 10.42195574810996,
+              "min_gain_pct": -20.1484997326973,
+              "max_gain_pct": 32.413998120605456,
+              "regressions": 22
+            },
+            "sjf": {
+              "mean_barrier_s": 2.400842968535494,
+              "mean_paired_gain_pct": 10.09231703793534,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 28.022487092865568,
+              "regressions": 0
+            },
+            "tail": {
+              "mean_barrier_s": 2.093330285836987,
+              "mean_paired_gain_pct": 20.81777396009283,
+              "min_gain_pct": 0.5399631862077703,
+              "max_gain_pct": 39.03021983773583,
+              "regressions": 0
+            },
+            "guarded": {
+              "mean_barrier_s": 2.6722358663092343,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "oracle_tail": {
+              "mean_barrier_s": 2.0931445779697473,
+              "mean_paired_gain_pct": 20.825109476920897,
+              "min_gain_pct": 0.5399631862077703,
+              "max_gain_pct": 39.03021983773583,
+              "regressions": 0
+            }
+          }
+        },
+        "uncovered_drift": {
+          "runs": 100,
+          "interval_coverage": 0,
+          "interventions": 95,
+          "policies": {
+            "rr": {
+              "mean_barrier_s": 2.6722358663092343,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "fifo": {
+              "mean_barrier_s": 2.3683921844715474,
+              "mean_paired_gain_pct": 10.42195574810996,
+              "min_gain_pct": -20.1484997326973,
+              "max_gain_pct": 32.413998120605456,
+              "regressions": 22
+            },
+            "sjf": {
+              "mean_barrier_s": 2.400842968535494,
+              "mean_paired_gain_pct": 10.09231703793534,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 28.022487092865568,
+              "regressions": 0
+            },
+            "tail": {
+              "mean_barrier_s": 2.569793975742305,
+              "mean_paired_gain_pct": 2.5881561909935056,
+              "min_gain_pct": -34.45735538048411,
+              "max_gain_pct": 34.80677210008658,
+              "regressions": 46
+            },
+            "guarded": {
+              "mean_barrier_s": 2.586131627593642,
+              "mean_paired_gain_pct": 2.011947848787425,
+              "min_gain_pct": -34.45735538048411,
+              "max_gain_pct": 34.80677210008658,
+              "regressions": 44
+            },
+            "oracle_tail": {
+              "mean_barrier_s": 2.0931445779697473,
+              "mean_paired_gain_pct": 20.825109476920897,
+              "min_gain_pct": 0.5399631862077703,
+              "max_gain_pct": 39.03021983773583,
+              "regressions": 0
+            }
+          }
+        },
+        "independent_links": {
+          "runs": 100,
+          "interval_coverage": 1,
+          "interventions": 0,
+          "policies": {
+            "rr": {
+              "mean_barrier_s": 1.1777262168329183,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "fifo": {
+              "mean_barrier_s": 1.1777262168329183,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "sjf": {
+              "mean_barrier_s": 1.1777262168329183,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "tail": {
+              "mean_barrier_s": 1.1777262168329183,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "guarded": {
+              "mean_barrier_s": 1.1777262168329183,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            },
+            "oracle_tail": {
+              "mean_barrier_s": 1.1777262168329183,
+              "mean_paired_gain_pct": 0.0,
+              "min_gain_pct": 0.0,
+              "max_gain_pct": 0.0,
+              "regressions": 0
+            }
+          }
+        }
+      },
+      "sha256": {
+        "scripts\\analysis\\barrier_study.py": "fc2ab49f6fff8494612eeb541697c03080c4f6f17c3fa3e3a80c4d5b8ddf9b89",
+        "configs\\barrier_study.json": "e52437db27fdb2ee94580823f2df290bec6c55b0315d955b0ec5d77f45ea4b82",
+        "sfl\\barrier_schedule.py": "b6a9f420f8cefe9d39fdc8a3fb45131379d5941ec98b34848f5836bd146dd938"
+      }
+    },
+    "drift_summary": {
+      "warmup": {
+        "windows": 800,
+        "interventions": 0,
+        "coverage": 1,
+        "policies": {
+          "rr": {
+            "mean_gain_pct": 0.0,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          },
+          "tail": {
+            "mean_gain_pct": 16.70497252248454,
+            "regressions": 79,
+            "worst_gain_pct": -42.06097366705863
+          },
+          "guarded": {
+            "mean_gain_pct": 0.0,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          },
+          "calibrated": {
+            "mean_gain_pct": 0.0,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          }
+        }
+      },
+      "stable": {
+        "windows": 2200,
+        "interventions": 1946,
+        "coverage": 1,
+        "policies": {
+          "rr": {
+            "mean_gain_pct": 0.0,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          },
+          "tail": {
+            "mean_gain_pct": 20.12410974295898,
+            "regressions": 56,
+            "worst_gain_pct": -0.5509321787887878
+          },
+          "guarded": {
+            "mean_gain_pct": 19.780401852982806,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          },
+          "calibrated": {
+            "mean_gain_pct": 19.780401852982806,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          }
+        }
+      },
+      "first_drift": {
+        "windows": 100,
+        "interventions": 89,
+        "coverage": 0,
+        "policies": {
+          "rr": {
+            "mean_gain_pct": 0.0,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          },
+          "tail": {
+            "mean_gain_pct": 2.9302211307528765,
+            "regressions": 45,
+            "worst_gain_pct": -31.87714894635669
+          },
+          "guarded": {
+            "mean_gain_pct": 2.7114075989234547,
+            "regressions": 38,
+            "worst_gain_pct": -31.87714894635669
+          },
+          "calibrated": {
+            "mean_gain_pct": 2.7114075989234547,
+            "regressions": 38,
+            "worst_gain_pct": -31.87714894635669
+          }
+        }
+      },
+      "recovery": {
+        "windows": 1200,
+        "interventions": 84,
+        "coverage": 0.9983333333333333,
+        "policies": {
+          "rr": {
+            "mean_gain_pct": 0.0,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          },
+          "tail": {
+            "mean_gain_pct": 15.132446452387624,
+            "regressions": 120,
+            "worst_gain_pct": -30.649371034526496
+          },
+          "guarded": {
+            "mean_gain_pct": 1.4603313095609443,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          },
+          "calibrated": {
+            "mean_gain_pct": 1.4603313095609443,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          }
+        }
+      },
+      "adapted": {
+        "windows": 1700,
+        "interventions": 1428,
+        "coverage": 1,
+        "policies": {
+          "rr": {
+            "mean_gain_pct": 0.0,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          },
+          "tail": {
+            "mean_gain_pct": 18.005400094810927,
+            "regressions": 54,
+            "worst_gain_pct": -0.545643206216262
+          },
+          "guarded": {
+            "mean_gain_pct": 17.43019366972968,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          },
+          "calibrated": {
+            "mean_gain_pct": 17.43019366972968,
+            "regressions": 0,
+            "worst_gain_pct": 0.0
+          }
+        }
+      }
+    },
+    "arrival_summary": {
+      "burst": {
+        "rr": {
+          "mean_gain_pct": 0.0,
+          "regressions": 0,
+          "interventions": 0
+        },
+        "tail": {
+          "mean_gain_pct": 20.81777396009283,
+          "regressions": 0,
+          "interventions": 0
+        },
+        "guarded": {
+          "mean_gain_pct": 20.682546886684076,
+          "regressions": 0,
+          "interventions": 97
+        }
+      },
+      "server_spaced": {
+        "rr": {
+          "mean_gain_pct": 0.0,
+          "regressions": 0,
+          "interventions": 0
+        },
+        "tail": {
+          "mean_gain_pct": 16.651743810747927,
+          "regressions": 1,
+          "interventions": 0
+        },
+        "guarded": {
+          "mean_gain_pct": 15.43744732888325,
+          "regressions": 0,
+          "interventions": 89
+        }
+      },
+      "sparse": {
+        "rr": {
+          "mean_gain_pct": 0.0,
+          "regressions": 0,
+          "interventions": 0
+        },
+        "tail": {
+          "mean_gain_pct": 0.0,
+          "regressions": 0,
+          "interventions": 0
+        },
+        "guarded": {
+          "mean_gain_pct": 0.0,
+          "regressions": 0,
+          "interventions": 0
+        }
+      },
+      "slow_clients_late": {
+        "rr": {
+          "mean_gain_pct": 0.0,
+          "regressions": 0,
+          "interventions": 0
+        },
+        "tail": {
+          "mean_gain_pct": 0.7486798854156451,
+          "regressions": 0,
+          "interventions": 0
+        },
+        "guarded": {
+          "mean_gain_pct": 0.5525152371252245,
+          "regressions": 0,
+          "interventions": 7
+        }
+      }
+    },
+    "socket_summary": {
+      "scope": "primed queue, paced loopback TCP, real PyTorch gradients, injected device delays",
+      "repeats": 5,
+      "clients": 8,
+      "capacity_bps": 16000000.0,
+      "torch": "2.6.0+cu124",
+      "summary": {
+        "heterogeneous": {
+          "rr": {
+            "mean_barrier_s": 1.5287478399812244,
+            "mean_paired_gain_pct": 0.0,
+            "min_gain_pct": 0.0,
+            "max_gain_pct": 0.0
+          },
+          "fifo": {
+            "mean_barrier_s": 1.3095423399936408,
+            "mean_paired_gain_pct": 14.535495268162654,
+            "min_gain_pct": 6.228886566827951,
+            "max_gain_pct": 20.740259024173202
+          },
+          "sjf": {
+            "mean_barrier_s": 1.3102022599894554,
+            "mean_paired_gain_pct": 14.492503305004822,
+            "min_gain_pct": 6.121936905794579,
+            "max_gain_pct": 20.662090445020553
+          },
+          "tail": {
+            "mean_barrier_s": 1.089864720008336,
+            "mean_paired_gain_pct": 28.633153103732766,
+            "min_gain_pct": 24.863515472778264,
+            "max_gain_pct": 31.129865393819056
+          },
+          "guarded": {
+            "mean_barrier_s": 1.0899502599961124,
+            "mean_paired_gain_pct": 28.62739121980889,
+            "min_gain_pct": 24.775466282513946,
+            "max_gain_pct": 31.081716168730487
+          }
+        },
+        "homogeneous": {
+          "rr": {
+            "mean_barrier_s": 1.1152111600036734,
+            "mean_paired_gain_pct": 0.0,
+            "min_gain_pct": 0.0,
+            "max_gain_pct": 0.0
+          },
+          "fifo": {
+            "mean_barrier_s": 1.1149491400108673,
+            "mean_paired_gain_pct": 0.023485206359090682,
+            "min_gain_pct": -0.045016310124235126,
+            "max_gain_pct": 0.15645020729059267
+          },
+          "sjf": {
+            "mean_barrier_s": 1.1152278799912891,
+            "mean_paired_gain_pct": -0.001546757952046729,
+            "min_gain_pct": -0.16247421426152098,
+            "max_gain_pct": 0.14974353944160468
+          },
+          "tail": {
+            "mean_barrier_s": 1.1146132600028067,
+            "mean_paired_gain_pct": 0.05361936363533992,
+            "min_gain_pct": -0.051384959448563805,
+            "max_gain_pct": 0.15533319919649458
+          },
+          "guarded": {
+            "mean_barrier_s": 1.1148436999879778,
+            "mean_paired_gain_pct": 0.03292225581646102,
+            "min_gain_pct": -0.09438850015655031,
+            "max_gain_pct": 0.23005326870072507
+          }
+        }
+      },
+      "max_parameter_error": 0.0,
+      "all_payload_hashes_match": true,
+      "payload_bytes_per_arm": [
+        2097152
+      ]
+    },
+    "legacy_audit": {
+      "scope": "historical aggregates; mean batch backward is NOT the final gradient tail",
+      "sources": [
+        {
+          "file": "wp_r8mix_rho1_s1_bothmp_widthpath.jsonl",
+          "sha256": "f93079c6674473e6e8e9e16756c5b8cb17a3e50b3f1f47d2f91f4f1d2acd88e9"
+        },
+        {
+          "file": "wp_r8mix_rho1_s2_bothmp_widthpath.jsonl",
+          "sha256": "862128d10b6884c1cb1ca17673661fd60affdee25976f75ca48cb0aab6930bf0"
+        },
+        {
+          "file": "wp_r8mix_rho1_s3_bothmp_widthpath.jsonl",
+          "sha256": "05fca81c514998fd9fd96d3ba17c4e42a320cf127668912252f6891fd4095c85"
+        }
+      ],
+      "rounds": 60,
+      "median_round_min_client_mean_batch_bwd_s": 0.22615000000000002,
+      "median_round_max_client_mean_batch_bwd_s": 0.837325,
+      "gradient_ready_event_rounds": 0,
+      "batch_compute_rounds": 0,
+      "ready_queue_overlap": null,
+      "counterfactual_training_speedup": null,
+      "reason": "Historical logs do not identify concurrent ready gradients, wire completion, or exact final local tails."
+    }
+  },
+  "source_sha256": {
+    "sfl/barrier_schedule.py": "b6a9f420f8cefe9d39fdc8a3fb45131379d5941ec98b34848f5836bd146dd938",
+    "configs/barrier_study.json": "e52437db27fdb2ee94580823f2df290bec6c55b0315d955b0ec5d77f45ea4b82",
+    "scripts/analysis/barrier_arrival_study.py": "65780e2799d844ccd8b06f5e5f86429c2783cafa1c74b5ea09cfcb5b30b3e61c",
+    "scripts/analysis/barrier_drift_study.py": "17c96420f7df2feecce4cbec85a24c648ce3d7807b5ea88b3b39ad27e7f71bd2",
+    "scripts/analysis/barrier_socket_experiment.py": "5b214718fccbe2d07e6dc0dff02110bfbc07c128359526abb2764d57d9a224ce",
+    "scripts/analysis/barrier_study.py": "fc2ab49f6fff8494612eeb541697c03080c4f6f17c3fa3e3a80c4d5b8ddf9b89",
+    "scripts/analysis/barrier_trace_audit.py": "a2adcdd7d0d92cc19ebf97290f5573664cebcb4787da9f09739b18c1077cb47f",
+    "tests/test_barrier_schedule.py": "1c47593611d50e22a871407c2bb0d6cf263d8d1d609e453ce3e9a4a55affdbbe"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "purpose": "paper-style architecture and experiment figures; no new experiment",
+  "style": "sparse labels, captions outside, vector geometry",
+  "sources": [
+    {
+      "path": "configs/measurements/final_report_evidence_2026-09-26.json",
+      "sha256": "3c9a3168f9b18937f68abe0ff6bb130a5adfd24e0da115d82bbe699fdf40d40a"
+    },
+    {
+      "path": "scripts/exp/conditions.json",
+      "sha256": "fd087c4f05d55bb96834c1ccdefa526693328185afa4ef5d8864c8c6ceb5d5ed"
+    },
+    {
+      "path": "scripts/exp/run_scen32.sh",
+      "sha256": "1746d16c3bfa2a5de9d3ab5551f4c677ff382cc2d3eb54865a46cba5b51b1b9f"
+    },
+    {
+      "path": "scripts/exp/scenario_perturb.sh",
+      "sha256": "260a09c864777f3090ef264690b90403342cb73a86141e0f8c54d805929bc600"
+    },
+    {
+      "path": "docs/02_실험/실험환경_VM_HPC.md",
+      "sha256": "22a28ed66dd73dd851621ad610ede1cd0f3651a91880bfccdd6619b9d48c2a96"
+    },
+    {
+      "path": "sfl/sdn/README.md",
+      "sha256": "fa1c8d9c3faf97c8cdbf662215101e94d67c2350665b61f7f009e634475d810f"
+    },
+    {
+      "path": "sfl/experiments/run_fed_split_lora.py",
+      "sha256": "80d5eae60860fadfd81a968eee6b1410533b76339dd70e435ab53d6eebb8a4b8"
+    },
+    {
+      "path": "configs/measurements/network_implementation_audit_2026-09-26.json",
+      "sha256": "f74816e44715fe5320c55600ad7dc874560c15890f9a0d9352347c1d56eebfe0"
+    },
+    {
+      "path": "sfl/net/real_rig.sh",
+      "sha256": "99822fc0bf78e89dfdfddf6daa3947e09926718fd9576378f8d1fbce0a07c682"
+    },
+    {
+      "path": "sfl/net/hairpin_lo.sh",
+      "sha256": "e32f21914e871676488d19045c985d6736690dab2d89f92570f5132ee1d8475e"
+    }
+  ],
+  "generators": [
+    {
+      "path": "scripts/analysis/paper_diagrams.py",
+      "sha256": "6099c69751c0a6efa87ce63b3ebc091da1ffa28697d9dc1d02c77552e5526da5"
+    },
+    {
+      "path": "scripts/analysis/build_report_diagrams.py",
+      "sha256": "9062e3e1b7a3731796067f17a07b7f9c3043d88ec7dc237166e083354d6f2724"
+    }
+  ],
+  "figures": [
+    {
+      "stem": "01_architecture",
+      "title": "전체 아키텍처",
+      "caption": "기기에서 모델 앞부분을 실행하고, 허용 중계 접속점을 통해 서버와 활성값·기울기를 교환한다. 결합 제어기는 폭 w와 종점 배정 S를 함께 계획한다.",
+      "scope_note": "점선 경계는 관리·위임 범위가 필요한 자원이다. 각 선은 논리 TCP 연결이며 물리 경로의 독립성을 뜻하지 않는다. OS-Ken/OVS는 별도 확장으로 학습 연동과 실제 적용 확인 전이다.",
+      "width": 1400,
+      "height": 820
+    },
+    {
+      "stem": "02_control_loop",
+      "title": "폭·경로 결합 제어",
+      "caption": "계측, 공유 자원을 반영한 경로 평가, 폭 선택, 실행과 관측의 순서. 경로가 전송률을 바꾸고 모델 폭이 연산량과 전송 수요를 바꾼다.",
+      "scope_note": "비용 모형에 기초한 단계적 휴리스틱이며 전역 최적해 보장은 없다.",
+      "width": 1400,
+      "height": 570
+    },
+    {
+      "stem": "03_tensor_sequence",
+      "title": "분할 전송과 학습 집계",
+      "caption": "같은 배치 k의 활성값을 여러 TCP 연결에 나누어 전송하고, 전체 구간의 수신 후 복원한다. 반환 기울기는 배치에 대응시키며, 연합 집계는 라운드 경계에서 별도로 수행한다.",
+      "scope_note": "개념 순서도이며 세로 길이는 측정 시간이 아니다. 전체 텐서 ACK를 사용하며 조각별 수신 ACK는 구현되지 않았다.",
+      "width": 1400,
+      "height": 700
+    },
+    {
+      "stem": "08_kernel_authority",
+      "title": "관리 경계와 커널 집행",
+      "caption": "현재 실험은 팀이 관리하는 HPC와 VM의 Linux tc를 설정한다. 접속망과 KOREN 코어의 관리자 권한은 별개다. 아래의 루프백 경로 분류와 SDN 확장은 별도 구성이다.",
+      "scope_note": "OVSDB 큐 설정과 OpenFlow 전달 규칙은 서로 다른 집행 단위다. OS-Ken 학습 연동과 실제 OVS 적용 확인, 기관 간 위임은 검증 전이다.",
+      "width": 1400,
+      "height": 730
+    },
+    {
+      "stem": "09_agent_timescales",
+      "title": "계층별 제어와 시간 규모",
+      "caption": "패킷은 커널의 설치된 규칙으로 계속 처리하고, 전송 에이전트는 조각을, 계획 에이전트는 라운드 계획을 다룬다. 위 시간선의 간격은 개념 표현이며 실측 주기가 아니다.",
+      "scope_note": "아래의 1,500바이트 직렬화 시간과 출력 중단 시 유입량은 식으로 계산한 값이다. AI 추론 시간이나 실제 큐 증가량을 측정한 결과가 아니다.",
+      "width": 1400,
+      "height": 735
+    },
+    {
+      "stem": "04_scen32_topology",
+      "title": "실제 실험 배치",
+      "caption": "클라이언트 32개 CPU 프로세스와 V100 서버는 같은 HPC 호스트에서 실행했다. KOREN VM 2대에 각각 두 중계 포트를 두어 4개 논리 엣지를 구성했다.",
+      "scope_note": "32는 독립 물리 기기의 수가 아니다. 선은 논리 연결을 뜻한다. CIFAR-10, cut=2, batch 32×4, 24라운드×3시드; 출구 5/2Mbps, 엣지 56Mbps×4.",
+      "width": 1400,
+      "height": 790
+    },
+    {
+      "stem": "05_scenarios",
+      "title": "실험 조건",
+      "caption": "선 그래프는 tc에 지정한 교란 조건이며 관측 처리량이 아니다. 정상, 트래픽 몰림, 선택적 연산 지연, 용량 변동을 비교했다.",
+      "scope_note": "R은 완료 로그 개수에 따른 교란 트리거로 실제 반영에 지연이 있을 수 있다. 모델·분할점·배치·데이터 분할·반복 수를 고정했다.",
+      "width": 1400,
+      "height": 850
+    },
+    {
+      "stem": "06_results",
+      "title": "KOREN 실험 결과",
+      "caption": "기존 scen32 기록의 3시드 평균 라운드 시간. 초기 4라운드를 제외했다. 기준선은 전폭·고정 배정·출구 1개, 결합은 폭·배정 변경·출구 2개 허용이다.",
+      "scope_note": "동일 정확도 도달 시간 비교가 아니며, 출구 수 차이도 감소율에 포함된다.",
+      "width": 1400,
+      "height": 595
+    },
+    {
+      "stem": "07_lora_workflow",
+      "title": "LoRA 실행 구조",
+      "caption": "KOREN VM 2대의 3개 논리 클라이언트와 HPC V100 서버. 활성값과 정답 토큰을 보내고 기울기를 반환받으며 라운드 끝에 LoRA 어댑터를 집계했다.",
+      "scope_note": "Qwen2.5-0.5B, cut 2, rank 16, 16라운드×30스텝. CNN 폭·경로 제어와 통합한 실험이 아니며, 서버는 기기별 순차 처리한다.",
+      "width": 1400,
+      "height": 575
+    }
+  ]
+}

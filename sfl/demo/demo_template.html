@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>삼면비교 — 데이터는 안 움직였다, 지식은 합쳐졌다</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F8F9FB; --card:#FFFFFF; --ink:#1B2230; --mute:#5A6478; --line:#DCE1EA;
+  --teal:#0E7C86; --teal-soft:#E7F2F3; --ok:#2E7D4F; --ok-soft:#E4F1E8;
+  --bad:#A3403C; --bad-soft:#F6E7E6; --amber:#A85E12; --amber-soft:#F7EDDF;
+  --shadow:0 1px 2px rgba(20,30,50,.06),0 8px 24px rgba(20,30,50,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#121721; --card:#1A2130; --ink:#E6EAF2; --mute:#98A2B8; --line:#2B3345;
+    --teal:#45B8C2; --teal-soft:#14333A; --ok:#6CC092; --ok-soft:#1A3326;
+    --bad:#D98782; --bad-soft:#3A2020; --amber:#D9924D; --amber-soft:#3A2B18;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);
+  font:400 16px/1.7 "IBM Plex Sans KR",-apple-system,"Malgun Gothic",sans-serif;
+  padding:0 20px 80px}
+.wrap{max-width:1000px;margin:0 auto}
+.mono{font-family:"IBM Plex Mono","Consolas",monospace}
+header{padding:48px 0 28px;border-bottom:2px solid var(--ink);position:relative}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+  color:var(--teal);margin-bottom:10px}
+h1{font-size:clamp(24px,4vw,36px);font-weight:700;line-height:1.3;text-wrap:balance}
+.sub{margin-top:10px;color:var(--mute);font-size:15px}
+.sample-badge{position:absolute;top:48px;right:0;background:var(--amber-soft);
+  color:var(--amber);font-family:"IBM Plex Mono",monospace;font-size:12px;
+  padding:4px 12px;border-radius:999px;letter-spacing:.08em}
+
+.strip{display:flex;gap:0;align-items:stretch;margin:32px 0;flex-wrap:wrap}
+.stat{flex:1;min-width:180px;background:var(--card);border:1px solid var(--line);
+  padding:20px 24px;position:relative}
+.stat:first-child{border-radius:12px 0 0 12px}
+.stat:last-child{border-radius:0 12px 12px 0}
+.stat+.stat{border-left:none}
+.stat .name{font-size:13px;color:var(--mute);margin-bottom:4px}
+.stat .val{font-family:"IBM Plex Mono",monospace;font-size:34px;font-weight:500;
+  font-variant-numeric:tabular-nums}
+.stat .arrow{position:absolute;right:-13px;top:50%;transform:translateY(-50%);
+  z-index:2;color:var(--mute);font-size:18px;background:var(--paper);
+  border-radius:50%;width:26px;height:26px;line-height:26px;text-align:center;
+  border:1px solid var(--line)}
+.stat.hero{background:var(--teal-soft);border-color:var(--teal)}
+.stat.hero .val{color:var(--teal)}
+.stat.hero .name{color:var(--teal);font-weight:700}
+
+h2{font-size:19px;font-weight:700;margin:40px 0 14px}
+.gridwrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.08em;
+  color:var(--mute);font-weight:500;text-align:left;padding:12px 18px;
+  border-bottom:1px solid var(--line)}
+td{padding:14px 18px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:none}
+td.model{font-weight:700;white-space:nowrap}
+.cell{display:inline-flex;align-items:baseline;gap:8px;font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums}
+.cell .pct{font-size:20px;font-weight:500}
+.cell .frac{font-size:12px;color:var(--mute)}
+.cell.good .pct{color:var(--ok)} .cell.bad .pct{color:var(--bad)}
+.cell.mid .pct{color:var(--amber)}
+
+.tabs{display:flex;gap:8px;margin:18px 0 14px;flex-wrap:wrap}
+.tab{font-family:"IBM Plex Mono",monospace;font-size:13px;padding:7px 16px;
+  border:1px solid var(--line);border-radius:999px;background:var(--card);
+  color:var(--mute);cursor:pointer}
+.tab.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.tab:focus-visible,.qbtn:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.qlist{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.qbtn{text-align:left;font:inherit;font-size:14.5px;padding:11px 16px;
+  border:1px solid var(--line);border-radius:10px;background:var(--card);
+  color:var(--ink);cursor:pointer;line-height:1.5}
+.qbtn.on{border-color:var(--teal);background:var(--teal-soft)}
+.qbtn .mono{font-size:11px;color:var(--mute);margin-right:8px}
+
+.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.ans{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;box-shadow:var(--shadow)}
+.ans.hero{border-color:var(--teal)}
+.ans .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.ans .mname{font-weight:700;font-size:14.5px}
+.badge{font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:2px 10px;
+  border-radius:999px}
+.badge.ok{background:var(--ok-soft);color:var(--ok)}
+.badge.no{background:var(--bad-soft);color:var(--bad)}
+.ans .gen{font-size:14.5px;line-height:1.65;min-height:3.2em;word-break:break-all}
+.ans mark{background:transparent;color:var(--ok);font-weight:700;
+  border-bottom:2px solid var(--ok)}
+.keys{margin-top:10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mute)}
+
+.foot{margin-top:56px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">AWARENET · 연합 LoRA 삼면비교</div>
+  <h1>데이터는 한 발짝도 안 움직였다.<br>지식은 합쳐졌다.</h1>
+  <p class="sub">같은 질문을 세 모델에 던진다 — 튜닝 전 베이스, 한 기관 단독학습, 그리고 어댑터만 오간 연합 튜닝.
+  답은 전부 <b>실제 실험에서 생성된 그대로</b>다 (라이브 추론 아님 — 재생).</p>
+  <div class="sample-badge" id="sampleBadge" hidden>예시 데이터 — L2 실험 실행 전</div>
+</header>
+
+<div class="strip" id="strip"></div>
+
+<h2>정답률 그리드 — 모델 × 지식 도메인</h2>
+<div class="gridwrap"><table id="grid"></table></div>
+
+<h2>질문을 골라 보세요</h2>
+<div class="tabs" id="tabs"></div>
+<div class="qlist" id="qlist"></div>
+<div class="answers" id="answers"></div>
+
+<div class="foot">
+  채점 규약(사전 등록): 그리디 생성 32토큰 · 정답 키워드 포함 여부로 채점 (LLM 심판 없음, 재현 가능) ·
+  검증 문항은 학습에 안 쓴 문형 (해시 기반 결정적 분할) · 원천 데이터 <span class="mono">out/l2_grid.json</span>
+</div>
+</div>
+
+<script>
+const DATA = __DATA__;
+const DOMS = __DOMS__;
+const MODELS = __MODELS__;
+const SAMPLE = __SAMPLE__;
+const HERO = MODELS[MODELS.length-1];
+const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+if (SAMPLE) document.getElementById('sampleBadge').hidden = false;
+
+// ── 요약 스트립 ──
+const strip = document.getElementById('strip');
+MODELS.forEach((m,i)=>{
+  const avg = DOMS.reduce((s,d)=>s+DATA[m][d].acc,0)/DOMS.length;
+  const div = document.createElement('div');
+  div.className = 'stat'+(m===HERO?' hero':'');
+  div.innerHTML = `<div class="name">${esc(m)}</div><div class="val">${(avg*100).toFixed(0)}%</div>`
+    + (i<MODELS.length-1?'<div class="arrow">→</div>':'');
+  strip.appendChild(div);
+});
+
+// ── 그리드 ──
+const grid = document.getElementById('grid');
+grid.innerHTML = '<tr><th>모델</th>'+DOMS.map(d=>`<th>${esc(d)} 도메인</th>`).join('')+'</tr>'
+  + MODELS.map(m=>'<tr><td class="model">'+esc(m)+'</td>'+DOMS.map(d=>{
+      const c = DATA[m][d], hits = c.detail.filter(x=>x.ok).length;
+      const cls = c.acc>=0.7?'good':(c.acc>=0.35?'mid':'bad');
+      return `<td><span class="cell ${cls}"><span class="pct">${(c.acc*100).toFixed(0)}%</span>`
+           + `<span class="frac">${hits}/${c.n}</span></span></td>`;
+    }).join('')+'</tr>').join('');
+
+// ── 질문 탐색기 ──
+let curDom = DOMS[0], curQ = 0;
+const tabs = document.getElementById('tabs'), qlist = document.getElementById('qlist'),
+      answers = document.getElementById('answers');
+function renderTabs(){
+  tabs.innerHTML='';
+  DOMS.forEach(d=>{
+    const b=document.createElement('button'); b.className='tab'+(d===curDom?' on':'');
+    b.textContent=d+' 도메인'; b.onclick=()=>{curDom=d;curQ=0;renderTabs();renderQ();renderA();};
+    tabs.appendChild(b);
+  });
+}
+function renderQ(){
+  qlist.innerHTML='';
+  DATA[MODELS[0]][curDom].detail.forEach((item,i)=>{
+    const b=document.createElement('button'); b.className='qbtn'+(i===curQ?' on':'');
+    b.innerHTML=`<span class="mono">Q${i+1}</span>${esc(item.q)}`;
+    b.onclick=()=>{curQ=i;renderQ();renderA();};
+    qlist.appendChild(b);
+  });
+}
+function hl(gen,keys){
+  let out=esc(gen);
+  keys.forEach(k=>{
+    const e=esc(k).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    out=out.replace(new RegExp(e,'gi'),m=>`<mark>${m}</mark>`);
+  });
+  return out;
+}
+function renderA(){
+  answers.innerHTML='';
+  MODELS.forEach(m=>{
+    const it=DATA[m][curDom].detail[curQ];
+    const div=document.createElement('div'); div.className='ans'+(m===HERO?' hero':'');
+    div.innerHTML=`<div class="head"><span class="mname">${esc(m)}</span>`
+      +`<span class="badge ${it.ok?'ok':'no'}">${it.ok?'정답':'오답'}</span></div>`
+      +`<div class="gen">${hl(it.gen,it.keys)}</div>`
+      +`<div class="keys">채점 키워드: ${it.keys.map(esc).join(' · ')}</div>`;
+    answers.appendChild(div);
+  });
+}
+renderTabs();renderQ();renderA();
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="730" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 730" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>관리 경계와 커널 집행</title>
+	<desc>현재 실험은 팀이 관리하는 HPC와 VM의 Linux tc를 설정한다. 접속망과 KOREN 코어의 관리자 권한은 별개다. 아래의 루프백 경로 분류와 SDN 확장은 별도 구성이다. / OVSDB 큐 설정과 OpenFlow 전달 규칙은 서로 다른 집행 단위다. OS-Ken 학습 연동과 실제 OVS 적용 확인, 기관 간 위임은 검증 전이다.</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="730"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-730)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="730" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="25" y="360" width="407" height="345" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="45" y="660" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,1320) scale(1,-1)">HPC · 관리 권한</text>
+			<rect x="967" y="360" width="407" height="345" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="987" y="660" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,1320) scale(1,-1)">VM · 관리 권한</text>
+			<text x="590.47119140625" y="659" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,1318) scale(1,-1)">접속망 / KOREN</text>
+			<path d="M 554,556 L 672,612 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2.5;"/>
+			<path d="M 554,556 L 720,482 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2.5;"/>
+			<path d="M 672,612 L 720,482 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2.5;"/>
+			<path d="M 672,612 L 846,553 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2.5;"/>
+			<path d="M 720,482 L 846,553 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2.5;"/>
+			<circle cx="554" cy="556" r="16" style="stroke: rgb(34%,39%,43%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="672" cy="612" r="16" style="stroke: rgb(34%,39%,43%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="720" cy="482" r="16" style="stroke: rgb(34%,39%,43%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<circle cx="846" cy="553" r="16" style="stroke: rgb(34%,39%,43%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="630.4296875" y="407" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,814) scale(1,-1)">별도 관리자</text>
+			<rect x="64" y="518" width="61" height="62" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 72,528 L 117,528 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 94.5,518 L 94.5,509 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 79.5,509 L 109.5,509 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 143,546 L 219,546 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="219 546, 206 551, 206 541" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 248,568 L 364,568 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 248,526 L 364,526 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="257" y="535" width="17" height="24" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="282" y="535" width="17" height="24" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="307" y="535" width="17" height="24" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="332" y="535" width="17" height="24" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<text x="282.056640625" y="473" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,946) scale(1,-1)">HTB</text>
+			<text x="253.78125" y="426" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 24px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,852) scale(1,-1)">포트 분류</text>
+			<path d="M 432,546 L 531,546 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="531 546, 518 551, 518 541" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 867,546 L 967,546 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="967 546, 954 551, 954 541" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 1004,568 L 1120,568 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 1004,526 L 1120,526 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="1013" y="535" width="17" height="24" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1038" y="535" width="17" height="24" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1063" y="535" width="17" height="24" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1088" y="535" width="17" height="24" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="1008.19140625" y="473" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,946) scale(1,-1)">IFB / HTB</text>
+			<path d="M 1135,546 L 1211,546 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="1211 546, 1198 551, 1198 541" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1240" y="499" width="90" height="88" rx="5" ry="5" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="1252" y="553.0" width="66" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1305" cy="564.0" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1252" y="528.3333333333334" width="66" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1305" cy="539.3333333333334" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1252" y="503.66666666666663" width="66" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1305" cy="514.6666666666666" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 1260,492 L 1310,492 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="1083.5986328125" y="406" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,812) scale(1,-1)">tc class change</text>
+			<path d="M 25,314 L 1375,314 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="40" y="256" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,512) scale(1,-1)">(a) 루프백 경로 분류</text>
+			<path d="M 89,173 L 205,173 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 89,131 L 205,131 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="98" y="140" width="17" height="24" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="123" y="140" width="17" height="24" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="148" y="140" width="17" height="24" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="173" y="140" width="17" height="24" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<path d="M 222,152 L 354,152 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="354 152, 341 157, 341 147" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+			<path d="M 380,173 L 496,173 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 380,131 L 496,131 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="389" y="140" width="17" height="24" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="414" y="140" width="17" height="24" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="439" y="140" width="17" height="24" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="464" y="140" width="17" height="24" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<text x="90.4296875" y="86" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,172) scale(1,-1)">접속 상한</text>
+			<text x="381.4296875" y="86" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 26px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,172) scale(1,-1)">공유 경로</text>
+			<text x="268.775390625" y="180" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 24px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,360) scale(1,-1)">IFB</text>
+			<path d="M 700,285 L 700,47 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="753" y="256" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,512) scale(1,-1)">(b) SDN 확장*</text>
+			<rect x="782" y="119" width="186" height="63" rx="3" ry="3" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="826.9775390625" y="140" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,280) scale(1,-1)">OS-Ken</text>
+			<path d="M 986,151 L 1154,151 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<polygon points="1154 151, 1141 156, 1141 146" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<text x="1015.19140625" y="182" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 24px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,364) scale(1,-1)">OpenFlow</text>
+			<rect x="1170" y="119" width="174" height="63" rx="3" ry="3" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="1229.6904296875" y="140" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,280) scale(1,-1)">OVS</text>
+			<text x="921.40234375" y="55" style="font-family: Malgun Gothic, 맑은 고딕, sans-serif; font-size: 24px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,110) scale(1,-1)">* 학습 연동·적용 확인 전</text>
+		</g>
+	</g>
+</svg>

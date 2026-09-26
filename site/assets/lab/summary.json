@@ -1,0 +1,129 @@
+{
+  "run_id": "virtual-20260926T142615Z",
+  "round_count": 18,
+  "transfer_count": 144,
+  "packets": 35058,
+  "streams": 92,
+  "application_rows": 6631,
+  "groups": {
+    "edge_drop": {
+      "single": {
+        "rounds": 3,
+        "network_mean_s": 21.824739715000003,
+        "probe_mean_s": 2.2870308090000058,
+        "total_mean_s": 24.111770524000008,
+        "total_round_seconds": [
+          20.44426994500003,
+          20.460209561,
+          31.430832065999994
+        ]
+      },
+      "fixed_dual": {
+        "rounds": 3,
+        "network_mean_s": 9.210099844999982,
+        "probe_mean_s": 2.297441155333369,
+        "total_mean_s": 11.507541000333353,
+        "total_round_seconds": [
+          11.502361897000014,
+          11.46991349300015,
+          11.550347610999893
+        ]
+      },
+      "adaptive_dual": {
+        "rounds": 3,
+        "network_mean_s": 4.756132140333345,
+        "probe_mean_s": 2.3135081776666766,
+        "total_mean_s": 7.069640318000022,
+        "total_round_seconds": [
+          7.000387301000046,
+          7.07916572299996,
+          7.129367930000058
+        ]
+      }
+    },
+    "shared_access": {
+      "single": {
+        "rounds": 2,
+        "network_mean_s": 6.007003357499968,
+        "probe_mean_s": 1.543164714999989,
+        "total_mean_s": 7.550168072499957,
+        "total_round_seconds": [
+          7.637605064000013,
+          7.462731080999902
+        ]
+      },
+      "fixed_dual": {
+        "rounds": 2,
+        "network_mean_s": 7.001629936000029,
+        "probe_mean_s": 1.5500180094999791,
+        "total_mean_s": 8.551647945500008,
+        "total_round_seconds": [
+          8.741553784999951,
+          8.361742106000065
+        ]
+      },
+      "adaptive_dual": {
+        "rounds": 2,
+        "network_mean_s": 6.851369447000025,
+        "probe_mean_s": 1.5673196954999753,
+        "total_mean_s": 8.4186891425,
+        "total_round_seconds": [
+          9.01294923599994,
+          7.824429049000059
+        ]
+      }
+    }
+  },
+  "edge_drop_total_reduction_pct": 38.56515203556323,
+  "shared_vs_single_total_increase_pct": 11.503334252431596,
+  "conclusion": "한 경로의 용량이 감소한 조건에서 적응 분할은 고정 분할보다 프로브 포함 완료 시간이 38.6% 짧았습니다. 공통 병목에서는 적응 두 경로가 단일 경로보다 11.5% 느렸습니다. 경로 수를 늘리는 것보다 병목을 구분하는 것이 중요합니다.",
+  "limitation": "한 번의 가상 실행입니다. 조건별 라운드는 독립 반복이 아니며 유의성·현장 성능·학습 정확도를 주장하지 않습니다. TCG 가상 CPU, 패킷 캡처, 고정된 정책 실행 순서의 영향을 포함합니다.",
+  "new_koren_measurement": false,
+  "new_training": false,
+  "fixed_width": 1.0,
+  "clients": 8,
+  "payload_bytes_per_client": 131072,
+  "chunk_bytes": 4096,
+  "environment": {
+    "uname": "Linux localhost 6.18.52-0-virt #1-Alpine SMP PREEMPT_DYNAMIC 2026-09-15 05:37:48 x86_64 Linux",
+    "python": "3.14.7 (main, Aug 15 2026, 07:18:27) [GCC 15.2.0]",
+    "tc": "tc utility, iproute2-v7.0.0",
+    "tshark": "TShark (Wireshark) 4.6.6 (Git commit 3a22c3ef473d).",
+    "clients": 8,
+    "payload_per_client": 131072,
+    "chunk_bytes": 4096,
+    "model_width": 1.0,
+    "new_training": false,
+    "new_koren_measurement": false,
+    "clock": 1790433396.1989083,
+    "offload": {
+      "awn-client": "Features for c1:\nrx-checksumming: on\ntx-checksumming: on\n\ttx-checksum-ipv4: off [fixed]\n\ttx-checksum-ip-generic: on\n\ttx-checksum-ipv6: off [fixed]\n\ttx-checksum-fcoe-crc: off [fixed]\n\ttx-checksum-sctp: on\nscatter-gather: on\n\ttx-scatter-gather: on\n\ttx-scatter-gather-fraglist: on\ntcp-segmentation-offload: off\n\ttx-tcp-segmentation: off\n\ttx-tcp-ecn-segmentation: off\n\ttx-tcp-mangleid-segmentation: off\n\ttx-tcp6-segmentation: off\n\ttx-tcp-accecn-segmentation: off\ngeneric-segmentation-offload: off\ngeneric-receive-offload: off\nlarge-receive-offload: off [fixed]\nrx-vlan-offload: on\ntx-vlan-offload: on\nntuple-filters: off [fixed]\nreceive-hashing: off [fixed]\nhighdma: on\nrx-vlan-filter: off [fixed]\nvlan-challenged: off [fixed]\ntx-gso-robust: off [fixed]\ntx-fcoe-segmentation: off [fixed]\ntx-gre-segmentation: on\ntx-gre-csum-segmentation: on\ntx-ipxip4-segmentation: on\ntx-ipxip6-segmentation: on\ntx-udp_tnl-segmentation: on\ntx-udp_tnl-csum-segmentation: on\ntx-gso-partial: off [fixed]\ntx-tunnel-remcsum-segmentation: off [fixed]\ntx-sctp-segmentation: on\ntx-esp-segmentation: off [fixed]\ntx-udp-segmentation: on\ntx-gso-list: on\ntx-nocache-copy: off\nloopback: off [fixed]\nrx-fcs: off [fixed]\nrx-all: off [fixed]\ntx-vlan-stag-hw-insert: on\nrx-vlan-stag-hw-parse: on\nrx-vlan-stag-filter: off [fixed]\nl2-fwd-offload: off [fixed]\nhw-tc-offload: off [fixed]\nesp-hw-offload: off [fixed]\nesp-tx-csum-hw-offload: off [fixed]\nrx-udp_tunnel-port-offload: off [fixed]\ntls-hw-tx-offload: off [fixed]\ntls-hw-rx-offload: off [fixed]\nrx-gro-hw: off [fixed]\ntls-hw-record: off [fixed]\nrx-gro-list: off\nmacsec-hw-offload: off [fixed]\nrx-udp-gro-forwarding: off\nhsr-tag-ins-offload: off [fixed]\nhsr-tag-rm-offload: off [fixed]\nhsr-fwd-offload: off [fixed]\nhsr-dup-offload: off [fixed]\n",
+      "awn-server": "Features for s1:\nrx-checksumming: on\ntx-checksumming: on\n\ttx-checksum-ipv4: off [fixed]\n\ttx-checksum-ip-generic: on\n\ttx-checksum-ipv6: off [fixed]\n\ttx-checksum-fcoe-crc: off [fixed]\n\ttx-checksum-sctp: on\nscatter-gather: on\n\ttx-scatter-gather: on\n\ttx-scatter-gather-fraglist: on\ntcp-segmentation-offload: off\n\ttx-tcp-segmentation: off\n\ttx-tcp-ecn-segmentation: off\n\ttx-tcp-mangleid-segmentation: off\n\ttx-tcp6-segmentation: off\n\ttx-tcp-accecn-segmentation: off\ngeneric-segmentation-offload: off\ngeneric-receive-offload: off\nlarge-receive-offload: off [fixed]\nrx-vlan-offload: on\ntx-vlan-offload: on\nntuple-filters: off [fixed]\nreceive-hashing: off [fixed]\nhighdma: on\nrx-vlan-filter: off [fixed]\nvlan-challenged: off [fixed]\ntx-gso-robust: off [fixed]\ntx-fcoe-segmentation: off [fixed]\ntx-gre-segmentation: on\ntx-gre-csum-segmentation: on\ntx-ipxip4-segmentation: on\ntx-ipxip6-segmentation: on\ntx-udp_tnl-segmentation: on\ntx-udp_tnl-csum-segmentation: on\ntx-gso-partial: off [fixed]\ntx-tunnel-remcsum-segmentation: off [fixed]\ntx-sctp-segmentation: on\ntx-esp-segmentation: off [fixed]\ntx-udp-segmentation: on\ntx-gso-list: on\ntx-nocache-copy: off\nloopback: off [fixed]\nrx-fcs: off [fixed]\nrx-all: off [fixed]\ntx-vlan-stag-hw-insert: on\nrx-vlan-stag-hw-parse: on\nrx-vlan-stag-filter: off [fixed]\nl2-fwd-offload: off [fixed]\nhw-tc-offload: off [fixed]\nesp-hw-offload: off [fixed]\nesp-tx-csum-hw-offload: off [fixed]\nrx-udp_tunnel-port-offload: off [fixed]\ntls-hw-tx-offload: off [fixed]\ntls-hw-rx-offload: off [fixed]\nrx-gro-hw: off [fixed]\ntls-hw-record: off [fixed]\nrx-gro-list: off\nmacsec-hw-offload: off [fixed]\nrx-udp-gro-forwarding: off\nhsr-tag-ins-offload: off [fixed]\nhsr-tag-rm-offload: off [fixed]\nhsr-fwd-offload: off [fixed]\nhsr-dup-offload: off [fixed]\n"
+    }
+  },
+  "packet_analysis": {
+    "packets": 35058,
+    "streams": 92,
+    "dissected_application_rows": 6631,
+    "paths": {
+      "e1": {
+        "packets": 21667,
+        "tcp_payload_bytes": 15564965,
+        "retransmission_flags": 734,
+        "ack_rtt_median_ms": 1261.7079019999999,
+        "ack_rtt_p95_ms": 8554.467084
+      },
+      "e2": {
+        "packets": 13391,
+        "tcp_payload_bytes": 10432825,
+        "retransmission_flags": 447,
+        "ack_rtt_median_ms": 475.008598,
+        "ack_rtt_p95_ms": 2004.1881429999999
+      }
+    },
+    "capture_point": "awn-client any; only TCP port 20500",
+    "rtt_definition": "Wireshark TCP ACK RTT; not end-to-end tensor latency",
+    "retransmission_definition": "Wireshark analysis flags; not an independently measured packet-loss rate"
+  },
+  "counter_normalization": "See counter-normalization.json; raw data preserved."
+}

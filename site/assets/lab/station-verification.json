@@ -1,0 +1,27 @@
+{
+  "grafana": {
+    "database": "ok",
+    "version": "13.2.2",
+    "commit": "1bea008f7e4e858b6824c9e364d608bd4d10b13a"
+  },
+  "dashboard_uid": "awarenet-lab",
+  "panels": 10,
+  "grafana_datasource_query": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {},
+          "value": [
+            1790434176.756,
+            "1"
+          ]
+        }
+      ]
+    }
+  },
+  "series_count": 53,
+  "event_count": 79,
+  "exported_utc": "2026-09-26T14:49:36.764814+00:00"
+}

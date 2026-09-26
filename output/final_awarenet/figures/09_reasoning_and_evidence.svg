@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="840" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 840" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>문제 정의에서 검증까지 이어지는 논리</title>
+	<desc>기기 자원과 전송 자원을 함께 모델링하고 각 실험이 뒷받침하는 주장으로 결론을 연결한다 | 향후 과제: 실제 OVS 집행·동일 정확도까지의 시간·통합 LoRA 네트워크 제어  |  후속 후보의 성능은 미확정</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="840"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-840)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="840" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="58" y="757" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 39px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,1514) scale(1,-1)">문제 정의에서 검증까지 이어지는 논리</text>
+			<text x="58" y="709" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 23px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,1418) scale(1,-1)">기기 자원과 전송 자원을 함께 모델링하고 각 실험이 뒷받침하는 주장으로 결론을 연결한다</text>
+			<path d="M 58,690 L 1342,690 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="58" y="33" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 20px;fill: rgb(32%,39%,48%); stroke:none;" transform="translate(0,66) scale(1,-1)">향후 과제: 실제 OVS 집행·동일 정확도까지의 시간·통합 LoRA 네트워크 제어  |  후속 후보의 성능은 미확정</text>
+			<text x="58" y="580" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 50px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1160) scale(1,-1)">01</text>
+			<text x="58" y="522" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 32px;fill: rgb(41%,33%,67%); stroke:none;" transform="translate(0,1044) scale(1,-1)">기기 부하</text>
+			<text x="58" y="473" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 25px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,946) scale(1,-1)">폭·모델 분할로 조절</text>
+			<path d="M 408,542 L 479,542 Z" style="stroke: rgb(41%,33%,67%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="479 542, 464.5928 535.0406, 464.5928 548.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(41%,33%,67%); fill-rule: evenodd;"/>
+			<text x="503" y="580" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 50px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1160) scale(1,-1)">02</text>
+			<text x="503" y="522" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 32px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,1044) scale(1,-1)">반복 왕복 전송</text>
+			<text x="503" y="473" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 25px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,946) scale(1,-1)">공유 병목·경유 선택</text>
+			<path d="M 853,542 L 924,542 Z" style="stroke: rgb(0%,49%,47%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="924 542, 909.5928 535.0406, 909.5928 548.9594" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="948" y="580" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 50px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,1160) scale(1,-1)">03</text>
+			<text x="948" y="522" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 32px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,1044) scale(1,-1)">공통 완료 목표</text>
+			<text x="948" y="473" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 25px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,946) scale(1,-1)">시간·폭 대가의 모델링</text>
+			<path d="M 58,417 L 1342,417 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="58" y="136" width="394" height="223" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="83" y="301" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(0%,49%,47%); fill-rule: evenodd;"/>
+			<text x="106" y="306" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(0%,49%,47%); stroke:none;" transform="translate(0,612) scale(1,-1)">실제 회선·학습</text>
+			<text x="84" y="251" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,502) scale(1,-1)">KOREN 결합 실험</text>
+			<text x="84" y="213" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,426) scale(1,-1)">VM↔HPC LoRA 학습</text>
+			<rect x="503" y="136" width="394" height="223" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="528" y="301" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(73%,34%,12%); fill-rule: evenodd;"/>
+			<text x="551" y="306" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(73%,34%,12%); stroke:none;" transform="translate(0,612) scale(1,-1)">실제 장비 프로파일</text>
+			<text x="529" y="251" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,502) scale(1,-1)">Jetson 전력 모드별 시간</text>
+			<text x="529" y="213" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,426) scale(1,-1)">메모리·OOM 관측</text>
+			<rect x="948" y="136" width="394" height="223" rx="14" ry="14" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1.5; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<rect x="973" y="301" width="6" height="30" style="stroke: none; stroke-linecap: butt; stroke-width: 1.5; fill: rgb(15%,40%,66%); fill-rule: evenodd;"/>
+			<text x="996" y="306" style="font-weight: 700; font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 28px;fill: rgb(15%,40%,66%); stroke:none;" transform="translate(0,612) scale(1,-1)">실측값 기반 재현</text>
+			<text x="974" y="251" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,502) scale(1,-1)">시간 모형·로컬 TCP</text>
+			<text x="974" y="213" style="font-family: Malgun Gothic, Noto Sans CJK KR, sans-serif; font-size: 24px;fill: rgb(8%,14%,22%); stroke:none;" transform="translate(0,426) scale(1,-1)">새 제어의 조건·반례</text>
+		</g>
+	</g>
+</svg>

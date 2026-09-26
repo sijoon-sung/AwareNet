@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "scope": "synthetic closed ready-gradient window; not KOREN measurement",
+  "seeds": 100,
+  "clients": 8,
+  "capacity_bps": 20000000,
+  "quantum_bytes": 65536,
+  "completion_error_s": 0.002,
+  "cases": ["heterogeneous", "homogeneous", "inverted_estimate", "wide_uncertainty", "uncovered_drift", "independent_links"],
+  "primary_metric": "max(gradient_completion_s + independent_local_tail_s)",
+  "secondary_metrics": ["mean_gradient_completion_s", "total_payload_bytes", "regressions_vs_rr", "interval_coverage"],
+  "decision_rule": "Retain only as a research candidate if heterogeneous gains survive FIFO/SJF comparisons. Report every negative case. Never claim global training speedup from this window model."
+}

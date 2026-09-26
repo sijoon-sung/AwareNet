@@ -1,0 +1,257 @@
+{
+  "reason": "iproute2 7 stores class counters in stats.bytes; raw event parser expected bytes. Timing and payload records are unchanged.",
+  "corrections": [
+    {
+      "condition": "edge_drop",
+      "policy": "single",
+      "round": 1,
+      "source": "kernel-edge_drop-single-r1.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        1288138,
+        142117
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "single",
+      "round": 2,
+      "source": "kernel-edge_drop-single-r2.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        1275689,
+        141803
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "single",
+      "round": 3,
+      "source": "kernel-edge_drop-single-r3.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        1276057,
+        141803
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "single",
+      "round": 4,
+      "source": "kernel-edge_drop-single-r4.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        1275655,
+        141733
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "fixed_dual",
+      "round": 1,
+      "source": "kernel-edge_drop-fixed_dual-r1.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        715935,
+        715926
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "fixed_dual",
+      "round": 2,
+      "source": "kernel-edge_drop-fixed_dual-r2.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        713523,
+        710205
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "fixed_dual",
+      "round": 3,
+      "source": "kernel-edge_drop-fixed_dual-r3.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        711240,
+        708488
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "fixed_dual",
+      "round": 4,
+      "source": "kernel-edge_drop-fixed_dual-r4.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        711741,
+        708249
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "adaptive_dual",
+      "round": 1,
+      "source": "kernel-edge_drop-adaptive_dual-r1.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        718570,
+        719239
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "adaptive_dual",
+      "round": 2,
+      "source": "kernel-edge_drop-adaptive_dual-r2.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        430531,
+        992656
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "adaptive_dual",
+      "round": 3,
+      "source": "kernel-edge_drop-adaptive_dual-r3.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        429711,
+        992522
+      ]
+    },
+    {
+      "condition": "edge_drop",
+      "policy": "adaptive_dual",
+      "round": 4,
+      "source": "kernel-edge_drop-adaptive_dual-r4.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        429706,
+        992593
+      ]
+    },
+    {
+      "condition": "shared_access",
+      "policy": "single",
+      "round": 1,
+      "source": "kernel-shared_access-single-r1.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        1316577,
+        143787
+      ]
+    },
+    {
+      "condition": "shared_access",
+      "policy": "single",
+      "round": 2,
+      "source": "kernel-shared_access-single-r2.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        1279017,
+        160169
+      ]
+    },
+    {
+      "condition": "shared_access",
+      "policy": "fixed_dual",
+      "round": 1,
+      "source": "kernel-shared_access-fixed_dual-r1.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        908352,
+        911011
+      ]
+    },
+    {
+      "condition": "shared_access",
+      "policy": "fixed_dual",
+      "round": 2,
+      "source": "kernel-shared_access-fixed_dual-r2.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        849770,
+        863641
+      ]
+    },
+    {
+      "condition": "shared_access",
+      "policy": "adaptive_dual",
+      "round": 1,
+      "source": "kernel-shared_access-adaptive_dual-r1.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        790582,
+        965622
+      ]
+    },
+    {
+      "condition": "shared_access",
+      "policy": "adaptive_dual",
+      "round": 2,
+      "source": "kernel-shared_access-adaptive_dual-r2.json",
+      "original": [
+        0,
+        0
+      ],
+      "normalized": [
+        847254,
+        761753
+      ]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>삼면비교 라이브 — 직접 물어보세요</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F8F9FB; --card:#FFFFFF; --ink:#1B2230; --mute:#5A6478; --line:#DCE1EA;
+  --teal:#0E7C86; --teal-soft:#E7F2F3; --ok:#2E7D4F; --ok-soft:#E4F1E8;
+  --bad:#A3403C; --bad-soft:#F6E7E6;
+  --shadow:0 1px 2px rgba(20,30,50,.06),0 8px 24px rgba(20,30,50,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#121721; --card:#1A2130; --ink:#E6EAF2; --mute:#98A2B8; --line:#2B3345;
+    --teal:#45B8C2; --teal-soft:#14333A; --ok:#6CC092; --ok-soft:#1A3326;
+    --bad:#D98782; --bad-soft:#3A2020;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);
+  font:400 16px/1.7 "IBM Plex Sans KR",-apple-system,"Malgun Gothic",sans-serif;
+  padding:0 20px 80px}
+.wrap{max-width:1000px;margin:0 auto}
+.mono{font-family:"IBM Plex Mono","Consolas",monospace}
+header{padding:44px 0 24px;border-bottom:2px solid var(--ink)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+  color:var(--teal);margin-bottom:10px}
+h1{font-size:clamp(24px,4vw,34px);font-weight:700;line-height:1.3;text-wrap:balance}
+.sub{margin-top:8px;color:var(--mute);font-size:15px}
+
+.askrow{display:flex;gap:10px;margin:28px 0 12px}
+#q{flex:1;font:inherit;font-size:16px;padding:14px 18px;border:2px solid var(--line);
+  border-radius:12px;background:var(--card);color:var(--ink)}
+#q:focus{outline:none;border-color:var(--teal)}
+#go{font:inherit;font-size:15px;font-weight:700;padding:14px 26px;border:none;
+  border-radius:12px;background:var(--teal);color:#fff;cursor:pointer;white-space:nowrap}
+#go:disabled{opacity:.5;cursor:wait}
+.sugg{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{font-size:13px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;
+  background:var(--card);color:var(--mute);cursor:pointer;line-height:1.5}
+.chip:hover{border-color:var(--teal);color:var(--teal)}
+.chip:focus-visible,#go:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+
+.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.ans{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;box-shadow:var(--shadow);min-height:150px}
+.ans.hero{border-color:var(--teal)}
+.ans .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.ans .mname{font-weight:700;font-size:14.5px}
+.badge{font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:2px 10px;border-radius:999px}
+.badge.ok{background:var(--ok-soft);color:var(--ok)}
+.badge.no{background:var(--bad-soft);color:var(--bad)}
+.badge.ms{background:var(--teal-soft);color:var(--teal)}
+.ans .gen{font-size:15px;line-height:1.7;word-break:break-all;white-space:pre-wrap}
+.ans .gen.wait{color:var(--mute)}
+.ans mark{background:transparent;color:var(--ok);font-weight:700;border-bottom:2px solid var(--ok)}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--line);
+  border-top-color:var(--teal);border-radius:50%;animation:r .8s linear infinite;
+  vertical-align:-2px;margin-right:8px}
+@keyframes r{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.spin{animation:none}}
+.foot{margin-top:52px;padding-top:14px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">AWARENET · 삼면비교 라이브</div>
+  <h1>직접 물어보세요 — 세 모델이 지금 답합니다</h1>
+  <p class="sub">같은 골격, 어댑터만 다른 세 모델 — 튜닝 전 베이스, 한 기관 단독학습, 연합 튜닝.
+  데이터는 한 발짝도 안 움직였고, 라운드마다 오간 것은 KB급 어댑터뿐입니다.</p>
+</header>
+
+<div class="askrow">
+  <input id="q" placeholder="질문을 입력하세요 (Enter)" autocomplete="off">
+  <button id="go">묻기</button>
+</div>
+<div class="sugg" id="sugg"></div>
+<div class="answers" id="answers"></div>
+
+<div class="foot">
+  생성: 그리디 · 검증 문항과 일치하면 채점 키워드로 정답/오답 배지 ·
+  서버는 요청을 하나씩 처리합니다 (모델 하나, 어댑터 스왑)
+</div>
+</div>
+
+<script>
+const MODELS = __MODELS__;
+const SUGG = __SUGG__;
+const HERO = MODELS[MODELS.length-1];
+const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $ = id => document.getElementById(id);
+
+SUGG.forEach(q=>{
+  const b=document.createElement('button'); b.className='chip'; b.textContent=q;
+  b.onclick=()=>{ $('q').value=q; ask(); };
+  $('sugg').appendChild(b);
+});
+
+function card(m){
+  const div=document.createElement('div');
+  div.className='ans'+(m===HERO?' hero':'');
+  div.innerHTML=`<div class="head"><span class="mname">${esc(m)}</span>`
+    +`<span class="slot"></span></div>`
+    +`<div class="gen wait"><span class="spin"></span>생각 중…</div>`;
+  return div;
+}
+function hl(gen,keys){
+  let out=esc(gen);
+  (keys||[]).forEach(k=>{
+    const e=esc(k).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    out=out.replace(new RegExp(e,'gi'),x=>`<mark>${x}</mark>`);
+  });
+  return out;
+}
+async function ask(){
+  const q=$('q').value.trim();
+  if(!q) return;
+  $('go').disabled=true;
+  const box=$('answers'); box.innerHTML='';
+  const cards={};
+  MODELS.forEach(m=>{ cards[m]=card(m); box.appendChild(cards[m]); });
+  for(const m of MODELS){                      // 순차 — 서버가 1개씩 처리
+    try{
+      const r=await fetch('/chat',{method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({q, model:m})});
+      const d=await r.json();
+      let badge=`<span class="badge ms">${d.ms}ms</span>`;
+      if('ok' in d) badge=`<span class="badge ${d.ok?'ok':'no'}">${d.ok?'정답':'오답'}</span> `+badge;
+      cards[m].querySelector('.slot').innerHTML=badge;
+      cards[m].querySelector('.gen').className='gen';
+      cards[m].querySelector('.gen').innerHTML=hl(d.a,d.keys);
+    }catch(e){
+      cards[m].querySelector('.gen').textContent='오류: '+e;
+    }
+  }
+  $('go').disabled=false;
+}
+$('go').onclick=ask;
+$('q').addEventListener('keydown',e=>{ if(e.key==='Enter') ask(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+{
+  "pages": [
+    {
+      "pdf_page": 1,
+      "section": "cover",
+      "used_pt": 524.0,
+      "remaining_pt": 185.2
+    },
+    {
+      "pdf_page": 2,
+      "section": "summary",
+      "used_pt": 661.0,
+      "remaining_pt": 73.2
+    },
+    {
+      "pdf_page": 3,
+      "section": "summary",
+      "used_pt": 606.0,
+      "remaining_pt": 128.2
+    },
+    {
+      "pdf_page": 4,
+      "section": "summary",
+      "used_pt": 591.0,
+      "remaining_pt": 143.2
+    },
+    {
+      "pdf_page": 5,
+      "section": "contents",
+      "used_pt": 726.0,
+      "remaining_pt": 8.2
+    },
+    {
+      "pdf_page": 6,
+      "section": "main",
+      "used_pt": 582.0,
+      "remaining_pt": 152.2
+    },
+    {
+      "pdf_page": 7,
+      "section": "main",
+      "used_pt": 594.0,
+      "remaining_pt": 140.2
+    },
+    {
+      "pdf_page": 8,
+      "section": "main",
+      "used_pt": 675.0,
+      "remaining_pt": 59.2
+    },
+    {
+      "pdf_page": 9,
+      "section": "main",
+      "used_pt": 672.5,
+      "remaining_pt": 61.6
+    },
+    {
+      "pdf_page": 10,
+      "section": "main",
+      "used_pt": 624.0,
+      "remaining_pt": 110.2
+    },
+    {
+      "pdf_page": 11,
+      "section": "main",
+      "used_pt": 688.4,
+      "remaining_pt": 45.7
+    },
+    {
+      "pdf_page": 12,
+      "section": "main",
+      "used_pt": 680.3,
+      "remaining_pt": 53.9
+    },
+    {
+      "pdf_page": 13,
+      "section": "main",
+      "used_pt": 638.1,
+      "remaining_pt": 96.1
+    },
+    {
+      "pdf_page": 14,
+      "section": "main",
+      "used_pt": 639.9,
+      "remaining_pt": 94.3
+    },
+    {
+      "pdf_page": 15,
+      "section": "main",
+      "used_pt": 714.7,
+      "remaining_pt": 19.5
+    },
+    {
+      "pdf_page": 16,
+      "section": "main",
+      "used_pt": 725.3,
+      "remaining_pt": 8.8
+    },
+    {
+      "pdf_page": 17,
+      "section": "main",
+      "used_pt": 718.4,
+      "remaining_pt": 15.7
+    },
+    {
+      "pdf_page": 18,
+      "section": "main",
+      "used_pt": 594.0,
+      "remaining_pt": 140.2
+    },
+    {
+      "pdf_page": 19,
+      "section": "main",
+      "used_pt": 732.2,
+      "remaining_pt": 1.9
+    },
+    {
+      "pdf_page": 20,
+      "section": "main",
+      "used_pt": 560.0,
+      "remaining_pt": 174.2
+    },
+    {
+      "pdf_page": 21,
+      "section": "main",
+      "used_pt": 574.0,
+      "remaining_pt": 160.2
+    },
+    {
+      "pdf_page": 22,
+      "section": "main",
+      "used_pt": 732.0,
+      "remaining_pt": 2.2
+    },
+    {
+      "pdf_page": 23,
+      "section": "main",
+      "used_pt": 560.0,
+      "remaining_pt": 174.2
+    },
+    {
+      "pdf_page": 24,
+      "section": "main",
+      "used_pt": 730.0,
+      "remaining_pt": 4.2
+    },
+    {
+      "pdf_page": 25,
+      "section": "main",
+      "used_pt": 649.5,
+      "remaining_pt": 84.7
+    },
+    {
+      "pdf_page": 26,
+      "section": "main",
+      "used_pt": 727.9,
+      "remaining_pt": 6.3
+    },
+    {
+      "pdf_page": 27,
+      "section": "main",
+      "used_pt": 655.0,
+      "remaining_pt": 79.2
+    }
+  ],
+  "summary_pages": 3,
+  "main_pages": 22,
+  "font": "HY신명조 H2MJSM.TTF (휴먼명조 미설치로 PDF 대체; HTML은 휴먼명조 지정)",
+  "heading_pt": 15,
+  "body_pt": 13,
+  "source_sha256": "89038a0eb1047dfbed98b64bc02d9042963346a2840757bd849d17f1be844140",
+  "visual_qa": "passed",
+  "evidence_sources_checked": 39,
+  "source_hashes_match": true,
+  "publication_sources_checked": 413,
+  "publication_hashes_match": true,
+  "figures": 11,
+  "tables": 7,
+  "diagram_sources": "figures/sources.json",
+  "new_experiments_run": false,
+  "includes_completed_virtual_lab": true,
+  "virtual_lab_manifest": "site/assets/lab/manifest.json",
+  "virtual_lab_sources_checked": 21,
+  "virtual_lab_hashes_match": true,
+  "visually_checked_changed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    15,
+    27
+  ],
+  "unchanged_pages_verified_by_png_sha256": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "jetson_git_provenance_checked": 20
+}

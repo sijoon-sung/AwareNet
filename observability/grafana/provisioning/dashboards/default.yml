@@ -1,0 +1,10 @@
+apiVersion: 1
+providers:
+  - name: AwareNet
+    orgId: 1
+    folder: AwareNet
+    type: file
+    disableDeletion: true
+    updateIntervalSeconds: 5
+    options:
+      path: ${AWN_DASHBOARD_PATH}

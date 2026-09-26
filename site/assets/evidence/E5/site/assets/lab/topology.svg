@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="620" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 620" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="620"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-620)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="620" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="25" y="215" width="1350" height="380" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="45" y="550" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1100) scale(1,-1)">QEMU / Linux namespaces · 2 vCPU · 1 GiB</text>
+			<rect x="70" y="330" width="240" height="150" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="95" y="421" width="32" height="27" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 103,431 L 119,431 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 111,421 L 111,412 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 96,412 L 126,412 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="145" y="421" width="32" height="27" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 153,431 L 169,431 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 161,421 L 161,412 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 146,412 L 176,412 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="195" y="421" width="32" height="27" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 203,431 L 219,431 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 211,421 L 211,412 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 196,412 L 226,412 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="245" y="421" width="32" height="27" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 253,431 L 269,431 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 261,421 L 261,412 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 246,412 L 276,412 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="95" y="374" width="32" height="27" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 103,384 L 119,384 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 111,374 L 111,365 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 96,365 L 126,365 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="145" y="374" width="32" height="27" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 153,384 L 169,384 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 161,374 L 161,365 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 146,365 L 176,365 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="195" y="374" width="32" height="27" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 203,384 L 219,384 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 211,374 L 211,365 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 196,365 L 226,365 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<rect x="245" y="374" width="32" height="27" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 253,384 L 269,384 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 261,374 L 261,365 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 246,365 L 276,365 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="94.93310546875" y="285" style="font-family: Malgun Gothic, sans-serif; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,570) scale(1,-1)">8 logical clients</text>
+			<rect x="480" y="414" width="260" height="76" rx="7" ry="7" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="506.429443359375" y="446" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,892) scale(1,-1)">E1 / HTB + netem</text>
+			<path d="M 310,405 L 385,405 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 385,405 L 385,452 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 385,452 L 480,452 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="480 452, 467 457, 467 447" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 740,452 L 850,452 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 850,452 L 850,405 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 850,405 L 965,405 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="965 405, 952 410, 952 400" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="480" y="264" width="260" height="76" rx="7" ry="7" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="506.429443359375" y="296" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,592) scale(1,-1)">E2 / HTB + netem</text>
+			<path d="M 310,405 L 385,405 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 385,405 L 385,302 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 385,302 L 480,302 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="480 302, 467 307, 467 297" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<path d="M 740,302 L 850,302 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 850,302 L 850,405 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 850,405 L 965,405 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="965 405, 952 410, 952 400" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="1020" y="345" width="175" height="135" rx="5" ry="5" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="1032" y="446.0" width="151" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1170" cy="457.0" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1032" y="405.66666666666663" width="151" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1170" cy="416.66666666666663" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="1032" y="365.3333333333333" width="151" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<circle cx="1170" cy="376.3333333333333" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 1040,338 L 1175,338 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<rect x="900" y="260" width="410" height="75" rx="5" ry="5" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="982.813720703125" y="294" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,588) scale(1,-1)">Shared IFB / 2 Mbit/s</text>
+			<text x="1027.75732421875" y="271" style="font-family: Malgun Gothic, sans-serif; font-size: 18px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,542) scale(1,-1)">shared_access only</text>
+			<text x="61.8984375" y="234" style="font-family: Malgun Gothic, sans-serif; font-size: 24px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,468) scale(1,-1)">128 KiB / client · 4 KiB chunks · width = 1.0</text>
+			<text x="835" y="512" style="font-family: Malgun Gothic, sans-serif; font-size: 23px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,1024) scale(1,-1)">E1: 2 → 0.5 Mbit/s (R2)</text>
+			<text x="835" y="484" style="font-family: Malgun Gothic, sans-serif; font-size: 23px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,968) scale(1,-1)">E2: 2 Mbit/s · netem: 10 ms</text>
+			<rect x="40" y="74" width="220" height="72" rx="5" ry="5" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="92.0390625" y="101" style="font-family: Malgun Gothic, sans-serif; font-size: 24px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,202) scale(1,-1)">tc / events</text>
+			<rect x="315" y="74" width="220" height="72" rx="5" ry="5" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="346.1796875" y="101" style="font-family: Malgun Gothic, sans-serif; font-size: 24px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,202) scale(1,-1)">TShark / PCAP</text>
+			<rect x="590" y="74" width="220" height="72" rx="5" ry="5" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="651.625" y="101" style="font-family: Malgun Gothic, sans-serif; font-size: 24px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,202) scale(1,-1)">Collector</text>
+			<rect x="865" y="74" width="220" height="72" rx="5" ry="5" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="910.1015625" y="101" style="font-family: Malgun Gothic, sans-serif; font-size: 24px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,202) scale(1,-1)">Prometheus</text>
+			<rect x="1140" y="74" width="220" height="72" rx="5" ry="5" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="1207.8828125" y="101" style="font-family: Malgun Gothic, sans-serif; font-size: 24px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,202) scale(1,-1)">Grafana</text>
+			<path d="M 150,146 L 150,180 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 150,180 L 700,180 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 700,180 L 700,146 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="700 146, 705 159, 695 159" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+			<path d="M 535,110 L 590,110 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="590 110, 577 115, 577 105" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+			<path d="M 810,110 L 865,110 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="865 110, 852 115, 852 105" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+			<path d="M 1085,110 L 1140,110 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="1140 110, 1127 115, 1127 105" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+			<text x="413.99365234375" y="24" style="font-family: Malgun Gothic, sans-serif; font-size: 23px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,48) scale(1,-1)">Owned virtual interfaces only · no KOREN core control</text>
+		</g>
+	</g>
+</svg>
