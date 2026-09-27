@@ -144,7 +144,7 @@ def main():
     published_paths = {r['source_path'] for g in groups for r in g['files']}
     extra_sources = [s['path'] for s in revised['sources'] if s['path'] not in published_paths]
     g = group('E8', '보고서 재집계: 시간·정확도·제어 동작',
-          '기존 실행의 시간, 폭, 응용 전송량과 정확도를 함께 재집계하고 여섯 개의 본문 그림으로 연결한다.',
+          '기존 실행의 시간, 폭, 응용 전송량과 정확도를 함께 재집계하고 본문 그림으로 연결한다.',
           '32프로세스 24R×3시드: 초기 4R 제외 시간·폭·바이트, 최종 round 23 정확도. 8프로세스 200R×2시드: 초기 4R 제외 시간·폭, round 150–199 평균 정확도. E1·E7의 원시 로그 및 실행 인자를 사용한다.',
           'λ=280: 시간 20.7% 단축, 정확도 65.52%→65.22%. λ=70: 32.5% 단축, 63.17%. λ=18: 58.1% 단축, 53.59%. 모든 비교는 단일 출구 기준선과 두 출구 AwareNet의 구성 비교다. 정확도 평가는 시험 데이터 앞 2,000개와 실행별 최대 학습 폭을 사용했다. 두 시드의 요약값이며 독립 반복 수를 늘리는 후속 평가가 필요하다.',
           extra_sources+['configs/measurements/report_metrics_revised.json',
@@ -152,6 +152,17 @@ def main():
               'scripts/analysis/paper_diagrams.py', 'scripts/analysis/build_prose_report.py',
               'output/prose_awarenet/figures/revised_sources.json'])
     g['statistics'] = revised['accuracy_200']
+
+    group('E9', '설계 선택의 이유: 용어·개발 과정·활용 예시',
+          'CNN 채널 선택, 중계 경로, 단계적 제어를 택한 이유를 문헌·코드·개발 기록에 연결한다.',
+          '8/29 방향 검토, 9/2 다중 경로 설계, 9/9 이후 컨트롤러 기록과 현재 모델 코드를 함께 제공한다. 4·3·2MiB는 배치 32, cut 2, FP32의 텐서 모양에 따른 계산이다.',
+          '과거 문서는 당시의 제안·시행착오다. 현재 주장은 제출 보고서와 E1–E8을 따른다. 여러 현장의 영상 분류는 적용 시나리오이며 현장 도입 실적이 아니다. 자체 정확도 제외의 과거 이유와 현재의 탐색 결과 해석도 보존한다.',
+          ['docs/03_리서치/용어와_설계선택_활용시나리오_2026-09-27.md',
+           'docs/01_제출발표/방향검토보고서_AwareNet.md',
+           'docs/03_리서치/실전_포지셔닝_FL배치지형.md',
+           'docs/04_설계기록/설계_멀티패스_분할전송.md',
+           'docs/04_설계기록/설계기록_컨트롤러.md',
+           'sfl/models.py', 'scripts/analysis/final_results_page.py'])
 
     manifest = dict(version=1, date='2026-09-27', kind='historical evidence publication; no new experiments',
                     byte_preserving_copies=True, groups=groups)

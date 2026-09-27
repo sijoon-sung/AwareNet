@@ -12,11 +12,11 @@
 		<g transform="">
 			<rect x="0" y="0" width="1400" height="520" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<rect x="385" y="390" width="630" height="110" rx="8" ry="8" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
-			<text x="536.341796875" y="451" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 34px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,902) scale(1,-1)">AwareNet scheduler</text>
-			<text x="513.7724609375" y="411" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,822) scale(1,-1)">compute · bytes · path capacity</text>
-			<text x="106.731689453125" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">CLIENTS</text>
-			<text x="558.559814453125" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">RELAY EDGES</text>
-			<text x="1181.108642578125" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">SERVER</text>
+			<text x="545.82958984375" y="451" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 34px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,902) scale(1,-1)">AwareNet 스케줄러</text>
+			<text x="523.890625" y="411" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,822) scale(1,-1)">계산 시간 · 전송량 · 경로 용량</text>
+			<text x="133.0" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">기기</text>
+			<text x="587.25390625" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">중계 서버</text>
+			<text x="1171.25390625" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">학습 서버</text>
 			<rect x="30" y="81" width="260" height="202" rx="8" ry="8" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
 			<rect x="52" y="210" width="51" height="47" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<path d="M 60,220 L 95,220 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
@@ -42,7 +42,7 @@
 			<rect x="214" y="151" width="8" height="34" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
 			<rect x="225" y="151" width="8" height="34" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(86%,88%,90%); fill-rule: evenodd;"/>
 			<rect x="236" y="151" width="8" height="34" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(86%,88%,90%); fill-rule: evenodd;"/>
-			<text x="113.255859375" y="92" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,184) scale(1,-1)">width w</text>
+			<text x="89.287109375" y="92" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,184) scale(1,-1)">채널 비율 w</text>
 			<rect x="576" y="207" width="238" height="70" rx="5" ry="5" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<text x="678.2275390625" y="230" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 30px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,460) scale(1,-1)">E1</text>
 			<rect x="576" y="83" width="238" height="70" rx="5" ry="5" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
@@ -55,7 +55,7 @@
 			<rect x="1162" y="136.66666666666669" width="123" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
 			<circle cx="1272" cy="147.66666666666669" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
 			<path d="M 1170,107 L 1277,107 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
-			<text x="1139.48046875" y="69" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,138) scale(1,-1)">merge → train</text>
+			<text x="1138.83349609375" y="69" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,138) scale(1,-1)">재조립 → 학습</text>
 			<path d="M 292,198 L 430,198 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
 			<path d="M 430,198 L 430,242 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
 			<path d="M 430,242 L 570,242 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
@@ -69,23 +69,23 @@
 			<polygon points="1140 196, 1127 201, 1127 191" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
 			<path d="M 820,118 L 998,118 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
 			<path d="M 998,118 L 998,196 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
-			<text x="405.93994140625" y="248" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,496) scale(1,-1)">ACT</text>
-			<text x="973.93994140625" y="248" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,496) scale(1,-1)">ACT</text>
+			<text x="392.5" y="248" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,496) scale(1,-1)">활성값</text>
+			<text x="960.5" y="248" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,496) scale(1,-1)">활성값</text>
 			<path d="M 1145,63 L 1033,32 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<path d="M 1033,32 L 370,32 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<path d="M 370,32 L 287,83 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<polygon points="287 83, 295.4585 71.93413, 300.6938 80.45423" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
-			<text x="686.09765625" y="28" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 24px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,56) scale(1,-1)">GRAD</text>
+			<text x="684.0" y="28" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 24px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,56) scale(1,-1)">기울기</text>
 			<path d="M 480,390 L 480,357 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<path d="M 480,357 L 158,357 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
-			<path d="M 158,357 L 158,289 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
-			<polygon points="158 289, 163 302, 153 302" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<path d="M 158,357 L 158,335 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<polygon points="158 335, 163 348, 153 348" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
 			<path d="M 893,390 L 893,357 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<path d="M 893,357 L 695,357 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
-			<path d="M 695,357 L 695,285 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
-			<polygon points="695 285, 700 298, 690 298" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
-			<text x="345" y="359" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,718) scale(1,-1)">width</text>
-			<text x="808" y="359" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,718) scale(1,-1)">path / split</text>
+			<path d="M 695,357 L 695,335 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<polygon points="695 335, 700 348, 690 348" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<text x="345" y="359" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,718) scale(1,-1)">채널 수</text>
+			<text x="808" y="359" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,718) scale(1,-1)">경로 / 전송 비율</text>
 		</g>
 	</g>
 </svg>

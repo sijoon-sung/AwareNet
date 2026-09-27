@@ -45,7 +45,7 @@
 			<rect x="207" y="155" width="17" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
 			<rect x="232" y="155" width="17" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
 			<rect x="257" y="155" width="17" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
-			<text x="75.53662109375" y="94" style="font-family: Malgun Gothic, sans-serif; font-size: 27px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,188) scale(1,-1)">32 CPU processes</text>
+			<text x="67.3759765625" y="94" style="font-family: Malgun Gothic, sans-serif; font-size: 27px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,188) scale(1,-1)">CPU 프로세스 32개</text>
 			<rect x="1111" y="124" width="134" height="125" rx="5" ry="5" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.5; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<rect x="1123" y="215.0" width="110" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
 			<circle cx="1220" cy="226.0" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
@@ -54,7 +54,7 @@
 			<rect x="1123" y="141.0" width="110" height="21.0" rx="2" ry="2" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
 			<circle cx="1220" cy="152.0" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
 			<path d="M 1131,117 L 1225,117 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
-			<text x="1098.265625" y="75" style="font-family: Malgun Gothic, sans-serif; font-size: 27px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,150) scale(1,-1)">V100 · server</text>
+			<text x="1075.939208984375" y="75" style="font-family: Malgun Gothic, sans-serif; font-size: 27px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,150) scale(1,-1)">V100 · 학습 서버</text>
 			<text x="645.4140625" y="510" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 32px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,1020) scale(1,-1)">KOREN</text>
 			<rect x="385" y="358" width="322" height="124" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: none; fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
 			<text x="405" y="437" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,874) scale(1,-1)">VM</text>
@@ -82,8 +82,8 @@
 			<path d="M 1060,194 L 1104,194 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
 			<polygon points="1104 194, 1091 199, 1091 189" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
 			<path d="M 1050,356 L 1050,258 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
-			<text x="501.7529296875" y="181" style="font-family: Malgun Gothic, sans-serif; font-size: 28px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,362) scale(1,-1)">4 logical relays · shared capacity</text>
-			<text x="548.7158203125" y="120" style="font-family: Malgun Gothic, sans-serif; font-size: 27px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,240) scale(1,-1)">activation ↑   gradient ↓</text>
+			<text x="513.6953125" y="181" style="font-family: Malgun Gothic, sans-serif; font-size: 28px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,362) scale(1,-1)">논리 중계 4개 · 공유 용량 반영</text>
+			<text x="548.669677734375" y="120" style="font-family: Malgun Gothic, sans-serif; font-size: 27px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,240) scale(1,-1)">활성값 전송 / 기울기 반환</text>
 		</g>
 	</g>
 </svg>

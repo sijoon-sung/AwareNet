@@ -9,26 +9,26 @@
     {
       "pdf_page": 2,
       "section": "summary",
-      "used_pt": 619.0,
-      "remaining_pt": 115.2
+      "used_pt": 598.0,
+      "remaining_pt": 136.2
     },
     {
       "pdf_page": 3,
       "section": "summary",
-      "used_pt": 694.0,
-      "remaining_pt": 40.2
+      "used_pt": 715.0,
+      "remaining_pt": 19.2
     },
     {
       "pdf_page": 4,
       "section": "contents",
-      "used_pt": 631.0,
-      "remaining_pt": 103.2
+      "used_pt": 669.0,
+      "remaining_pt": 65.2
     },
     {
       "pdf_page": 5,
       "section": "main",
-      "used_pt": 582.0,
-      "remaining_pt": 152.2
+      "used_pt": 593.0,
+      "remaining_pt": 141.2
     },
     {
       "pdf_page": 6,
@@ -45,32 +45,32 @@
     {
       "pdf_page": 8,
       "section": "main",
-      "used_pt": 598.0,
-      "remaining_pt": 136.2
+      "used_pt": 615.8,
+      "remaining_pt": 118.3
     },
     {
       "pdf_page": 9,
       "section": "main",
-      "used_pt": 612.6,
-      "remaining_pt": 121.5
+      "used_pt": 640.0,
+      "remaining_pt": 94.2
     },
     {
       "pdf_page": 10,
+      "section": "main",
+      "used_pt": 633.6,
+      "remaining_pt": 100.5
+    },
+    {
+      "pdf_page": 11,
       "section": "main",
       "used_pt": 550.0,
       "remaining_pt": 184.2
     },
     {
-      "pdf_page": 11,
+      "pdf_page": 12,
       "section": "main",
       "used_pt": 598.8,
       "remaining_pt": 135.3
-    },
-    {
-      "pdf_page": 12,
-      "section": "main",
-      "used_pt": 670.0,
-      "remaining_pt": 64.2
     },
     {
       "pdf_page": 13,
@@ -81,72 +81,83 @@
     {
       "pdf_page": 14,
       "section": "main",
-      "used_pt": 657.0,
-      "remaining_pt": 77.2
+      "used_pt": 670.0,
+      "remaining_pt": 64.2
     },
     {
       "pdf_page": 15,
       "section": "main",
-      "used_pt": 666.4,
-      "remaining_pt": 67.8
+      "used_pt": 657.0,
+      "remaining_pt": 77.2
     },
     {
       "pdf_page": 16,
+      "section": "main",
+      "used_pt": 708.4,
+      "remaining_pt": 25.8
+    },
+    {
+      "pdf_page": 17,
       "section": "main",
       "used_pt": 596.0,
       "remaining_pt": 138.2
     },
     {
-      "pdf_page": 17,
+      "pdf_page": 18,
       "section": "main",
       "used_pt": 519.0,
       "remaining_pt": 215.2
     },
     {
-      "pdf_page": 18,
+      "pdf_page": 19,
       "section": "main",
-      "used_pt": 627.0,
-      "remaining_pt": 107.2
+      "used_pt": 382.0,
+      "remaining_pt": 352.2
     },
     {
-      "pdf_page": 19,
+      "pdf_page": 20,
+      "section": "main",
+      "used_pt": 655.9,
+      "remaining_pt": 78.3
+    },
+    {
+      "pdf_page": 21,
       "section": "main",
       "used_pt": 560.0,
       "remaining_pt": 174.2
     },
     {
-      "pdf_page": 20,
+      "pdf_page": 22,
       "section": "main",
-      "used_pt": 509.0,
-      "remaining_pt": 225.2
+      "used_pt": 710.0,
+      "remaining_pt": 24.2
     },
     {
-      "pdf_page": 21,
+      "pdf_page": 23,
       "section": "main",
-      "used_pt": 623.0,
-      "remaining_pt": 111.2
+      "used_pt": 644.0,
+      "remaining_pt": 90.2
     }
   ],
   "summary_pages": 2,
-  "main_pages": 17,
+  "main_pages": 19,
   "font": "HY신명조 H2MJSM.TTF (휴먼명조 미설치로 PDF 대체; HTML은 휴먼명조 지정)",
   "heading_pt": 15,
   "body_pt": 13,
-  "source_sha256": "6a73700831676d69fb0d729a1f02dacc9c40b2139a0d9f786a7851ec2a70de1a",
-  "visual_qa": "passed: all 21 rendered pages inspected; diagrams, equations, tables and changed pages checked individually",
+  "source_sha256": "d54f82bb27ff862caab2dff731d6d1c08d46a6c535774e4a219e37249b3ce19f",
+  "visual_qa": "passed: all 23 pages inspected; changed pages rechecked after copy editing",
   "evidence_sources_checked": 39,
   "source_hashes_match": true,
-  "publication_sources_checked": 421,
+  "publication_sources_checked": 428,
   "publication_hashes_match": true,
-  "figures": 6,
+  "figures": 8,
   "tables": 6,
   "revised_sources_checked": 70,
   "revised_hashes_match": true,
   "diagram_sources": "figures/revised_sources.json",
   "new_experiments_run": false,
   "includes_completed_virtual_lab": false,
-  "pdf_sha256": "12cfed4f1207553b6612a85523456c839b04ecae5610e4f2fed2f0c63319283a",
-  "pdf_pages_visually_checked": [
+  "inspected_pdf_pages": [
     1,
     2,
     3,
@@ -167,8 +178,10 @@
     18,
     19,
     20,
-    21
+    21,
+    22,
+    23
   ],
-  "local_html_links_checked": 501,
-  "public_pdf_copy_matches": true
+  "pdf_sha256": "7abced39f905037f862bd782a984990de672f1b0c68de1e173b7a576571ac6e3",
+  "local_html_links_checked": 485
 }

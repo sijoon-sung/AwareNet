@@ -4,16 +4,18 @@
 
 > 2026-09-02 폴더 정리, 2026-09-27 진입점 갱신. 원칙: **문서는 6개 폴더 중 하나에 들어간다.** 낡은 판은 지우지 않고
 > `old/` 로 옮긴다. 새 문서를 만들면 해당 폴더에 넣고 이 목차에 한 줄 추가한다.
-> 최신 줄글 보고서(9/27 전면 개정)와 본문 그림 6종은 `output/prose_awarenet/`, 보조 시각 자료 PDF·HTML·이미지 9종은 `output/final_awarenet/`, 이전 산출물은 `out/reports/` 에 있다.
+> 최신 줄글 보고서(9/27 전면 개정)와 본문 그림 8종은 `output/prose_awarenet/`, 보조 시각 자료 PDF·HTML·이미지 9종은 `output/final_awarenet/`, 이전 산출물은 `out/reports/` 에 있다.
 
-> **주장별 원자료:** [E1–E8 증거 색인](EVIDENCE.md) · [공개 원파일·해시](https://sijoon-sung.github.io/AwareNet/site/evidence.html) · [9/27 전면 개정·수치 검토](03_리서치/보고서_전면개정_2026-09-27.md)
+> **주장별 원자료:** [E1–E9 증거 색인](EVIDENCE.md) · [공개 원파일·해시](https://sijoon-sung.github.io/AwareNet/site/evidence.html) · [9/27 전면 개정·수치 검토](03_리서치/보고서_전면개정_2026-09-27.md)
+
+> **왜 이 설계인가:** [용어·설계 선택·활용 시나리오](03_리서치/용어와_설계선택_활용시나리오_2026-09-27.md) · CNN 채널 선택, 대역폭 재배분의 한계, 중계 서버 선택, 경로 우선 판단의 개발 기록을 연결했다.
 
 ## 지금 무엇을 읽어야 하나 (awarenet 브랜치)
 
 | 목적 | 기준 문서 | 상태 |
 |---|---|---|
-| **제출용 줄글 보고서** | [9/27 전면 개정 보고서](01_제출발표/AwareNet_서술형보고서_2026-09-26.md) | **현재 제출 본문 기준**. 요약문·Ⅰ~Ⅴ장 구조, 그림 6개·표 6개, 경로 우선 평가·시간·정확도 비교. [21쪽 PDF](../output/prose_awarenet/AwareNet_서술형보고서.pdf) · [복사용 HTML](../output/prose_awarenet/AwareNet_서술형보고서.html) |
-| **구조·조건·결과를 한눈에 보기** | [본문 도식·결과 차트 6종](../output/prose_awarenet/figures.html) | 짧은 표기·도형·연결선 중심. 아키텍처, 제어 절차, HPC/VM 배치, 시간 비교, 실제 제어, 시간·정확도. 상세 설명은 캡션. [PNG/SVG 묶음](../output/prose_awarenet/AwareNet_구조도_조건그림.zip) · [보고서 쪽 안내](../output/prose_awarenet/README.md) |
+| **제출용 줄글 보고서** | [9/27 전면 개정 보고서](01_제출발표/AwareNet_서술형보고서_2026-09-26.md) | **현재 제출 본문 기준**. 요약문·Ⅰ~Ⅴ장 구조, 그림 8개·표 6개, 경로 우선 평가·시간·정확도 비교. [23쪽 PDF](../output/prose_awarenet/AwareNet_서술형보고서.pdf) · [복사용 HTML](../output/prose_awarenet/AwareNet_서술형보고서.html) |
+| **구조·조건·결과를 한눈에 보기** | [본문 도식·결과 차트 8종](../output/prose_awarenet/figures.html) | 짧은 표기·도형·연결선 중심. 아키텍처, 제어 절차, HPC/VM 배치, 시간 비교, 실제 제어, 시간·정확도. 상세 설명은 캡션. [PNG/SVG 묶음](../output/prose_awarenet/AwareNet_구조도_조건그림.zip) · [보고서 쪽 안내](../output/prose_awarenet/README.md) |
 | 양식과 신규성 판단의 근거 | [브랜치·문헌·성과 감사](03_리서치/서술형보고서_신규성및출처검토_2026-09-26.md) | 6개 참조의 양식 검색, 가까운 선행연구, 채택·제외 주장, 원본 HWP 부재와 PDF 대체 글꼴 기록 |
 | **발표용 도식·하드웨어·LoRA 요약** | [9/26 통합 시각 자료](01_제출발표/AwareNet_통합보고서_2026-09-26.md) | 제출 원고의 보조 자료. [10쪽 PDF](../output/final_awarenet/AwareNet_종합보고서.pdf) · [이미지 9종](../output/final_awarenet/index.html) |
 | 추가 후보 판정과 미완료 항목 | [9/26 기여 판정과 최종 정리](01_제출발표/기여_판정과_최종정리_2026-09-26.md) | 마지막 조각 재전송 후보 보류, 구조·증거·미완료 항목·53개 테스트 확인 |

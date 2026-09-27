@@ -12,17 +12,17 @@
 		<g transform="">
 			<rect x="0" y="0" width="1400" height="565" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<rect x="30" y="212" width="275" height="118" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
-			<text x="87.173828125" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">1. OBSERVE</text>
-			<text x="42.738281249999986" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">compute · bytes · capacity</text>
+			<text x="121.703369140625" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">1. 관측</text>
+			<text x="75.140625" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">계산 · 전송량 · 용량</text>
 			<rect x="385" y="212" width="275" height="118" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
-			<text x="466.982421875" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">2. PATH</text>
-			<text x="404.593017578125" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">max delay + mean delay</text>
+			<text x="442.605712890625" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">2. 경로 평가</text>
+			<text x="416.877197265625" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">최대 시간 + 평균 시간</text>
 			<rect x="740" y="212" width="275" height="118" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
-			<text x="811.14990234375" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">3. WIDTH</text>
-			<text x="766.319580078125" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">time gain vs width cost</text>
+			<text x="778.008056640625" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">3. 채널 수 선택</text>
+			<text x="761.92578125" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">시간 이득과 축소 페널티</text>
 			<rect x="1095" y="212" width="275" height="118" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
-			<text x="1171.452880859375" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">4. APPLY</text>
-			<text x="1180.65380859375" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">next round</text>
+			<text x="1186.703369140625" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">4. 적용</text>
+			<text x="1176.80859375" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">다음 라운드</text>
 			<path d="M 308,271 L 374,271 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
 			<polygon points="374 271, 361 276, 361 266" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
 			<path d="M 663,271 L 729,271 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
@@ -30,23 +30,23 @@
 			<path d="M 1018,271 L 1084,271 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
 			<polygon points="1084 271, 1071 276, 1071 266" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
 			<rect x="740" y="412" width="275" height="99" rx="6" ry="6" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
-			<text x="773.2109375" y="468" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 24px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,936) scale(1,-1)">capacity changed?</text>
-			<text x="774.030517578125" y="429" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,858) scale(1,-1)">hold width this round</text>
+			<text x="768.13671875" y="468" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 24px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,936) scale(1,-1)">망 용량이 변했는가?</text>
+			<text x="772.42578125" y="429" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,858) scale(1,-1)">이번에는 채널 수 유지</text>
 			<path d="M 523,334 L 523,460 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<path d="M 523,460 L 733,460 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<polygon points="733 460, 720 465, 720 455" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
 			<path d="M 1021,460 L 1233,460 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<path d="M 1233,460 L 1233,336 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<polygon points="1233 336, 1238 349, 1228 349" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
-			<text x="830.02001953125" y="354" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,708) scale(1,-1)">otherwise</text>
+			<text x="797.1328125" y="354" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,708) scale(1,-1)">용량이 안정되면</text>
 			<path d="M 1233,206 L 1233,69 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<path d="M 1233,69 L 168,69 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<path d="M 168,69 L 168,206 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<polygon points="168 206, 163 193, 173 193" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
-			<text x="526.568603515625" y="75" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,150) scale(1,-1)">measure the completed round</text>
-			<text x="419.3671875" y="158" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,316) scale(1,-1)">limited route moves</text>
-			<text x="760.88330078125" y="158" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,316) scale(1,-1)">one width step / round</text>
-			<text x="769.89599609375" y="122" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,244) scale(1,-1)">restore after 2 checks</text>
+			<text x="479.6875" y="75" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,150) scale(1,-1)">완료된 라운드의 계산·전송 시간을 수집</text>
+			<text x="431.3984375" y="158" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,316) scale(1,-1)">경로 이동 수 제한</text>
+			<text x="778.3984375" y="158" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,316) scale(1,-1)">한 라운드에 한 단계</text>
+			<text x="789.3984375" y="122" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,244) scale(1,-1)">복귀는 두 번 확인</text>
 		</g>
 	</g>
 </svg>

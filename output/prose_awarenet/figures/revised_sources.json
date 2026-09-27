@@ -3,7 +3,12 @@
     {
       "stem": "R1_architecture",
       "title": "AwareNet의 구성과 학습 흐름",
-      "caption": "기기는 앞부분, 서버는 뒷부분을 학습하고 중계 엣지는 텐서 조각을 전달한다."
+      "caption": "기기는 앞부분, 서버는 뒷부분을 학습하고 중계 서버는 텐서 조각을 전달한다."
+    },
+    {
+      "stem": "R7_channels",
+      "title": "CNN을 선택한 이유: 채널 수 조절",
+      "caption": "계층 분할은 계산 위치, 채널 선택은 모델 크기, 조각 나누기는 전송 방식을 결정한다."
     },
     {
       "stem": "R2_control",
@@ -27,8 +32,13 @@
     },
     {
       "stem": "R6_accuracy",
-      "title": "폭 보존 가중치에 따른 시간·정확도",
+      "title": "폭 축소 페널티에 따른 시간·정확도",
       "caption": "8프로세스·200라운드·2시드. 평가 대상은 CIFAR-10 시험 집합의 앞 2,000개다."
+    },
+    {
+      "stem": "R8_application",
+      "title": "활용 예시: 여러 현장의 영상 분류 모델 갱신",
+      "caption": "현장 장비가 모델 앞부분을 학습하고, 허용된 중계 서버를 거쳐 중앙 GPU 서버와 함께 모델을 갱신하는 적용 예시."
     }
   ],
   "metrics": "configs/measurements/report_metrics_revised.json",
