@@ -51,6 +51,38 @@ def main():
         count = sum(bool(strict.get(name,{}).get(r['q'],r['ok'])) for domain in domains.values() for r in domain['detail'])
         computed['lora_correct'][name] = count
     assert sorted(computed['lora_correct'].values()) == [0,6,12,12]
+    revised = read(sources['configs/measurements/report_metrics_revised.json'])
+    for entry in revised['sources']:
+        assert hashlib.sha256(sources[entry['path']].read_bytes()).hexdigest() == entry['sha256']
+    def verify_run(run):
+        rr = [json.loads(s) for s in sources[run['source']].read_text(encoding='utf-8-sig').splitlines() if s.strip()]
+        rr = [r for r in rr if 'round' in r]
+        assert [r['round'] for r in rr] == list(range(run['rounds']))
+        args = read(sources[run['source'].replace('.jsonl', '.args.json')])
+        assert args['clients'] == run['clients'] and args['seed'] == run['seed']
+        assert (2 if args['multipath'] else 1) == run['exits']
+        values = {
+            'mean_round_s': statistics.mean(r['makespan'] for r in rr[4:]),
+            'mean_width': statistics.mean(statistics.mean(r['plan'].values()) for r in rr[4:]),
+            'mean_application_bytes': statistics.mean(sum(v[2] for v in r['per_client'].values()) for r in rr[4:]),
+            'final_accuracy_pct': 100*rr[-1]['acc'],
+            'tail50_accuracy_pct': 100*statistics.mean(r['acc'] for r in rr[-50:]),
+        }
+        for key,value in values.items():
+            assert abs(value-run[key]) < 1e-8, (run['source'],key)
+        return values
+    for scenario in revised['scenarios']:
+        for arm in ('uniform','widthpath'):
+            runs = [verify_run(r) for r in scenario[arm]['seeds']]
+            for key in ('mean_round_s','mean_width','mean_application_bytes','final_accuracy_pct'):
+                assert abs(statistics.mean(r[key] for r in runs)-scenario[arm][key]) < 1e-8
+    computed['accuracy_200'] = []
+    for arm in revised['accuracy_200']:
+        runs = [verify_run(r) for r in arm['seeds']]
+        for key in ('mean_round_s','mean_width','mean_application_bytes','tail50_accuracy_pct'):
+            assert abs(statistics.mean(r[key] for r in runs)-arm[key]) < 1e-8
+        computed['accuracy_200'].append({k:arm[k] for k in ('lam','mean_round_s','tail50_accuracy_pct','time_reduction_pct','accuracy_difference_pp')})
+    computed['report_source_hashes_checked'] = len(revised['sources'])
     print(json.dumps(computed, indent=2))
 
 

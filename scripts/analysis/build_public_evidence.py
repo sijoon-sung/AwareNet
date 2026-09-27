@@ -140,6 +140,19 @@ def main():
           'SHRiNK를 참고한 축소 구성은 32대 물리 시스템과의 동등성을 입증하지 않는다. OOM·CPU 제약 때문에 실행 크기를 줄인 것으로, 8개와 32개의 결과를 합산하지 않는다. 주입값을 사용한 모형·로컬 결과를 하드웨어 재측정으로 표기하지 않는다.',
           files+['scripts/exp/conditions.json', 'docs/02_실험/실측주입_재현실험_2026-09-23.md', 'docs/02_실험/measured_replay_2026-09-23.json'])
 
+    revised = read(ROOT/'configs/measurements/report_metrics_revised.json')
+    published_paths = {r['source_path'] for g in groups for r in g['files']}
+    extra_sources = [s['path'] for s in revised['sources'] if s['path'] not in published_paths]
+    g = group('E8', '보고서 재집계: 시간·정확도·제어 동작',
+          '기존 실행의 시간, 폭, 응용 전송량과 정확도를 함께 재집계하고 여섯 개의 본문 그림으로 연결한다.',
+          '32프로세스 24R×3시드: 초기 4R 제외 시간·폭·바이트, 최종 round 23 정확도. 8프로세스 200R×2시드: 초기 4R 제외 시간·폭, round 150–199 평균 정확도. E1·E7의 원시 로그 및 실행 인자를 사용한다.',
+          'λ=280: 시간 20.7% 단축, 정확도 65.52%→65.22%. λ=70: 32.5% 단축, 63.17%. λ=18: 58.1% 단축, 53.59%. 모든 비교는 단일 출구 기준선과 두 출구 AwareNet의 구성 비교다. 정확도 평가는 시험 데이터 앞 2,000개와 실행별 최대 학습 폭을 사용했다. 두 시드의 요약값이며 독립 반복 수를 늘리는 후속 평가가 필요하다.',
+          extra_sources+['configs/measurements/report_metrics_revised.json',
+              'scripts/analysis/build_revised_report_metrics.py', 'scripts/analysis/revised_report_figures.py',
+              'scripts/analysis/paper_diagrams.py', 'scripts/analysis/build_prose_report.py',
+              'output/prose_awarenet/figures/revised_sources.json'])
+    g['statistics'] = revised['accuracy_200']
+
     manifest = dict(version=1, date='2026-09-27', kind='historical evidence publication; no new experiments',
                     byte_preserving_copies=True, groups=groups)
     (DEST/'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
@@ -160,7 +173,7 @@ def main():
             parts.append(f'<li><a href="assets/evidence/{esc(r["public_path"])}">{esc(r["source_path"])}</a><code>{r["sha256"]}</code><small>{r["bytes"]:,} bytes</small></li>')
         parts.append('</ul></details></section>')
         md.append(f'| [{id}]({URL}evidence.html#{id}) | {g["title"]} | {g["claim"]} {g["limits"]} |')
-    parts.append('<section><h2>재집계 방법</h2><p>저장소의 site/assets/evidence 폴더에서 아래 명령을 실행하면 모든 원파일·ZIP 해시를 확인하고 KOREN 평균, Jetson 중앙값, LoRA 문답 점수를 다시 계산한다. Python 표준 라이브러리만 필요하다.</p><pre>python verify_evidence.py</pre></section></main><footer class="container">AwareNet · 측정과 재현의 범위는 각 자료의 조건을 따른다.</footer></body></html>')
+    parts.append('<section><h2>재집계 방법</h2><p>저장소의 site/assets/evidence 폴더에서 아래 명령을 실행하면 모든 원파일·ZIP 해시를 확인하고 KOREN 시간·정확도·전송량, 200라운드의 시간·정확도, Jetson 중앙값, LoRA 문답 점수를 다시 계산한다. Python 표준 라이브러리만 필요하다.</p><pre>python verify_evidence.py</pre></section></main><footer class="container">AwareNet · 측정과 재현의 범위는 각 자료의 조건을 따른다.</footer></body></html>')
     (ROOT/'site/evidence.html').write_text('\n'.join(parts), encoding='utf-8')
     (ROOT/'docs/EVIDENCE.md').write_text('\n'.join(md)+'\n', encoding='utf-8')
     print(json.dumps(dict(groups=len(groups), files=sum(len(g['files']) for g in groups), koren=koren, jetson=medians)))

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="565" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 565" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>라운드 경계의 의사결정</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="565"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-565)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="565" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="30" y="212" width="275" height="118" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="87.173828125" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">1. OBSERVE</text>
+			<text x="42.738281249999986" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">compute · bytes · capacity</text>
+			<rect x="385" y="212" width="275" height="118" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="466.982421875" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">2. PATH</text>
+			<text x="404.593017578125" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">max delay + mean delay</text>
+			<rect x="740" y="212" width="275" height="118" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="811.14990234375" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">3. WIDTH</text>
+			<text x="766.319580078125" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">time gain vs width cost</text>
+			<rect x="1095" y="212" width="275" height="118" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="1171.452880859375" y="280" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,560) scale(1,-1)">4. APPLY</text>
+			<text x="1180.65380859375" y="235" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,470) scale(1,-1)">next round</text>
+			<path d="M 308,271 L 374,271 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="374 271, 361 276, 361 266" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 663,271 L 729,271 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="729 271, 716 276, 716 266" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 1018,271 L 1084,271 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="1084 271, 1071 276, 1071 266" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<rect x="740" y="412" width="275" height="99" rx="6" ry="6" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd; stroke-dasharray: 10, 7;"/>
+			<text x="773.2109375" y="468" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 24px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,936) scale(1,-1)">capacity changed?</text>
+			<text x="774.030517578125" y="429" style="font-family: Malgun Gothic, sans-serif; font-size: 21px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,858) scale(1,-1)">hold width this round</text>
+			<path d="M 523,334 L 523,460 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<path d="M 523,460 L 733,460 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<polygon points="733 460, 720 465, 720 455" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<path d="M 1021,460 L 1233,460 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<path d="M 1233,460 L 1233,336 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<polygon points="1233 336, 1238 349, 1228 349" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<text x="830.02001953125" y="354" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,708) scale(1,-1)">otherwise</text>
+			<path d="M 1233,206 L 1233,69 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<path d="M 1233,69 L 168,69 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<path d="M 168,69 L 168,206 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
+			<polygon points="168 206, 163 193, 173 193" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<text x="526.568603515625" y="75" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,150) scale(1,-1)">measure the completed round</text>
+			<text x="419.3671875" y="158" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,316) scale(1,-1)">limited route moves</text>
+			<text x="760.88330078125" y="158" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,316) scale(1,-1)">one width step / round</text>
+			<text x="769.89599609375" y="122" style="font-family: Malgun Gothic, sans-serif; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,244) scale(1,-1)">restore after 2 checks</text>
+		</g>
+	</g>
+</svg>

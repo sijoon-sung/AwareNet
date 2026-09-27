@@ -11,7 +11,7 @@
       "conditions": "HPC의 CPU 클라이언트 32프로세스·V100 서버, KOREN VM 2대·논리 엣지 4개. CIFAR-10 CNN, cut=2, 배치 32×4, 24라운드×3시드×4조건×2정책. 초기 4라운드를 제외한 시드별 평균을 다시 평균한다.",
       "limits": "32대 물리 기기 실험이 아니다. tc 용량 교란과 연산 지연을 주입했다. 기준선과 결합 정책의 출구 수·폭·배정이 함께 달라 순수 경로 효과 및 동일 정확도 도달 시간을 입증하지 않는다. args.alpha=1.2는 지연 기준선 배율이며, 데이터 분할은 fed_client의 alpha-dir 기본값 0.5다. 로그의 mp 필드보다 실행 인자 및 출구 기록을 우선한다.",
       "archive": "E1.zip",
-      "archive_sha256": "7a86f0fee91c469138f0962f51229881d32cb467bbbc4f9207e4b83b69d34400",
+      "archive_sha256": "6b96fd3b8a437d35848e0b1c6d28a75a597d104b054c4da94c5080c9fe4ab91a",
       "files": [
         {
           "source_path": "out/scen32_smoke_s1_bothmp_perturb.log",
@@ -626,7 +626,7 @@
       "conditions": "Jetson Orin Nano Super 8GB 한 대. 2026-08-13~14 기록. Qwen2.5-0.5B FP32, LoRA r=32(q_proj/v_proj), batch=1, seq=256. 각 모드 warmup=3 제외 후 30스텝, 총 90스텝.",
       "limits": "KOREN 32프로세스 실행에 Jetson을 연결한 통합 실험이 아니다. 전체 LoRA 스텝 시간을 CNN 폭별 비용이나 반환 후 연산 시간으로 그대로 사용할 수 없다. 소프트웨어 버전은 환경 로그의 기록값이다. 원시 스텝·tegrastats·환경·콘솔과 측정 스크립트를 함께 제공한다.",
       "archive": "E2.zip",
-      "archive_sha256": "e242899a00f28e9362fdf936d6ec8f762c9a68e6fff7881d1b22bde484e3403e",
+      "archive_sha256": "547f0ee05b68702bff7e4cc12b6f56255dd29f5e9687f9ec853a7aebdabfd213",
       "files": [
         {
           "source_path": "_archive/v2/jetson/results/15w_b1_s256_anchor/console.log",
@@ -844,7 +844,7 @@
       "conditions": "n=8, shrink=1.0, TCP, 경유 종점 2개. 배치당 상행·하행 각각 4.2 MB, 4배치×3라운드. batch와 burst는 서로 다른 송신 패턴이다.",
       "limits": "cap_mbps=8000은 설정값이며 물리 링크의 측정 용량이 아니다. aggregate_mbps 필드도 링크 용량으로 해석하지 않는다. 공통 측정 시간창 기반 처리율과 기기별 지연을 구분해야 한다. 이 입력의 재사용은 새로운 KOREN 실험을 의미하지 않는다.",
       "archive": "E3.zip",
-      "archive_sha256": "b6e0e37fb2bb8db6f1d67312fb4f8e3effdb68ccc865093a502f3d68dcf3e4e2",
+      "archive_sha256": "4faafbb691b176530a478d0fa5e25477f15354e4f29917ea49b53abe80c9481f",
       "files": [
         {
           "source_path": "configs/measurements/koren_jetson_2026-09-23.json",
@@ -885,7 +885,7 @@
       "conditions": "KOREN VM 2대의 논리 클라이언트 3개와 HPC. Qwen2.5-0.5B, cut=2, rank=16, 16라운드×30스텝. strict 판정이 적용된 18문항: 미학습 0, 단독 6, 연합 두 방식 각 12개 정답. 7B 분할 10스텝은 별도 실행이다.",
       "limits": "소규모 자체 문답 실습이며 일반 벤치마크 또는 개인정보 보호의 입증이 아니다. 모델을 층으로 분할하는 SFL이며 특성 분할 VFL과 다르다. 앞부분 메모리 프로파일과 실제 분할 시스템 최대 메모리를 구분한다.",
       "archive": "E4.zip",
-      "archive_sha256": "49ce8b4ce86fc595ff430d24fd3f292753c85f0d5ce02f899364220d93cd2a65",
+      "archive_sha256": "f112db881aa757c4c2d6f565ae2daf7fe8c0ca863ec97b4f833963e9d78d1d31",
       "files": [
         {
           "source_path": "docs/02_실험/실험_대형모델_분할LoRA_사전등록_2026-09-13.md",
@@ -962,7 +962,7 @@
       "conditions": "virtual-20260926T142615Z. QEMU Linux, 4네임스페이스, 8논리 클라이언트, 128 KiB/기기, 폭=1.0. 한 경로 감소와 공유 IFB 병목. 18라운드·144전송·35,058패킷. 각 정책에 프로브 비용 포함.",
       "limits": "한 번의 로컬 가상 실행이며 라운드는 독립 반복이 아니다. 새 KOREN 측정·학습 성능이 아니다. raw tc 카운터의 포맷 문제와 정규화 기록을 보존한다. TCP 커널 알고리즘 패치는 하지 않았다.",
       "archive": "E5.zip",
-      "archive_sha256": "bd052576c8e8424cb9cff780ed5cc17933dcefee52e004c2fa39800d72e9fd6d",
+      "archive_sha256": "b48f8de71c4efb89391b71953cce9fc3f1ce0e538a4c48129e0d75b2338fec33",
       "files": [
         {
           "source_path": "site/assets/lab/awarenet.lua",
@@ -1105,7 +1105,7 @@
       "conditions": "계획기, TCP 전송·재조립, tc/IFB/HTB 스크립트 및 OS-Ken 확장을 제공한다.",
       "limits": "관리하거나 권한을 위임받은 호스트가 집행 대상이다. KOREN 코어 경로 제어와 기관 간 위임은 검증하지 않았다. OS-Ken 코드 존재는 실제 OVS 적용 증거가 아니다. 패킷 처리는 커널과 고정 전송 코드가 담당하고 계획은 라운드 수준에서 수행한다.",
       "archive": "E6.zip",
-      "archive_sha256": "4b80e2daac01d24c923c688a4534a1d124da631524be8581500072df1a49a8fc",
+      "archive_sha256": "660065b5dffc104d72e1f88d9004a542ef4dcf1f6d55f1d7ccb27cfe7b7671a4",
       "files": [
         {
           "source_path": "configs/measurements/network_implementation_audit_2026-09-26.json",
@@ -1188,7 +1188,7 @@
       "conditions": "r8mix 계열은 원래 파일명·args·profile로 실행을 구분한다. 200R 정확도 계열과 24R 시간 계열은 별개다. Jetson·KOREN 수치 주입은 2026-09-23 보고서의 가정과 집계에 따른다.",
       "limits": "SHRiNK를 참고한 축소 구성은 32대 물리 시스템과의 동등성을 입증하지 않는다. OOM·CPU 제약 때문에 실행 크기를 줄인 것으로, 8개와 32개의 결과를 합산하지 않는다. 주입값을 사용한 모형·로컬 결과를 하드웨어 재측정으로 표기하지 않는다.",
       "archive": "E7.zip",
-      "archive_sha256": "f86b8db7c876431759e2ff3de291f89b985504f93186f4eef659a5dd5564fa94",
+      "archive_sha256": "6ed2cdb3de966451ae6cb50ac2c96302871c386d91f8db7e0e4687a26027f994",
       "files": [
         {
           "source_path": "out/wp_r8mix_acc_l18_s1_bothmp_uniform.args.json",
@@ -2719,6 +2719,211 @@
           "public_path": "E7/scripts/exp/conditions.json",
           "bytes": 92792,
           "sha256": "fd087c4f05d55bb96834c1ccdefa526693328185afa4ef5d8864c8c6ceb5d5ed"
+        }
+      ]
+    },
+    {
+      "id": "E8",
+      "title": "보고서 재집계: 시간·정확도·제어 동작",
+      "claim": "기존 실행의 시간, 폭, 응용 전송량과 정확도를 함께 재집계하고 여섯 개의 본문 그림으로 연결한다.",
+      "conditions": "32프로세스 24R×3시드: 초기 4R 제외 시간·폭·바이트, 최종 round 23 정확도. 8프로세스 200R×2시드: 초기 4R 제외 시간·폭, round 150–199 평균 정확도. E1·E7의 원시 로그 및 실행 인자를 사용한다.",
+      "limits": "λ=280: 시간 20.7% 단축, 정확도 65.52%→65.22%. λ=70: 32.5% 단축, 63.17%. λ=18: 58.1% 단축, 53.59%. 모든 비교는 단일 출구 기준선과 두 출구 AwareNet의 구성 비교다. 정확도 평가는 시험 데이터 앞 2,000개와 실행별 최대 학습 폭을 사용했다. 두 시드의 요약값이며 독립 반복 수를 늘리는 후속 평가가 필요하다.",
+      "archive": "E8.zip",
+      "archive_sha256": "b3a5555d6a98f1a0ffc506297abe7d75738ee27058c9fd469de2c28796a224eb",
+      "files": [
+        {
+          "source_path": "configs/measurements/final_report_evidence_2026-09-26.json",
+          "public_path": "E8/configs/measurements/final_report_evidence_2026-09-26.json",
+          "bytes": 81780,
+          "sha256": "3c9a3168f9b18937f68abe0ff6bb130a5adfd24e0da115d82bbe699fdf40d40a"
+        },
+        {
+          "source_path": "configs/measurements/report_metrics_revised.json",
+          "public_path": "E8/configs/measurements/report_metrics_revised.json",
+          "bytes": 56659,
+          "sha256": "745b6722f05e0a3930fc1a95735646c29e87adbb3de099e4016000ef6d0ac905"
+        },
+        {
+          "source_path": "output/prose_awarenet/figures/revised_sources.json",
+          "public_path": "E8/output/prose_awarenet/figures/revised_sources.json",
+          "bytes": 1562,
+          "sha256": "474a61eba3a168b7e7742e02e4ff16b8457c2d1ebb0c2b1609fc0cc364a4e2ab"
+        },
+        {
+          "source_path": "scripts/analysis/acc_lambda_table.py",
+          "public_path": "E8/scripts/analysis/acc_lambda_table.py",
+          "bytes": 2406,
+          "sha256": "e9b8fbd8c33e8d26646837edcd0f1a953cd78e60fb82fb9ced8f64e9f92d670f"
+        },
+        {
+          "source_path": "scripts/analysis/build_prose_report.py",
+          "public_path": "E8/scripts/analysis/build_prose_report.py",
+          "bytes": 16679,
+          "sha256": "fab50f693548a3b52d565212436b5edfa8e0b612e44d19b2ba263b55d602dc0a"
+        },
+        {
+          "source_path": "scripts/analysis/build_revised_report_metrics.py",
+          "public_path": "E8/scripts/analysis/build_revised_report_metrics.py",
+          "bytes": 5588,
+          "sha256": "16fe253f595cc40960b57039610a3eb899033718be0f54360dffbcfcb6c2731c"
+        },
+        {
+          "source_path": "scripts/analysis/paper_diagrams.py",
+          "public_path": "E8/scripts/analysis/paper_diagrams.py",
+          "bytes": 23826,
+          "sha256": "6099c69751c0a6efa87ce63b3ebc091da1ffa28697d9dc1d02c77552e5526da5"
+        },
+        {
+          "source_path": "scripts/analysis/revised_report_figures.py",
+          "public_path": "E8/scripts/analysis/revised_report_figures.py",
+          "bytes": 12073,
+          "sha256": "ecc7b62a1735f504e6b08f6998aaea4fcfe4838d1561e6c1dd12e3008ab84b59"
+        }
+      ],
+      "statistics": [
+        {
+          "label": "기준선",
+          "lam": null,
+          "seeds": [
+            {
+              "source": "out/wp_r8mix_acc_s1_bothmp_uniform.jsonl",
+              "seed": 1,
+              "rounds": 200,
+              "clients": 8,
+              "mean_round_s": 19.137576530612247,
+              "mean_width": 1.0,
+              "mean_application_bytes": 268446889.04591835,
+              "final_accuracy_pct": 64.60000000000001,
+              "tail50_accuracy_pct": 64.288,
+              "exits": 1
+            },
+            {
+              "source": "out/wp_r8mix_acc_s2_bothmp_uniform.jsonl",
+              "seed": 2,
+              "rounds": 200,
+              "clients": 8,
+              "mean_round_s": 19.0752806122449,
+              "mean_width": 1.0,
+              "mean_application_bytes": 268446889.21938777,
+              "final_accuracy_pct": 71.8,
+              "tail50_accuracy_pct": 66.74799999999999,
+              "exits": 1
+            }
+          ],
+          "mean_round_s": 19.106428571428573,
+          "mean_width": 1.0,
+          "tail50_accuracy_pct": 65.518,
+          "mean_application_bytes": 268446889.13265306,
+          "time_reduction_pct": 0.0,
+          "accuracy_difference_pp": 0.0
+        },
+        {
+          "label": "λ=18",
+          "lam": 18,
+          "seeds": [
+            {
+              "source": "out/wp_r8mix_acc_l18_s1_bothmp_widthpath.jsonl",
+              "seed": 1,
+              "rounds": 200,
+              "clients": 8,
+              "mean_round_s": 8.201494897959183,
+              "mean_width": 0.8450255102040817,
+              "mean_application_bytes": 226846224.8265306,
+              "final_accuracy_pct": 58.650000000000006,
+              "tail50_accuracy_pct": 54.064,
+              "exits": 2
+            },
+            {
+              "source": "out/wp_r8mix_acc_l18_s2_bothmp_widthpath.jsonl",
+              "seed": 2,
+              "rounds": 200,
+              "clients": 8,
+              "mean_round_s": 7.811734693877551,
+              "mean_width": 0.8180803571428571,
+              "mean_application_bytes": 219613191.00510204,
+              "final_accuracy_pct": 53.949999999999996,
+              "tail50_accuracy_pct": 53.117999999999995,
+              "exits": 2
+            }
+          ],
+          "mean_round_s": 8.006614795918367,
+          "mean_width": 0.8315529336734694,
+          "tail50_accuracy_pct": 53.590999999999994,
+          "mean_application_bytes": 223229707.9158163,
+          "time_reduction_pct": 58.09465507388796,
+          "accuracy_difference_pp": -11.927000000000007
+        },
+        {
+          "label": "λ=70",
+          "lam": 70,
+          "seeds": [
+            {
+              "source": "out/wp_r8mix_acc_s1_bothmp_widthpath.jsonl",
+              "seed": 1,
+              "rounds": 200,
+              "clients": 8,
+              "mean_round_s": 13.78673469387755,
+              "mean_width": 0.9861288265306123,
+              "mean_application_bytes": 264723371.83673468,
+              "final_accuracy_pct": 61.0,
+              "tail50_accuracy_pct": 61.402,
+              "exits": 2
+            },
+            {
+              "source": "out/wp_r8mix_acc_s2_bothmp_widthpath.jsonl",
+              "seed": 2,
+              "rounds": 200,
+              "clients": 8,
+              "mean_round_s": 12.016265306122449,
+              "mean_width": 0.96875,
+              "mean_application_bytes": 260058277.47959185,
+              "final_accuracy_pct": 67.30000000000001,
+              "tail50_accuracy_pct": 64.943,
+              "exits": 2
+            }
+          ],
+          "mean_round_s": 12.901499999999999,
+          "mean_width": 0.9774394132653061,
+          "tail50_accuracy_pct": 63.1725,
+          "mean_application_bytes": 262390824.65816325,
+          "time_reduction_pct": 32.47560656473141,
+          "accuracy_difference_pp": -2.3455000000000013
+        },
+        {
+          "label": "λ=280",
+          "lam": 280,
+          "seeds": [
+            {
+              "source": "out/wp_r8mix_acc_l280_s1_bothmp_widthpath.jsonl",
+              "seed": 1,
+              "rounds": 200,
+              "clients": 8,
+              "mean_round_s": 15.168836734693878,
+              "mean_width": 1.0,
+              "mean_application_bytes": 268446888.7908163,
+              "final_accuracy_pct": 69.39999999999999,
+              "tail50_accuracy_pct": 64.57300000000001,
+              "exits": 2
+            },
+            {
+              "source": "out/wp_r8mix_acc_l280_s2_bothmp_widthpath.jsonl",
+              "seed": 2,
+              "rounds": 200,
+              "clients": 8,
+              "mean_round_s": 15.140581632653062,
+              "mean_width": 1.0,
+              "mean_application_bytes": 268446889.4489796,
+              "final_accuracy_pct": 67.0,
+              "tail50_accuracy_pct": 65.874,
+              "exits": 2
+            }
+          ],
+          "mean_round_s": 15.15470918367347,
+          "mean_width": 1.0,
+          "tail50_accuracy_pct": 65.2235,
+          "mean_application_bytes": 268446889.11989796,
+          "time_reduction_pct": 20.682669045037738,
+          "accuracy_difference_pp": -0.2944999999999993
         }
       ]
     }

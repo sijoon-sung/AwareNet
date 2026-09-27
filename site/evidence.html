@@ -6,6 +6,7 @@
 <a href="#E5">E5 · 가상 Linux 망: 커널·패킷·계측</a>
 <a href="#E6">E6 · 구현: 폭·경로·권한 경계</a>
 <a href="#E7">E7 · 축소 실험과 실측값 주입 재현</a>
+<a href="#E8">E8 · 보고서 재집계: 시간·정확도·제어 동작</a>
 </nav>
 <section id="E1"><div class="section-title"><span class="section-id">E1</span><h2>KOREN 시나리오: 결합 시스템의 완료 시간</h2></div><p>기존 기준선과 폭·경로 결합 시스템의 조건별 평균 라운드 시간을 재집계한다.</p><dl class="facts"><dt>조건·집계</dt><dd>HPC의 CPU 클라이언트 32프로세스·V100 서버, KOREN VM 2대·논리 엣지 4개. CIFAR-10 CNN, cut=2, 배치 32×4, 24라운드×3시드×4조건×2정책. 초기 4라운드를 제외한 시드별 평균을 다시 평균한다.</dd><dt>해석 범위</dt><dd>32대 물리 기기 실험이 아니다. tc 용량 교란과 연산 지연을 주입했다. 기준선과 결합 정책의 출구 수·폭·배정이 함께 달라 순수 경로 효과 및 동일 정확도 도달 시간을 입증하지 않는다. args.alpha=1.2는 지연 기준선 배율이며, 데이터 분할은 fed_client의 alpha-dir 기본값 0.5다. 로그의 mp 필드보다 실행 인자 및 출구 기록을 우선한다.</dd></dl>
 <p><a class="download" href="assets/evidence/E1.zip">E1 원자료 ZIP · 87개 파일</a></p><details><summary>개별 원파일과 해시 (87개)</summary><ul class="file-list">
@@ -443,4 +444,15 @@
 <li><a href="assets/evidence/E7/docs/02_실험/실측주입_재현실험_2026-09-23.md">docs/02_실험/실측주입_재현실험_2026-09-23.md</a><code>e0a489437380d79858ed8db35f47fe31e8543427e9c0978c05fb6c5ea54e6281</code><small>14,594 bytes</small></li>
 <li><a href="assets/evidence/E7/scripts/exp/conditions.json">scripts/exp/conditions.json</a><code>fd087c4f05d55bb96834c1ccdefa526693328185afa4ef5d8864c8c6ceb5d5ed</code><small>92,792 bytes</small></li>
 </ul></details></section>
-<section><h2>재집계 방법</h2><p>저장소의 site/assets/evidence 폴더에서 아래 명령을 실행하면 모든 원파일·ZIP 해시를 확인하고 KOREN 평균, Jetson 중앙값, LoRA 문답 점수를 다시 계산한다. Python 표준 라이브러리만 필요하다.</p><pre>python verify_evidence.py</pre></section></main><footer class="container">AwareNet · 측정과 재현의 범위는 각 자료의 조건을 따른다.</footer></body></html>
+<section id="E8"><div class="section-title"><span class="section-id">E8</span><h2>보고서 재집계: 시간·정확도·제어 동작</h2></div><p>기존 실행의 시간, 폭, 응용 전송량과 정확도를 함께 재집계하고 여섯 개의 본문 그림으로 연결한다.</p><dl class="facts"><dt>조건·집계</dt><dd>32프로세스 24R×3시드: 초기 4R 제외 시간·폭·바이트, 최종 round 23 정확도. 8프로세스 200R×2시드: 초기 4R 제외 시간·폭, round 150–199 평균 정확도. E1·E7의 원시 로그 및 실행 인자를 사용한다.</dd><dt>해석 범위</dt><dd>λ=280: 시간 20.7% 단축, 정확도 65.52%→65.22%. λ=70: 32.5% 단축, 63.17%. λ=18: 58.1% 단축, 53.59%. 모든 비교는 단일 출구 기준선과 두 출구 AwareNet의 구성 비교다. 정확도 평가는 시험 데이터 앞 2,000개와 실행별 최대 학습 폭을 사용했다. 두 시드의 요약값이며 독립 반복 수를 늘리는 후속 평가가 필요하다.</dd></dl>
+<p><a class="download" href="assets/evidence/E8.zip">E8 원자료 ZIP · 8개 파일</a></p><details><summary>개별 원파일과 해시 (8개)</summary><ul class="file-list">
+<li><a href="assets/evidence/E8/configs/measurements/final_report_evidence_2026-09-26.json">configs/measurements/final_report_evidence_2026-09-26.json</a><code>3c9a3168f9b18937f68abe0ff6bb130a5adfd24e0da115d82bbe699fdf40d40a</code><small>81,780 bytes</small></li>
+<li><a href="assets/evidence/E8/configs/measurements/report_metrics_revised.json">configs/measurements/report_metrics_revised.json</a><code>745b6722f05e0a3930fc1a95735646c29e87adbb3de099e4016000ef6d0ac905</code><small>56,659 bytes</small></li>
+<li><a href="assets/evidence/E8/output/prose_awarenet/figures/revised_sources.json">output/prose_awarenet/figures/revised_sources.json</a><code>474a61eba3a168b7e7742e02e4ff16b8457c2d1ebb0c2b1609fc0cc364a4e2ab</code><small>1,562 bytes</small></li>
+<li><a href="assets/evidence/E8/scripts/analysis/acc_lambda_table.py">scripts/analysis/acc_lambda_table.py</a><code>e9b8fbd8c33e8d26646837edcd0f1a953cd78e60fb82fb9ced8f64e9f92d670f</code><small>2,406 bytes</small></li>
+<li><a href="assets/evidence/E8/scripts/analysis/build_prose_report.py">scripts/analysis/build_prose_report.py</a><code>fab50f693548a3b52d565212436b5edfa8e0b612e44d19b2ba263b55d602dc0a</code><small>16,679 bytes</small></li>
+<li><a href="assets/evidence/E8/scripts/analysis/build_revised_report_metrics.py">scripts/analysis/build_revised_report_metrics.py</a><code>16fe253f595cc40960b57039610a3eb899033718be0f54360dffbcfcb6c2731c</code><small>5,588 bytes</small></li>
+<li><a href="assets/evidence/E8/scripts/analysis/paper_diagrams.py">scripts/analysis/paper_diagrams.py</a><code>6099c69751c0a6efa87ce63b3ebc091da1ffa28697d9dc1d02c77552e5526da5</code><small>23,826 bytes</small></li>
+<li><a href="assets/evidence/E8/scripts/analysis/revised_report_figures.py">scripts/analysis/revised_report_figures.py</a><code>ecc7b62a1735f504e6b08f6998aaea4fcfe4838d1561e6c1dd12e3008ab84b59</code><small>12,073 bytes</small></li>
+</ul></details></section>
+<section><h2>재집계 방법</h2><p>저장소의 site/assets/evidence 폴더에서 아래 명령을 실행하면 모든 원파일·ZIP 해시를 확인하고 KOREN 시간·정확도·전송량, 200라운드의 시간·정확도, Jetson 중앙값, LoRA 문답 점수를 다시 계산한다. Python 표준 라이브러리만 필요하다.</p><pre>python verify_evidence.py</pre></section></main><footer class="container">AwareNet · 측정과 재현의 범위는 각 자료의 조건을 따른다.</footer></body></html>

@@ -1,0 +1,37 @@
+{
+  "figures": [
+    {
+      "stem": "R1_architecture",
+      "title": "AwareNet의 구성과 학습 흐름",
+      "caption": "기기는 앞부분, 서버는 뒷부분을 학습하고 중계 엣지는 텐서 조각을 전달한다."
+    },
+    {
+      "stem": "R2_control",
+      "title": "라운드 경계의 의사결정",
+      "caption": "경로 평가 뒤에 폭의 비용을 비교하고, 변경 속도와 복귀 조건으로 제어를 안정화한다."
+    },
+    {
+      "stem": "R3_testbed",
+      "title": "KOREN 실험 배치",
+      "caption": "HPC 안의 논리 기기들이 KOREN의 두 VM을 경유하여 학습 서버와 텐서를 교환한다."
+    },
+    {
+      "stem": "R4_time",
+      "title": "조건별 평균 라운드 시간",
+      "caption": "32프로세스·3시드. 각 24라운드의 초기 4라운드를 제외한 시드 평균을 집계했다."
+    },
+    {
+      "stem": "R5_actions",
+      "title": "서로 다른 병목에서 관측한 제어",
+      "caption": "몰림 구간과 시간 응답, 연산 지연 기기 네 개의 폭 선택을 원로그에서 확인했다."
+    },
+    {
+      "stem": "R6_accuracy",
+      "title": "폭 보존 가중치에 따른 시간·정확도",
+      "caption": "8프로세스·200라운드·2시드. 평가 대상은 CIFAR-10 시험 집합의 앞 2,000개다."
+    }
+  ],
+  "metrics": "configs/measurements/report_metrics_revised.json",
+  "metrics_sha256": "745b6722f05e0a3930fc1a95735646c29e87adbb3de099e4016000ef6d0ac905",
+  "new_experiments": false
+}
