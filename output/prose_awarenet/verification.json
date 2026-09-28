@@ -45,8 +45,8 @@
     {
       "pdf_page": 8,
       "section": "main",
-      "used_pt": 594.8,
-      "remaining_pt": 139.3
+      "used_pt": 710.8,
+      "remaining_pt": 23.3
     },
     {
       "pdf_page": 9,
@@ -150,11 +150,11 @@
   "font": "HY신명조 H2MJSM.TTF (휴먼명조 미설치로 PDF 대체; HTML은 휴먼명조 지정)",
   "heading_pt": 15,
   "body_pt": 13,
-  "source_sha256": "88221828e62273a3f42da806cfcb4e11a91913efde903d947ded6b1de4fba413",
+  "source_sha256": "0e29bb369a336a75e2775781c5122ccfe2754f4a930d776a9c25607fc99679dd",
   "visual_qa": "passed: all 24 rendered pages inspected; Korean text, tables, equations and nine figures; CNN/LoRA extension distinguished from measured results",
   "evidence_sources_checked": 39,
   "source_hashes_match": true,
-  "publication_sources_checked": 434,
+  "publication_sources_checked": 444,
   "publication_hashes_match": true,
   "figures": 9,
   "tables": 6,
@@ -163,7 +163,7 @@
   "diagram_sources": "figures/revised_sources.json",
   "new_experiments_run": false,
   "includes_completed_virtual_lab": false,
-  "local_html_links_checked": 537,
-  "pdf_sha256": "9af8676dc5cbbc7427e3627f8ad1eee9e211b382b6dc43de85146d971156df58",
-  "verified_utc": "2026-09-28T03:29:52.140591+00:00"
+  "local_html_links_checked": 548,
+  "pdf_sha256": "5cd740d506389dab488918548a2add255a29fa4d49a98a48191bccfa6e4d9737",
+  "verified_utc": "2026-09-28T03:43:56.469593+00:00"
 }

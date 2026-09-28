@@ -1,0 +1,12 @@
+### 2단 대기 — 1단(VERIFY1_DONE)이 끝나면 시작한다
+### 검증 2단 — FedRolex 롤링 창, 폭 바닥 0.25 / 0.5, BN 끔, 300라운드, 시드 3
+## 시드 1
+[done] w25r_s1 300R
+[done] w50r_s1 300R
+## 시드 2
+[done] w25r_s2 300R
+[done] w50r_s2 300R
+## 시드 3
+[done] w25r_s3 300R
+[done] w50r_s3 300R
+VERIFY2_DONE

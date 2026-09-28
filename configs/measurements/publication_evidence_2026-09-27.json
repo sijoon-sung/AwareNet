@@ -11,7 +11,7 @@
       "conditions": "HPC의 CPU 클라이언트 32프로세스·V100 서버, KOREN VM 2대·논리 엣지 4개. CIFAR-10 CNN, cut=2, 배치 32×4, 24라운드×3시드×4조건×2정책. 초기 4라운드를 제외한 시드별 평균을 다시 평균한다.",
       "limits": "32대 물리 기기 실험이 아니다. tc 용량 교란과 연산 지연을 주입했다. 기준선과 결합 정책의 출구 수·폭·배정이 함께 달라 순수 경로 효과 및 동일 정확도 도달 시간을 입증하지 않는다. args.alpha=1.2는 지연 기준선 배율이며, 데이터 분할은 fed_client의 alpha-dir 기본값 0.5다. 로그의 mp 필드보다 실행 인자 및 출구 기록을 우선한다.",
       "archive": "E1.zip",
-      "archive_sha256": "f8bee4be77f1974e0ef0753a87f3a03e9ebdb30048d739b2c73ea3e5306359cc",
+      "archive_sha256": "97285c989285c973a6ff2c79cb561232ebd1713708870ddb40a7d2c3dc3cc0c6",
       "files": [
         {
           "source_path": "out/scen32_smoke_s1_bothmp_perturb.log",
@@ -626,7 +626,7 @@
       "conditions": "Jetson Orin Nano Super 8GB 한 대. 2026-08-13~14 기록. Qwen2.5-0.5B FP32, LoRA r=32(q_proj/v_proj), batch=1, seq=256. 각 모드 warmup=3 제외 후 30스텝, 총 90스텝.",
       "limits": "KOREN 32프로세스 실행에 Jetson을 연결한 통합 실험이 아니다. 전체 LoRA 스텝 시간을 CNN 폭별 비용이나 반환 후 연산 시간으로 그대로 사용할 수 없다. 소프트웨어 버전은 환경 로그의 기록값이다. 원시 스텝·tegrastats·환경·콘솔과 측정 스크립트를 함께 제공한다.",
       "archive": "E2.zip",
-      "archive_sha256": "8f2ddd60026a7c5d8e9e70b0bb0a1787165e1d8ba0c6347b9ff39a801b4dcd02",
+      "archive_sha256": "c570d427b3fc6f69255fac8b9c93d5c64a4a0e073df336016e75cd14e5c91f03",
       "files": [
         {
           "source_path": "_archive/v2/jetson/results/15w_b1_s256_anchor/console.log",
@@ -844,7 +844,7 @@
       "conditions": "n=8, shrink=1.0, TCP, 경유 종점 2개. 배치당 상행·하행 각각 4.2 MB, 4배치×3라운드. batch와 burst는 서로 다른 송신 패턴이다.",
       "limits": "cap_mbps=8000은 설정값이며 물리 링크의 측정 용량이 아니다. aggregate_mbps 필드도 링크 용량으로 해석하지 않는다. 공통 측정 시간창 기반 처리율과 기기별 지연을 구분해야 한다. 이 입력의 재사용은 새로운 KOREN 실험을 의미하지 않는다.",
       "archive": "E3.zip",
-      "archive_sha256": "54559d8615910fc879609fa3e2f5010ea5e9693be19cb7aa6bd7f0c2422445d6",
+      "archive_sha256": "f4842a7a2e41cda02e77377e4b0dd2719c223e6a5bc87556d7dd47e0cec1ed8b",
       "files": [
         {
           "source_path": "configs/measurements/koren_jetson_2026-09-23.json",
@@ -885,7 +885,7 @@
       "conditions": "KOREN VM 2대의 논리 클라이언트 3개와 HPC. Qwen2.5-0.5B, cut=2, rank=16, 16라운드×30스텝. strict 판정이 적용된 18문항: 미학습 0, 단독 6, 연합 두 방식 각 12개 정답. 7B 분할 10스텝은 별도 실행이다.",
       "limits": "소규모 자체 문답 실습이며 일반 벤치마크 또는 개인정보 보호의 입증이 아니다. 모델을 층으로 분할하는 SFL이며 특성 분할 VFL과 다르다. 앞부분 메모리 프로파일과 실제 분할 시스템 최대 메모리를 구분한다.",
       "archive": "E4.zip",
-      "archive_sha256": "ed10a74ac66df6cf8bb4626eaadc3340b00bf7054677b19dc9091b313ce9da39",
+      "archive_sha256": "d98f32be71148dfafd34baa1098b8e63f6c6c68f71a29f2509e9a1df3309bebb",
       "files": [
         {
           "source_path": "docs/02_실험/실험_대형모델_분할LoRA_사전등록_2026-09-13.md",
@@ -962,7 +962,7 @@
       "conditions": "virtual-20260926T142615Z. QEMU Linux, 4네임스페이스, 8논리 클라이언트, 128 KiB/기기, 폭=1.0. 한 경로 감소와 공유 IFB 병목. 18라운드·144전송·35,058패킷. 각 정책에 프로브 비용 포함.",
       "limits": "한 번의 로컬 가상 실행이며 라운드는 독립 반복이 아니다. 새 KOREN 측정·학습 성능이 아니다. raw tc 카운터의 포맷 문제와 정규화 기록을 보존한다. TCP 커널 알고리즘 패치는 하지 않았다.",
       "archive": "E5.zip",
-      "archive_sha256": "c7dbab03aeae4cf61e85197cafc7c0d0d81bff90994672f19b10ef5a1329b97c",
+      "archive_sha256": "0ab0ecb5236d02d6a3927bda2cb0b1ecc8d8fb1fe3356943e7e4452e90b7d622",
       "files": [
         {
           "source_path": "site/assets/lab/awarenet.lua",
@@ -1105,7 +1105,7 @@
       "conditions": "계획기, TCP 전송·재조립, tc/IFB/HTB 스크립트 및 OS-Ken 확장을 제공한다.",
       "limits": "관리하거나 권한을 위임받은 호스트가 집행 대상이다. KOREN 코어 경로 제어와 기관 간 위임은 검증하지 않았다. OS-Ken 코드 존재는 실제 OVS 적용 증거가 아니다. 패킷 처리는 커널과 고정 전송 코드가 담당하고 계획은 라운드 수준에서 수행한다.",
       "archive": "E6.zip",
-      "archive_sha256": "7c4f8ba748fec11e6cfec90cae2074dcfe3838ea29782573d93417de7f04094f",
+      "archive_sha256": "c1e27446faac66919ad122f4966d2ffd5c7ca6ebf7bdf9c0c98b59daa0bed846",
       "files": [
         {
           "source_path": "configs/measurements/network_implementation_audit_2026-09-26.json",
@@ -1188,7 +1188,7 @@
       "conditions": "r8mix 계열은 원래 파일명·args·profile로 실행을 구분한다. 200R 정확도 계열과 24R 시간 계열은 별개다. Jetson·KOREN 수치 주입은 2026-09-23 보고서의 가정과 집계에 따른다.",
       "limits": "SHRiNK를 참고한 축소 구성은 32대 물리 시스템과의 동등성을 입증하지 않는다. OOM·CPU 제약 때문에 실행 크기를 줄인 것으로, 8개와 32개의 결과를 합산하지 않는다. 주입값을 사용한 모형·로컬 결과를 하드웨어 재측정으로 표기하지 않는다.",
       "archive": "E7.zip",
-      "archive_sha256": "ec58a492c42b800a021cb5a5bb66857e0c9df187b358e4e8712f458ec9657c08",
+      "archive_sha256": "0f5bb295f5f453ff9ef330269fd215fc46753ca1abba3769e68162764baf4053",
       "files": [
         {
           "source_path": "out/wp_r8mix_acc_l18_s1_bothmp_uniform.args.json",
@@ -2729,7 +2729,7 @@
       "conditions": "32프로세스 24R×3시드: 초기 4R 제외 시간·폭·바이트, 최종 round 23 정확도. 8프로세스 200R×2시드: 초기 4R 제외 시간·폭, round 150–199 평균 정확도. E1·E7의 원시 로그 및 실행 인자를 사용한다.",
       "limits": "λ=280: 시간 20.7% 단축, 정확도 65.52%→65.22%. λ=70: 32.5% 단축, 63.17%. λ=18: 58.1% 단축, 53.59%. 모든 비교는 단일 출구 기준선과 두 출구 AwareNet의 구성 비교다. 정확도 평가는 시험 데이터 앞 2,000개와 실행별 최대 학습 폭을 사용했다. 두 시드의 요약값이며 독립 반복 수를 늘리는 후속 평가가 필요하다.",
       "archive": "E8.zip",
-      "archive_sha256": "11c598fc9337dac5f9cf77647e408cddd379a04c752a3f7612ff203633a5ce45",
+      "archive_sha256": "269834a137b85ff1484f21353ff6d91987d65dd9124d83e921f3cd0ab202d45c",
       "files": [
         {
           "source_path": "configs/measurements/final_report_evidence_2026-09-26.json",
@@ -2746,8 +2746,8 @@
         {
           "source_path": "output/prose_awarenet/figures/revised_sources.json",
           "public_path": "E8/output/prose_awarenet/figures/revised_sources.json",
-          "bytes": 2349,
-          "sha256": "c2c48ab4ee583c1fd2954c139ccb8081ce9a87679c2de9c1e3e570a2a53ec0f6"
+          "bytes": 2395,
+          "sha256": "d919ec8750729c0dcc7c122d7db0eb3dfd31b213d73c1c78c5c5bff76f628b7e"
         },
         {
           "source_path": "scripts/analysis/acc_lambda_table.py",
@@ -2776,8 +2776,8 @@
         {
           "source_path": "scripts/analysis/revised_report_figures.py",
           "public_path": "E8/scripts/analysis/revised_report_figures.py",
-          "bytes": 17916,
-          "sha256": "655dee3425822410587e1569ca52f71993ced606b68dd47a3a65f3cf1115fe7f"
+          "bytes": 17961,
+          "sha256": "d0491932368af814e9ce4c4daab634c978cc3a017a090a089a2aab3edb0e9fb8"
         }
       ],
       "statistics": [
@@ -2930,17 +2930,35 @@
     {
       "id": "E9",
       "title": "설계 선택의 이유: 용어·개발 과정·활용 예시",
-      "claim": "클라이언트, CNN 모델 폭·폭 비율, LoRA 랭크를 정의하고 설계 선택의 이유를 문헌·코드·개발 기록에 연결한다. 은닉 차원 축소와 LoRA의 결합은 후속 검증 설계로 제공한다.",
+      "claim": "클라이언트, CNN 모델 폭·폭 비율, LoRA 랭크를 정의하고 설계 선택의 이유를 문헌·코드·개발 기록에 연결한다. FjORD 계열의 고정 선택에서 FedRolex식 롤링 검증으로 확장한 이력을 제공한다. 은닉 차원 축소와 LoRA의 결합은 후속 검증 설계다.",
       "conditions": "8/29 방향 검토, 9/2 다중 경로 설계, 9/9 이후 컨트롤러 기록과 현재 모델 코드를 함께 제공한다. 4·3·2MiB는 배치 32, cut 2, FP32의 텐서 모양에 따른 계산이다.",
       "limits": "과거 문서는 당시의 제안·시행착오다. 현재 주장은 제출 보고서와 E1–E8을 따른다. 병원 등 기관 간 공동 학습은 기대 효과의 적용 시나리오다. 자체 정확도 제외의 과거 이유와 현재의 탐색 결과 해석도 보존한다. 멘토 의견은 설계 전환 회의록의 기록과 연결한다.",
       "archive": "E9.zip",
-      "archive_sha256": "1ff112ac70052b95710b23807cbad8a8ae126d2a841af9904b25c6d5717b7ce5",
+      "archive_sha256": "581f389f29395eed93dacbe1217fc146e24c09b12335507dd5162852784fdcf3",
       "files": [
         {
           "source_path": "docs/01_제출발표/방향검토보고서_AwareNet.md",
           "public_path": "E9/docs/01_제출발표/방향검토보고서_AwareNet.md",
           "bytes": 15925,
           "sha256": "e0214e9a816ffcfbff19b73da7d09e12e2d819a84c152c4d9b63df6c8d2d83ce"
+        },
+        {
+          "source_path": "docs/02_실험/실험_J시리즈_통합증명.md",
+          "public_path": "E9/docs/02_실험/실험_J시리즈_통합증명.md",
+          "bytes": 10820,
+          "sha256": "dc3b07684eed2b6d68153d1226fe357dc1e7b107f3a38f21009bfee91b6ebfe4"
+        },
+        {
+          "source_path": "docs/03_리서치/FjORD_FedRolex_적용이력_2026-09-28.md",
+          "public_path": "E9/docs/03_리서치/FjORD_FedRolex_적용이력_2026-09-28.md",
+          "bytes": 6454,
+          "sha256": "5ed927a9281a61633e4602076cd2ce01ed06f2c90194c0b9222d3c5716871a74"
+        },
+        {
+          "source_path": "docs/03_리서치/리서치_폭축소_정확도대가_2026-09-08.md",
+          "public_path": "E9/docs/03_리서치/리서치_폭축소_정확도대가_2026-09-08.md",
+          "bytes": 7744,
+          "sha256": "ede4694c7b3e79fd2e0f07ec9a1265053516bae5feff78f8b68dfe56e61e1b0c"
         },
         {
           "source_path": "docs/03_리서치/실전_포지셔닝_FL배치지형.md",
@@ -2957,8 +2975,8 @@
         {
           "source_path": "docs/03_리서치/클라이언트_모델폭_LoRA_용어정리_2026-09-28.md",
           "public_path": "E9/docs/03_리서치/클라이언트_모델폭_LoRA_용어정리_2026-09-28.md",
-          "bytes": 7515,
-          "sha256": "51c6a4c70d6a15f2ea3194fb0021bc7b92db8e5b8d39bde617a1b9f008615323"
+          "bytes": 8076,
+          "sha256": "f2c83ce04b7728f345fdac0de195ac68a06e4660f6d69fcde8e5c5f3f5aac8dd"
         },
         {
           "source_path": "docs/04_설계기록/LoRA_은닉차원축소_확장검토_2026-09-28.md",
@@ -2983,6 +3001,48 @@
           "public_path": "E9/docs/04_설계기록/설계전환_회의록.md",
           "bytes": 14413,
           "sha256": "3d40f03162f4b0c6f8f2caad156ac612a340d9fc35c8c273b6af2eb02d1d32df"
+        },
+        {
+          "source_path": "out/verify2.log",
+          "public_path": "E9/out/verify2.log",
+          "bytes": 341,
+          "sha256": "e77c332ca0755ea1617ecfdd6b46bfe58614911dd6bcd2dd25de184b183744cc"
+        },
+        {
+          "source_path": "out/w25r_s1.jsonl",
+          "public_path": "E9/out/w25r_s1.jsonl",
+          "bytes": 344581,
+          "sha256": "f1887c23a11772b511544565d7e7c1456181647cbdc6ecd9e630a74b74a5914c"
+        },
+        {
+          "source_path": "out/w25r_s2.jsonl",
+          "public_path": "E9/out/w25r_s2.jsonl",
+          "bytes": 344676,
+          "sha256": "068c862865fc5ae38e90e92dc19dca990d893a95c6c3c327de62be40a9734ea4"
+        },
+        {
+          "source_path": "out/w25r_s3.jsonl",
+          "public_path": "E9/out/w25r_s3.jsonl",
+          "bytes": 344518,
+          "sha256": "6946cf7f8e7d276993fabb7d4d2b4f98961d5f568645413675078723339f26a8"
+        },
+        {
+          "source_path": "out/w50r_s1.jsonl",
+          "public_path": "E9/out/w50r_s1.jsonl",
+          "bytes": 344623,
+          "sha256": "989f1864b487cb553b57723f3525359e6356aa73ae4006be84cdf1edfc17a57f"
+        },
+        {
+          "source_path": "out/w50r_s2.jsonl",
+          "public_path": "E9/out/w50r_s2.jsonl",
+          "bytes": 344514,
+          "sha256": "944e562e55e2a1bb0bfda0e14545cffaaf2142a9c7e54bcddd5fef0ae237c3d4"
+        },
+        {
+          "source_path": "out/w50r_s3.jsonl",
+          "public_path": "E9/out/w50r_s3.jsonl",
+          "bytes": 344597,
+          "sha256": "abff224f3e8adbad647e1de8b04a22d702a655186f388bf5d68806917703aa7a"
         },
         {
           "source_path": "scripts/analysis/final_results_page.py",

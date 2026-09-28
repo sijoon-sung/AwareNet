@@ -153,12 +153,23 @@ def main():
               'output/prose_awarenet/figures/revised_sources.json'])
     g['statistics'] = revised['accuracy_200']
 
+    rolling_files = ['out/verify2.log']
+    for floor in ('25', '50'):
+        for seed in (1, 2, 3):
+            name = f'out/w{floor}r_s{seed}.jsonl'
+            records = [r for r in rows(ROOT/name) if 'round' in r]
+            assert [r['round'] for r in records] == list(range(300))
+            assert all(r['policy'] == 'oracle' and len(r['plan']) == 4 for r in records)
+            rolling_files.append(name)
     group('E9', '설계 선택의 이유: 용어·개발 과정·활용 예시',
-          '클라이언트, CNN 모델 폭·폭 비율, LoRA 랭크를 정의하고 설계 선택의 이유를 문헌·코드·개발 기록에 연결한다. 은닉 차원 축소와 LoRA의 결합은 후속 검증 설계로 제공한다.',
+          '클라이언트, CNN 모델 폭·폭 비율, LoRA 랭크를 정의하고 설계 선택의 이유를 문헌·코드·개발 기록에 연결한다. FjORD 계열의 고정 선택에서 FedRolex식 롤링 검증으로 확장한 이력을 제공한다. 은닉 차원 축소와 LoRA의 결합은 후속 검증 설계다.',
           '8/29 방향 검토, 9/2 다중 경로 설계, 9/9 이후 컨트롤러 기록과 현재 모델 코드를 함께 제공한다. 4·3·2MiB는 배치 32, cut 2, FP32의 텐서 모양에 따른 계산이다.',
           '과거 문서는 당시의 제안·시행착오다. 현재 주장은 제출 보고서와 E1–E8을 따른다. 병원 등 기관 간 공동 학습은 기대 효과의 적용 시나리오다. 자체 정확도 제외의 과거 이유와 현재의 탐색 결과 해석도 보존한다. 멘토 의견은 설계 전환 회의록의 기록과 연결한다.',
-          ['docs/03_리서치/용어와_설계선택_활용시나리오_2026-09-27.md',
+          rolling_files+['docs/03_리서치/용어와_설계선택_활용시나리오_2026-09-27.md',
            'docs/03_리서치/클라이언트_모델폭_LoRA_용어정리_2026-09-28.md',
+           'docs/03_리서치/FjORD_FedRolex_적용이력_2026-09-28.md',
+           'docs/03_리서치/리서치_폭축소_정확도대가_2026-09-08.md',
+           'docs/02_실험/실험_J시리즈_통합증명.md',
            'docs/04_설계기록/LoRA_은닉차원축소_확장검토_2026-09-28.md',
            'docs/04_설계기록/설계전환_회의록.md',
            'docs/01_제출발표/방향검토보고서_AwareNet.md',

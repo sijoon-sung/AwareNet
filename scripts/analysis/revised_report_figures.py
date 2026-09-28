@@ -75,7 +75,7 @@ def native_figures():
     f.path([(1050,204),(1050,302)],TEAL,arrow=False)
     f.text(708,351,'논리 중계 4개 · 공유 용량 반영',28,MUTED,False,'middle')
     f.text(708,413,'활성값 전송 / 기울기 반환',27,TEAL,False,'middle')
-    f=Fig('R7_channels',610,'CNN을 선택한 이유: 채널 수 조절','계층 분할은 계산 위치, 채널 선택은 모델 크기, 조각 나누기는 전송 방식을 결정한다.')
+    f=Fig('R7_channels',610,'정확도 손실을 고려한 채널 수 조절','계층 구조와 분할 위치를 유지하면서 사용할 채널 수를 조절한다. 축소의 시간 이득과 정확도 변화를 함께 평가한다.')
     fs[f.stem]=f
     f.text(30,10,'① 계층 분할: 어디에서 계산하는가',29,INK,True)
     for x,label,color in [(70,'클라이언트: 앞부분',PURPLE),(905,'서버: 뒷부분',BLUE)]:
