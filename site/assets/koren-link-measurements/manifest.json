@@ -1,0 +1,87 @@
+{
+  "description": "Existing KOREN end-to-end tensor transfer measurements; no new experiment",
+  "conditions": "8–96 concurrent clients; 4.2 MB each direction; 4 batches × 3 rounds; 4 Gbps configured ceilings; batch and burst patterns",
+  "interpretation": "Application completion times across HPC, access, relay and tunnel path; no isolated core-router attribution",
+  "files": [
+    {
+      "source": "out/line_scale.jsonl",
+      "bytes": 5551,
+      "sha256": "120bf59341e675cc76672edea41a1306534e145c1b67a62d0f5cfedab207362b"
+    },
+    {
+      "source": "out/line_scale_detail/n16_s1.0_tcp_batch_1788881997.json",
+      "bytes": 8095,
+      "sha256": "8ddd7dd57bde52f21d2da673bcbbc6d61b48226e0769331c4fbacfae9decb84d"
+    },
+    {
+      "source": "out/line_scale_detail/n16_s1.0_tcp_burst_1788882020.json",
+      "bytes": 2901,
+      "sha256": "6fd33dbdcd6b184f352fceeeb88456de115655085206cbd68b12269b5f9de9bc"
+    },
+    {
+      "source": "out/line_scale_detail/n32_s1.0_tcp_batch_1788882096.json",
+      "bytes": 15908,
+      "sha256": "1fb08b26ccec1a684f7589b08260b72766ca71402f8b95d518e8729f8a710f48"
+    },
+    {
+      "source": "out/line_scale_detail/n32_s1.0_tcp_burst_1788882140.json",
+      "bytes": 5322,
+      "sha256": "277a312310cc4483e25f534b822c9549ee086d12dc1f4de1f087b93b65c1b279"
+    },
+    {
+      "source": "out/line_scale_detail/n48_s1.0_tcp_batch_1788882226.json",
+      "bytes": 23668,
+      "sha256": "bc2d170335d484eff120d976591d4cf3b86d68e1f77d501fd94e944314c5ea75"
+    },
+    {
+      "source": "out/line_scale_detail/n48_s1.0_tcp_burst_1788882286.json",
+      "bytes": 7806,
+      "sha256": "335f0e22a22587c33bfc2adc9349a413c38fffbf489a4dc534f12725a30fb35b"
+    },
+    {
+      "source": "out/line_scale_detail/n64_s1.0_tcp_batch_1788882392.json",
+      "bytes": 31317,
+      "sha256": "792df8511e7590ab28a2033ff54c316470bb11454a56d2b4d2bc0799ea50d322"
+    },
+    {
+      "source": "out/line_scale_detail/n64_s1.0_tcp_burst_1788882476.json",
+      "bytes": 10175,
+      "sha256": "a37a7e853f39e5a5066704bc5aca98be1dd94e70dfefa432e63783efbbb7a7b6"
+    },
+    {
+      "source": "out/line_scale_detail/n8_s1.0_tcp_batch_1788881912.json",
+      "bytes": 4259,
+      "sha256": "6e026d9b4464be5dc98ab439ac4a8433b9bb562498babdfdd56ba4c0a2321c77"
+    },
+    {
+      "source": "out/line_scale_detail/n8_s1.0_tcp_burst_1788881939.json",
+      "bytes": 1686,
+      "sha256": "ca7c923772e4aff22c5a5ab603551b26079d4370c26c213757aef47f2740f31d"
+    },
+    {
+      "source": "out/line_scale_detail/n96_s1.0_tcp_batch_1788882646.json",
+      "bytes": 47275,
+      "sha256": "b4f07f241600f640097b008c6c3662bf1ec586e15d2269e618219ce7830472ba"
+    },
+    {
+      "source": "out/line_scale_detail/n96_s1.0_tcp_burst_1788882802.json",
+      "bytes": 15357,
+      "sha256": "c64050617ca8473076f06ee04e01da982a1e68aafe2f9b370362a210765abb5e"
+    },
+    {
+      "source": "scripts/measurement/line_scale_raw.sh",
+      "bytes": 853,
+      "sha256": "a677bc864b34b869acb64ca30cf5725a92e434ff2cbe4f57c84be24477eae228"
+    },
+    {
+      "source": "scripts/measurement/line_scale.sh",
+      "bytes": 3070,
+      "sha256": "c93d211bf8381824c291ee98f418ea92407dbbb34fa0c2ae1fb352bdc5687b04"
+    },
+    {
+      "source": "scripts/measurement/line_scale.py",
+      "bytes": 12310,
+      "sha256": "9db4a9217e53c0a42f16a9d8394bbcfc3cea33d2a3d083598817df44e301a215"
+    }
+  ]
+}

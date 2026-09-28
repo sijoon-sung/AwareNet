@@ -1,0 +1,26 @@
+{
+  "pages": 16,
+  "previous_pages": 24,
+  "figures": 5,
+  "tables": 8,
+  "equations": 4,
+  "original_unchanged": true,
+  "pdf_sha256": "80d20b03a847d773c849fc407fdf5e1b020881fde6ed7047dda4d5a581deafb8",
+  "new_experiments": false,
+  "visual_qa": "Pages 1–16 inspected; final changed pages re-inspected; remaining PNGs identical",
+  "changed_pages": [
+    4,
+    7,
+    10,
+    12
+  ],
+  "feedback": {
+    "introduction": "p4 problem and contribution; chronology removed",
+    "width_channels": "p6 fixed to rolling selection; replaceable model module",
+    "CNN_and_LoRA": "p6, p12, p14 connected and distinct verified scopes",
+    "KOREN_motivation": "p9 actual transmission contention precedes scaled experiments",
+    "round_equations_lambda": "p7 components, units, model profiles and lambda example",
+    "hardware": "p12 original median statistic retained",
+    "website": "PDF, core wording and raw KOREN transmission bundle updated"
+  }
+}

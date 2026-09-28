@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="475" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 475" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="475"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-475)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="475" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="100" y="433" style="font-family: Diagram Malgun Bold; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,866) scale(1,-1)">텐서 왕복 완료 시간 중앙값 (초)</text>
+			<path d="M 100,125 L 1260,125 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="71.8828125" y="119.0" style="font-family: Diagram Malgun; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,238) scale(1,-1)">0</text>
+			<path d="M 100,162.333333 L 1260,162.333333 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="71.8828125" y="156.33333333333331" style="font-family: Diagram Malgun; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,312) scale(1,-1)">2</text>
+			<path d="M 100,199.666667 L 1260,199.666667 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="71.8828125" y="193.66666666666669" style="font-family: Diagram Malgun; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,387) scale(1,-1)">4</text>
+			<path d="M 100,237 L 1260,237 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="71.8828125" y="231.0" style="font-family: Diagram Malgun; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,462) scale(1,-1)">6</text>
+			<path d="M 100,274.333333 L 1260,274.333333 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="71.8828125" y="268.33333333333337" style="font-family: Diagram Malgun; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,536) scale(1,-1)">8</text>
+			<path d="M 100,311.666667 L 1260,311.666667 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="59.765625" y="305.66666666666663" style="font-family: Diagram Malgun; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,611) scale(1,-1)">10</text>
+			<path d="M 100,349 L 1260,349 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="59.765625" y="343.0" style="font-family: Diagram Malgun; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,686) scale(1,-1)">12</text>
+			<path d="M 100,386.333333 L 1260,386.333333 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="59.765625" y="380.3333333333333" style="font-family: Diagram Malgun; font-size: 22px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,760) scale(1,-1)">14</text>
+			<text x="93.666015625" y="87" style="font-family: Diagram Malgun; font-size: 23px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,174) scale(1,-1)">8</text>
+			<text x="192.78657670454544" y="87" style="font-family: Diagram Malgun; font-size: 23px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,174) scale(1,-1)">16</text>
+			<text x="403.6956676136363" y="87" style="font-family: Diagram Malgun; font-size: 23px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,174) scale(1,-1)">32</text>
+			<text x="614.6047585227273" y="87" style="font-family: Diagram Malgun; font-size: 23px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,174) scale(1,-1)">48</text>
+			<text x="825.5138494318181" y="87" style="font-family: Diagram Malgun; font-size: 23px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,174) scale(1,-1)">64</text>
+			<text x="1247.33203125" y="87" style="font-family: Diagram Malgun; font-size: 23px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,174) scale(1,-1)">96</text>
+			<path d="M 100,132.736866 L 205.454545,146.763648 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 205.454545,146.763648 L 416.363636,165.6202 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 416.363636,165.6202 L 627.272727,194.277279 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 627.272727,194.277279 L 838.181818,210.664404 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 838.181818,210.664404 L 1260,233.985817 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 4;"/>
+			<circle cx="100.0" cy="132.73686564581777" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="205.45454545454544" cy="146.76364814039943" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="416.3636363636363" cy="165.62019977408153" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="627.2727272727273" cy="194.27727937193902" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="838.1818181818181" cy="210.66440413543023" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<circle cx="1260.0" cy="233.9858167756659" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
+			<path d="M 100,147.238642 L 205.454545,149.850304 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 205.454545,149.850304 L 416.363636,181.293398 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 416.363636,181.293398 L 627.272727,190.46524 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 627.272727,190.46524 L 838.181818,218.027603 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 4;"/>
+			<path d="M 838.181818,218.027603 L 1260,323.731289 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 4;"/>
+			<circle cx="100.0" cy="147.23864219260093" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<circle cx="205.45454545454544" cy="149.8503044276731" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<circle cx="416.3636363636363" cy="181.29339810010669" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<circle cx="627.2727272727273" cy="190.46524028431548" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<circle cx="838.1818181818181" cy="218.02760262121836" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<circle cx="1260.0" cy="323.73128874196357" r="5" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<text x="541.81640625" y="43" style="font-family: Diagram Malgun; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,86) scale(1,-1)">동시 전송 클라이언트 수</text>
+			<path d="M 885,453 L 930,453 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 4;"/>
+			<text x="945" y="447" style="font-family: Diagram Malgun; font-size: 23px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,894) scale(1,-1)">배치 왕복</text>
+			<path d="M 1110,453 L 1155,453 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 4;"/>
+			<text x="1170" y="447" style="font-family: Diagram Malgun; font-size: 23px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,894) scale(1,-1)">동시 버스트</text>
+		</g>
+	</g>
+</svg>

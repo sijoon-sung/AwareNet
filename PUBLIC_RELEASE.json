@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 9037,
-      "sha256": "7d46c2404cac7b3f5e6e70416ff7804aedf0b411f53df89e9c324280ffe3f94f"
+      "bytes": 9809,
+      "sha256": "eca883440f010c4cc93f91fb0c85e5d1d7714935528f5fa0f66b3a607e6d28b7"
     },
     {
       "path": "_archive/v2/jetson/results/15w_b1_s256_anchor/console.log",
@@ -171,6 +171,11 @@
       "path": "docs/01_제출발표/AwareNet_서술형보고서_2026-09-26.md",
       "bytes": 42569,
       "sha256": "0e29bb369a336a75e2775781c5122ccfe2754f4a930d776a9c25607fc99679dd"
+    },
+    {
+      "path": "docs/01_제출발표/AwareNet_최종보고서_2026-09-28.md",
+      "bytes": 31974,
+      "sha256": "d1cb8690725d31baf71ec11351463605842082479c9d003aa48ec4cb497b89c9"
     },
     {
       "path": "docs/01_제출발표/AwareNet_통합보고서_2026-09-26.md",
@@ -694,8 +699,8 @@
     },
     {
       "path": "docs/INDEX.md",
-      "bytes": 22769,
-      "sha256": "4d33692b9a1a70882b60e70ae16dd9a0fcc8618db95a0926bc0e64d546112f91"
+      "bytes": 22776,
+      "sha256": "573e9ab8808efa3efabf31665acc609b03c56f8fc01a01db3e6f0c2a4578f342"
     },
     {
       "path": "docs/README_legacy.md",
@@ -2883,6 +2888,26 @@
       "sha256": "71448c53a68d2a9136df9b3e418885177321d0d99e53303f6b690be7c3b45238"
     },
     {
+      "path": "output/report_concise/AwareNet_최종보고서.pdf",
+      "bytes": 747531,
+      "sha256": "80d20b03a847d773c849fc407fdf5e1b020881fde6ed7047dda4d5a581deafb8"
+    },
+    {
+      "path": "output/report_concise/figures/01_architecture.svg",
+      "bytes": 11905,
+      "sha256": "a4d21a7ad6f0df4479bb3c2a7401028f2d883f24eb7c222c3c00040550789c50"
+    },
+    {
+      "path": "output/report_concise/figures/04_link_measurement.svg",
+      "bytes": 8640,
+      "sha256": "4d5838aca9d7c3456e73906b5e173f3f40cf305ff8b98004789fe7bef1f0e4f4"
+    },
+    {
+      "path": "output/report_concise/revision.json",
+      "bytes": 974,
+      "sha256": "88469f255c33388fa1c9cb876b9db9690d2b811de661f82f1ad94a7fd726a60f"
+    },
+    {
       "path": "requirements-hpc-freeze.txt",
       "bytes": 1121,
       "sha256": "81019506331812a777b5af462f1bc25be092241a8f5fc03ff6baedbca0827a17"
@@ -2974,8 +2999,8 @@
     },
     {
       "path": "scripts/analysis/build_public_evidence.py",
-      "bytes": 19691,
-      "sha256": "a9db7c7c9cadc95402b4add85f2e4280801ff1f50d829ccd02d46e74b271c675"
+      "bytes": 19926,
+      "sha256": "9b89541d85825cc3fb5b3eee72d77d36773adf6aa4aff8b14da1548faf5290f8"
     },
     {
       "path": "scripts/analysis/build_report_diagrams.py",
@@ -2989,8 +3014,8 @@
     },
     {
       "path": "scripts/analysis/build_revised_site.py",
-      "bytes": 23826,
-      "sha256": "454819d53d3dbec55840f246a5d8e0f0ba14a43627193929d85c90b0b5204970"
+      "bytes": 24661,
+      "sha256": "c17286980f85ce9d416f4aade009b80908a58d299582336380c26f2ac3cfb176"
     },
     {
       "path": "scripts/analysis/combo_sim.py",
@@ -3979,8 +4004,8 @@
     },
     {
       "path": "site/assets/architecture.svg",
-      "bytes": 12498,
-      "sha256": "79063ac1257f641e07b22b5b438e44ead4322642cf634661d0ad230820857c87"
+      "bytes": 11905,
+      "sha256": "a4d21a7ad6f0df4479bb3c2a7401028f2d883f24eb7c222c3c00040550789c50"
     },
     {
       "path": "site/assets/channels.svg",
@@ -6288,6 +6313,106 @@
       "sha256": "905d90fc07c21f39511217a4a9f58775a559fb948f92c6d2f6172e01286f447b"
     },
     {
+      "path": "site/assets/koren-link-measurements.zip",
+      "bytes": 80540,
+      "sha256": "e126250eb483c3280dc6d447f9e98fe47c48847837eb966139e495e8a22e4343"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/README.md",
+      "bytes": 1139,
+      "sha256": "ab8f481a2c060adb3a93d2a2ad10957b9930f1e618be328d8fc78e86a3c6d600"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/manifest.json",
+      "bytes": 3466,
+      "sha256": "083775dc8eacbc2820c0449ebad0917bd9bdc0ea5be09451ecb39a9bb7158f96"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale.jsonl",
+      "bytes": 5551,
+      "sha256": "120bf59341e675cc76672edea41a1306534e145c1b67a62d0f5cfedab207362b"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n16_s1.0_tcp_batch_1788881997.json",
+      "bytes": 8095,
+      "sha256": "8ddd7dd57bde52f21d2da673bcbbc6d61b48226e0769331c4fbacfae9decb84d"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n16_s1.0_tcp_burst_1788882020.json",
+      "bytes": 2901,
+      "sha256": "6fd33dbdcd6b184f352fceeeb88456de115655085206cbd68b12269b5f9de9bc"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n32_s1.0_tcp_batch_1788882096.json",
+      "bytes": 15908,
+      "sha256": "1fb08b26ccec1a684f7589b08260b72766ca71402f8b95d518e8729f8a710f48"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n32_s1.0_tcp_burst_1788882140.json",
+      "bytes": 5322,
+      "sha256": "277a312310cc4483e25f534b822c9549ee086d12dc1f4de1f087b93b65c1b279"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n48_s1.0_tcp_batch_1788882226.json",
+      "bytes": 23668,
+      "sha256": "bc2d170335d484eff120d976591d4cf3b86d68e1f77d501fd94e944314c5ea75"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n48_s1.0_tcp_burst_1788882286.json",
+      "bytes": 7806,
+      "sha256": "335f0e22a22587c33bfc2adc9349a413c38fffbf489a4dc534f12725a30fb35b"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n64_s1.0_tcp_batch_1788882392.json",
+      "bytes": 31317,
+      "sha256": "792df8511e7590ab28a2033ff54c316470bb11454a56d2b4d2bc0799ea50d322"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n64_s1.0_tcp_burst_1788882476.json",
+      "bytes": 10175,
+      "sha256": "a37a7e853f39e5a5066704bc5aca98be1dd94e70dfefa432e63783efbbb7a7b6"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n8_s1.0_tcp_batch_1788881912.json",
+      "bytes": 4259,
+      "sha256": "6e026d9b4464be5dc98ab439ac4a8433b9bb562498babdfdd56ba4c0a2321c77"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n8_s1.0_tcp_burst_1788881939.json",
+      "bytes": 1686,
+      "sha256": "ca7c923772e4aff22c5a5ab603551b26079d4370c26c213757aef47f2740f31d"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n96_s1.0_tcp_batch_1788882646.json",
+      "bytes": 47275,
+      "sha256": "b4f07f241600f640097b008c6c3662bf1ec586e15d2269e618219ce7830472ba"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/out/line_scale_detail/n96_s1.0_tcp_burst_1788882802.json",
+      "bytes": 15357,
+      "sha256": "c64050617ca8473076f06ee04e01da982a1e68aafe2f9b370362a210765abb5e"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/scripts/measurement/line_scale.py",
+      "bytes": 12310,
+      "sha256": "9db4a9217e53c0a42f16a9d8394bbcfc3cea33d2a3d083598817df44e301a215"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/scripts/measurement/line_scale.sh",
+      "bytes": 3070,
+      "sha256": "c93d211bf8381824c291ee98f418ea92407dbbb34fa0c2ae1fb352bdc5687b04"
+    },
+    {
+      "path": "site/assets/koren-link-measurements/scripts/measurement/line_scale_raw.sh",
+      "bytes": 853,
+      "sha256": "a677bc864b34b869acb64ca30cf5725a92e434ff2cbe4f57c84be24477eae228"
+    },
+    {
+      "path": "site/assets/koren-measurement.svg",
+      "bytes": 8640,
+      "sha256": "4d5838aca9d7c3456e73906b5e173f3f40cf305ff8b98004789fe7bef1f0e4f4"
+    },
+    {
       "path": "site/assets/lab/awarenet.lua",
       "bytes": 2340,
       "sha256": "019e83b0fa419bba600ac9afcf4242b88a3e76f343e03fa92e9349a1a9f18c46"
@@ -6403,9 +6528,14 @@
       "sha256": "bdb3b8d8531f4acafe4d54f128f96a8b5a1c5b13071b539902033d8906e9553e"
     },
     {
+      "path": "site/assets/report-revision.json",
+      "bytes": 974,
+      "sha256": "88469f255c33388fa1c9cb876b9db9690d2b811de661f82f1ad94a7fd726a60f"
+    },
+    {
       "path": "site/assets/report.pdf",
-      "bytes": 660498,
-      "sha256": "5cd740d506389dab488918548a2add255a29fa4d49a98a48191bccfa6e4d9737"
+      "bytes": 747531,
+      "sha256": "80d20b03a847d773c849fc407fdf5e1b020881fde6ed7047dda4d5a581deafb8"
     },
     {
       "path": "site/assets/source-overview.md",
@@ -6424,13 +6554,13 @@
     },
     {
       "path": "site/evidence.html",
-      "bytes": 118029,
-      "sha256": "9b915742bd842bca2ed6ffbba334d04ff1076885c23ed0122426c5356aee1953"
+      "bytes": 118246,
+      "sha256": "a482b226e9a5a5211a82857e5c0ac7f205fc11e05553491a3a470e2a3747a68f"
     },
     {
       "path": "site/index.html",
-      "bytes": 22826,
-      "sha256": "85dd7f64c3f811e6a1a32ddea1ef7227015402808411286d99193fa49cb65548"
+      "bytes": 23426,
+      "sha256": "1577172d8159ff99361027a6aa1091b7cb5634ee60fee19db007cb880a750642"
     },
     {
       "path": "site/style.css",
@@ -6548,7 +6678,7 @@
       "sha256": "237a4e0f79563b832571b717f2e877b2d2892ef8a790a143f82f123c7821402a"
     }
   ],
-  "updated_utc": "2026-09-28T03:44:36.941341+00:00",
-  "revision": "2026-09-28 report template, client/width terminology, FjORD-to-FedRolex evidence, LoRA extension and institutional learning benefits",
-  "previous_public_commit": "cc6ced6b138d25f85cf70b533b19201ec6af914f"
+  "updated_utc": "2026-09-28T08:14:02.906544+00:00",
+  "revision": "16-page report: model reduction cost, interchangeable learning modules and KOREN measurement-to-scaled-evaluation narrative",
+  "previous_public_commit": "780ef87fce5dea8a96b1f072aa3e5de752235124"
 }
