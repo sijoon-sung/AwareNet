@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="610" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 610" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>기존 실험과 LoRA 확장 방향</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="610"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-610)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1400" height="610" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="25" y="148" width="650" height="442" rx="8" ry="8" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<rect x="725" y="148" width="650" height="442" rx="8" ry="8" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
+			<text x="151.40625" y="538" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,1076) scale(1,-1)">CNN: 폭·경로 스케줄러 평가</text>
+			<text x="862.95556640625" y="538" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,1076) scale(1,-1)">LoRA: 분할 학습·집계 확인</text>
+			<text x="290.814208984375" y="493" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,986) scale(1,-1)">ResNet-18</text>
+			<text x="1000.7080078125" y="493" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,986) scale(1,-1)">Qwen2.5</text>
+			<rect x="84" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="109" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="134" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="159" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="184" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="209" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="234" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="259" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="399" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="424" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="449" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="474" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="499" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="524" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<rect x="549" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(87%,89%,90%); fill-rule: evenodd;"/>
+			<rect x="574" y="366" width="19" height="80" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(87%,89%,90%); fill-rule: evenodd;"/>
+			<path d="M 301,407 L 381,407 Z" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="381 407, 368 412, 368 402" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
+			<text x="135.345703125" y="319" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,638) scale(1,-1)">128채널</text>
+			<text x="457.23046875" y="319" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,638) scale(1,-1)">96채널</text>
+			<text x="239.1005859375" y="260" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,520) scale(1,-1)">폭 비율 w = 0.75</text>
+			<text x="208.015625" y="188" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,376) scale(1,-1)">활성값·기울기 크기 감소</text>
+			<rect x="790" y="346" width="144" height="108" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="800.45703125" y="399" style="font-family: Malgun Gothic, sans-serif; font-size: 23px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,798) scale(1,-1)">고정 가중치</text>
+			<text x="949.738037109375" y="387" style="font-family: Malgun Gothic, sans-serif; font-size: 35px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,774) scale(1,-1)">+</text>
+			<rect x="997" y="354" width="31" height="94" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<rect x="1066" y="420" width="105" height="28" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
+			<text x="1036.89111328125" y="396" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,792) scale(1,-1)">×</text>
+			<text x="1194" y="389" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,778) scale(1,-1)">학습</text>
+			<text x="912.7685546875" y="301" style="font-family: Malgun Gothic, sans-serif; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,602) scale(1,-1)">작은 행렬의 크기: 랭크 r</text>
+			<text x="876.2109375" y="258" style="font-family: Malgun Gothic, sans-serif; font-size: 24px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,516) scale(1,-1)">r 고정: Jetson 32 / 연합 실행 16</text>
+			<text x="906.2890625" y="188" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,376) scale(1,-1)">활성값의 은닉 차원 유지</text>
+			<text x="30" y="98" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,196) scale(1,-1)">후속 검증</text>
+			<rect x="240" y="22" width="330" height="62" rx="5" ry="5" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="321.2109375" y="42" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,84) scale(1,-1)">은닉 차원 축소</text>
+			<rect x="635" y="22" width="330" height="62" rx="5" ry="5" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="739.48974609375" y="42" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,84) scale(1,-1)">LoRA 학습</text>
+			<rect x="1030" y="22" width="330" height="62" rx="5" ry="5" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1082.939453125" y="42" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 25px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,84) scale(1,-1)">분할 전송·경로 제어</text>
+			<path d="M 580,53 L 622,53 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="622 53, 609 58, 609 48" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+			<path d="M 975,53 L 1018,53 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="1018 53, 1005 58, 1005 48" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,16%,19%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

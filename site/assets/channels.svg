@@ -13,7 +13,7 @@
 			<rect x="0" y="0" width="1400" height="610" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<text x="30" y="571" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1142) scale(1,-1)">① 계층 분할: 어디에서 계산하는가</text>
 			<rect x="70" y="453" width="425" height="92" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
-			<text x="194.994140625" y="486" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,972) scale(1,-1)">기기: 앞부분</text>
+			<text x="148.494140625" y="486" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,972) scale(1,-1)">클라이언트: 앞부분</text>
 			<rect x="905" y="453" width="425" height="92" rx="7" ry="7" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
 			<text x="1029.994140625" y="486" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,972) scale(1,-1)">서버: 뒷부분</text>
 			<path d="M 507,499 L 889,499 Z" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 3;"/>
@@ -22,7 +22,7 @@
 			<text x="644.0771484375" y="517" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,1034) scale(1,-1)">활성값 →</text>
 			<text x="622.9140625" y="450" style="font-family: Malgun Gothic, sans-serif; font-size: 23px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,900) scale(1,-1)">고정 분할 지점</text>
 			<path d="M 30,417 L 1370,417 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
-			<text x="30" y="368" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,736) scale(1,-1)">② 채널 선택: 얼마나 큰 모델을 쓰는가</text>
+			<text x="30" y="368" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,736) scale(1,-1)">② 모델 폭 조절: 사용할 채널 수</text>
 			<rect x="85" y="256" width="25" height="76" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
 			<rect x="118" y="256" width="25" height="76" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
 			<rect x="151" y="256" width="25" height="76" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>

@@ -3,7 +3,7 @@
     {
       "stem": "R1_architecture",
       "title": "AwareNet의 구성과 학습 흐름",
-      "caption": "기기는 앞부분, 서버는 뒷부분을 학습하고 중계 서버는 텐서 조각을 전달한다."
+      "caption": "클라이언트는 앞부분, 서버는 뒷부분을 학습하고 중계 서버는 텐서 조각을 전달한다."
     },
     {
       "stem": "R7_channels",
@@ -18,7 +18,7 @@
     {
       "stem": "R3_testbed",
       "title": "KOREN 실험 배치",
-      "caption": "HPC 안의 논리 기기들이 KOREN의 두 VM을 경유하여 학습 서버와 텐서를 교환한다."
+      "caption": "HPC 안의 논리 클라이언트들이 KOREN의 두 VM을 경유하여 학습 서버와 텐서를 교환한다."
     },
     {
       "stem": "R4_time",
@@ -28,7 +28,7 @@
     {
       "stem": "R5_actions",
       "title": "서로 다른 병목에서 관측한 제어",
-      "caption": "몰림 구간과 시간 응답, 연산 지연 기기 네 개의 폭 선택을 원로그에서 확인했다."
+      "caption": "몰림 구간과 시간 응답, 연산 지연 클라이언트 네 개의 폭 선택을 원로그에서 확인했다."
     },
     {
       "stem": "R6_accuracy",
@@ -36,9 +36,14 @@
       "caption": "8프로세스·200라운드·2시드. 평가 대상은 CIFAR-10 시험 집합의 앞 2,000개다."
     },
     {
+      "stem": "R9_cnn_lora",
+      "title": "기존 실험과 LoRA 확장 방향",
+      "caption": "위: 기존 CNN과 고정 랭크 LoRA 실험. 아래: 은닉 차원 축소와 LoRA를 결합하는 후속 검증 설계."
+    },
+    {
       "stem": "R8_application",
-      "title": "활용 예시: 여러 현장의 영상 분류 모델 갱신",
-      "caption": "현장 장비가 모델 앞부분을 학습하고, 허용된 중계 서버를 거쳐 중앙 GPU 서버와 함께 모델을 갱신하는 적용 예시."
+      "title": "활용 예시: 병원 간 공동 학습",
+      "caption": "각 병원의 클라이언트가 허용된 중계 서버를 거쳐 중앙 학습 서버와 함께 전역 모델을 개선하는 향후 적용 예시."
     }
   ],
   "metrics": "configs/measurements/report_metrics_revised.json",

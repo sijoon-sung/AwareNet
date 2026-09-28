@@ -3,7 +3,7 @@
   PUBLIC '-//W3C//DTD SVG 1.0//EN'
   'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
 <svg width="1400" height="660" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 660" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<title>활용 예시: 여러 현장의 영상 분류 모델 갱신</title>
+	<title>활용 예시: 병원 간 공동 학습</title>
 	<desc>...</desc>
 	<clipPath id="clip">
 		<rect x="0" y="0" width="1400" height="660"/>
@@ -11,7 +11,7 @@
 	<g id="group" transform="scale(1,-1) translate(0,-660)" style="clip-path: url(#clip)">
 		<g transform="">
 			<rect x="0" y="0" width="1400" height="660" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
-			<text x="142.55078125" y="613" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1226) scale(1,-1)">여러 현장</text>
+			<text x="142.55078125" y="613" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1226) scale(1,-1)">참여 기관</text>
 			<text x="579.15234375" y="613" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1226) scale(1,-1)">사용 가능한 중계 서버</text>
 			<text x="1096.1015625" y="613" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1226) scale(1,-1)">중앙 학습 서버</text>
 			<rect x="40" y="442" width="340" height="138" rx="8" ry="8" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
@@ -19,14 +19,14 @@
 			<path d="M 72,504 L 118,504 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
 			<path d="M 95,494 L 95,485 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
 			<path d="M 80,485 L 110,485 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
-			<text x="194.2275390625" y="534" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1068) scale(1,-1)">현장 A</text>
+			<text x="194.2275390625" y="534" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,1068) scale(1,-1)">병원 A</text>
 			<text x="178.25390625" y="486" style="font-family: Malgun Gothic, sans-serif; font-size: 27px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,972) scale(1,-1)">계산 지연</text>
 			<rect x="40" y="267" width="340" height="138" rx="8" ry="8" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
 			<rect x="64" y="319" width="62" height="49" rx="4" ry="4" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2.4; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<path d="M 72,329 L 118,329 Z" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2;"/>
 			<path d="M 95,319 L 95,310 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
 			<path d="M 80,310 L 110,310 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 2;"/>
-			<text x="195.1572265625" y="359" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,718) scale(1,-1)">현장 B</text>
+			<text x="195.1572265625" y="359" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 28px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,718) scale(1,-1)">병원 B</text>
 			<text x="178.25390625" y="311" style="font-family: Malgun Gothic, sans-serif; font-size: 27px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,622) scale(1,-1)">전송 혼잡</text>
 			<rect x="624" y="473" width="220" height="83" rx="6" ry="6" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<text x="691.498291015625" y="504" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 29px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,1008) scale(1,-1)">중계 1</text>
@@ -56,7 +56,7 @@
 			<circle cx="1255" cy="406.0" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(3%,49%,51%); fill-rule: evenodd;"/>
 			<path d="M 1120,362 L 1260,362 Z" style="stroke: rgb(12%,16%,19%); stroke-linecap: butt; stroke-width: 3;"/>
 			<text x="1089.859375" y="307" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,614) scale(1,-1)">모델 뒷부분 학습</text>
-			<text x="1107.4296875" y="267" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,534) scale(1,-1)">라운드별 집계</text>
+			<text x="1102.859375" y="267" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,534) scale(1,-1)">전역 모델 갱신</text>
 			<rect x="355" y="112" width="690" height="95" rx="7" ry="7" style="stroke: rgb(50%,39%,63%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
 			<text x="626.882080078125" y="158" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 31px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,316) scale(1,-1)">AwareNet</text>
 			<text x="477.8125" y="126" style="font-family: Malgun Gothic, sans-serif; font-size: 24px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,252) scale(1,-1)">계산 시간 + 전송 시간 → 채널 수 + 경로</text>
@@ -66,9 +66,9 @@
 			<path d="M 1052,160 L 1360,160 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<path d="M 1360,160 L 1360,247 Z" style="stroke: rgb(20%,41%,59%); stroke-linecap: butt; stroke-width: 3; stroke-dasharray: 9, 7;"/>
 			<polygon points="1360 247, 1355 234, 1365 234" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(20%,41%,59%); fill-rule: evenodd;"/>
-			<text x="43" y="64" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,128) scale(1,-1)">기기별 채널 수 조절</text>
-			<text x="1040" y="64" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,128) scale(1,-1)">공동 모델 갱신</text>
-			<text x="368.15087890625" y="13" style="font-family: Malgun Gothic, sans-serif; font-size: 23px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,26) scale(1,-1)">원본 이미지: 현장 보관   |   실선: 활성값 전송 (기울기는 역방향)</text>
+			<text x="43" y="64" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,128) scale(1,-1)">클라이언트별 채널 수 조절</text>
+			<text x="1040" y="64" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(20%,41%,59%); stroke:none;" transform="translate(0,128) scale(1,-1)">공동 학습 지속</text>
+			<text x="354.7080078125" y="13" style="font-family: Malgun Gothic, sans-serif; font-size: 23px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,26) scale(1,-1)">향후 적용 예시   |   원본 이미지: 기관별 보관   |   기울기는 역방향</text>
 		</g>
 	</g>
 </svg>

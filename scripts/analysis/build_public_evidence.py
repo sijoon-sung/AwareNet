@@ -154,25 +154,30 @@ def main():
     g['statistics'] = revised['accuracy_200']
 
     group('E9', '설계 선택의 이유: 용어·개발 과정·활용 예시',
-          'CNN 채널 선택, 중계 경로, 단계적 제어를 택한 이유를 문헌·코드·개발 기록에 연결한다.',
+          '클라이언트, CNN 모델 폭·폭 비율, LoRA 랭크를 정의하고 설계 선택의 이유를 문헌·코드·개발 기록에 연결한다. 은닉 차원 축소와 LoRA의 결합은 후속 검증 설계로 제공한다.',
           '8/29 방향 검토, 9/2 다중 경로 설계, 9/9 이후 컨트롤러 기록과 현재 모델 코드를 함께 제공한다. 4·3·2MiB는 배치 32, cut 2, FP32의 텐서 모양에 따른 계산이다.',
-          '과거 문서는 당시의 제안·시행착오다. 현재 주장은 제출 보고서와 E1–E8을 따른다. 여러 현장의 영상 분류는 적용 시나리오이며 현장 도입 실적이 아니다. 자체 정확도 제외의 과거 이유와 현재의 탐색 결과 해석도 보존한다.',
+          '과거 문서는 당시의 제안·시행착오다. 현재 주장은 제출 보고서와 E1–E8을 따른다. 병원 등 기관 간 공동 학습은 기대 효과의 적용 시나리오다. 자체 정확도 제외의 과거 이유와 현재의 탐색 결과 해석도 보존한다. 멘토 의견은 설계 전환 회의록의 기록과 연결한다.',
           ['docs/03_리서치/용어와_설계선택_활용시나리오_2026-09-27.md',
+           'docs/03_리서치/클라이언트_모델폭_LoRA_용어정리_2026-09-28.md',
+           'docs/04_설계기록/LoRA_은닉차원축소_확장검토_2026-09-28.md',
+           'docs/04_설계기록/설계전환_회의록.md',
            'docs/01_제출발표/방향검토보고서_AwareNet.md',
            'docs/03_리서치/실전_포지셔닝_FL배치지형.md',
            'docs/04_설계기록/설계_멀티패스_분할전송.md',
            'docs/04_설계기록/설계기록_컨트롤러.md',
-           'sfl/models.py', 'scripts/analysis/final_results_page.py'])
+           'sfl/models.py', 'sfl/models_llm.py',
+           'sfl/experiments/run_fed_split_lora.py', 'sfl/experiments/run_scale_lora.py',
+           'scripts/analysis/final_results_page.py'])
 
-    manifest = dict(version=1, date='2026-09-27', kind='historical evidence publication; no new experiments',
+    manifest = dict(version=1, date='2026-09-28', kind='historical evidence publication; no new experiments',
                     byte_preserving_copies=True, groups=groups)
     (DEST/'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     shutil.copyfile(DEST/'manifest.json', ROOT/'configs/measurements/publication_evidence_2026-09-27.json')
     esc = html.escape
-    parts = ['<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AwareNet | 원자료 및 주장 근거</title><link rel="stylesheet" href="style.css"></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="index.html">AwareNet</a><nav><a href="index.html">연구 개요</a><a href="assets/report.pdf">보고서</a><a href="https://github.com/sijoon-sung/AwareNet">GitHub</a></nav></div></header><main class="container evidence-page"><p class="kicker">EVIDENCE REGISTER / 2026.09.27</p><h1>원자료와 주장 근거</h1><p class="intro">측정 대상, 실행 조건, 집계 방법과 해석 범위를 자료별로 정리했다. 원파일은 바이트를 변경하지 않고 복사했으며, 아래 목록에서 개별 파일과 SHA-256을 확인할 수 있다.</p><div class="links"><a href="assets/evidence/manifest.json">전체 출처·해시 원장</a><a href="assets/evidence/verify_evidence.py">재집계·해시 검증 코드</a></div><p class="note">SHA-256은 공개 파일의 동일성을 확인한다. 측정 장비나 당시 실행 환경의 독립적인 인증을 의미하지 않는다. 원본 비공개 저장소의 이력 대신 검증에 필요한 파일 사본과 복구 커밋 식별자를 공개한다.</p><nav class="contents" aria-label="증거 목록">']
+    parts = ['<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AwareNet | 원자료 및 주장 근거</title><link rel="stylesheet" href="style.css"></head><body><header class="site-header"><div class="container header-inner"><a class="brand" href="index.html">AwareNet</a><nav><a href="index.html">연구 개요</a><a href="assets/report.pdf">보고서</a><a href="https://github.com/sijoon-sung/AwareNet">GitHub</a></nav></div></header><main class="container evidence-page"><p class="kicker">EVIDENCE REGISTER / 2026.09.28</p><h1>원자료와 주장 근거</h1><p class="intro">측정 대상, 실행 조건, 집계 방법과 해석 범위를 자료별로 정리했다. 원파일은 바이트를 변경하지 않고 복사했으며, 아래 목록에서 개별 파일과 SHA-256을 확인할 수 있다.</p><div class="links"><a href="assets/evidence/manifest.json">전체 출처·해시 원장</a><a href="assets/evidence/verify_evidence.py">재집계·해시 검증 코드</a></div><p class="note">SHA-256은 공개 파일의 동일성을 확인한다. 측정 장비나 당시 실행 환경의 독립적인 인증을 의미하지 않는다. 원본 비공개 저장소의 이력 대신 검증에 필요한 파일 사본과 복구 커밋 식별자를 공개한다.</p><nav class="contents" aria-label="증거 목록">']
     parts += [f'<a href="#{g["id"]}">{g["id"]} · {esc(g["title"])}</a>' for g in groups]
     parts.append('</nav>')
-    md = ['# AwareNet 주장과 원자료 색인', '', '2026-09-27 갱신. 공식 제출 본문과 홈페이지가 사용하는 근거를 연결한다.', '', f'[공개 원자료 페이지]({URL}evidence.html) · [전체 원장](../configs/measurements/publication_evidence_2026-09-27.json)', '', '| ID | 자료 | 주장과 범위 |', '|---|---|---|']
+    md = ['# AwareNet 주장과 원자료 색인', '', '2026-09-28 갱신. 공식 제출 본문과 홈페이지가 사용하는 근거를 연결한다.', '', f'[공개 원자료 페이지]({URL}evidence.html) · [전체 원장](../configs/measurements/publication_evidence_2026-09-27.json)', '', '| ID | 자료 | 주장과 범위 |', '|---|---|---|']
     for g in groups:
         id = g['id']
         parts.append(f'<section id="{id}"><div class="section-title"><span class="section-id">{id}</span><h2>{esc(g["title"])}</h2></div><p>{esc(g["claim"])}</p><dl class="facts"><dt>조건·집계</dt><dd>{esc(g["conditions"])}</dd><dt>해석 범위</dt><dd>{esc(g["limits"])}</dd></dl>')

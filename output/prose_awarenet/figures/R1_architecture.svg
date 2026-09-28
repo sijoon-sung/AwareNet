@@ -14,7 +14,7 @@
 			<rect x="385" y="390" width="630" height="110" rx="8" ry="8" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
 			<text x="545.82958984375" y="451" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 34px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,902) scale(1,-1)">AwareNet 스케줄러</text>
 			<text x="523.890625" y="411" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(34%,39%,43%); stroke:none;" transform="translate(0,822) scale(1,-1)">계산 시간 · 전송량 · 경로 용량</text>
-			<text x="133.0" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">기기</text>
+			<text x="92.5" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">클라이언트</text>
 			<text x="587.25390625" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">중계 서버</text>
 			<text x="1171.25390625" y="304" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 27px;fill: rgb(12%,16%,19%); stroke:none;" transform="translate(0,608) scale(1,-1)">학습 서버</text>
 			<rect x="30" y="81" width="260" height="202" rx="8" ry="8" style="stroke: rgb(70%,74%,78%); stroke-linecap: butt; stroke-width: 2; fill: rgb(96%,96%,97%); fill-rule: evenodd;"/>
@@ -42,7 +42,7 @@
 			<rect x="214" y="151" width="8" height="34" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(50%,39%,63%); fill-rule: evenodd;"/>
 			<rect x="225" y="151" width="8" height="34" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(86%,88%,90%); fill-rule: evenodd;"/>
 			<rect x="236" y="151" width="8" height="34" style="stroke: none; stroke-linecap: butt; stroke-width: 2; fill: rgb(86%,88%,90%); fill-rule: evenodd;"/>
-			<text x="89.287109375" y="92" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,184) scale(1,-1)">채널 비율 w</text>
+			<text x="102.287109375" y="92" style="font-family: Malgun Gothic, sans-serif; font-size: 26px;fill: rgb(50%,39%,63%); stroke:none;" transform="translate(0,184) scale(1,-1)">폭 비율 w</text>
 			<rect x="576" y="207" width="238" height="70" rx="5" ry="5" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<text x="678.2275390625" y="230" style="font-family: Malgun Gothic, sans-serif; font-weight: 700; font-size: 30px;fill: rgb(3%,49%,51%); stroke:none;" transform="translate(0,460) scale(1,-1)">E1</text>
 			<rect x="576" y="83" width="238" height="70" rx="5" ry="5" style="stroke: rgb(3%,49%,51%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
