@@ -1,0 +1,13 @@
+{
+  "full_decode": "pass",
+  "frames": 2688,
+  "seconds": 112.0,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 24.0,
+  "audio_streams": 0,
+  "raw_means_verified": true,
+  "sha256": "bf4c0c1f008f8965e7a14e434661908ff097906394ac9a82f01094f1236231e0"
+}
