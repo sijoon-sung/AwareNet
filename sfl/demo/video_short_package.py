@@ -33,7 +33,7 @@ def main():
 
 | 구간 | 내용 | 원자료 |
 |---|---|---|
-| 0:00–0:24 | CNN의 클라이언트별 학습 손실, 채널 선택, 라운드별 집계 정확도 | 2026-09-29 로컬 X-ray 학습 기록 |
+| 0:00–0:24 | CNN의 클라이언트별 학습 손실, 채널 사용률, 라운드별 집계 정확도 | 2026-09-29 로컬 X-ray 학습 기록 |
 | 0:24–0:34 | 같은 공개 X-ray에 대한 학습 전·후 예측 | 저장 모델의 실제 추론 결과 |
 | 0:34–0:54 | 세 부서의 LoRA 학습 손실과 앞단 어댑터 집계 | 2026-09-29 로컬 기업 시연 학습 기록 |
 | 0:54–1:06 | 고객 응답 기한·외부 로그 공유 질문 | 저장 모델이 생성한 답변 원문 |
@@ -41,6 +41,8 @@ def main():
 | 1:38–1:52 | 네 조건의 기준 방식 대비 시간 단축 | 24개 원로그, 3시드 평균, 초기 4라운드 제외 |
 
 영상은 실제 저장 기록을 실험 뷰어 형태로 재생합니다. 새로 촬영한 실시간 OS 화면이 아닙니다. 음성·배경음·오디오 스트림이 없습니다. 제목 슬라이드, 광고 문구, 깜빡임 효과를 사용하지 않았습니다.
+
+화면은 실험 설정, 학습 곡선, 원로그 중심으로 구성했습니다. 중복 메뉴와 영문 제목을 줄이고 색과 글자 크기를 조정한 버전이며, 실행 자료와 비교 수치는 이전 버전과 같습니다. 채널 막대는 사용 비율을 표시합니다.
 
 ## 비교 결과
 
@@ -53,7 +55,7 @@ def main():
 
 기준 방식은 전폭·고정 배정·연결 1개, AwareNet은 폭·경로 적응·연결 2개입니다. 연결 수 차이를 포함하는 전체 시스템 조건 비교입니다. 측정 지표는 라운드 완료 시간이며 목표 정확도 도달 시간과 구분합니다. 마지막 라운드 정확도 차이도 영상 마지막 화면에 제공합니다.
 
-작동 화면의 KOREN 곡선은 seed 1의 실제 라운드 기록입니다. 표시한 누적 평균은 현재 화면까지의 r4 이후 평균이며, 마지막 표는 3개 시드의 전체 분석 구간 평균입니다. 경로와 폭이 동일한 행은 폭만 바뀐 경우가 있어 폭의 변경 전·후를 함께 표시합니다.
+작동 화면의 KOREN 곡선은 seed 1의 실제 라운드 기록입니다. 표시한 누적 평균은 현재 화면까지의 r4 이후 평균이며, 마지막 표는 3개 시드의 전체 분석 구간 평균입니다. 경로가 동일한 행은 폭만 바뀐 경우가 있어 폭의 변경 전·후를 함께 표시합니다.
 
 ## 학습 시연 범위
 
@@ -96,6 +98,14 @@ CNN과 LoRA 화면은 이전 버전 영상과 같은 실제 로컬 실행 자료
 <div class="scope"><strong>화면에 사용한 기록</strong><p>CNN과 LoRA는 로컬 GPU에서 실제 실행한 학습·추론 기록입니다. 공개 X-ray를 세 가상 병원에 나눈 영상 분류와 가상 부서별 지침을 학습한 업무 문답을 보여줍니다.</p><p>KOREN 비교는 기존 CIFAR-10 실측입니다. 작동 화면은 seed 1의 라운드 기록, 마지막 표는 3시드 평균입니다. 병원·기업 로컬 시연에 KOREN의 시간 단축 수치를 적용하지 않았습니다.</p><a href="assets/demo/evidence.zip">CNN·LoRA 학습 근거</a> · <a href="evidence.html">기존 원자료 색인</a></div>
 <footer>공개 영상: <a href="https://zenodo.org/records/10519652">MedMNIST+</a> / Yang et al. · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · 64×64 영상 확대 표시. 임상 검증과 구분합니다. 기업 규정은 시연용 가상 데이터입니다.</footer>
 </main><script>const player=document.querySelector('video');document.querySelectorAll('[data-time]').forEach(b=>b.addEventListener('click',()=>{player.currentTime=Number(b.dataset.time);player.play();player.scrollIntoView({behavior:'smooth',block:'center'});}));</script></body></html>'''.replace('__BUTTONS__',buttons).replace('__ROWS__',rows)
+    page=page.replace('#f6f7f9','#fafaf9').replace('#202833','#303332').replace('#245fc2','#486777')
+    page=page.replace('#626c7a','#6b706f').replace('#d9dee5','#dddfdc').replace('#e9eef6','#f0f1ee')
+    page=page.replace('h1{font-size:32px;','h1{font-size:29px;font-weight:500;')
+    page=page.replace('h2{font-size:23px;','h2{font-size:22px;font-weight:500;')
+    page=page.replace('td:last-child{color:#486777;font-weight:650}','td:last-child{color:#303332}')
+    version=quality['sha256'][:12]
+    for name in ['demo-silent-112.mp4','poster-short.png','evidence-short.zip','README-short.md']:
+        page=page.replace(f'assets/demo/{name}"',f'assets/demo/{name}?v={version}"')
     (SITE/'demo.html').write_text(page,encoding='utf-8')
     index=SITE/'index.html';content=index.read_text(encoding='utf-8')
     content=content.replace('시연 영상 보기 · 4분 15초','시연 영상 보기 · 1분 52초 · 무음')
