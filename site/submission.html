@@ -1,0 +1,18 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AwareNet | 최종평가 자료</title><style>
+*{box-sizing:border-box}body{margin:0;background:#fafaf9;color:#303332;font:16px/1.8 system-ui,"Malgun Gothic",sans-serif}main{max-width:1080px;margin:auto;padding:32px 24px 60px}a{color:#486777}h1{font-size:32px;font-weight:500;margin:24px 0 6px}h2{font-size:23px;font-weight:500;margin:40px 0 15px}p{max-width:850px}.muted{color:#68706d}.files{border-top:1px solid #cdd1ce}.row{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:18px 0;border-bottom:1px solid #d7dbd8}.row b{font-weight:500}.row small{display:block;color:#68706d}.row .links{display:flex;gap:22px;align-items:center;flex-wrap:wrap}figure{margin:18px 0 32px;padding:20px;border:1px solid #d7dbd8;background:white}img{width:100%;height:auto;display:block}figcaption{font-size:14px;color:#68706d;margin-top:16px}.downloads{display:flex;gap:24px;flex-wrap:wrap}footer{border-top:1px solid #d7dbd8;margin-top:40px;padding-top:20px;font-size:14px;color:#68706d}@media(max-width:680px){main{padding:22px 16px}.row{grid-template-columns:1fr;gap:10px}figure{padding:10px}h1{font-size:27px}}</style></head><body><main>
+<a href="index.html">← AwareNet</a><h1>최종평가 자료</h1><p class="muted">2026.09.30 · 제공된 보고서·과제개요 양식 반영</p>
+<p>분할 연합학습의 연산·통신 병목을 함께 다루는 이유, 모델과 중계 경로의 제어 방법, KOREN·Jetson 실측과 학습 결과를 정리했습니다.</p>
+<div class="files">
+<div class="row"><div><b>최종보고서</b><small>20쪽 · 본문·참고문헌 15쪽 · 그림 5개·표 8개</small></div><div class="links"><a href="assets/report.pdf?v=20260930">PDF 열기</a><a href="assets/report.pdf?v=20260930" download="최종보고서_AwareNet.pdf">다운로드</a></div></div>
+<div class="row"><div><b>과제 개요</b><small>1쪽 · 소개·KOREN 연동·네트워크 구성·성과</small></div><div class="links"><a href="assets/submission/overview.pdf?v=20260930">PDF 열기</a><a href="assets/submission/overview.pdf?v=20260930" download="과제개요_AwareNet_충남대학교.pdf">다운로드</a></div></div>
+<div class="row"><div><b>시연 영상</b><small>1분 55초 · 1920×1080 · 무음 · 기록 조회 화면 녹화</small></div><div class="links"><a href="demo.html">영상 보기</a><a href="assets/demo/final-evaluation-demo.mp4?v=20260930" download="최종평가시연동영상_AwareNet.mp4">MP4</a><a href="experiment-viewer.html">실행 화면</a></div></div>
+<div class="row"><div><b>전체 자료</b><small>PDF·편집용 DOCX·PNG·SVG·MP4·제출 전 확인사항</small></div><div class="links"><a href="assets/submission/AwareNet-final-materials.zip?v=20260930">ZIP 다운로드</a></div></div>
+</div>
+<h2>네트워크 구성도</h2><p>클라이언트, 공유 접속 구간, KOREN 중계 VM과 학습 서버를 한 그림에 표시했습니다. 점선은 스케줄러의 관측·설정, 실선은 학습 데이터 흐름입니다.</p>
+<figure><img src="assets/submission/architecture.svg" alt="클라이언트의 CNN 채널 비율과 KOREN 중계 경로를 함께 조정하는 AwareNet. HPC 클라이언트, 두 VM의 네 논리 중계, V100 학습 서버로 구성."><figcaption>실제 VM 2대와 논리 중계 4개를 구분한 실험 구성입니다.</figcaption></figure>
+<div class="downloads"><a href="assets/submission/architecture-hires.png" download="AwareNet_네트워크구성도.png">PNG · 4800×2800</a><a href="assets/submission/architecture.svg" download="AwareNet_네트워크구성도.svg">편집용 SVG</a></div>
+<h2>핵심 결과</h2><p>32클라이언트의 단기 시간 비교와 8클라이언트의 장기 정확도 평가를 구분했습니다. 기준 연결 1개와 결합 연결 2개의 차이를 포함한 전체 시스템 비교입니다.</p>
+<figure><img src="assets/submission/results.svg" alt="32클라이언트 네 조건의 시간 단축과 8클라이언트 200라운드의 시간·정확도 결과."></figure>
+<div class="downloads"><a href="assets/submission/results-hires.png" download="AwareNet_핵심결과.png">PNG · 4800×2440</a><a href="assets/submission/results.svg" download="AwareNet_핵심결과.svg">편집용 SVG</a><a href="evidence.html">원자료 색인</a></div>
+<footer>공식 접수 안내의 보고서·과제개요 형식은 HWP입니다. 이 페이지는 PDF와 편집용 DOCX를 제공합니다. 실제 회의·단체사진과 최종 제출 정보는 별도로 확인해야 합니다.</footer>
+</main></body></html>

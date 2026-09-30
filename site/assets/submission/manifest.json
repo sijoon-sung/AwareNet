@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-30",
+  "artifacts": {
+    "assets/report.pdf": {
+      "bytes": 802671,
+      "sha256": "94e57949d99c6609c31b419a4d54c98095152c38beb8a2fb3201157509685be9"
+    },
+    "assets/submission/overview.pdf": {
+      "bytes": 185576,
+      "sha256": "4cb2a29d0a4fa83dbb775d5d0fe93321f9f8705ab94c4b009cfb4e05f2a478e9"
+    },
+    "assets/demo/final-evaluation-demo.mp4": {
+      "bytes": 4783305,
+      "sha256": "b7503d0b1646ecb67ac52508507a1ac11491960fd8e72d60d5bf07c51717afd6"
+    },
+    "assets/submission/architecture-hires.png": {
+      "bytes": 464745,
+      "sha256": "a5bed09677b3c551d6bed1569ff00f5100db0d524f3bb06049c8226a215235b3"
+    },
+    "assets/submission/architecture.svg": {
+      "bytes": 10075,
+      "sha256": "8558cd65eb7870f7cb29be316cac7f243a998e3ee2a958dec88342f4aaccd7c0"
+    },
+    "assets/submission/results-hires.png": {
+      "bytes": 369703,
+      "sha256": "691708be74af485a36814c435ff73f2758903c454bc1e3d84731683df3d69196"
+    },
+    "assets/submission/results.svg": {
+      "bytes": 6804,
+      "sha256": "c3e1002cf7b183cbe5b74e533cc78c8386f95cf10e4162ce0a9fec81c8c20652"
+    }
+  },
+  "video": {
+    "duration_seconds": 115.32,
+    "width": 1920,
+    "height": 1080,
+    "fps": 25,
+    "audio_streams": 0,
+    "decode": "complete, exit 0",
+    "sha256": "b7503d0b1646ecb67ac52508507a1ac11491960fd8e72d60d5bf07c51717afd6"
+  },
+  "source": "Existing verified measurements; no new training or network measurements for this revision."
+}

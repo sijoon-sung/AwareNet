@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8" fill="#426b83"/></marker></defs><rect width="100%" height="100%" fill="white"/>
+<text x="24" y="34" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="28" font-weight="700" fill="#23343f" text-anchor="start">AwareNet의 제어 구조와 KOREN 실험 구성</text>
+<rect x="278" y="65" width="670" height="108" rx="0" fill="#f4f7f8" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="301" y="99" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="25" font-weight="700" fill="#23343f" text-anchor="start">AwareNet 스케줄러</text>
+<text x="301" y="130" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">관측: 연산 시간·실효 전송률</text>
+<text x="301" y="158" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">결정: 채널 비율·중계 선택·조각 배분</text>
+<text x="983" y="100" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#62717b" text-anchor="start">실선  데이터</text>
+<text x="983" y="130" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#62717b" text-anchor="start">점선  관측·설정</text>
+<rect x="24" y="237" width="244" height="278" rx="0" fill="#fafbfb" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="44" y="271" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="24" font-weight="700" fill="#23343f" text-anchor="start">클라이언트</text>
+<text x="44" y="300" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#62717b" text-anchor="start">데이터 보관 · 모델 앞부분</text>
+<rect x="44" y="325" width="204" height="46" rx="0" fill="white" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="57" y="355" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="21" font-weight="700" fill="#23343f" text-anchor="start">A</text>
+<rect x="95" y="337" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="111" y="337" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="127" y="337" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="143" y="337" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="159" y="337" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="175" y="337" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="191" y="337" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="207" y="337" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="44" y="383" width="204" height="46" rx="0" fill="white" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="57" y="413" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="21" font-weight="700" fill="#23343f" text-anchor="start">B</text>
+<rect x="95" y="395" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="111" y="395" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="127" y="395" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="143" y="395" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="159" y="395" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="175" y="395" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="191" y="395" width="11" height="23" rx="0" fill="#e6ebed" stroke="none" stroke-width="1.5"/>
+<rect x="207" y="395" width="11" height="23" rx="0" fill="#e6ebed" stroke="none" stroke-width="1.5"/>
+<rect x="44" y="441" width="204" height="46" rx="0" fill="white" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="57" y="471" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="21" font-weight="700" fill="#23343f" text-anchor="start">C</text>
+<rect x="95" y="453" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="111" y="453" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="127" y="453" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="143" y="453" width="11" height="23" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
+<rect x="159" y="453" width="11" height="23" rx="0" fill="#e6ebed" stroke="none" stroke-width="1.5"/>
+<rect x="175" y="453" width="11" height="23" rx="0" fill="#e6ebed" stroke="none" stroke-width="1.5"/>
+<rect x="191" y="453" width="11" height="23" rx="0" fill="#e6ebed" stroke="none" stroke-width="1.5"/>
+<rect x="207" y="453" width="11" height="23" rx="0" fill="#e6ebed" stroke="none" stroke-width="1.5"/>
+<text x="44" y="509" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="16" font-weight="400" fill="#62717b" text-anchor="start">채널 수로 서브모델 크기 조절</text>
+<rect x="450" y="224" width="358" height="305" rx="5" fill="#f4f8fa" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="473" y="259" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="23" font-weight="700" fill="#23343f" text-anchor="start">KOREN 경유 중계 구간</text>
+<rect x="484" y="284" width="288" height="90" rx="0" fill="white" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="502" y="316" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#23343f" text-anchor="start">VM 1</text>
+<text x="502" y="346" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#62717b" text-anchor="start">논리 중계 0 · 1</text>
+<rect x="484" y="402" width="288" height="90" rx="0" fill="white" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="502" y="434" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#23343f" text-anchor="start">VM 2</text>
+<text x="502" y="464" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#62717b" text-anchor="start">논리 중계 2 · 3</text>
+<rect x="963" y="237" width="211" height="278" rx="0" fill="#fafbfb" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="984" y="271" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="24" font-weight="700" fill="#23343f" text-anchor="start">학습 서버</text>
+<text x="984" y="302" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">모델 뒷부분</text>
+<rect x="985" y="337" width="168" height="59" rx="0" fill="#edf2f4" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="1069" y="374" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="middle">순전파·역전파</text>
+<rect x="985" y="424" width="168" height="59" rx="0" fill="#edf2f4" stroke="#c6d2d8" stroke-width="1.5"/>
+<text x="1069" y="461" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="middle">라운드 집계</text>
+<polyline points="268,378 361,378 361,329 484,329" fill="none" stroke="#426b83" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="361,378 361,447 484,447" fill="none" stroke="#426b83" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="772,329 883,329 883,378 963,378" fill="none" stroke="#426b83" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="772,447 883,447 883,378" fill="none" stroke="#426b83" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="279" y="332" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="16" font-weight="400" fill="#62717b" text-anchor="start">공유 접속</text>
+<text x="279" y="356" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="16" font-weight="400" fill="#62717b" text-anchor="start">상한 반영</text>
+<text x="830" y="484" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#62717b" text-anchor="start">조각 재조립</text>
+<text x="465" y="559" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="21" font-weight="400" fill="#426b83" text-anchor="start">활성값 → / ← 기울기</text>
+<polyline points="360,173 360,198 144,198 144,237" fill="none" stroke="#426b83" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="630,173 630,224" fill="none" stroke="#426b83" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<polyline points="1060,237 1060,197 860,197 860,173" fill="none" stroke="#426b83" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<rect x="24" y="590" width="1150" height="88" rx="0" fill="#f7f7f5" stroke="none" stroke-width="1.5"/>
+<text x="43" y="619" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="700" fill="#23343f" text-anchor="start">실험 배치</text>
+<text x="175" y="619" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="400" fill="#23343f" text-anchor="start">HPC CPU 클라이언트  →  KOREN VM 2대 / 논리 중계 4개  →  HPC V100 서버</text>
+<text x="43" y="650" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="700" fill="#23343f" text-anchor="start">평가 규모</text>
+<text x="175" y="650" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="400" fill="#23343f" text-anchor="start">32개 논리 클라이언트 · 24라운드×3시드    /    8개 · 200라운드×2시드</text></svg>
