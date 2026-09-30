@@ -90,7 +90,7 @@ python -m http.server 8000 --directory site
 
 ### 자료 구조
 
-- `site/submission.html`: **현재 최종보고서 23쪽·과제 개요 1쪽**, 고해상도 그림과 시연 영상. [자료 페이지](https://sijoon-sung.github.io/AwareNet/site/submission.html) · [KOREN 전송 원자료](site/assets/koren-link-measurements.zip)
+- `site/submission.html`: **현재 최종보고서 24쪽·과제 개요 1쪽**, 고해상도 그림과 시연 영상. [자료 페이지](https://sijoon-sung.github.io/AwareNet/site/submission.html) · [KOREN 전송 원자료](site/assets/koren-link-measurements.zip)
 - `output/prose_awarenet/`: 이전 24쪽 보고서와 그림·복사용 HTML
 - `site/`: 연구 홈페이지, E1–E9 원자료, 보고서와 보조 계측 기록
 - `sfl/`: 폭·경로 계획, 전송·재조립, 분할 학습 및 SDN 확장

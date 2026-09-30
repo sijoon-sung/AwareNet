@@ -2,16 +2,16 @@
   "date": "2026-09-30",
   "artifacts": {
     "assets/report.pdf": {
-      "bytes": 963007,
-      "sha256": "abd27bab48e5382f79d2ba64c6bdf1a0cf6e73eaf5cab32a8f67906addac20b4"
+      "bytes": 984565,
+      "sha256": "02f610c1f6b08bc766627dbc57f83761c13c0880f55710e6854f795086dba7dd"
     },
     "assets/submission/overview.pdf": {
-      "bytes": 203871,
-      "sha256": "cbd89fb7992b9a272c2c59a42cae5b45c3cf85650331e81bb9ea4cfc1a0c77cf"
+      "bytes": 208280,
+      "sha256": "075860d19e917fb7fba54a779e0e5d80c1687e79a0533ae874e882892a74f4be"
     },
     "assets/demo/final-evaluation-demo.mp4": {
-      "bytes": 4783305,
-      "sha256": "b7503d0b1646ecb67ac52508507a1ac11491960fd8e72d60d5bf07c51717afd6"
+      "bytes": 5212539,
+      "sha256": "a8a4491601f81b5912af404937c9ef39ff8b053fed74fd95ed732b6e6b05fedb"
     },
     "assets/submission/architecture-hires.png": {
       "bytes": 480082,
@@ -30,8 +30,8 @@
       "sha256": "c3e1002cf7b183cbe5b74e533cc78c8386f95cf10e4162ce0a9fec81c8c20652"
     },
     "assets/submission/AwareNet-final-materials.zip": {
-      "bytes": 8445827,
-      "sha256": "5230721ba4b1f5b6f91e1eea4f06d6981d60bd0e63d04eff0830979ebf72d667"
+      "bytes": 8895686,
+      "sha256": "07bd44003d4fb49abc049a6bd7c89a6923df2e11a7ecb2fc6f6ec105c1f1c889"
     },
     "assets/submission/pipeline.svg": {
       "bytes": 5006,
@@ -62,23 +62,47 @@
       "sha256": "653d3ad0e55f91dfe8ba6d93605e313f7aaa3f8127c8c145aa9a9d7261ac914d"
     },
     "assets/submission/feedback-review.html": {
-      "bytes": 7831,
-      "sha256": "ff1878fe0dae267db2a67aca6c602a4d44876b6b0d30ea65418d2bde97a2f208"
+      "bytes": 8264,
+      "sha256": "05c6440ecaf6ffa468b4722d36d20fb75f22d8f42960d86a25facd56e882db48"
     },
     "assets/submission/feedback-audit.json": {
-      "bytes": 8259,
-      "sha256": "2eaac1a0a7f86772899cfeb56f566e7c7fad5cb8692fd9146146ab8805e1cbdd"
+      "bytes": 8759,
+      "sha256": "a7f4c4185436eec17d28df260265fe82a332841b0c975b96861d4af701bc5b93"
+    },
+    "assets/demo/final-poster.png": {
+      "bytes": 368086,
+      "sha256": "39c0385789375e9aff1ed47633a390173267b73c34f36b8f8114c59c2cc15993"
+    },
+    "assets/demo/final-recording.json": {
+      "bytes": 1532,
+      "sha256": "3f5aa44055d0e218c3bb0d879e79afa4748b41e9ba045bd219de877feb861e8d"
+    },
+    "assets/demo/README-diagram.md": {
+      "bytes": 1382,
+      "sha256": "bf4ed44d68f9220f9931375473e1ecf2cbbd3b831cc40b2f629e0416d0affdba"
+    },
+    "assets/demo/diagram-viewer.css": {
+      "bytes": 6421,
+      "sha256": "c9a32b04c1522616189e8a0260706c07589b65d39a89f8bb2c81f1c3d84eff6f"
+    },
+    "assets/demo/diagram-viewer.js": {
+      "bytes": 20326,
+      "sha256": "d7603f870ed05f98299de9f16a8f55812a3b2135465b500a12e95f053beaed4a"
+    },
+    "assets/report-revision.json": {
+      "bytes": 956,
+      "sha256": "e9a6e0ff94d1ba058abc771979a19297cd88d4f76a36ba733109918cf7c52b08"
     }
   },
   "video": {
-    "duration_seconds": 115.32,
+    "duration_seconds": 114.28,
     "width": 1920,
     "height": 1080,
     "fps": 25,
     "audio_streams": 0,
     "decode": "complete, exit 0",
-    "sha256": "b7503d0b1646ecb67ac52508507a1ac11491960fd8e72d60d5bf07c51717afd6"
+    "sha256": "a8a4491601f81b5912af404937c9ef39ff8b053fed74fd95ed732b6e6b05fedb"
   },
   "source": "Existing verified measurements; no new training or network measurements for this revision.",
-  "revision": "20260930r3"
+  "revision": "20260930r4"
 }

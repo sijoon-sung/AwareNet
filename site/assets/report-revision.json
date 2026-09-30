@@ -1,24 +1,23 @@
 {
   "date": "2026-09-30",
-  "pages": 23,
+  "pages": 24,
   "front_matter_pages": 5,
-  "body_and_references_pages": 18,
+  "body_and_references_pages": 19,
   "overview_pages": 1,
   "figures": 6,
   "tables": 10,
   "equations": 6,
-  "pdf_sha256": "abd27bab48e5382f79d2ba64c6bdf1a0cf6e73eaf5cab32a8f67906addac20b4",
+  "pdf_sha256": "02f610c1f6b08bc766627dbc57f83761c13c0880f55710e6854f795086dba7dd",
   "new_experiments": false,
   "original_unchanged": true,
-  "visual_qa": "All 23 report pages and the one-page overview inspected; page 9 byte-identical to inspected first render.",
+  "visual_qa": "Changed report pages 4, 5, 16, 17, 18 and 24 and the overview visually inspected. Other report page bodies pixel-identical to the previously inspected revision; updated page fields checked.",
   "changes": [
-    "I-2 contributions",
-    "II-1 objective, architecture and roles",
-    "II-2 profiling, decision, execution, framing, reassembly and testbed",
-    "Four architecture and workflow diagrams"
+    "KOREN rationale and practical benefits in report III-2 and overview",
+    "Conditional T-SDN and L2VPN extensions, with service-guide reference",
+    "Updated contents and page fields; experiment values preserved"
   ],
-  "previous_pdf_sha256": "3517af185a92429aaff3ac630770d815de7d830763d197607cbce3420f9a4a2b",
-  "revision": "20260930r3",
-  "feedback_items": 18,
+  "previous_pdf_sha256": "abd27bab48e5382f79d2ba64c6bdf1a0cf6e73eaf5cab32a8f67906addac20b4",
+  "revision": "20260930r4",
+  "feedback_items": 19,
   "code_checked": true
 }

@@ -4,9 +4,9 @@
 
 > 2026-09-02 폴더 정리, 2026-09-30 진입점 갱신. 원칙: **문서는 6개 폴더 중 하나에 들어간다.** 낡은 판은 지우지 않고
 > `old/` 로 옮긴다. 새 문서를 만들면 해당 폴더에 넣고 이 목차에 한 줄 추가한다.
-> 현재 제출 보고서는 [23쪽 최종보고서 PDF](../site/assets/report.pdf)와 [본문 원고](01_제출발표/AwareNet_최종보고서_2026-09-30.md)다. 피드백 18개 항목을 대조해 단계별 입력·출력, 탐색 복잡도, 프로토콜 프레이밍·재조립과 재현 환경을 보강했다. 기존 실험 수치와 출처는 유지했다. [피드백 반영 대조표](../site/assets/submission/feedback-review.html)와 [새 도식 4종](../site/submission.html)을 제공한다. 이전 24쪽 보고서는 `output/prose_awarenet/`에 보존했다.
+> 현재 제출 보고서는 [24쪽 최종보고서 PDF](../site/assets/report.pdf)와 [본문 원고](01_제출발표/AwareNet_최종보고서_2026-09-30.md)다. 피드백 19개 항목을 대조해 단계별 입력·출력, 탐색 복잡도, 프로토콜 프레이밍·재조립과 재현 환경을 보강했다. 기존 실험 수치와 출처는 유지했다. [피드백 반영 대조표](../site/assets/submission/feedback-review.html)와 [새 도식 4종](../site/submission.html)을 제공한다. 이전 24쪽 보고서는 `output/prose_awarenet/`에 보존했다.
 
-> **최종평가 양식 자료:** [과제 개요·고해상도 그림·시연 영상](../site/submission.html) · 보고서 본문·참고문헌 18쪽, 앞부분 5쪽, 개요 1쪽. 공식 최종 양식의 역할·통합 시험 항목을 반영했다. 기존 9/28 원고는 이력으로 보존한다.
+> **최종평가 양식 자료:** [과제 개요·고해상도 그림·시연 영상](../site/submission.html) · 보고서 본문·참고문헌 19쪽, 앞부분 5쪽, 개요 1쪽. 공식 최종 양식의 역할·통합 시험 항목을 반영했다. 기존 9/28 원고는 이력으로 보존한다.
 
 > **주장별 원자료:** [E1–E9 증거 색인](EVIDENCE.md) · [공개 원파일·해시](https://sijoon-sung.github.io/AwareNet/site/evidence.html) · [9/27 전면 개정·수치 검토](03_리서치/보고서_전면개정_2026-09-27.md)
 
@@ -24,7 +24,7 @@
 
 | 목적 | 기준 문서 | 상태 |
 |---|---|---|
-| **현재 제출 보고서** | [9/30 최종 양식 원고](01_제출발표/AwareNet_최종보고서_2026-09-30.md) | 요약문·Ⅰ~Ⅴ장, 그림 6개·표 10개. [23쪽 PDF](../site/assets/report.pdf) · [KOREN 측정 원자료](../site/assets/koren-link-measurements.zip) |
+| **현재 제출 보고서** | [9/30 최종 양식 원고](01_제출발표/AwareNet_최종보고서_2026-09-30.md) | 요약문·Ⅰ~Ⅴ장, 그림 6개·표 10개. [24쪽 PDF](../site/assets/report.pdf) · [KOREN 측정 원자료](../site/assets/koren-link-measurements.zip) |
 | **구조·조건·결과를 한눈에 보기** | [본문 도식·결과 차트 9종](../output/prose_awarenet/figures.html) | 짧은 표기·도형·연결선 중심. 아키텍처, 제어 절차, HPC/VM 배치, 시간 비교, 실제 제어, 시간·정확도. 상세 설명은 캡션. [PNG/SVG 묶음](../output/prose_awarenet/AwareNet_구조도_조건그림.zip) · [보고서 쪽 안내](../output/prose_awarenet/README.md) |
 | 양식과 신규성 판단의 근거 | [브랜치·문헌·성과 감사](03_리서치/서술형보고서_신규성및출처검토_2026-09-26.md) | 6개 참조의 양식 검색, 가까운 선행연구, 채택·제외 주장, 원본 HWP 부재와 PDF 대체 글꼴 기록 |
 | **발표용 도식·하드웨어·LoRA 요약** | [9/26 통합 시각 자료](01_제출발표/AwareNet_통합보고서_2026-09-26.md) | 제출 원고의 보조 자료. [10쪽 PDF](../output/final_awarenet/AwareNet_종합보고서.pdf) · [이미지 9종](../output/final_awarenet/index.html) |

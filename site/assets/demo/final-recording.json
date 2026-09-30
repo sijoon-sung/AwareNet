@@ -2,19 +2,54 @@
   "source": "experiment-viewer.html",
   "method": "Continuous browser viewport recording with Playwright recordVideo",
   "playback": "Saved CNN/LoRA and historical KOREN records, explicitly labeled in the application",
-  "start": "2026-09-30T01:25:31.124Z",
-  "end": "2026-09-30T01:27:25.660Z",
+  "start": "2026-09-30T04:26:05.765Z",
+  "end": "2026-09-30T04:28:00.390Z",
   "postproduction": "Container/codec conversion only; no subtitles, transitions, overlays, cuts or audio",
   "errors": [],
   "video": {
-    "duration_seconds": 115.32,
+    "duration_seconds": 114.28,
     "width": 1920,
     "height": 1080,
     "fps": 25,
     "audio_streams": 0,
     "decode": "complete, exit 0",
-    "sha256": "b7503d0b1646ecb67ac52508507a1ac11491960fd8e72d60d5bf07c51717afd6"
+    "sha256": "a8a4491601f81b5912af404937c9ef39ff8b053fed74fd95ed732b6e6b05fedb"
   },
   "input_data_sha256": "65ae22a70c643cf75514267af6e17a58cfd4b0a47957fa661b1687c711026935",
-  "raw_data_index": "evidence.html and assets/demo/evidence.zip"
+  "raw_data_index": "evidence.html and assets/demo/evidence.zip",
+  "visual_revision": "White background, blue/teal line diagrams, live record curves and compact log rows; no flashing particles.",
+  "chapters": [
+    {
+      "time": 0,
+      "label": "전체 구조"
+    },
+    {
+      "time": 10,
+      "label": "CNN 학습"
+    },
+    {
+      "time": 28,
+      "label": "X-ray 추론"
+    },
+    {
+      "time": 36,
+      "label": "LoRA 학습"
+    },
+    {
+      "time": 52,
+      "label": "업무 질문"
+    },
+    {
+      "time": 62,
+      "label": "KOREN 활용"
+    },
+    {
+      "time": 74,
+      "label": "경로 제어·시간 비교"
+    },
+    {
+      "time": 102,
+      "label": "조건별 결과"
+    }
+  ]
 }

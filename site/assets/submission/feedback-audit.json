@@ -1,6 +1,6 @@
 {
-  "report_pages": 23,
-  "checked_items": 18,
+  "report_pages": 24,
+  "checked_items": 19,
   "items": [
     {
       "request": "기능 나열을 기여 논증으로 변경",
@@ -124,9 +124,16 @@
     {
       "request": "직관적인 도식",
       "previous": "기존 텍스트 상자 중심",
-      "location": "8·11·13·21쪽",
+      "location": "8·11·13·22쪽",
       "revision": "전체 구조, 제어 파이프라인, 텐서 분할·재조립, 병원 활용 도식을 새 SVG와 4800px PNG로 제작.",
       "evidence": "실제 구성 및 향후 활용 시나리오"
+    },
+    {
+      "request": "KOREN을 선택한 이유와 활용 이점",
+      "previous": "테스트베드 배치와 실측 중심",
+      "location": "16쪽·과제 개요",
+      "revision": "변동 요인을 통제한 반복 비교, 원격 VM·HPC의 실제 전송·학습 비용, 양호한 망의 동시 전송 병목을 연결. T-SDN·L2VPN은 이번 실험 미적용인 후속 확장으로 기술.",
+      "evidence": "NIA KOREN 이용안내서 6–9쪽; KOREN line_scale 원로그"
     }
   ],
   "corrected_examples": [
