@@ -2,24 +2,24 @@
   "date": "2026-09-30",
   "artifacts": {
     "assets/report.pdf": {
-      "bytes": 821308,
-      "sha256": "3517af185a92429aaff3ac630770d815de7d830763d197607cbce3420f9a4a2b"
+      "bytes": 963007,
+      "sha256": "abd27bab48e5382f79d2ba64c6bdf1a0cf6e73eaf5cab32a8f67906addac20b4"
     },
     "assets/submission/overview.pdf": {
-      "bytes": 185576,
-      "sha256": "4cb2a29d0a4fa83dbb775d5d0fe93321f9f8705ab94c4b009cfb4e05f2a478e9"
+      "bytes": 203871,
+      "sha256": "cbd89fb7992b9a272c2c59a42cae5b45c3cf85650331e81bb9ea4cfc1a0c77cf"
     },
     "assets/demo/final-evaluation-demo.mp4": {
       "bytes": 4783305,
       "sha256": "b7503d0b1646ecb67ac52508507a1ac11491960fd8e72d60d5bf07c51717afd6"
     },
     "assets/submission/architecture-hires.png": {
-      "bytes": 464745,
-      "sha256": "a5bed09677b3c551d6bed1569ff00f5100db0d524f3bb06049c8226a215235b3"
+      "bytes": 480082,
+      "sha256": "1f3325b8ac0b17f7b4923ebf1e3d7e3efaec547fc8c7faad756904c0dbc77b36"
     },
     "assets/submission/architecture.svg": {
-      "bytes": 10075,
-      "sha256": "8558cd65eb7870f7cb29be316cac7f243a998e3ee2a958dec88342f4aaccd7c0"
+      "bytes": 20625,
+      "sha256": "e6d645d57688ec9d510650eff8ff26d0380f658d05ea34ff077c55aabf05ebae"
     },
     "assets/submission/results-hires.png": {
       "bytes": 369703,
@@ -30,8 +30,44 @@
       "sha256": "c3e1002cf7b183cbe5b74e533cc78c8386f95cf10e4162ce0a9fec81c8c20652"
     },
     "assets/submission/AwareNet-final-materials.zip": {
-      "bytes": 7164233,
-      "sha256": "1f727689bd6048db76845c45236f2ac6a1d61eda02e3307e9803e5f79375964a"
+      "bytes": 8445827,
+      "sha256": "5230721ba4b1f5b6f91e1eea4f06d6981d60bd0e63d04eff0830979ebf72d667"
+    },
+    "assets/submission/pipeline.svg": {
+      "bytes": 5006,
+      "sha256": "0326b467cb1c5d9e8ec57732625ebf4f39467890d97304eb37762485343f1cc8"
+    },
+    "assets/submission/pipeline-hires.png": {
+      "bytes": 220807,
+      "sha256": "276e5f1ecf14b4506909fe7084ba2ddf25dda207334f5c405f9ce2f2d0df9ec1"
+    },
+    "assets/submission/multipath.svg": {
+      "bytes": 10940,
+      "sha256": "86867d7cf80514d9d28eddff27c1f002c9319ed84be3f4e158d62d117a8967a8"
+    },
+    "assets/submission/multipath-hires.png": {
+      "bytes": 204219,
+      "sha256": "a35109a5cd5c116156fed920497ee3175b333527927ecbb3cc2227665d2ee741"
+    },
+    "assets/submission/application.svg": {
+      "bytes": 14289,
+      "sha256": "653d3ad0e55f91dfe8ba6d93605e313f7aaa3f8127c8c145aa9a9d7261ac914d"
+    },
+    "assets/submission/application-hires.png": {
+      "bytes": 258167,
+      "sha256": "ea7002d917655723fbbddb3d7b1436d2660afa2c189cc29f21178f91feddae00"
+    },
+    "assets/application.svg": {
+      "bytes": 14289,
+      "sha256": "653d3ad0e55f91dfe8ba6d93605e313f7aaa3f8127c8c145aa9a9d7261ac914d"
+    },
+    "assets/submission/feedback-review.html": {
+      "bytes": 7831,
+      "sha256": "ff1878fe0dae267db2a67aca6c602a4d44876b6b0d30ea65418d2bde97a2f208"
+    },
+    "assets/submission/feedback-audit.json": {
+      "bytes": 8259,
+      "sha256": "2eaac1a0a7f86772899cfeb56f566e7c7fad5cb8692fd9146146ab8805e1cbdd"
     }
   },
   "video": {
@@ -44,5 +80,5 @@
     "sha256": "b7503d0b1646ecb67ac52508507a1ac11491960fd8e72d60d5bf07c51717afd6"
   },
   "source": "Existing verified measurements; no new training or network measurements for this revision.",
-  "revision": "20260930r2"
+  "revision": "20260930r3"
 }
