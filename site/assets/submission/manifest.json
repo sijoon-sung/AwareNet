@@ -2,8 +2,8 @@
   "date": "2026-09-30",
   "artifacts": {
     "assets/report.pdf": {
-      "bytes": 802671,
-      "sha256": "94e57949d99c6609c31b419a4d54c98095152c38beb8a2fb3201157509685be9"
+      "bytes": 821308,
+      "sha256": "3517af185a92429aaff3ac630770d815de7d830763d197607cbce3420f9a4a2b"
     },
     "assets/submission/overview.pdf": {
       "bytes": 185576,
@@ -28,6 +28,10 @@
     "assets/submission/results.svg": {
       "bytes": 6804,
       "sha256": "c3e1002cf7b183cbe5b74e533cc78c8386f95cf10e4162ce0a9fec81c8c20652"
+    },
+    "assets/submission/AwareNet-final-materials.zip": {
+      "bytes": 7164233,
+      "sha256": "1f727689bd6048db76845c45236f2ac6a1d61eda02e3307e9803e5f79375964a"
     }
   },
   "video": {
@@ -39,5 +43,6 @@
     "decode": "complete, exit 0",
     "sha256": "b7503d0b1646ecb67ac52508507a1ac11491960fd8e72d60d5bf07c51717afd6"
   },
-  "source": "Existing verified measurements; no new training or network measurements for this revision."
+  "source": "Existing verified measurements; no new training or network measurements for this revision.",
+  "revision": "20260930r2"
 }

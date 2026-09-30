@@ -1,21 +1,23 @@
 {
   "date": "2026-09-30",
-  "pages": 20,
+  "pages": 21,
   "front_matter_pages": 5,
-  "body_and_references_pages": 15,
+  "body_and_references_pages": 16,
   "overview_pages": 1,
   "figures": 5,
   "tables": 8,
-  "equations": 4,
-  "pdf_sha256": "94e57949d99c6609c31b419a4d54c98095152c38beb8a2fb3201157509685be9",
+  "equations": 5,
+  "pdf_sha256": "3517af185a92429aaff3ac630770d815de7d830763d197607cbce3420f9a4a2b",
   "new_experiments": false,
   "original_unchanged": true,
-  "visual_qa": "All 20 final report pages and the one-page overview inspected after rendering.",
+  "visual_qa": "All 21 final pages inspected; unchanged pages 7, 8, 9, 11 and 12 confirmed byte-identical to inspected previous render.",
   "changes": [
-    "Official final-report hierarchy and figure/table lists",
-    "Privacy -> FL -> resource constraints -> SFL -> stragglers",
-    "Submodel width, channel selection and LoRA rank distinguished",
-    "KOREN and Jetson sources retained; local demonstrations identified separately",
-    "High-resolution network diagram and one-page overview"
-  ]
+    "Path-conditioned width decisions replace feature-list contributions",
+    "Shared-capacity model, width penalty and adoption threshold explained",
+    "Capacity-change width hold, movement limits and restoration hysteresis explained",
+    "Actual framing, persistent TCP, reassembly and completion handling described",
+    "All experiment and reference pages preserved; no new measurements"
+  ],
+  "previous_pdf_sha256": "94e57949d99c6609c31b419a4d54c98095152c38beb8a2fb3201157509685be9",
+  "revision": "20260930r2"
 }
