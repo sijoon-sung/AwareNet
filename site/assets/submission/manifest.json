@@ -116,6 +116,10 @@
     "assets/report-20261001-r5.pdf": {
       "bytes": 1071392,
       "sha256": "643187567c1bc5204faa161619751f6ab4fe853b9131b322d50d3289d97359f3"
+    },
+    "assets/experiments-20261001.pdf": {
+      "bytes": 145945,
+      "sha256": "3e4f3c1deff0edf4b0774b35074a71efd8a6bd4b50a9c962af6a3c483161f592"
     }
   },
   "video": {
