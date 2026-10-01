@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "pages": 24,
   "front_matter_pages": 5,
   "body_and_references_pages": 19,
@@ -7,17 +7,22 @@
   "figures": 6,
   "tables": 10,
   "equations": 6,
-  "pdf_sha256": "02f610c1f6b08bc766627dbc57f83761c13c0880f55710e6854f795086dba7dd",
+  "pdf_sha256": "77724195843e488f5e190c46d98a526f8222e8000b3be13d58a9fe0e9e6d5c64",
   "new_experiments": false,
   "original_unchanged": true,
-  "visual_qa": "Changed report pages 4, 5, 16, 17, 18 and 24 and the overview visually inspected. Other report page bodies pixel-identical to the previously inspected revision; updated page fields checked.",
+  "visual_qa": "All 18 changed report pages and the one-page overview visually inspected. Six unchanged report pages pixel-identical to the previously inspected release. Final diagram update affects only page 11.",
   "changes": [
-    "KOREN rationale and practical benefits in report III-2 and overview",
-    "Conditional T-SDN and L2VPN extensions, with service-guide reference",
-    "Updated contents and page fields; experiment values preserved"
+    "Shorter explanations and paragraphs in report and overview; simpler terminology without changing evidence",
+    "Matching plain-language labels in the control-flow figure",
+    "Report remains 24 pages with 6 equations, 6 figures and 10 tables; overview remains one page"
   ],
-  "previous_pdf_sha256": "abd27bab48e5382f79d2ba64c6bdf1a0cf6e73eaf5cab32a8f67906addac20b4",
-  "revision": "20260930r4",
-  "feedback_items": 19,
-  "code_checked": true
+  "previous_pdf_sha256": "02f610c1f6b08bc766627dbc57f83761c13c0880f55710e6854f795086dba7dd",
+  "revision": "20261001r1",
+  "feedback_items": 20,
+  "code_checked": true,
+  "editorial_summary": {
+    "edited_paragraphs": 79,
+    "added_paragraph_breaks": 10,
+    "edited_prose_reduction_percent": 7.5
+  }
 }

@@ -1,13 +1,13 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "artifacts": {
     "assets/report.pdf": {
-      "bytes": 984565,
-      "sha256": "02f610c1f6b08bc766627dbc57f83761c13c0880f55710e6854f795086dba7dd"
+      "bytes": 969323,
+      "sha256": "77724195843e488f5e190c46d98a526f8222e8000b3be13d58a9fe0e9e6d5c64"
     },
     "assets/submission/overview.pdf": {
-      "bytes": 208280,
-      "sha256": "075860d19e917fb7fba54a779e0e5d80c1687e79a0533ae874e882892a74f4be"
+      "bytes": 209143,
+      "sha256": "857405a665e649debafaade1983b189ee9288825e92d7d50702dcd28a4b5d2a2"
     },
     "assets/demo/final-evaluation-demo.mp4": {
       "bytes": 5212539,
@@ -30,16 +30,16 @@
       "sha256": "c3e1002cf7b183cbe5b74e533cc78c8386f95cf10e4162ce0a9fec81c8c20652"
     },
     "assets/submission/AwareNet-final-materials.zip": {
-      "bytes": 8895686,
-      "sha256": "07bd44003d4fb49abc049a6bd7c89a6923df2e11a7ecb2fc6f6ec105c1f1c889"
+      "bytes": 8824077,
+      "sha256": "c1f161ddb467aa13abf9070c36d4ae5f0ccf306d156e0d39754761263c64c205"
     },
     "assets/submission/pipeline.svg": {
-      "bytes": 5006,
-      "sha256": "0326b467cb1c5d9e8ec57732625ebf4f39467890d97304eb37762485343f1cc8"
+      "bytes": 4921,
+      "sha256": "fbabfc6f2109dde11d29efa479152b454ed905335a638aa79ef4b614731f4b2f"
     },
     "assets/submission/pipeline-hires.png": {
-      "bytes": 220807,
-      "sha256": "276e5f1ecf14b4506909fe7084ba2ddf25dda207334f5c405f9ce2f2d0df9ec1"
+      "bytes": 136616,
+      "sha256": "054ebd6dc7ce6e2d20efaac141f69b47756c29773e77bcaa01ffd56a65fe1305"
     },
     "assets/submission/multipath.svg": {
       "bytes": 10940,
@@ -62,12 +62,12 @@
       "sha256": "653d3ad0e55f91dfe8ba6d93605e313f7aaa3f8127c8c145aa9a9d7261ac914d"
     },
     "assets/submission/feedback-review.html": {
-      "bytes": 8264,
-      "sha256": "05c6440ecaf6ffa468b4722d36d20fb75f22d8f42960d86a25facd56e882db48"
+      "bytes": 8785,
+      "sha256": "a15306c2b5f711dca368aab3dad29bb44f41920e2a491e05ed81d5f02acfb734"
     },
     "assets/submission/feedback-audit.json": {
-      "bytes": 8759,
-      "sha256": "a7f4c4185436eec17d28df260265fe82a332841b0c975b96861d4af701bc5b93"
+      "bytes": 9350,
+      "sha256": "9fecedc7ad000772b849916ccad3c002f08073196b0c0e3d0c0363e691d3f030"
     },
     "assets/demo/final-poster.png": {
       "bytes": 368086,
@@ -90,8 +90,8 @@
       "sha256": "d7603f870ed05f98299de9f16a8f55812a3b2135465b500a12e95f053beaed4a"
     },
     "assets/report-revision.json": {
-      "bytes": 956,
-      "sha256": "e9a6e0ff94d1ba058abc771979a19297cd88d4f76a36ba733109918cf7c52b08"
+      "bytes": 1161,
+      "sha256": "b3080afc131cca94fd51cd684128ad39b8475b75a006b130feae789effae61dc"
     }
   },
   "video": {
@@ -104,5 +104,5 @@
     "sha256": "a8a4491601f81b5912af404937c9ef39ff8b053fed74fd95ed732b6e6b05fedb"
   },
   "source": "Existing verified measurements; no new training or network measurements for this revision.",
-  "revision": "20260930r4"
+  "revision": "20261001r1"
 }

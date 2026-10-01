@@ -1,6 +1,6 @@
 {
   "report_pages": 24,
-  "checked_items": 19,
+  "checked_items": 20,
   "items": [
     {
       "request": "기능 나열을 기여 논증으로 변경",
@@ -134,6 +134,13 @@
       "location": "16쪽·과제 개요",
       "revision": "변동 요인을 통제한 반복 비교, 원격 VM·HPC의 실제 전송·학습 비용, 양호한 망의 동시 전송 병목을 연결. T-SDN·L2VPN은 이번 실험 미적용인 후속 확장으로 기술.",
       "evidence": "NIA KOREN 이용안내서 6–9쪽; KOREN line_scale 원로그"
+    },
+    {
+      "request": "전문용어와 문장 밀도 완화",
+      "previous": "한 문장에 개념과 구현 용어가 몰려 읽기 어려움",
+      "location": "요약문·본문·과제 개요",
+      "revision": "79개 문단의 표현을 다듬고 긴 문단 10곳을 나눔. 수정 문장의 분량을 7.5% 줄이고, 제어 그림의 표기도 상태 측정 → 설정 선택 → 실행·결과 수집으로 통일.",
+      "evidence": "수식 6개·표 10개·그림 6개와 실험 조건·결과 수치 유지. 보고서 24쪽·개요 1쪽의 PDF 배치 확인."
     }
   ],
   "corrected_examples": [
