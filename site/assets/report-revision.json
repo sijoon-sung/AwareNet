@@ -7,22 +7,17 @@
   "figures": 6,
   "tables": 10,
   "equations": 6,
-  "pdf_sha256": "d6f3629ee0278dc5610f73cfd6b48b52d197375f0d930b073a41566c95d41a2d",
-  "new_experiments": false,
+  "pdf_sha256": "68d614121497fe72f97b66e0d24b6de5a29c4e866474919d9a659f3673b19e88",
+  "new_experiments": true,
   "original_unchanged": true,
-  "visual_qa": "Changed report pages 10 and 20 visually inspected; the other 22 pages are pixel-identical to the previously inspected release. All equations and tables preserved.",
+  "visual_qa": "All 24 report pages and the one-page overview rendered and visually reviewed; six native equations and six figures retained.",
   "changes": [
-    "Explain lambda as a user-set model-reduction cost, its direction and time unit",
-    "Add a numerical decision example below the equations and a reminder before the results table",
-    "Preserve 24-page structure, native equations and measured results"
+    "Explain model width, relay assignment and tensor chunking together",
+    "Correct uncapped KOREN premeasurement and endpoint control scope",
+    "Add Fashion-MNIST learning and equal-connection diagnostic evidence; distinguish pending chunk-tail comparison"
   ],
-  "previous_pdf_sha256": "77724195843e488f5e190c46d98a526f8222e8000b3be13d58a9fe0e9e6d5c64",
-  "revision": "20261001r2",
-  "feedback_items": 21,
-  "code_checked": true,
-  "editorial_summary": {
-    "edited_paragraphs": 79,
-    "added_paragraph_breaks": 10,
-    "edited_prose_reduction_percent": 7.5
-  }
+  "previous_pdf_sha256": "d6f3629ee0278dc5610f73cfd6b48b52d197375f0d930b073a41566c95d41a2d",
+  "revision": "20261001r3",
+  "feedback_items": 22,
+  "code_checked": true
 }

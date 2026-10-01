@@ -1,0 +1,10 @@
+{
+  "seed": 41,
+  "arm": "prefix",
+  "correct": 6912,
+  "test_count": 10000,
+  "accuracy": 0.6912,
+  "training_wall_s": 8.427007099962793,
+  "activation_gradient_bytes": 2312110080,
+  "initial_sha256": "6a6ac5d445571c5a4063492db8dd2e132f7fbd3b53931f47e585091fd2589690"
+}

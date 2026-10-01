@@ -1,0 +1,10 @@
+{
+  "seed": 43,
+  "arm": "rolling",
+  "correct": 6872,
+  "test_count": 10000,
+  "accuracy": 0.6872,
+  "training_wall_s": 8.499745000037365,
+  "activation_gradient_bytes": 2312110080,
+  "initial_sha256": "9d01a96190cdd1993c27759c8685cba5da20c6fdfca6f1ac8a55ee1ed2720d9d"
+}

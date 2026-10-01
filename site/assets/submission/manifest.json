@@ -2,12 +2,12 @@
   "date": "2026-10-01",
   "artifacts": {
     "assets/report.pdf": {
-      "bytes": 972513,
-      "sha256": "d6f3629ee0278dc5610f73cfd6b48b52d197375f0d930b073a41566c95d41a2d"
+      "bytes": 969710,
+      "sha256": "68d614121497fe72f97b66e0d24b6de5a29c4e866474919d9a659f3673b19e88"
     },
     "assets/submission/overview.pdf": {
-      "bytes": 209143,
-      "sha256": "857405a665e649debafaade1983b189ee9288825e92d7d50702dcd28a4b5d2a2"
+      "bytes": 208216,
+      "sha256": "1fbeb78bdc98de5e2e8003b85c078fab2ea7cc52baab2c03c4f7acfe5e0bc214"
     },
     "assets/demo/final-evaluation-demo.mp4": {
       "bytes": 5212539,
@@ -30,8 +30,8 @@
       "sha256": "c3e1002cf7b183cbe5b74e533cc78c8386f95cf10e4162ce0a9fec81c8c20652"
     },
     "assets/submission/AwareNet-final-materials.zip": {
-      "bytes": 8827044,
-      "sha256": "41f6d41cadad945e1f444132fe44c63161ad2a6c597f1e3001168211b3caef95"
+      "bytes": 11011650,
+      "sha256": "7d868c224173eadaacd85c7236332b42ad68153fc12c2b4791437221d9b93cb3"
     },
     "assets/submission/pipeline.svg": {
       "bytes": 4921,
@@ -62,12 +62,12 @@
       "sha256": "653d3ad0e55f91dfe8ba6d93605e313f7aaa3f8127c8c145aa9a9d7261ac914d"
     },
     "assets/submission/feedback-review.html": {
-      "bytes": 9302,
-      "sha256": "1cb9cf0961884d26d14480a1a36793f5a40ebf3b0aad202b97a05ae23c75d869"
+      "bytes": 9734,
+      "sha256": "cae177be156c6862091ae2c3aeb70287f62f523dec5919ec251eb386cf7c2730"
     },
     "assets/submission/feedback-audit.json": {
-      "bytes": 9931,
-      "sha256": "eab80e34f57248339df90bc6f516bdd8d5dfb16eefb73c0d83681809c8a22152"
+      "bytes": 10507,
+      "sha256": "969cd47090f25dde4e0887a843ed104ae4ad080291402017e81585522059757f"
     },
     "assets/demo/final-poster.png": {
       "bytes": 368086,
@@ -90,8 +90,12 @@
       "sha256": "d7603f870ed05f98299de9f16a8f55812a3b2135465b500a12e95f053beaed4a"
     },
     "assets/report-revision.json": {
-      "bytes": 1108,
-      "sha256": "4fdee5be1539fd4fa20072f4b5427396cde32b7feb834ca499189321f8ec733f"
+      "bytes": 934,
+      "sha256": "8a2be2eb942a5f9b145544103b206838d6b7d027088cd446436ee4e521e08f09"
+    },
+    "assets/awarenet_followup_20261001.zip": {
+      "bytes": 2195470,
+      "sha256": "25fe7104959e780d9d679e8e112c473a7698f900e17ad22d21c8f97bf34ffd26"
     }
   },
   "video": {
@@ -104,5 +108,5 @@
     "sha256": "a8a4491601f81b5912af404937c9ef39ff8b053fed74fd95ed732b6e6b05fedb"
   },
   "source": "Existing verified measurements; no new training or network measurements for this revision.",
-  "revision": "20261001r2"
+  "revision": "20261001r3"
 }

@@ -1,0 +1,85 @@
+{
+  "kind": "new_local_paced_tcp_diagnostic",
+  "scenarios": {
+    "relay_congestion": {
+      "cpu": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "caps": [
+        64000000.0,
+        192000000.0
+      ],
+      "access": [
+        800000000.0,
+        800000000.0
+      ]
+    },
+    "compute_straggler": {
+      "cpu": [
+        1.6,
+        0.01,
+        0.01
+      ],
+      "caps": [
+        192000000.0,
+        192000000.0
+      ],
+      "access": [
+        800000000.0,
+        800000000.0
+      ]
+    },
+    "access_limited": {
+      "cpu": [
+        0.01,
+        0.01,
+        0.01
+      ],
+      "caps": [
+        192000000.0,
+        192000000.0
+      ],
+      "access": [
+        6400000.0,
+        6400000.0
+      ]
+    },
+    "mixed": {
+      "cpu": [
+        1.6,
+        0.01,
+        0.01
+      ],
+      "caps": [
+        64000000.0,
+        192000000.0
+      ],
+      "access": [
+        800000000.0,
+        800000000.0
+      ]
+    }
+  },
+  "policies": [
+    "fixed",
+    "balanced",
+    "path",
+    "width",
+    "independent",
+    "joint"
+  ],
+  "lambda_s": 2.0,
+  "repeats": 3,
+  "connections_per_client": 2,
+  "clients": 3,
+  "payload_bytes_full": 4194304,
+  "assumptions": "known synthetic profiles; compute via sleep; application-paced TCP receive; fresh sockets per measurement",
+  "exclusions": "no training, production transport, KOREN, kernel qdisc, convergence or accuracy evidence",
+  "primary": "measured completion and retained width, all scenarios including ties or regressions",
+  "source_sha256": {
+    "sfl/plan.py": "b722f89f187e7a0d0afbce477d5d5d5f0421a068329b2ab68c2823852d82b05d",
+    "scripts/analysis/equal_connection_probe.py": "19533068d80e5b219d7e52f27e4e4d653ef080b18cf522aa1b3f4b82b18c4ee5"
+  }
+}

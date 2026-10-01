@@ -1,0 +1,92 @@
+[
+  {
+    "seed": 41,
+    "arm": "full",
+    "correct": 8207,
+    "test_count": 10000,
+    "accuracy": 0.8207,
+    "training_wall_s": 53.19014560000505,
+    "activation_gradient_bytes": 15414067200,
+    "initial_sha256": "6a6ac5d445571c5a4063492db8dd2e132f7fbd3b53931f47e585091fd2589690"
+  },
+  {
+    "seed": 41,
+    "arm": "prefix",
+    "correct": 8138,
+    "test_count": 10000,
+    "accuracy": 0.8138,
+    "training_wall_s": 45.10246179997921,
+    "activation_gradient_bytes": 11560550400,
+    "initial_sha256": "6a6ac5d445571c5a4063492db8dd2e132f7fbd3b53931f47e585091fd2589690"
+  },
+  {
+    "seed": 41,
+    "arm": "rolling",
+    "correct": 8148,
+    "test_count": 10000,
+    "accuracy": 0.8148,
+    "training_wall_s": 44.54245670000091,
+    "activation_gradient_bytes": 11560550400,
+    "initial_sha256": "6a6ac5d445571c5a4063492db8dd2e132f7fbd3b53931f47e585091fd2589690"
+  },
+  {
+    "seed": 42,
+    "arm": "prefix",
+    "correct": 8243,
+    "test_count": 10000,
+    "accuracy": 0.8243,
+    "training_wall_s": 45.26414460001979,
+    "activation_gradient_bytes": 11560550400,
+    "initial_sha256": "4b582b9db0315df6b14f8a16bed67af34a24d07508a480ac6dace0bd37520295"
+  },
+  {
+    "seed": 42,
+    "arm": "rolling",
+    "correct": 8055,
+    "test_count": 10000,
+    "accuracy": 0.8055,
+    "training_wall_s": 42.95679460000247,
+    "activation_gradient_bytes": 11560550400,
+    "initial_sha256": "4b582b9db0315df6b14f8a16bed67af34a24d07508a480ac6dace0bd37520295"
+  },
+  {
+    "seed": 42,
+    "arm": "full",
+    "correct": 8326,
+    "test_count": 10000,
+    "accuracy": 0.8326,
+    "training_wall_s": 56.25295210001059,
+    "activation_gradient_bytes": 15414067200,
+    "initial_sha256": "4b582b9db0315df6b14f8a16bed67af34a24d07508a480ac6dace0bd37520295"
+  },
+  {
+    "seed": 43,
+    "arm": "rolling",
+    "correct": 8170,
+    "test_count": 10000,
+    "accuracy": 0.817,
+    "training_wall_s": 45.04189769993536,
+    "activation_gradient_bytes": 11560550400,
+    "initial_sha256": "9d01a96190cdd1993c27759c8685cba5da20c6fdfca6f1ac8a55ee1ed2720d9d"
+  },
+  {
+    "seed": 43,
+    "arm": "full",
+    "correct": 8225,
+    "test_count": 10000,
+    "accuracy": 0.8225,
+    "training_wall_s": 53.696462200023234,
+    "activation_gradient_bytes": 15414067200,
+    "initial_sha256": "9d01a96190cdd1993c27759c8685cba5da20c6fdfca6f1ac8a55ee1ed2720d9d"
+  },
+  {
+    "seed": 43,
+    "arm": "prefix",
+    "correct": 8276,
+    "test_count": 10000,
+    "accuracy": 0.8276,
+    "training_wall_s": 43.72532969992608,
+    "activation_gradient_bytes": 11560550400,
+    "initial_sha256": "9d01a96190cdd1993c27759c8685cba5da20c6fdfca6f1ac8a55ee1ed2720d9d"
+  }
+]

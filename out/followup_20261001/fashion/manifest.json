@@ -1,0 +1,50 @@
+{
+  "kind": "new_local_training_pilot",
+  "dataset": "Fashion-MNIST",
+  "source": "https://github.com/zalandoresearch/fashion-mnist",
+  "train_count": 60000,
+  "test_count": 10000,
+  "torch": "2.6.0+cu124",
+  "python": "3.12.14",
+  "device": "NVIDIA GeForce RTX 3080",
+  "model": "repository split ResNet18",
+  "cut": 2,
+  "normalization": "GroupNorm",
+  "batch": 32,
+  "rounds": 20,
+  "steps": 8,
+  "seeds": [
+    41,
+    42,
+    43
+  ],
+  "clients": 3,
+  "partition": "disjoint stratified IID",
+  "optimizer": "Adam lr=0.0006, reset per client per round",
+  "input": "28x28 grayscale replicated to RGB, normalized (x/255-0.5)/0.5",
+  "arms": {
+    "full": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "prefix": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "rolling": [
+      0.5,
+      0.75,
+      1.0
+    ]
+  },
+  "evaluation": "full global model on all 10000 official test samples after fixed final round",
+  "network": "in-process activation/gradient handoff, no network or KOREN measurement",
+  "primary": "final test accuracy; paired differences across three seeds",
+  "secondary": "actual local sequential training wall time and activation payload bytes",
+  "code_sha256": {
+    "sfl/models.py": "3623eace59acda8c32b1dfb70332cba5eef35bab8b605cb65b76aff2a186fd59",
+    "scripts/analysis/fashion_followup.py": "464712594b535e136d837108d8be98c6925a67a10145cfe171d9ec2b3d13d790"
+  }
+}
