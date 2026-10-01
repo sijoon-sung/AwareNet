@@ -7,17 +7,16 @@
   "figures": 6,
   "tables": 12,
   "equations": 6,
-  "pdf_sha256": "b8b22aecfff7fb50b18c2124292c55c19535f02976e579636bc552a0401706b8",
+  "pdf_sha256": "643187567c1bc5204faa161619751f6ab4fe853b9131b322d50d3289d97359f3",
   "new_experiments": false,
   "original_unchanged": true,
-  "visual_qa": "Rendered 26-page report and one-page overview; checked changed text and new tables. Existing logs reaggregated, no new training in this revision.",
+  "visual_qa": "Updated table of contents and feature-comparison page rendered and visually checked.",
   "changes": [
-    "Clarify application-level relay control and future SDN switch integration",
-    "Add model/dataset/results/evidence table",
-    "Add historical actual-training feature ablation and original logs"
+    "Remove accuracy from the historical feature comparison table and its interpretation",
+    "Retain original evidence and separate long-training quality evaluation"
   ],
-  "previous_pdf_sha256": "68d614121497fe72f97b66e0d24b6de5a29c4e866474919d9a659f3673b19e88",
-  "revision": "20261001r4",
+  "previous_pdf_sha256": "b8b22aecfff7fb50b18c2124292c55c19535f02976e579636bc552a0401706b8",
+  "revision": "20261001r5",
   "feedback_items": 23,
   "code_checked": true
 }
