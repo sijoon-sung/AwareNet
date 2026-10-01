@@ -2,8 +2,8 @@
   "date": "2026-10-01",
   "artifacts": {
     "assets/report.pdf": {
-      "bytes": 969323,
-      "sha256": "77724195843e488f5e190c46d98a526f8222e8000b3be13d58a9fe0e9e6d5c64"
+      "bytes": 972513,
+      "sha256": "d6f3629ee0278dc5610f73cfd6b48b52d197375f0d930b073a41566c95d41a2d"
     },
     "assets/submission/overview.pdf": {
       "bytes": 209143,
@@ -30,8 +30,8 @@
       "sha256": "c3e1002cf7b183cbe5b74e533cc78c8386f95cf10e4162ce0a9fec81c8c20652"
     },
     "assets/submission/AwareNet-final-materials.zip": {
-      "bytes": 8824077,
-      "sha256": "c1f161ddb467aa13abf9070c36d4ae5f0ccf306d156e0d39754761263c64c205"
+      "bytes": 8827044,
+      "sha256": "41f6d41cadad945e1f444132fe44c63161ad2a6c597f1e3001168211b3caef95"
     },
     "assets/submission/pipeline.svg": {
       "bytes": 4921,
@@ -62,12 +62,12 @@
       "sha256": "653d3ad0e55f91dfe8ba6d93605e313f7aaa3f8127c8c145aa9a9d7261ac914d"
     },
     "assets/submission/feedback-review.html": {
-      "bytes": 8785,
-      "sha256": "a15306c2b5f711dca368aab3dad29bb44f41920e2a491e05ed81d5f02acfb734"
+      "bytes": 9302,
+      "sha256": "1cb9cf0961884d26d14480a1a36793f5a40ebf3b0aad202b97a05ae23c75d869"
     },
     "assets/submission/feedback-audit.json": {
-      "bytes": 9350,
-      "sha256": "9fecedc7ad000772b849916ccad3c002f08073196b0c0e3d0c0363e691d3f030"
+      "bytes": 9931,
+      "sha256": "eab80e34f57248339df90bc6f516bdd8d5dfb16eefb73c0d83681809c8a22152"
     },
     "assets/demo/final-poster.png": {
       "bytes": 368086,
@@ -90,8 +90,8 @@
       "sha256": "d7603f870ed05f98299de9f16a8f55812a3b2135465b500a12e95f053beaed4a"
     },
     "assets/report-revision.json": {
-      "bytes": 1161,
-      "sha256": "b3080afc131cca94fd51cd684128ad39b8475b75a006b130feae789effae61dc"
+      "bytes": 1108,
+      "sha256": "4fdee5be1539fd4fa20072f4b5427396cde32b7feb834ca499189321f8ec733f"
     }
   },
   "video": {
@@ -104,5 +104,5 @@
     "sha256": "a8a4491601f81b5912af404937c9ef39ff8b053fed74fd95ed732b6e6b05fedb"
   },
   "source": "Existing verified measurements; no new training or network measurements for this revision.",
-  "revision": "20261001r1"
+  "revision": "20261001r2"
 }

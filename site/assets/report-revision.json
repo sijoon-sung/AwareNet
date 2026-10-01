@@ -7,18 +7,18 @@
   "figures": 6,
   "tables": 10,
   "equations": 6,
-  "pdf_sha256": "77724195843e488f5e190c46d98a526f8222e8000b3be13d58a9fe0e9e6d5c64",
+  "pdf_sha256": "d6f3629ee0278dc5610f73cfd6b48b52d197375f0d930b073a41566c95d41a2d",
   "new_experiments": false,
   "original_unchanged": true,
-  "visual_qa": "All 18 changed report pages and the one-page overview visually inspected. Six unchanged report pages pixel-identical to the previously inspected release. Final diagram update affects only page 11.",
+  "visual_qa": "Changed report pages 10 and 20 visually inspected; the other 22 pages are pixel-identical to the previously inspected release. All equations and tables preserved.",
   "changes": [
-    "Shorter explanations and paragraphs in report and overview; simpler terminology without changing evidence",
-    "Matching plain-language labels in the control-flow figure",
-    "Report remains 24 pages with 6 equations, 6 figures and 10 tables; overview remains one page"
+    "Explain lambda as a user-set model-reduction cost, its direction and time unit",
+    "Add a numerical decision example below the equations and a reminder before the results table",
+    "Preserve 24-page structure, native equations and measured results"
   ],
-  "previous_pdf_sha256": "02f610c1f6b08bc766627dbc57f83761c13c0880f55710e6854f795086dba7dd",
-  "revision": "20261001r1",
-  "feedback_items": 20,
+  "previous_pdf_sha256": "77724195843e488f5e190c46d98a526f8222e8000b3be13d58a9fe0e9e6d5c64",
+  "revision": "20261001r2",
+  "feedback_items": 21,
   "code_checked": true,
   "editorial_summary": {
     "edited_paragraphs": 79,
