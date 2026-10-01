@@ -96,6 +96,10 @@
     "assets/awarenet_followup_20261001.zip": {
       "bytes": 2195470,
       "sha256": "25fe7104959e780d9d679e8e112c473a7698f900e17ad22d21c8f97bf34ffd26"
+    },
+    "assets/report-20261001-r3.pdf": {
+      "bytes": 969710,
+      "sha256": "68d614121497fe72f97b66e0d24b6de5a29c4e866474919d9a659f3673b19e88"
     }
   },
   "video": {
