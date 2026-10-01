@@ -159,3 +159,6 @@ docs/
 ## 코드 지도
 
 코드 구조는 [`sfl/ARCHITECTURE.md`](../sfl/ARCHITECTURE.md) 참조.
+
+
+**모델별 실험·기능 비교:** [학습 비교표와 원자료](https://sijoon-sung.github.io/AwareNet/site/comparisons.html). 보고서 22–23쪽에 실제 8클라이언트 학습의 기능 활성화 비교를 수록했다. 현재 제어는 응용 계층의 중계 선택이며, SDN 스위치 연동은 후속 검증 대상이다.

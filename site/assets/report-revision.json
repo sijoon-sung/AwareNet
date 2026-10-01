@@ -1,23 +1,23 @@
 {
   "date": "2026-10-01",
-  "pages": 24,
+  "pages": 26,
   "front_matter_pages": 5,
-  "body_and_references_pages": 19,
+  "body_and_references_pages": 21,
   "overview_pages": 1,
   "figures": 6,
-  "tables": 10,
+  "tables": 12,
   "equations": 6,
-  "pdf_sha256": "68d614121497fe72f97b66e0d24b6de5a29c4e866474919d9a659f3673b19e88",
-  "new_experiments": true,
+  "pdf_sha256": "b8b22aecfff7fb50b18c2124292c55c19535f02976e579636bc552a0401706b8",
+  "new_experiments": false,
   "original_unchanged": true,
-  "visual_qa": "All 24 report pages and the one-page overview rendered and visually reviewed; six native equations and six figures retained.",
+  "visual_qa": "Rendered 26-page report and one-page overview; checked changed text and new tables. Existing logs reaggregated, no new training in this revision.",
   "changes": [
-    "Explain model width, relay assignment and tensor chunking together",
-    "Correct uncapped KOREN premeasurement and endpoint control scope",
-    "Add Fashion-MNIST learning and equal-connection diagnostic evidence; distinguish pending chunk-tail comparison"
+    "Clarify application-level relay control and future SDN switch integration",
+    "Add model/dataset/results/evidence table",
+    "Add historical actual-training feature ablation and original logs"
   ],
-  "previous_pdf_sha256": "d6f3629ee0278dc5610f73cfd6b48b52d197375f0d930b073a41566c95d41a2d",
-  "revision": "20261001r3",
-  "feedback_items": 22,
+  "previous_pdf_sha256": "68d614121497fe72f97b66e0d24b6de5a29c4e866474919d9a659f3673b19e88",
+  "revision": "20261001r4",
+  "feedback_items": 23,
   "code_checked": true
 }

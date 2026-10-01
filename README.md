@@ -103,3 +103,6 @@ python -m http.server 8000 --directory site
 - `docs/`: 현재 제출 원고, 과거 실험·설계 기록 및 문서 색인
 
 이 공개 저장소는 비공개 개발 저장소의 `awarenet` 작업본을 별도로 게시한다. 원시 측정 파일과 과거 실측값을 주입한 재현 파일은 [출처 원장](configs/measurements/publication_evidence_2026-09-27.json)에 따라 구분해 보존한다.
+
+
+**모델별 실험·기능 비교:** [학습 비교표와 원자료](https://sijoon-sung.github.io/AwareNet/site/comparisons.html). 보고서 22–23쪽에 실제 8클라이언트 학습의 기능 활성화 비교를 수록했다. 현재 제어는 응용 계층의 중계 선택이며, SDN 스위치 연동은 후속 검증 대상이다.

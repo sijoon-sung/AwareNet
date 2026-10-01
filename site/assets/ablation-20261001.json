@@ -1,0 +1,366 @@
+{
+  "scope": "Historical actual ResNet18/CNN training; fixed 10-second target, not current lambda policy. Multipath changes connection budget. No causal chunk-only claim.",
+  "conditions": {
+    "clients": 8,
+    "rounds": 24,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "dataset": "CIFAR-10",
+    "time_round_indices": "10..23",
+    "accuracy_round_indices": "4..23",
+    "path_mbps": [
+      125,
+      125,
+      125,
+      125
+    ],
+    "deadline_s": 10
+  },
+  "rows": [
+    {
+      "label": "기준 방식",
+      "width_control": "끔",
+      "path_control": "고정",
+      "multipath": "끔",
+      "time_s": 18.946404761904763,
+      "mean_width": 1.0,
+      "accuracy_pct": 24.613333333333333,
+      "seeds": [
+        {
+          "seed": 1,
+          "time_s": 19.418785714285715,
+          "width": 1.0,
+          "accuracy_pct": 22.56,
+          "source": "out/wp_r8mix_rho1_s1_bothmp_uniform.jsonl"
+        },
+        {
+          "seed": 2,
+          "time_s": 18.858357142857145,
+          "width": 1.0,
+          "accuracy_pct": 25.1725,
+          "source": "out/wp_r8mix_rho1_s2_bothmp_uniform.jsonl"
+        },
+        {
+          "seed": 3,
+          "time_s": 18.56207142857143,
+          "width": 1.0,
+          "accuracy_pct": 26.1075,
+          "source": "out/wp_r8mix_rho1_s3_bothmp_uniform.jsonl"
+        }
+      ]
+    },
+    {
+      "label": "폭만",
+      "width_control": "켬",
+      "path_control": "고정",
+      "multipath": "끔",
+      "time_s": 9.363333333333333,
+      "mean_width": 0.5677083333333334,
+      "accuracy_pct": 17.335833333333333,
+      "seeds": [
+        {
+          "seed": 1,
+          "time_s": 8.974285714285715,
+          "width": 0.53125,
+          "accuracy_pct": 16.71,
+          "source": "out/wp_r8mix_rho1_s1_width3_widthpath.jsonl"
+        },
+        {
+          "seed": 2,
+          "time_s": 9.6225,
+          "width": 0.578125,
+          "accuracy_pct": 17.0825,
+          "source": "out/wp_r8mix_rho1_s2_width3_widthpath.jsonl"
+        },
+        {
+          "seed": 3,
+          "time_s": 9.493214285714286,
+          "width": 0.59375,
+          "accuracy_pct": 18.215,
+          "source": "out/wp_r8mix_rho1_s3_width3_widthpath.jsonl"
+        }
+      ]
+    },
+    {
+      "label": "경로+분할",
+      "width_control": "끔",
+      "path_control": "켬",
+      "multipath": "켬",
+      "time_s": 14.481666666666667,
+      "mean_width": 1.0,
+      "accuracy_pct": 26.388333333333335,
+      "seeds": [
+        {
+          "seed": 1,
+          "time_s": 15.389142857142858,
+          "width": 1.0,
+          "accuracy_pct": 25.5375,
+          "source": "out/wp_r8mix_rho1_s1_mp_widthpath.jsonl"
+        },
+        {
+          "seed": 2,
+          "time_s": 14.127285714285714,
+          "width": 1.0,
+          "accuracy_pct": 27.425,
+          "source": "out/wp_r8mix_rho1_s2_mp_widthpath.jsonl"
+        },
+        {
+          "seed": 3,
+          "time_s": 13.928571428571429,
+          "width": 1.0,
+          "accuracy_pct": 26.2025,
+          "source": "out/wp_r8mix_rho1_s3_mp_widthpath.jsonl"
+        }
+      ]
+    },
+    {
+      "label": "폭+경로",
+      "width_control": "켬",
+      "path_control": "켬",
+      "multipath": "끔",
+      "time_s": 9.224642857142857,
+      "mean_width": 0.8132440476190477,
+      "accuracy_pct": 23.049166666666665,
+      "seeds": [
+        {
+          "seed": 1,
+          "time_s": 10.032714285714286,
+          "width": 0.7522321428571429,
+          "accuracy_pct": 19.1375,
+          "source": "out/wp_r8mix_rho1_s1_both3_widthpath.jsonl"
+        },
+        {
+          "seed": 2,
+          "time_s": 8.704571428571429,
+          "width": 0.84375,
+          "accuracy_pct": 25.81,
+          "source": "out/wp_r8mix_rho1_s2_both3_widthpath.jsonl"
+        },
+        {
+          "seed": 3,
+          "time_s": 8.936642857142857,
+          "width": 0.84375,
+          "accuracy_pct": 24.2,
+          "source": "out/wp_r8mix_rho1_s3_both3_widthpath.jsonl"
+        }
+      ]
+    },
+    {
+      "label": "폭+경로+분할",
+      "width_control": "켬",
+      "path_control": "켬",
+      "multipath": "켬",
+      "time_s": 9.288142857142857,
+      "mean_width": 0.9270833333333334,
+      "accuracy_pct": 26.323333333333334,
+      "seeds": [
+        {
+          "seed": 1,
+          "time_s": 10.181214285714285,
+          "width": 0.9375,
+          "accuracy_pct": 28.4725,
+          "source": "out/wp_r8mix_rho1_s1_bothmp_widthpath.jsonl"
+        },
+        {
+          "seed": 2,
+          "time_s": 10.11507142857143,
+          "width": 0.9375,
+          "accuracy_pct": 26.22,
+          "source": "out/wp_r8mix_rho1_s2_bothmp_widthpath.jsonl"
+        },
+        {
+          "seed": 3,
+          "time_s": 7.568142857142857,
+          "width": 0.90625,
+          "accuracy_pct": 24.2775,
+          "source": "out/wp_r8mix_rho1_s3_bothmp_widthpath.jsonl"
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "out/wp_r8mix_rho1_s1_both3_widthpath.args.json": {
+      "bytes": 833,
+      "sha256": "fc2ee724bd8188e9e695434480560646c686db2967d2d3cf4ea010da103b8715"
+    },
+    "out/wp_r8mix_rho1_s1_both3_widthpath.jsonl": {
+      "bytes": 68819,
+      "sha256": "5b7f6cf6e3caacf57ed3e127bbe890351672ea8c712ee01f76c586e1a1cf5b96"
+    },
+    "out/wp_r8mix_rho1_s1_both3_widthpath.profile.json": {
+      "bytes": 2388,
+      "sha256": "1f87bc236355e55f8efdbc9c9aa265479e0f275621bfd251aa96f629d7997256"
+    },
+    "out/wp_r8mix_rho1_s1_bothmp_uniform.args.json": {
+      "bytes": 812,
+      "sha256": "06843b51846826a3e20ad52b82d15b98aca202c91136bacf92f7dcdf4544e782"
+    },
+    "out/wp_r8mix_rho1_s1_bothmp_uniform.jsonl": {
+      "bytes": 75188,
+      "sha256": "8b9256d793260833afc679ff2d6a470387c76b525f4cbdf89f8ec7570ad02fdf"
+    },
+    "out/wp_r8mix_rho1_s1_bothmp_uniform.profile.json": {
+      "bytes": 720,
+      "sha256": "b3dff1523fe7487f0636e8d9dcb9a5c187f1cae33f522dbe8d7fbda82a51cfb5"
+    },
+    "out/wp_r8mix_rho1_s1_bothmp_widthpath.args.json": {
+      "bytes": 833,
+      "sha256": "6d992178ac19ed4d62484e15c8878bd232a7bccf93914abdde68651c437d020d"
+    },
+    "out/wp_r8mix_rho1_s1_bothmp_widthpath.jsonl": {
+      "bytes": 76675,
+      "sha256": "f93079c6674473e6e8e9e16756c5b8cb17a3e50b3f1f47d2f91f4f1d2acd88e9"
+    },
+    "out/wp_r8mix_rho1_s1_bothmp_widthpath.profile.json": {
+      "bytes": 2592,
+      "sha256": "8456f42bace10e8edf283d26fa413c392b6c2451828e1717b8c45ac2e2d184cb"
+    },
+    "out/wp_r8mix_rho1_s1_mp_widthpath.args.json": {
+      "bytes": 820,
+      "sha256": "daa0e55c6ade5a6c5b341d088a68f8469dd245f91793b156fed56f90f07da1ed"
+    },
+    "out/wp_r8mix_rho1_s1_mp_widthpath.jsonl": {
+      "bytes": 76943,
+      "sha256": "77255556d71307e6341c0135d8e057f053b8e98f1041965abc6eb2880dc35173"
+    },
+    "out/wp_r8mix_rho1_s1_mp_widthpath.profile.json": {
+      "bytes": 2630,
+      "sha256": "45824df46aa890c379662098ae7898691ea89e7226f57691ec003607df8c0624"
+    },
+    "out/wp_r8mix_rho1_s1_width3_widthpath.args.json": {
+      "bytes": 834,
+      "sha256": "824700e4bffa7db6c061651431bec9e26f89d89375e5481638074c4a7959e27b"
+    },
+    "out/wp_r8mix_rho1_s1_width3_widthpath.jsonl": {
+      "bytes": 68413,
+      "sha256": "5aa228758aa6ba4531b513aac5b6315e40579c9ead44e8331032a0a7b717bd0c"
+    },
+    "out/wp_r8mix_rho1_s1_width3_widthpath.profile.json": {
+      "bytes": 2377,
+      "sha256": "d235c39c3db2105a73c73b9250895fc8edbef285195f340423b684af03e8c047"
+    },
+    "out/wp_r8mix_rho1_s2_both3_widthpath.args.json": {
+      "bytes": 833,
+      "sha256": "df374a9746fa4b8e8caaff82696118cea0aa4800de560620d1fd9120038a8ea1"
+    },
+    "out/wp_r8mix_rho1_s2_both3_widthpath.jsonl": {
+      "bytes": 69024,
+      "sha256": "78ee0380c0e34f3a1d1aa2cd7f0653d9e5d14c266434766470b84331eb30a5a1"
+    },
+    "out/wp_r8mix_rho1_s2_both3_widthpath.profile.json": {
+      "bytes": 2445,
+      "sha256": "0602986fae73461c13a9182c9faa99a7b91fc737dd9d04dddd3f8e139509405b"
+    },
+    "out/wp_r8mix_rho1_s2_bothmp_uniform.args.json": {
+      "bytes": 812,
+      "sha256": "f4ba80caa201e5bfb6de7fc2337cb1263adee24d43996e5c1ee61ef8032cc697"
+    },
+    "out/wp_r8mix_rho1_s2_bothmp_uniform.jsonl": {
+      "bytes": 75211,
+      "sha256": "1740f63a2a7744e15516c485ca6f899432b0b4da372568a14303f1b77c6e9e63"
+    },
+    "out/wp_r8mix_rho1_s2_bothmp_uniform.profile.json": {
+      "bytes": 721,
+      "sha256": "a0b3031de6e9c414cd9e8c182a7ac98e38325e7d48a77b6d1cd1220fd4b48630"
+    },
+    "out/wp_r8mix_rho1_s2_bothmp_widthpath.args.json": {
+      "bytes": 833,
+      "sha256": "c5de2b1991037cb44bd409d7d3cb52b9851c72df055ed6d32e9825fcad8954a3"
+    },
+    "out/wp_r8mix_rho1_s2_bothmp_widthpath.jsonl": {
+      "bytes": 76688,
+      "sha256": "862128d10b6884c1cb1ca17673661fd60affdee25976f75ca48cb0aab6930bf0"
+    },
+    "out/wp_r8mix_rho1_s2_bothmp_widthpath.profile.json": {
+      "bytes": 2631,
+      "sha256": "24e69ed0156bc84bef0f0ea932bb6c1a5f840993f6276aad559f10771edb43d1"
+    },
+    "out/wp_r8mix_rho1_s2_mp_widthpath.args.json": {
+      "bytes": 820,
+      "sha256": "bc89d8bd2e8608dc4a1dd84ad3a549a576296fe60bb724bf8fed65352aa015b4"
+    },
+    "out/wp_r8mix_rho1_s2_mp_widthpath.jsonl": {
+      "bytes": 76847,
+      "sha256": "8edd50e525f4316338a7c1160ae9d259f47b148683852eceb9cc8cb0b0b97460"
+    },
+    "out/wp_r8mix_rho1_s2_mp_widthpath.profile.json": {
+      "bytes": 2592,
+      "sha256": "cd87c81b3919fb441b810cb3c572f5c89910291feaed2b7efde4f15a77549ac7"
+    },
+    "out/wp_r8mix_rho1_s2_width3_widthpath.args.json": {
+      "bytes": 834,
+      "sha256": "8a326c1fef46905a80a2df6f672f6ccc8a20e4671b7f2469bb3928f06bb5e58d"
+    },
+    "out/wp_r8mix_rho1_s2_width3_widthpath.jsonl": {
+      "bytes": 68698,
+      "sha256": "e06fa471874aa9de4c4f44c98d328fdad82dad178e3290afb1ef5c744f8834d9"
+    },
+    "out/wp_r8mix_rho1_s2_width3_widthpath.profile.json": {
+      "bytes": 2324,
+      "sha256": "892f39d2e9c2455a7d060986adb4624fb0c7bf86624d6581070b6a3523d3283d"
+    },
+    "out/wp_r8mix_rho1_s3_both3_widthpath.args.json": {
+      "bytes": 833,
+      "sha256": "378126c70d44091718848bc73163e98f92525c785fdb9afa21ee57b10631a56b"
+    },
+    "out/wp_r8mix_rho1_s3_both3_widthpath.jsonl": {
+      "bytes": 68964,
+      "sha256": "54b94828e7f6987d06c5a38c401147b6d73a0541fe102c098459dad91337a6d4"
+    },
+    "out/wp_r8mix_rho1_s3_both3_widthpath.profile.json": {
+      "bytes": 2435,
+      "sha256": "7c5fcb5a7fbe1f55c84c1889c24d880c4afeb1be87acf4dabeebb9ea38a5a42e"
+    },
+    "out/wp_r8mix_rho1_s3_bothmp_uniform.args.json": {
+      "bytes": 812,
+      "sha256": "9d40a53d53461cd95631528c2a8928abeaf27c7ba56f42c8911ac6e71f539955"
+    },
+    "out/wp_r8mix_rho1_s3_bothmp_uniform.jsonl": {
+      "bytes": 75278,
+      "sha256": "5ae1d0a163108c473d15f46488cd3ffb91369f067becd776afc5ca8c8f1274d6"
+    },
+    "out/wp_r8mix_rho1_s3_bothmp_uniform.profile.json": {
+      "bytes": 722,
+      "sha256": "ca479f6142e967a518479f1a4fa262ea22b0b1782a6ef9cb4dc544657d56737f"
+    },
+    "out/wp_r8mix_rho1_s3_bothmp_widthpath.args.json": {
+      "bytes": 833,
+      "sha256": "8f81f7f2ff5afd45332328638eb59a49aa3f0652c62d32472e8d1d75fe8cf1fe"
+    },
+    "out/wp_r8mix_rho1_s3_bothmp_widthpath.jsonl": {
+      "bytes": 76674,
+      "sha256": "05fca81c514998fd9fd96d3ba17c4e42a320cf127668912252f6891fd4095c85"
+    },
+    "out/wp_r8mix_rho1_s3_bothmp_widthpath.profile.json": {
+      "bytes": 2603,
+      "sha256": "e11b2f0b15a47ec7c24ffb78404cb40f51b6086ec6c49e01aa1552506bfb7a0d"
+    },
+    "out/wp_r8mix_rho1_s3_mp_widthpath.args.json": {
+      "bytes": 820,
+      "sha256": "592c6411de1805dc8eba8485dd9e2fbaca3a7dbfab02f7dc3bc51a5c9ce75f1a"
+    },
+    "out/wp_r8mix_rho1_s3_mp_widthpath.jsonl": {
+      "bytes": 76787,
+      "sha256": "ba3e9a58b3d587b83268e5bd94eb50f6fcfcfbd56fde106466998f27f9c234a5"
+    },
+    "out/wp_r8mix_rho1_s3_mp_widthpath.profile.json": {
+      "bytes": 2600,
+      "sha256": "4cc43b1d1c0fddf6f6a93f0d7c134393c66f7c7d3751c7756ff7bca07460f0a8"
+    },
+    "out/wp_r8mix_rho1_s3_width3_widthpath.args.json": {
+      "bytes": 834,
+      "sha256": "98a659f9e3d5a8c050db17014e6ccd28a1c9471456e67e491d798b20b0334716"
+    },
+    "out/wp_r8mix_rho1_s3_width3_widthpath.jsonl": {
+      "bytes": 68649,
+      "sha256": "479e9e802a96755b61ff2edca48c07276cb91657aeca86bf4b7477a2898a240a"
+    },
+    "out/wp_r8mix_rho1_s3_width3_widthpath.profile.json": {
+      "bytes": 2364,
+      "sha256": "f99082ed01c97ede8f1b87f37cb1bafe024f7c4f438a9b4fec09a4a804e2ea36"
+    }
+  }
+}
