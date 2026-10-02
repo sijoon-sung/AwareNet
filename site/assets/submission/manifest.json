@@ -10,8 +10,8 @@
       "sha256": "1c5fd97ae49a545323dfec3667455cc6d619e7a447c956a875dee5981369b533"
     },
     "assets/demo/final-evaluation-demo.mp4": {
-      "bytes": 4894599,
-      "sha256": "4efb98d2ca2735b703e55d77a017fc3b3305f15bfa67941e74ef0e9671e13304"
+      "bytes": 9392896,
+      "sha256": "857765e5d81e903433b69320bf6c16fcd6bdaacb4f6dd32288f22b7b7efcf198"
     },
     "assets/submission/architecture-hires.png": {
       "bytes": 486364,
@@ -30,8 +30,8 @@
       "sha256": "d39b8bc8d2accd581253297327d65e173d78f3d21134d485e9d6052844bf658c"
     },
     "assets/submission/AwareNet-final-materials.zip": {
-      "bytes": 11071888,
-      "sha256": "a18eb580c0fbcc20747e7c20beac18db35227a860da9bda670d89e1db273fec4"
+      "bytes": 15612191,
+      "sha256": "24cf14fedf3187765dddda50de188b8c48206f39c9cdc61607e19983e664e03f"
     },
     "assets/submission/pipeline.svg": {
       "bytes": 5004,
@@ -70,24 +70,24 @@
       "sha256": "6713c75b2d263d83fbfd060b385920722a471e38d5132238803fff075a872913"
     },
     "assets/demo/final-poster.png": {
-      "bytes": 367568,
-      "sha256": "091f96b854c201516cdee317ee69bd61a356186299ca5ade3d4ad0e5d2576ed9"
+      "bytes": 392585,
+      "sha256": "def0e42501ce0a04a04045ae03a367dbad08a35ddd4aed84a92436bf9beb8e29"
     },
     "assets/demo/final-recording.json": {
-      "bytes": 1566,
-      "sha256": "12cd724015e3d649fdd90579770d9d7fc38a4351758c5bc2ea298afe84db0504"
+      "bytes": 1823,
+      "sha256": "47ed2cb8d3c4970b583f20baa84f8c6b064510f6b1bbe610abd348face20b5a6"
     },
     "assets/demo/README-diagram.md": {
-      "bytes": 980,
-      "sha256": "1324f61eafc650cfa8e7efbf10341c40030f26551c9f569f69140a335b4ffe39"
+      "bytes": 1364,
+      "sha256": "7c94d67032d7de321bc96aef02cb436a544394fca7a383618b017e50851c7c04"
     },
     "assets/demo/diagram-viewer.css": {
       "bytes": 6421,
       "sha256": "c9a32b04c1522616189e8a0260706c07589b65d39a89f8bb2c81f1c3d84eff6f"
     },
     "assets/demo/diagram-viewer.js": {
-      "bytes": 21783,
-      "sha256": "b391cad03fe961f13833eb8c53313755b8decc06a50fc6426391248f1df0a729"
+      "bytes": 24927,
+      "sha256": "a162ac077fafda4055221b42fc080687d3683ad7a43df3157480e486b5e17e4f"
     },
     "assets/report-revision.json": {
       "bytes": 1091,
@@ -143,14 +143,15 @@
     }
   },
   "video": {
-    "duration_seconds": 114.16,
+    "duration_seconds": 114.12,
     "width": 1920,
     "height": 1080,
     "fps": 25,
     "audio_streams": 0,
     "decode": "complete, exit 0",
-    "sha256": "4efb98d2ca2735b703e55d77a017fc3b3305f15bfa67941e74ef0e9671e13304"
+    "sha256": "857765e5d81e903433b69320bf6c16fcd6bdaacb4f6dd32288f22b7b7efcf198"
   },
   "source": "Existing verified measurements; no new training or network measurements for this revision.",
-  "revision": "20261002r2"
+  "revision": "20261002r2",
+  "video_revision": "20261002v2"
 }

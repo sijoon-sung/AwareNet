@@ -3,6 +3,32 @@ const C={ink:'#223642',muted:'#5f737c',blue:'#356b8c',teal:'#388980',rose:'#af68
 const colors=[C.blue,C.teal,C.rose],q=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const f=x=>x.toFixed(1),sec=x=>`${String(Math.floor(x/60)).padStart(2,'0')}:${String(Math.floor(x%60)).padStart(2,'0')}`,image=n=>`assets/demo/viewer-images/${n}.png`;
 let data,t=0,playing=false,last=performance.now(),drawn=-1;
+let previousBody='',previousScene='',motion=[],activity=[],sceneFade;
+const clamp=v=>Math.max(0,Math.min(1,v));
+// Movement illustrates the pipeline; measured values continue to come from the saved logs.
+function flow(d,c,offset=0,period=3.6){
+ return `<g data-flow data-offset="${offset}" data-period="${period}"><path d="${d}" fill="none" stroke="none"/>${[0,1,2].map(i=>`<rect data-packet="${i}" x="-5" y="-3.5" width="10" height="7" rx="1.5" fill="${c}" opacity="0"/>`).join('')}</g>`;
+}
+function bindMotion(){
+ motion=[...document.querySelectorAll('[data-flow]')].map(g=>{const path=g.querySelector('path');return {path,length:path.getTotalLength(),offset:+g.dataset.offset,period:+g.dataset.period,packets:[...g.querySelectorAll('[data-packet]')]};});
+ activity=[...document.querySelectorAll('[data-activity]')];
+}
+function animateMotion(){
+ for(const m of motion){
+  const phase=((t+m.offset)%m.period)/m.period;
+  m.packets.forEach((p,i)=>{const u=(phase+i*.065)%1,point=m.path.getPointAtLength(u*m.length);p.setAttribute('transform',`translate(${point.x} ${point.y})`);p.setAttribute('opacity',Math.min(1,u*14,(1-u)*14)*(.9-i*.17));});
+ }
+ for(const el of activity){
+  const phase=((t+(+el.dataset.offset||0))%3.6)/3.6;
+  if(el.dataset.activity==='progress'){
+   el.setAttribute('x',12+296*phase);el.setAttribute('width',110);
+   el.setAttribute('opacity',Math.min(1,phase*10,(1-phase)*10));
+  }
+  else if(el.dataset.activity==='node')el.setAttribute('fill-opacity',.10+.45*(.5-.5*Math.cos(2*Math.PI*phase)));
+  else if(el.dataset.activity==='aggregate')el.setAttribute('fill-opacity',.12+.70*(.5-.5*Math.cos(2*Math.PI*phase)));
+ }
+ q('#progress').style.width=(t/112*100)+'%';
+}
 const txt=(x,y,s,size=22,c=C.ink,weight=400,anchor='start')=>`<text x="${x}" y="${y}" font-size="${size}" fill="${c}" font-weight="${weight}" text-anchor="${anchor}">${esc(s)}</text>`;
 const rect=(x,y,w,h,fill='white',stroke=C.line,r=5)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${stroke}" stroke-width="1.6"/>`;
 const line=(d,c=C.blue,arrow=false,dash=false)=>`<path d="${d}" fill="none" stroke="${c}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" ${arrow?`marker-end="url(#a${c.slice(1)})"`:''} ${dash?'stroke-dasharray="6 6"':''}/>`;
@@ -32,10 +58,21 @@ function learningFlow(row,kind){
   const xx=cnn?190:118;b+=txt(xx,y+33,cnn?'병원 '+ 'ABC'[i]:['운영','고객지원','보안'][i],23,C.ink,700);
   b+=cnn?channels(xx,y+51,c.width,colors[i])+txt(xx+127,y+68,c.width.toFixed(2),20,C.muted):txt(xx,y+66,['장애 대응 지침','고객 응답 기준','로그 공유 규정'][i],20,C.muted);
   b+=txt(xx,y+100,'loss '+c.loss.toFixed(4),20,colors[i])+line(`M420 ${y+59} H454`,colors[i]);
+  b+=`<rect x="12" y="${y+114}" height="2.5" width="0" rx="1" fill="${colors[i]}" data-activity="progress" data-offset="${i*.45}"/>`;
+  b+=flow(`M420 ${y+59} H454 V212 H578`,colors[i],i*.7);
  }
  b+=line('M454 75 V349 M454 212 H558',C.blue,true)+txt(515,188,'활성값',20,C.blue,400,'middle')+rack(589,115,1.02)+network(719,125,1.1);
- b+=txt(705,272,'서버 뒷부분 학습',24,C.ink,700,'middle')+line('M746 303 V364 H454 V249',C.rose,true)+txt(655,396,'기울기 반환',21,C.rose,400,'middle');
+ b+=txt(705,272,'서버 뒷부분 학습',24,C.ink,700,'middle')+line('M746 303 V364 H442 V75 H422',C.rose,true)+txt(655,396,'기울기 반환',21,C.rose,400,'middle');
+ for(let i=0;i<3;i++){
+  const y=75+i*137;
+  if(i>0)b+=line(`M442 ${y} H422`,C.rose,true);
+  b+=flow(`M746 303 V364 H442 V${y} H422`,C.rose,1.4+i*.7);
+ }
+ for(const [j,[x,ys]] of [[728,[141,174,207]],[772,[152,196]],[816,[141,174,207]]].entries())for(const y of ys)b+=`<circle cx="${x}" cy="${y}" r="6" fill="${C.blue}" data-activity="node" data-offset="${j*.7}"/>`;
  b+=line('M827 178 H878',C.teal,true)+rect(895,132,103,109,C.pale,C.line)+txt(946,174,'연합',22,C.ink,700,'middle')+txt(946,208,'집계',22,C.ink,700,'middle')+txt(925,288,'라운드 '+row.round,20,C.muted,400,'middle');
+ b+=flow('M827 178 H880',C.teal,.5,2.8);
+ for(let i=0;i<3;i++)b+=`<rect x="${912+i*25}" y="223" width="19" height="5" rx="1" fill="${colors[i]}" data-activity="aggregate" data-offset="${i*.6}"/>`;
+ b+=txt(13,427,'학습값: 실행 기록 · 움직임: 처리 흐름 설명',16,C.muted);
  return svg(1010,430,b,'클라이언트 학습, 서버 연산, 기울기 반환 및 라운드별 연합 집계');
 }
 function intro(){return heading('모델 크기와 전송 경로를 함께 조절하는 AwareNet','클라이언트의 연산 부담과 네트워크 경합을 함께 고려합니다.')+`<div class="overview-grid"><img class="architecture" src="assets/submission/architecture.svg?v=20261002r1" alt="클라이언트, KOREN 중계, 학습 서버와 AwareNet 스케줄러"><div class="steps"><div class="step" style="opacity:${t>0.5?1:0.45}"><h2><span class="number">1</span>연산·전송 상태 관측</h2><p>완료 시간과 전송량을<br>다음 계획에 반영</p></div><div class="step"><h2><span class="number">2</span>경로와 모델 크기 결정</h2><p>경로 개선 후의 시간 이득으로<br>폭 축소 필요성을 판단</p></div><div class="step"><h2><span class="number">3</span>학습·전송·집계</h2><p>활성값과 기울기를 교환하고<br>라운드 종료 후 모델 갱신</p></div></div></div>`;}
@@ -74,7 +111,8 @@ function topology(row){
   for(let j=0;j<2;j++){let yy=y+68+j*51;b+=router(617,yy,c)+txt(648,yy+7,'E'+(i*2+j+1)+' · '+counts[i*2+j]+'개',18,C.muted);}
  }
  b+=line('M740 112 H784 V217 H831',C.blue,true)+line('M740 325 H784 V217',C.teal)+rack(850,143,.90)+txt(895,278,'학습 서버',22,C.ink,700,'middle');
- b+=txt(185,425,'막대: 채널 비율',18,C.muted,400,'middle')+txt(616,442,'연결 배정은 해당 라운드 로그 기준',18,C.muted,400,'middle');
+ b+=flow('M380 217 H422 V106 H483',C.blue,0,3.8)+flow('M380 217 H422 V318 H483',C.teal,1.5,3.8)+flow('M740 112 H784 V217 H831',C.blue,1.2,3.8)+flow('M740 325 H784 V217 H831',C.teal,2.7,3.8);
+ b+=txt(185,425,'막대: 채널 비율',18,C.muted,400,'middle')+txt(616,442,'배정: 라운드 로그 · 이동: 흐름 설명',18,C.muted,400,'middle');
  return svg(980,453,b,'32개 클라이언트의 실제 폭과 네 중계에 대한 연결 배정 수');
 }
 function koren(){
@@ -109,11 +147,18 @@ function render(){
  else{key='ending';body=ending();source='Open source & evidence · 공개 코드와 원자료는 홈페이지에서 확인';}
  const rate=key==='cnn'?`실행 로그 약 ${Math.round(data.cnn.at(-1).elapsed/16)}배속`:key==='lora'?`실행 로그 약 ${Math.round(data.lora.federated.at(-1).elapsed/14)}배속`:key==='koren'?'실행 로그 · 라운드당 1.3초 압축':key==='lora-result'?'실제 생성 결과 · 표시 재생':'저장된 실행 기록';
  q('.replay-label').textContent=rate;
- q('#content').innerHTML=body;q('#source').textContent=source;q('#clock').textContent=sec(t)+' / 01:52';q('#seek').value=t;q('#progress').style.width=(t/112*100)+'%';document.querySelectorAll('nav button').forEach((b,i)=>b.classList.toggle('active',i===active));window.viewerScene=key;
+ if(body!==previousBody){q('#content').innerHTML=body;previousBody=body;bindMotion();}
+ const transitionKey=key==='cnn-result'?key+(t<31?0:1):key;
+ if(transitionKey!==previousScene){
+  if(sceneFade)sceneFade.cancel();
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)sceneFade=q('#content').animate([{opacity:.25,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:380,easing:'ease-out'});
+  previousScene=transitionKey;
+ }
+ q('#source').textContent=source;q('#clock').textContent=sec(t)+' / 01:52';q('#seek').value=t;document.querySelectorAll('nav button').forEach((b,i)=>b.classList.toggle('active',i===active));window.viewerScene=key;animateMotion();
 }
 function setTime(v){t=Math.max(0,Math.min(112,v));render();drawn=t;window.replayDone=t>=112;}
 q('#play').onclick=()=>{if(t>=112)setTime(0);playing=!playing;last=performance.now();q('#play').textContent=playing?'일시정지':'재생';};
 q('#reset').onclick=()=>setTime(0);q('#seek').oninput=e=>setTime(+e.target.value);document.querySelectorAll('[data-seek]').forEach(b=>b.onclick=()=>setTime(+b.dataset.seek));
 function resize(){const s=Math.min(innerWidth/1920,innerHeight/1080);q('#stage').style.transform=`scale(${s})`;q('#stage').style.left=Math.max(0,(innerWidth-1920*s)/2)+'px';}addEventListener('resize',resize);resize();
-function tick(now){if(playing){t=Math.min(112,t+(now-last)/1000);if(t-drawn>=.18){render();drawn=t;}if(t>=112){playing=false;render();q('#play').textContent='재생';window.replayDone=true;}}last=now;requestAnimationFrame(tick);}
+function tick(now){if(playing){t=Math.min(112,t+(now-last)/1000);if(t-drawn>=.08){render();drawn=t;}animateMotion();if(t>=112){playing=false;render();q('#play').textContent='재생';window.replayDone=true;}}last=now;requestAnimationFrame(tick);}
 fetch('assets/demo/viewer-data.json').then(r=>{if(!r.ok)throw Error('기록을 불러오지 못했습니다.');return r.json();}).then(d=>{data=d;render();window.viewerReady=true;window.viewerSeek=setTime;requestAnimationFrame(tick);}).catch(e=>q('#content').textContent=e.message);

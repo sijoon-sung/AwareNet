@@ -2,22 +2,23 @@
   "source": "experiment-viewer.html",
   "method": "Continuous browser viewport recording with Playwright recordVideo",
   "playback": "Saved CNN/LoRA and historical KOREN records, explicitly labeled in the application",
-  "start": "2026-10-02T08:22:49.596Z",
-  "end": "2026-10-02T08:24:44.181Z",
+  "start": "2026-10-02T09:25:08.453Z",
+  "end": "2026-10-02T09:27:02.792Z",
   "postproduction": "Container/codec conversion only; no subtitles, transitions, overlays, cuts or audio",
   "errors": [],
   "video": {
-    "duration_seconds": 114.16,
+    "duration_seconds": 114.12,
     "width": 1920,
     "height": 1080,
     "fps": 25,
     "audio_streams": 0,
     "decode": "complete, exit 0",
-    "sha256": "4efb98d2ca2735b703e55d77a017fc3b3305f15bfa67941e74ef0e9671e13304"
+    "sha256": "857765e5d81e903433b69320bf6c16fcd6bdaacb4f6dd32288f22b7b7efcf198"
   },
   "input_data_sha256": "65ae22a70c643cf75514267af6e17a58cfd4b0a47957fa661b1687c711026935",
   "raw_data_index": "evidence.html and assets/demo/evidence.zip",
-  "visual_revision": "Feedback revision: source-based replay labels, saved-answer text reveal, congestion indication, animated result bars and ending source link.",
+  "visual_revision": "20261002v2: continuous illustrative tensor/gradient movement, client activity, server and aggregation indicators, KOREN transfer flow, and restrained 380 ms scene transitions. Measurement values unchanged.",
+  "animation_scope": "Packet movement and client activity illustrate processing order, not captured packet or batch timings. The on-screen values and charts use the original saved records.",
   "chapters": [
     {
       "time": 0,
