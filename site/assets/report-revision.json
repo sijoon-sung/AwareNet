@@ -7,19 +7,26 @@
   "figures": 6,
   "tables": 12,
   "equations": 6,
-  "pdf_sha256": "9a67374081ca1542a5c630a5211851c4f2ba1921fb1a385a640298f710cf13b9",
+  "pdf_sha256": "ae0ec9e88969b2100c3ff041087e94226fb1f53bef9ae5118ac018762cea2cd3",
   "new_experiments": false,
   "original_unchanged": true,
-  "visual_qa": "26-page report and one-page overview rendered and checked; six figures and replay scenes inspected.",
+  "visual_qa": "All 26 pages rendered with Word and inspected; table data and native equation content compared with preceding revision.",
   "changes": [
-    "Revised rationale, consortium scope, contributions and model-cost explanation",
-    "Clarified seven-step control sequence and implementation mechanisms",
-    "Connected KOREN, Jetson and LoRA evidence with measured scope",
-    "Improved six figures and source links",
-    "Updated replay video and synchronized overview"
+    "Preserved FL and SFL definitions and the introduction problem sequence",
+    "Shortened repeated explanations and split long paragraphs",
+    "Increased body line and paragraph spacing",
+    "Preserved six equations, twelve measured tables and 26 pages"
   ],
-  "previous_pdf_sha256": "643187567c1bc5204faa161619751f6ab4fe853b9131b322d50d3289d97359f3",
-  "revision": "20261002r1",
+  "previous_pdf_sha256": "9a67374081ca1542a5c630a5211851c4f2ba1921fb1a385a640298f710cf13b9",
+  "revision": "20261002r2",
   "feedback_items": 32,
-  "code_checked": true
+  "code_checked": true,
+  "readability": {
+    "rewritten_paragraphs": 95,
+    "before_characters": 13772,
+    "after_characters": 9537,
+    "equations": 6,
+    "tables": 12,
+    "reduction_percent": 30.8
+  }
 }

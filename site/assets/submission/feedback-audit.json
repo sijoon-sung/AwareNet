@@ -164,5 +164,15 @@
       "location": "홈페이지·26쪽",
       "revision": "기존 7쪽 실험 기록 PDF와 원자료 링크를 유지했다. 이번 개정은 새 실험을 추가하지 않았다."
     }
-  ]
+  ],
+  "readability_revision": {
+    "revision": "20261002r2",
+    "rewritten_paragraphs": 95,
+    "before_characters": 13772,
+    "after_characters": 9537,
+    "equations": 6,
+    "tables": 12,
+    "reduction_percent": 30.8,
+    "note": "FL·SFL 정의와 문제 제기를 유지하고 문장·문단 밀도를 줄였다. 상세 검토의 근거는 기존 원자료에 유지했다."
+  }
 }
