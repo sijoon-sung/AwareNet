@@ -1,41 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8" fill="#426b83"/></marker></defs><rect width="100%" height="100%" fill="white"/>
-<text x="24" y="38" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="28" font-weight="700" fill="#23343f" text-anchor="start">라운드 완료 시간과 학습 정확도</text>
-<text x="24" y="75" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="400" fill="#62717b" text-anchor="start">KOREN 실측 기록 · 서로 다른 두 실험을 구분하여 비교</text>
-<text x="24" y="120" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#23343f" text-anchor="start">32클라이언트 · 24라운드 × 3시드</text>
-<text x="696" y="120" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#23343f" text-anchor="start">8클라이언트 · 200라운드 × 2시드</text>
-<text x="24" y="171" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">정상</text>
-<rect x="161" y="150" width="164.29092333333335" height="15" rx="0" fill="#a1a9ad" stroke="none" stroke-width="1.5"/>
-<rect x="161" y="172" width="123.87336" height="15" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
-<text x="468" y="164" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#23343f" text-anchor="start">63.2 → 47.6초</text>
-<text x="468" y="190" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="700" fill="#23343f" text-anchor="start">24.6% 단축</text>
-<text x="24" y="246" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">트래픽 몰림</text>
-<rect x="161" y="225" width="284.71958666666666" height="15" rx="0" fill="#a1a9ad" stroke="none" stroke-width="1.5"/>
-<rect x="161" y="247" width="163.47409000000002" height="15" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
-<text x="468" y="239" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#23343f" text-anchor="start">109.5 → 62.9초</text>
-<text x="468" y="265" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="700" fill="#23343f" text-anchor="start">42.6% 단축</text>
-<text x="24" y="321" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">연산 지연</text>
-<rect x="161" y="300" width="205.70147" height="15" rx="0" fill="#a1a9ad" stroke="none" stroke-width="1.5"/>
-<rect x="161" y="322" width="122.86971666666666" height="15" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
-<text x="468" y="314" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#23343f" text-anchor="start">79.1 → 47.3초</text>
-<text x="468" y="340" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="700" fill="#23343f" text-anchor="start">40.3% 단축</text>
-<text x="24" y="396" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">용량 변동</text>
-<rect x="161" y="375" width="189.72928" height="15" rx="0" fill="#a1a9ad" stroke="none" stroke-width="1.5"/>
-<rect x="161" y="397" width="139.04106666666667" height="15" rx="0" fill="#426b83" stroke="none" stroke-width="1.5"/>
-<text x="468" y="389" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#23343f" text-anchor="start">73.0 → 53.5초</text>
-<text x="468" y="415" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="700" fill="#23343f" text-anchor="start">26.7% 단축</text>
-<polyline points="658,142 658,450" fill="none" stroke="#c6d2d8" stroke-width="2.5"/>
-<text x="696" y="181" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">라운드 시간</text>
-<text x="910" y="181" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="400" fill="#23343f" text-anchor="start">19.11초</text>
-<text x="1040" y="181" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#23343f" text-anchor="start">15.15초</text>
-<text x="696" y="268" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">평균 채널 비율</text>
-<text x="910" y="268" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="400" fill="#23343f" text-anchor="start">1.000</text>
-<text x="1040" y="268" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#23343f" text-anchor="start">1.000</text>
-<text x="696" y="355" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">평가 정확도</text>
-<text x="910" y="355" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="400" fill="#23343f" text-anchor="start">65.52%</text>
-<text x="1040" y="355" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#23343f" text-anchor="start">65.22%</text>
-<text x="906" y="150" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#62717b" text-anchor="start">기준</text>
-<text x="1030" y="150" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#62717b" text-anchor="start">λ=280</text>
-<text x="696" y="438" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="23" font-weight="700" fill="#23343f" text-anchor="start">채널 비율 유지 · 시간 20.7% 단축</text>
-<text x="24" y="514" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#23343f" text-anchor="start">기준: 전폭·고정 배정·연결 1개    AwareNet: 폭·경로 조정·연결 2개</text>
-<text x="24" y="548" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#62717b" text-anchor="start">시간: 초기 4라운드 제외 평균 / 장기 정확도: 마지막 50라운드 평가 평균</text>
-<text x="24" y="581" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#62717b" text-anchor="start">출처: KOREN 원로그 E1·E7, 재집계 E8 · 연결 수 차이를 포함한 전체 구성 비교</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img"><title>조건별 라운드 완료 시간</title><defs>
+<marker id="b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#356b8c" stroke-width="1.5" stroke-linejoin="round"/></marker>
+<marker id="t" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#b66b32" stroke-width="1.5" stroke-linejoin="round"/></marker>
+<marker id="g" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#b66b32" stroke-width="1.5" stroke-linejoin="round"/></marker>
+<marker id="r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#af6878" stroke-width="1.5" stroke-linejoin="round"/></marker>
+</defs><rect width="100%" height="100%" fill="white"/>
+<text x="25" y="35" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="27" font-weight="700" fill="#223642" text-anchor="start">조건별 평균 라운드 완료 시간</text>
+<rect x="615" y="20" width="20" height="16" rx="4" fill="#aab5bf" stroke="none" stroke-width="1.7"/>
+<text x="645" y="35" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="400" fill="#223642" text-anchor="start">기준 방식</text>
+<rect x="825" y="20" width="20" height="16" rx="4" fill="#356b8c" stroke="none" stroke-width="1.7"/>
+<text x="855" y="35" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="400" fill="#223642" text-anchor="start">AwareNet</text>
+<text x="22" y="116" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#223642" text-anchor="start">정상</text>
+<rect x="200" y="79" width="391.77066333333335" height="23" rx="2" fill="#aab5bf" stroke="none" stroke-width="1.7"/>
+<text x="601.7706633333333" y="97" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="700" fill="#223642" text-anchor="start">63.19초</text>
+<rect x="200" y="110" width="295.39032000000003" height="23" rx="2" fill="#356b8c" stroke="none" stroke-width="1.7"/>
+<text x="505.39032000000003" y="128" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="700" fill="#223642" text-anchor="start">47.64초</text>
+<text x="1170" y="117" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="23" font-weight="700" fill="#356b8c" text-anchor="end">24.6% 단축</text>
+<text x="22" y="198" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#223642" text-anchor="start">트래픽 몰림</text>
+<rect x="200" y="161" width="678.9467066666666" height="23" rx="2" fill="#aab5bf" stroke="none" stroke-width="1.7"/>
+<text x="888.9467066666666" y="179" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="700" fill="#223642" text-anchor="start">109.51초</text>
+<rect x="200" y="192" width="389.82283" height="23" rx="2" fill="#356b8c" stroke="none" stroke-width="1.7"/>
+<text x="599.8228300000001" y="210" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="700" fill="#223642" text-anchor="start">62.87초</text>
+<text x="1170" y="199" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="23" font-weight="700" fill="#356b8c" text-anchor="end">42.6% 단축</text>
+<text x="22" y="280" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#223642" text-anchor="start">연산 지연</text>
+<rect x="200" y="243" width="490.51889" height="23" rx="2" fill="#aab5bf" stroke="none" stroke-width="1.7"/>
+<text x="700.51889" y="261" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="700" fill="#223642" text-anchor="start">79.12초</text>
+<rect x="200" y="274" width="292.99701666666664" height="23" rx="2" fill="#356b8c" stroke="none" stroke-width="1.7"/>
+<text x="502.99701666666664" y="292" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="700" fill="#223642" text-anchor="start">47.26초</text>
+<text x="1170" y="281" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="23" font-weight="700" fill="#356b8c" text-anchor="end">40.3% 단축</text>
+<text x="22" y="362" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#223642" text-anchor="start">용량 변동</text>
+<rect x="200" y="325" width="452.43136" height="23" rx="2" fill="#aab5bf" stroke="none" stroke-width="1.7"/>
+<text x="662.43136" y="343" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="700" fill="#223642" text-anchor="start">72.97초</text>
+<rect x="200" y="356" width="331.5594666666667" height="23" rx="2" fill="#356b8c" stroke="none" stroke-width="1.7"/>
+<text x="541.5594666666667" y="374" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="700" fill="#223642" text-anchor="start">53.48초</text>
+<text x="1170" y="363" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="23" font-weight="700" fill="#356b8c" text-anchor="end">26.7% 단축</text>
+<text x="25" y="431" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#5f737c" text-anchor="start">32 논리 클라이언트 · 24라운드 × 3시드 · 초기 4라운드 제외</text></svg>

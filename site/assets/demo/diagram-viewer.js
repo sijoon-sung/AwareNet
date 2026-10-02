@@ -38,7 +38,7 @@ function learningFlow(row,kind){
  b+=line('M827 178 H878',C.teal,true)+rect(895,132,103,109,C.pale,C.line)+txt(946,174,'연합',22,C.ink,700,'middle')+txt(946,208,'집계',22,C.ink,700,'middle')+txt(925,288,'라운드 '+row.round,20,C.muted,400,'middle');
  return svg(1010,430,b,'클라이언트 학습, 서버 연산, 기울기 반환 및 라운드별 연합 집계');
 }
-function intro(){return heading('모델 크기와 전송 경로를 함께 조절하는 AwareNet','클라이언트의 연산 부담과 네트워크 경합을 함께 고려합니다.')+`<div class="overview-grid"><img class="architecture" src="assets/submission/architecture.svg?v=20260930r3" alt="클라이언트, KOREN 중계, 학습 서버와 AwareNet 스케줄러"><div class="steps"><div class="step"><h2><span class="number">1</span>연산·전송 상태 관측</h2><p>완료 시간과 전송량을<br>다음 계획에 반영</p></div><div class="step"><h2><span class="number">2</span>경로와 모델 크기 결정</h2><p>경로 개선 후의 시간 이득으로<br>폭 축소 필요성을 판단</p></div><div class="step"><h2><span class="number">3</span>학습·전송·집계</h2><p>활성값과 기울기를 교환하고<br>라운드 종료 후 모델 갱신</p></div></div></div>`;}
+function intro(){return heading('모델 크기와 전송 경로를 함께 조절하는 AwareNet','클라이언트의 연산 부담과 네트워크 경합을 함께 고려합니다.')+`<div class="overview-grid"><img class="architecture" src="assets/submission/architecture.svg?v=20261002r1" alt="클라이언트, KOREN 중계, 학습 서버와 AwareNet 스케줄러"><div class="steps"><div class="step" style="opacity:${t>0.5?1:0.45}"><h2><span class="number">1</span>연산·전송 상태 관측</h2><p>완료 시간과 전송량을<br>다음 계획에 반영</p></div><div class="step"><h2><span class="number">2</span>경로와 모델 크기 결정</h2><p>경로 개선 후의 시간 이득으로<br>폭 축소 필요성을 판단</p></div><div class="step"><h2><span class="number">3</span>학습·전송·집계</h2><p>활성값과 기울기를 교환하고<br>라운드 종료 후 모델 갱신</p></div></div></div>`;}
 function cnnTrain(){
  const hist=data.cnn,wall=hist.at(-1).elapsed*Math.min(1,(t-9)/16),row=hist.slice(1).filter(r=>r.elapsed<=wall).at(-1)||hist[1],r=row.round;
  const logs=row.clients.map(c=>`client ${c.client}   width ${c.width.toFixed(2)}   loss ${c.loss.toFixed(6)}   activation [${c.activation_shape.join(', ')}]`);logs.push(`<b>round ${String(r).padStart(2,'0')}   집계 후 정확도 ${f(row.accuracy*100)}%   기록 시간 ${f(row.elapsed)}s</b>`);
@@ -56,7 +56,7 @@ function loraTrain(){
 }
 function loraInfer(){
  const ix=t<56?6:12,local=data.lora_inference.models[1].questions[ix],fed=data.lora_inference.models[2].questions[ix];
- return heading('부서 간 공동 학습 후, 업무 질문에 답하기','학습한 규정을 다른 표현으로 질문한 실제 생성 결과','가상 기업 지침 9개 · 평가 질문 18개')+`<div class="question"><small>평가 질문 · ${fed.fact}</small>${esc(fed.q)}</div><div class="two">${[local,fed].map((r,i)=>panel(i?'운영 + 고객지원 + 보안 연합학습':'운영 부서만 학습',`<div class="answer-icon">${svg(90,100,documentIcon(10,0,1,i?C.teal:C.gray),'부서별 업무 지침')}</div><p class="answer">${esc(r.answer)}</p><div class="status ${i?'good':''}">규정과 ${r.correct?'일치':'불일치'}</div><p class="muted" style="font-size:19px">생성 시간 ${r.seconds.toFixed(2)}초</p>`,'answer-panel')).join('')}</div><div class="strip"><span>18개 질문 전체 비교</span><strong>기본 0/18</strong><strong>단독 6/18</strong><strong style="color:${C.teal}">연합 18/18</strong></div>`;
+ return heading('부서 간 공동 학습 후, 업무 질문에 답하기','학습한 규정을 다른 표현으로 질문한 실제 생성 결과','저장된 실제 생성 결과 · 텍스트 표시만 압축 재생')+`<div class="question"><small>평가 질문 · ${fed.fact}</small>${esc(fed.q)}</div><div class="two">${[local,fed].map((r,i)=>panel(i?'운영 + 고객지원 + 보안 연합학습':'운영 부서만 학습',`<div class="answer-icon">${svg(90,100,documentIcon(10,0,1,i?C.teal:C.gray),'부서별 업무 지침')}</div><p class="answer">${esc(r.answer.slice(0,Math.ceil(r.answer.length*Math.min(1,Math.max(0,(t-(ix===6?51:56))/1.2)))))}</p><div class="status ${i?'good':''}">규정과 ${r.correct?'일치':'불일치'}</div><p class="muted" style="font-size:19px">생성 시간 ${r.seconds.toFixed(2)}초</p>`,'answer-panel')).join('')}</div><div class="strip"><span>18개 질문 전체 비교</span><strong>기본 0/18</strong><strong>단독 6/18</strong><strong style="color:${C.teal}">연합 18/18</strong></div>`;
 }
 function korenPurpose(){
  return heading('KOREN에서 확인한 것과 확장할 수 있는 것','관리 가능한 연구 환경에서 실제 학습 트래픽을 반복 측정')+`<div class="koren-purpose"><section class="panel purpose"><div class="icon">${svg(150,140,router(40,60)+line('M65 60 H103',C.blue,true)+rack(111,29,.52),'연구망과 관리 노드')}</div><h2>통제 가능한 실험 조건</h2><p>동일한 연구망에서 용량과 교란 시점을 설정하고 정책을 반복 비교</p></section><section class="panel purpose"><div class="icon">${svg(150,140,rack(8,19,.72)+line('M75 58 H104',C.teal,true)+rack(114,33,.47,C.teal),'원격 VM과 HPC 연계')}</div><h2>원격 VM·HPC 연동</h2><p>실제 전송·큐·재조립과 서버 연산을 포함한 완료 시간 측정</p></section><section class="panel purpose"><div class="icon">${svg(150,140,network(12,26,1.3),'동시 전송의 경합')}</div><h2>동시 전송의 병목 관측</h2><p>8 → 32 클라이언트<br>배치 왕복 중앙값<br>0.41초 → 2.18초</p></section></div><div class="next-network"><div><h2>후속 확장</h2><p style="font-size:20px;margin-top:14px">이번 실험에는 미적용</p></div><div><h3>T-SDN 전용회선</h3><p>회선 자원 확보 → 경합 완화<br>완료 시간 예측의 안정화 기대</p></div><div><h3>L2VPN</h3><p>다기관 논리망 구성<br>클라이언트·중계 배치 확장</p></div></div>`;
@@ -70,7 +70,7 @@ function topology(row){
  }
  b+=line('M380 217 H422 V106 H483',C.blue,true)+line('M422 217 V318 H483',C.teal,true);
  for(let i=0;i<2;i++){
-  const y=i?250:38,c=i?C.teal:C.blue;b+=rect(495,y,245,154,C.pale,C.line,8)+rack(512,y+32,.69,c)+txt(611,y+30,'VM '+(i+1),22,C.ink,700);
+  const y=i?250:38,c=i?C.teal:C.blue,congested=i===0&&row.round>=8&&row.round<20;b+=rect(495,y,245,154,congested?'#fff2ed':C.pale,congested?'#b66b32':C.line,8)+rack(512,y+32,.69,c)+txt(611,y+30,'VM '+(i+1),22,C.ink,700);if(congested)b+=txt(515,y+177,'중계 용량 축소 구간',17,'#b66b32',700);
   for(let j=0;j<2;j++){let yy=y+68+j*51;b+=router(617,yy,c)+txt(648,yy+7,'E'+(i*2+j+1)+' · '+counts[i*2+j]+'개',18,C.muted);}
  }
  b+=line('M740 112 H784 V217 H831',C.blue,true)+line('M740 325 H784 V217',C.teal)+rack(850,143,.90)+txt(895,278,'학습 서버',22,C.ink,700,'middle');
@@ -81,18 +81,21 @@ function koren(){
  const rr=Math.min(23,4+Math.floor((t-73)/1.3)),runs=data.network_runs,row=runs.widthpath[rr];
  const mean=p=>runs[p].slice(4,rr+1).reduce((s,r)=>s+r.makespan,0)/(rr-3),u=mean('uniform'),v=mean('widthpath');
  const changes=[];for(const r of runs.widthpath.slice(Math.max(0,rr-2),rr+1))for(const c of r.changes)changes.push(`r${r.round}  ${c.client.padEnd(4)}  중계 ${c.path_before} → ${c.path_after}   폭 ${c.width_before.toFixed(2)} → ${c.width_after.toFixed(2)}`);
- const cap=rr<8?'교란 전':rr<20?'중계 용량 축소 구간':'중계 용량 복구';
+ const cap=rr<8?'교란 전':rr<20?'8R 용량 축소 → 실제 중계 배정 변화':'20R 용량 복구 → 상태 재관측';
  return heading(`KOREN 동작 기록 · ${rr} 라운드`,'트래픽 몰림 조건: '+cap,'CIFAR-10 · 32 clients · seed 1')+`<div class="grid network-grid">${panel('채널 비율과 중계 연결 배정',topology(row),'network-panel')}${panel('라운드 완료 시간 · 초',`<div class="legend"><span><i class="gray"></i>기준 방식</span><span><i></i>AwareNet</span></div>${chart(['uniform','widthpath'].map((p,i)=>[runs[p].slice(0,rr+1).map(r=>[r.round,r.makespan]),i?C.blue:C.gray]),{xmin:4,xmax:23,ymin:0,ymax:200,ticks:[0,100,200],w:720,h:323})}<p class="muted" style="font-size:19px;margin:8px 0">서로 다른 실행을 라운드 번호로 정렬</p>`,'network-panel')}</div><div class="strip" style="padding:14px 24px;margin-top:18px"><span>현재까지 평균 · r4–r${rr}</span><strong>${f(u)}초 → ${f(v)}초</strong><strong>${f(100*(1-v/u))}% 단축</strong></div>`+trace('설정 변경 기록','최근 라운드의 실제 결정',changes.length?changes.slice(-2):['현재 모델 폭과 경로 배정 유지']);
 }
 function summary(){
  let b='';for(let i=0;i<4;i++){
-  const r=data.network_summary[i],y=22+i*125,scale=9.15;b+=txt(5,y+50,r.label,27,C.ink,500);
-  b+=rect(265,y+8,r.uniform*scale,24,C.gray,'none',2)+txt(285+r.uniform*scale,y+30,f(r.uniform)+'초',24,C.muted);
-  b+=rect(265,y+53,r.widthpath*scale,24,C.blue,'none',2)+txt(285+r.widthpath*scale,y+76,f(r.widthpath)+'초',24,C.blue)+txt(1700,y+64,f(r.reduction_pct)+'%',36,C.blue,500,'end');
+  const r=data.network_summary[i],y=22+i*125,scale=9.15*Math.min(1,Math.max(0,(t-101-i*.1)/1.2));b+=txt(5,y+50,r.label,27,C.ink,500);
+  b+=rect(265,y+8,r.uniform*scale,24,C.gray,'none',2)+txt(285+r.uniform*scale,y+30,f(r.uniform)+'초',24,C.ink,700);
+  b+=rect(265,y+53,r.widthpath*scale,24,C.blue,'none',2)+txt(285+r.widthpath*scale,y+76,f(r.widthpath)+'초',24,C.blue,700)+txt(1700,y+64,f(r.reduction_pct)+'%',36,C.blue,500,'end');
   if(i<3)b+=`<line x1="0" y1="${y+108}" x2="1720" y2="${y+108}" stroke="#e5ecef"/>`;
  }
- return heading('기준 방식 대비 라운드 완료 시간','KOREN · 24라운드 × 3시드 · 초기 4라운드 제외','단축률 = 1 − AwareNet / 기준 방식')+`<div class="result-legend"><span><i style="background:${C.gray}"></i>기준: 전체 채널 · 고정 배정 · 연결 1개</span><span><i style="background:${C.blue}"></i>AwareNet: 폭·경로 조정 · 연결 2개</span></div><section class="panel results-panel">${svg(1750,525,b,'네 조건의 기준 방식과 AwareNet 라운드 시간 및 단축률')}</section><div class="summary-note"><span>최종 정확도 차이: 정상 +4.63%p · 몰림 −0.50%p · 연산 −1.20%p · 용량 −2.85%p</span></div><div class="strip"><span>관측 → 경로 평가 → 필요한 클라이언트의 폭 조절</span><span class="muted">시간과 학습 품질을 함께 평가</span></div>`;
+ return heading('기준 방식 대비 라운드 완료 시간','KOREN · 24라운드 × 3시드 · 초기 4라운드 제외','단축률 = 1 − AwareNet / 기준 방식')+`<div class="result-legend"><span><i style="background:${C.gray}"></i>기준: 전체 채널 · 고정 배정 · 연결 1개</span><span><i style="background:${C.blue}"></i>AwareNet: 폭·경로 조정 · 연결 2개</span></div><section class="panel results-panel">${svg(1750,525,b,'네 조건의 기준 방식과 AwareNet 라운드 시간 및 단축률')}</section><div class="summary-note"><span>실제 실행 로그 24개 · 연결 수 차이를 포함한 전체 구성 비교</span></div><div class="strip"><span>관측 → 경로·분할 배분 → 필요한 클라이언트의 폭 조절</span><span class="muted">시간과 학습 품질을 함께 평가</span></div>`;
 }
+
+function ending(){return heading('AwareNet','분할 연합학습을 위한 모델과 네트워크의 적응형 스케줄링')+`<div style="padding:110px 70px"><h2 style="font-size:40px;font-weight:500">코드와 실행 기록 공개</h2><p style="font-size:34px;margin-top:34px">github.com/sijoon-sung/AwareNet</p><p style="font-size:25px;color:${C.muted};margin-top:50px">모델·전송 코드 · 시드별 원로그 · 실험 조건 · 재집계 코드</p><p style="font-size:25px;color:${C.muted};margin-top:25px">충남대학교 · 성시준 · 석태경</p></div>`;}
+
 function render(){
  const active=t<9?0:t<35?1:t<61?2:t<101?3:4;let key,body,source;
  if(t<9){key='intro';body=intro();source='시스템 구조 · 다음 화면부터 기존 CNN·LoRA 학습과 KOREN 측정 기록을 재생';}
@@ -102,7 +105,10 @@ function render(){
  else if(t<61){key='lora-result';body=loraInfer();source='저장 모델의 실제 생성 결과 · 학습한 규정 9개를 다른 문장으로 질문한 평가';}
  else if(t<73){key='koren-purpose';body=korenPurpose();source='기존 KOREN 측정 기록과 NIA KOREN 이용안내서 · T-SDN·L2VPN의 효과는 후속 비교 대상';}
  else if(t<101){key='koren';body=koren();source='기존 KOREN 실측 · 앞의 로컬 학습과 별도 실행 · 기준 연결 1개 / AwareNet 연결 2개의 전체 구성 비교';}
- else{key='summary';body=summary();source='원로그 24개 재집계 · 연결 수 차이를 포함한 전체 구성 비교 · 측정 지표는 라운드 완료 시간';}
+ else if(t<109){key='summary';body=summary();source='원로그 24개 재집계 · 연결 수 차이를 포함한 전체 구성 비교 · 측정 지표는 라운드 완료 시간';}
+ else{key='ending';body=ending();source='Open source & evidence · 공개 코드와 원자료는 홈페이지에서 확인';}
+ const rate=key==='cnn'?`실행 로그 약 ${Math.round(data.cnn.at(-1).elapsed/16)}배속`:key==='lora'?`실행 로그 약 ${Math.round(data.lora.federated.at(-1).elapsed/14)}배속`:key==='koren'?'실행 로그 · 라운드당 1.3초 압축':key==='lora-result'?'실제 생성 결과 · 표시 재생':'저장된 실행 기록';
+ q('.replay-label').textContent=rate;
  q('#content').innerHTML=body;q('#source').textContent=source;q('#clock').textContent=sec(t)+' / 01:52';q('#seek').value=t;q('#progress').style.width=(t/112*100)+'%';document.querySelectorAll('nav button').forEach((b,i)=>b.classList.toggle('active',i===active));window.viewerScene=key;
 }
 function setTime(v){t=Math.max(0,Math.min(112,v));render();drawn=t;window.replayDone=t>=112;}

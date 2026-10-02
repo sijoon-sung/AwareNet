@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img"><title>동시 전송 규모에 따른 텐서 왕복 시간</title><defs>
+<marker id="b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#356b8c" stroke-width="1.5" stroke-linejoin="round"/></marker>
+<marker id="t" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#b66b32" stroke-width="1.5" stroke-linejoin="round"/></marker>
+<marker id="g" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#b66b32" stroke-width="1.5" stroke-linejoin="round"/></marker>
+<marker id="r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#af6878" stroke-width="1.5" stroke-linejoin="round"/></marker>
+</defs><rect width="100%" height="100%" fill="white"/>
+<text x="25" y="35" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="27" font-weight="700" fill="#223642" text-anchor="start">동시 전송이 증가할 때의 텐서 왕복 시간</text>
+<path d="M110 380.0 H1100" fill="none" stroke="#e2e6e8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="90" y="387.0" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="end">0</text>
+<path d="M110 283.33333333333337 H1100" fill="none" stroke="#e2e6e8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="90" y="290.33333333333337" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="end">5</text>
+<path d="M110 186.66666666666669 H1100" fill="none" stroke="#e2e6e8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="90" y="193.66666666666669" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="end">10</text>
+<path d="M110 90.0 H1100" fill="none" stroke="#e2e6e8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="90" y="97.0" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="end">15</text>
+<text x="110.0" y="412" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="middle">8</text>
+<text x="199.0909090909091" y="412" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="middle">16</text>
+<text x="288.1818181818182" y="412" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="middle">24</text>
+<text x="377.27272727272725" y="412" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="middle">32</text>
+<text x="555.4545454545455" y="412" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="middle">48</text>
+<text x="733.6363636363636" y="412" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="middle">64</text>
+<text x="1090.0" y="412" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#223642" text-anchor="middle">96</text>
+<text x="1110" y="448" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="400" fill="#223642" text-anchor="end">동시 전송 수</text>
+<text x="28" y="73" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="19" font-weight="400" fill="#223642" text-anchor="start">초</text>
+<path d="M110.0 371.9868177239744 L199.0909090909091 357.4590787117292 L377.27272727272725 337.9290788054156 L555.4545454545455 308.2485320790632 L733.6363636363636 291.276152859733 L1090.0 267.1218326252031" fill="none" stroke="#356b8c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="110.0" cy="371.9868177239744" r="5" fill="#356b8c"/>
+<circle cx="199.0909090909091" cy="357.4590787117292" r="5" fill="#356b8c"/>
+<circle cx="377.27272727272725" cy="337.9290788054156" r="5" fill="#356b8c"/>
+<circle cx="555.4545454545455" cy="308.2485320790632" r="5" fill="#356b8c"/>
+<circle cx="733.6363636363636" cy="291.276152859733" r="5" fill="#356b8c"/>
+<circle cx="1090.0" cy="267.1218326252031" r="5" fill="#356b8c"/>
+<path d="M560 60 h40" fill="none" stroke="#356b8c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="609" y="67" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#356b8c" text-anchor="start">배치 왕복 중앙값</text>
+<path d="M110.0 356.9671205862348 L199.0909090909091 354.26218469991 L377.27272727272725 321.6961233963181 L555.4545454545455 312.19671541981614 L733.6363636363636 283.64998299945245 L1090.0 174.17116523153769" fill="none" stroke="#b66b32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<path d="M110.0 350.9671205862348 L116.0 361.9671205862348 H104.0 Z" fill="#b66b32"/>
+<path d="M199.0909090909091 348.26218469991 L205.0909090909091 359.26218469991 H193.0909090909091 Z" fill="#b66b32"/>
+<path d="M377.27272727272725 315.6961233963181 L383.27272727272725 326.6961233963181 H371.27272727272725 Z" fill="#b66b32"/>
+<path d="M555.4545454545455 306.19671541981614 L561.4545454545455 317.19671541981614 H549.4545454545455 Z" fill="#b66b32"/>
+<path d="M733.6363636363636 277.64998299945245 L739.6363636363636 288.64998299945245 H727.6363636363636 Z" fill="#b66b32"/>
+<path d="M1090.0 168.17116523153769 L1096.0 179.17116523153769 H1084.0 Z" fill="#b66b32"/>
+<path d="M870 60 h40" fill="none" stroke="#b66b32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<text x="919" y="67" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#b66b32" text-anchor="start">동시 버스트 중앙값</text>
+<text x="122.0" y="352.9868177239744" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="21" font-weight="700" fill="#356b8c" text-anchor="start">0.41s</text>
+<text x="389.27272727272725" y="318.9290788054156" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="21" font-weight="700" fill="#356b8c" text-anchor="start">2.18s</text>
+<text x="25" y="476" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#5f737c" text-anchor="start">상·하행 각각 약 4.2 MB · 실제 종단 간 측정 · TCP 연결 2개</text></svg>

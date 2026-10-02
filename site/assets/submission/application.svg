@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img"><title>병원 공동 학습의 활용 시나리오</title><defs>
 <marker id="b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#356b8c" stroke-width="1.5" stroke-linejoin="round"/></marker>
-<marker id="t" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#388980" stroke-width="1.5" stroke-linejoin="round"/></marker>
-<marker id="g" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#5f737c" stroke-width="1.5" stroke-linejoin="round"/></marker>
+<marker id="t" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#b66b32" stroke-width="1.5" stroke-linejoin="round"/></marker>
+<marker id="g" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#b66b32" stroke-width="1.5" stroke-linejoin="round"/></marker>
 <marker id="r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#af6878" stroke-width="1.5" stroke-linejoin="round"/></marker>
 </defs><rect width="100%" height="100%" fill="white"/>
 <text x="26" y="37" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="27" font-weight="700" fill="#223642" text-anchor="start">기관별 데이터를 현장에 두고, 하나의 모델을 함께 개선</text>
@@ -74,7 +74,12 @@
 <rect x="389" y="171" width="8" height="18" rx="1" fill="#e5ebee" stroke="none" stroke-width="1.7"/>
 <rect x="402" y="171" width="8" height="18" rx="1" fill="#e5ebee" stroke="none" stroke-width="1.7"/>
 <path d="M377 201 V237" fill="none" stroke="#356b8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="222" y="278" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="20" font-weight="400" fill="#5f737c" text-anchor="middle">서로 다른 연산·통신 자원</text>
+<text x="82" y="263" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#5f737c" text-anchor="middle">GPU 고사양</text>
+<text x="82" y="285" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#5f737c" text-anchor="middle">회선 보통</text>
+<text x="226" y="263" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#5f737c" text-anchor="middle">GPU 저사양</text>
+<text x="226" y="285" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#5f737c" text-anchor="middle">회선 빠름</text>
+<text x="370" y="263" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#5f737c" text-anchor="middle">GPU 보통</text>
+<text x="370" y="285" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="17" font-weight="400" fill="#5f737c" text-anchor="middle">회선 제한</text>
 <path d="M89 237 H451 V171 H490" fill="none" stroke="#356b8c" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#b)"/>
 <rect x="507" y="97" width="241" height="139" rx="8" fill="#f5f7f8" stroke="#b8c9d1" stroke-width="1.7"/>
 <g transform="translate(529 122) scale(0.58)">
@@ -129,7 +134,7 @@
 </g>
 <text x="939" y="79" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="23" font-weight="700" fill="#223642" text-anchor="middle">공동 학습 서버</text>
 <text x="951" y="258" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="22" font-weight="700" fill="#223642" text-anchor="middle">전역 모델 집계</text>
-<path d="M1080 172 H1164 V324 H90 V288" fill="none" stroke="#388980" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#t)"/>
+<path d="M1080 172 H1164 V324 H90 V288" fill="none" stroke="#b66b32" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#t)"/>
 <rect x="439" y="307" width="377" height="34" rx="0" fill="white" stroke="none" stroke-width="1.7"/>
-<text x="627" y="332" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="21" font-weight="400" fill="#388980" text-anchor="middle">갱신한 모델 → 다음 라운드 학습</text>
+<text x="627" y="332" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="21" font-weight="400" fill="#b66b32" text-anchor="middle">갱신한 모델 → 다음 라운드 학습</text>
 <text x="26" y="379" font-family="Malgun Gothic,맑은 고딕,sans-serif" font-size="18" font-weight="400" fill="#5f737c" text-anchor="start">향후 활용 시나리오 · 병원별 협약과 통신 보안 설정을 전제로 하는 공동 학습</text></svg>

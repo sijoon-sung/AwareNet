@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "pages": 26,
   "front_matter_pages": 5,
   "body_and_references_pages": 21,
@@ -7,16 +7,19 @@
   "figures": 6,
   "tables": 12,
   "equations": 6,
-  "pdf_sha256": "643187567c1bc5204faa161619751f6ab4fe853b9131b322d50d3289d97359f3",
+  "pdf_sha256": "9a67374081ca1542a5c630a5211851c4f2ba1921fb1a385a640298f710cf13b9",
   "new_experiments": false,
   "original_unchanged": true,
-  "visual_qa": "Updated table of contents and feature-comparison page rendered and visually checked.",
+  "visual_qa": "26-page report and one-page overview rendered and checked; six figures and replay scenes inspected.",
   "changes": [
-    "Remove accuracy from the historical feature comparison table and its interpretation",
-    "Retain original evidence and separate long-training quality evaluation"
+    "Revised rationale, consortium scope, contributions and model-cost explanation",
+    "Clarified seven-step control sequence and implementation mechanisms",
+    "Connected KOREN, Jetson and LoRA evidence with measured scope",
+    "Improved six figures and source links",
+    "Updated replay video and synchronized overview"
   ],
-  "previous_pdf_sha256": "b8b22aecfff7fb50b18c2124292c55c19535f02976e579636bc552a0401706b8",
-  "revision": "20261001r5",
-  "feedback_items": 23,
+  "previous_pdf_sha256": "643187567c1bc5204faa161619751f6ab4fe853b9131b322d50d3289d97359f3",
+  "revision": "20261002r1",
+  "feedback_items": 32,
   "code_checked": true
 }
