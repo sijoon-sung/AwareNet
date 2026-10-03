@@ -140,6 +140,10 @@
     "assets/report-20261002-r2.pdf": {
       "bytes": 1034019,
       "sha256": "ae0ec9e88969b2100c3ff041087e94226fb1f53bef9ae5118ac018762cea2cd3"
+    },
+    "assets/report-20261002-r2.docx": {
+      "bytes": 1655742,
+      "sha256": "e412b99d2dcf84c9b2a1307c6bd6f9afa4f627554f5263c8e2e5bf64f14f9370"
     }
   },
   "video": {
