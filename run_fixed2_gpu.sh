@@ -25,7 +25,7 @@ MODE=${1:-start}
 LOG=out/fixed2_gpu_all.log
 export SCEN=${SCEN:-"traffic"}
 export SEEDS=${SEEDS:-"1"}
-PREFIX=${PREFIX:-"scen32"}
+PREFIX=${PREFIX:-"scen32gpu"}   # KOREN 결과(scen32)와 이름을 나눈다
 VARY="8:49,9:42,10:35,11:28,12:21,13:14,14:21,15:28,16:35,17:42,18:49,19:56"
 
 if [ -z "${PY:-}" ]; then

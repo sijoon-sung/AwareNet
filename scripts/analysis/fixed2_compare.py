@@ -43,13 +43,16 @@ def main():
     ap.add_argument("--out", default="out")
     ap.add_argument("--skip", type=int, default=4)
     ap.add_argument("--prefix", default="scen32", help="파일 머리 — KOREN 은 scen32, 로컬 GPU 는 scen32gpu")
+    ap.add_argument("--fixed2-prefix", default=None,
+                    help="고정 2연결만 다른 머리에서 읽는다 (예: 기준·AwareNet=KOREN scen32, 고정 2연결=로컬 GPU scen32gpu). 환경 혼합 참고치로 표시된다")
     ap.add_argument("--min-rounds", type=int, default=24, help="이 라운드 수를 못 채운 실행은 뺀다")
     a = ap.parse_args()
     table = []
     for sc in ("normal", "traffic", "slow", "vary"):
         per_seed = {}
         for seed in range(1, 10):
-            fs = {arm: os.path.join(a.out, f"wp_{a.prefix}_{sc}_s{seed}_bothmp_{arm}.jsonl") for arm in ARMS}
+            fs = {arm: os.path.join(a.out, f"wp_{(a.fixed2_prefix or a.prefix) if arm == 'fixed2' else a.prefix}_{sc}_s{seed}_bothmp_{arm}.jsonl")
+                  for arm in ARMS}
             if not all(os.path.exists(f) for f in fs.values()):
                 continue
             s = {arm: summary(f, a.skip) for arm, f in fs.items()}
@@ -76,7 +79,10 @@ def main():
     if not table:
         print(f"{a.prefix}: 세 방식 결과가 모두 있는 장면이 아직 없다")
         return
-    path = os.path.join(a.out, f"fixed2_compare_{a.prefix}.csv")
+    mixed = a.fixed2_prefix and a.fixed2_prefix != a.prefix
+    if mixed:
+        print(f"※ 환경 혼합 참고치: 기준·AwareNet = {a.prefix}, 고정 2연결 = {a.fixed2_prefix}")
+    path = os.path.join(a.out, f"fixed2_compare_{a.prefix}" + (f"__fixed2_{a.fixed2_prefix}" if mixed else "") + ".csv")
     with io.open(path, "w", encoding="utf-8-sig", newline="") as fp:
         wr = csv.DictWriter(fp, fieldnames=list(table[0]))
         wr.writeheader()
