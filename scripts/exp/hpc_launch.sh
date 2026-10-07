@@ -4,6 +4,7 @@
 #     bash scripts/exp/hpc_launch.sh            # 코드 동기화 + 스모크 + R(w) 전체를 nohup 으로
 #     bash scripts/exp/hpc_launch.sh sync       # 코드 동기화만
 #     bash scripts/exp/hpc_launch.sh status     # 진행 상황
+#     bash scripts/exp/hpc_launch.sh fixed2     # 고정 2연결 비교군: 동기화 + 한 번에 실행 (진행: fixed2-status)
 #   결과 회수는 scripts/exp/hpc_fetch.sh (런처가 켜져 있을 때).
 set -e
 cd "$(dirname "$0")/../.."
@@ -21,6 +22,11 @@ sync_code() {
 
 case "$MODE" in
   sync) sync_code ;;
+  fixed2)          # 고정 2연결 비교군: 코드 동기화 + 실행기 시작 (2026-10-07). SCEN·SEEDS 를 주면 그대로 넘긴다
+    sync_code
+    ssh $H "cd ~/awarenet && SCEN='${SCEN:-traffic normal slow vary}' SEEDS='${SEEDS:-1 2 3}' bash run_fixed2_gpu.sh" ;;
+  fixed2-status)
+    ssh $H 'cd ~/awarenet && bash run_fixed2_gpu.sh status' ;;
   status)
     ssh $H 'cd ~/awarenet && echo "== 프로세스 =="; pgrep -af "run_rw|fed_server|run_l" | grep -v pgrep || echo "(없음)"; echo "== rw 로그 =="; tail -5 out/rw_run.log 2>/dev/null; ls out/rw_*.jsonl 2>/dev/null | wc -l; nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader' ;;
   all)
@@ -30,5 +36,5 @@ case "$MODE" in
     echo "── R(w) 전체 (폭 4 × 시드 3 × 30라운드) nohup"
     ssh $H 'cd ~/awarenet; rm -f out/rw_p1.00_s1.jsonl; nohup ~/env/bin/python sfl/experiments/run_rw.py --rounds 30 --batches 6 > out/rw_run.log 2>&1 < /dev/null & echo "PID $!"'
     echo "걸었습니다. 진행: bash scripts/exp/hpc_launch.sh status · 회수: bash scripts/exp/hpc_fetch.sh" ;;
-  *) echo "usage: hpc_launch.sh [all|sync|status]"; exit 2 ;;
+  *) echo "usage: hpc_launch.sh [all|sync|status|fixed2|fixed2-status]"; exit 2 ;;
 esac
