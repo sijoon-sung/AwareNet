@@ -1,0 +1,2 @@
+﻿scenario,seeds,uniform_s,fixed2_s,awarenet_s,total_pct,conn_pct,sched_pct,sched_vs_fixed2_pct,width_fixed2,width_awarenet
+트래픽 몰림,1,109.437,89.692,63.168,42.279,18.042,24.237,29.573,1.0,0.993

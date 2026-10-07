@@ -23,7 +23,15 @@ run_one() {  # $1 policy, $2 로그 이름, 이후 서버 추가 옵션
   "$PY" sfl/fed_server.py --clients $CLIENTS --rounds $ROUNDS --batches $BATCHES --seed $SEED --cut $CUT \
     --policy "$P" --port $PORT --device cuda --log "out/wp_$TAG$LOGN.jsonl" --edges "$EDGES" $EDGE_GROUPS "$@" &
   SRV=$!
-  w=0; while ! ss -ltn 2>/dev/null | grep -q ":$PORT "; do   # 서버는 테스트셋을 먼저 읽고 포트를 연다(10초 넘길 수 있음) → 들을 때까지 기다린 뒤 클라 기동 (2026-09-12)
+  w=0
+  port_open() {
+    if command -v ss >/dev/null 2>&1; then
+      ss -ltn 2>/dev/null | grep -q ":$PORT "
+    else
+      netstat -ano 2>/dev/null | grep -q ":$PORT .*LISTENING"
+    fi
+  }
+  while ! port_open; do   # 서버는 테스트셋을 먼저 읽고 포트를 연다(10초 넘길 수 있음) → 들을 때까지 기다린 뒤 클라 기동 (2026-09-12)
     kill -0 $SRV 2>/dev/null || { echo "서버가 포트를 열기 전에 죽음"; bash $RIGSH down >/dev/null 2>&1; exit 1; }
     sleep 1; w=$((w+1)); [ $w -ge 180 ] && { echo "서버 포트 $PORT 180초 내 미개방"; kill $SRV; bash $RIGSH down >/dev/null 2>&1; exit 1; }
   done; sleep 2
