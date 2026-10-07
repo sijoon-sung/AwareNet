@@ -39,6 +39,7 @@ run "준비된 기울기 전송 순서·불확실성 범위·부하 급변 반�
 run "KOREN·Jetson 원시 기록 주입·단위·과거 구간 분리·시간 재생" "$PY" -m unittest tests.test_trace_replay tests.test_measured_replay
 run "동적 SFL 깊이·경로 공동 계획과 SDN 권한 경계" "$PY" -m unittest tests.test_supersfl_net tests.test_sdn_policy
 run "조건 원장 (값마다 출처, 스크립트에 숫자 없음, 팔 규약)" "$PY" tests/test_cond.py
+run "고정 2연결 비교군 배정 (출구 A·B 다른 엣지, 고정 비율, 이후 무개입)" "$PY" tests/test_fixed2.py
 run "자르기·재조립 규칙 (chunker.py, 소켓 없음)" "$PY" tests/test_chunker.py
 run "유체 시뮬레이터 (fluidsim.py: 해석해·어긋남·마이크로배치·닫힌 고리 왕복 없음)" "$PY" tests/test_fluidsim.py
 run "코퍼스 통계" "$PY" sfl/lora_corpus.py
@@ -51,6 +52,7 @@ fi
 run "집행 층 조각 왕복 (mpsend ↔ ChunkServer)" "$PY" tests/test_mp_act.py
 run "기기·서버 소켓 왕복 마이크로배치 정합·전송 창" "$PY" -m unittest tests.test_micro_e2e
 run "네트워크 정책 실제 학습 라운드·경유 종점 완료 확인 (합성 데이터·루프백)" "$PY" -m unittest tests.test_network_runtime
+run "고정 2연결 비교군 실제 학습 2라운드 (합성 데이터·루프백 엣지 2개)" "$PY" -m unittest tests.test_fixed2_e2e
 run "폭 복귀 시 서버 모델 상태 동기화" "$PY" -m unittest tests.test_aggregate_width_sync
 run "인지 층 sense.py (관측 단위·엣지 용량 추정·되먹임 방지)" "$PY" tests/test_sense.py
 run "서버 즉시 내보내기 조각 기울기 (클라별 버퍼)" "$PY" tests/test_micro_srv.py

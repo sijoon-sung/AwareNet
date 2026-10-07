@@ -50,6 +50,14 @@ run_one() {  # $1 policy, $2 로그 이름, 이후 서버 추가 옵션
 #   9/9 발견: 균등 팔이 두 가닥을 가중치 없이(먼저-한가한 순) 쓰면 느린 가닥(2M)에 39% 가 실려 5:2 계획(71:29)보다 2배 느렸다 — 우리 채널의 성질이지 "일반"이 아님.
 ONLY=${ONLY:-}; UNIFORM_MP=${UNIFORM_MP:-1}
 UMP="--multipath"; [ "$UNIFORM_MP" = "0" ] && UMP=""
+# ONLY=fixed2 (2026-10-07): 고정 2연결 비교군만 돈다 — 전폭, 출구 A·B 를 서로 다른 엣지에 고정, 조각은 접속 상한 비율로 고정 분할.
+#   비율은 FIXED_WEIGHTS(예 '5,2')를 주지 않으면 ACC_LIST 첫 기기의 'aA/aB' 에서 읽는다.
+if [ "$ONLY" = "fixed2" ]; then
+  FW=${FIXED_WEIGHTS:-$(echo "$ACC_LIST" | awk '{print $1}' | tr '/' ',')}
+  echo "== $COND $ARM 시드 $SEED: 고정 2연결 (분할 $FW) =="
+  run_one fixed2 fixed2 --multipath --fixed-weights "$FW" ${MICRO_FLAG:-} ${INIT_FLAG:-}
+  exit 0
+fi
 if [ "$ONLY" != "widthpath" ]; then
 echo "== $COND $ARM 시드 $SEED: 균등 (${UMP:-출구 A 한 가닥}) =="
 # 같은 조건·시드의 균등 기준선이 완주해 있으면 복사한다 — 균등 실행은 팔과 무관하게 같다 (조건 micro 는 균등에도 붙으므로 같은 조건이면 같다). 끄려면 REUSE_UNIFORM=0

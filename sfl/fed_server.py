@@ -559,6 +559,7 @@ def parse_args(argv=None):
                     help="device-budget: 기기별 라운드 순·역전파 시간 예산(초). 예측 기준이며 CPU/메모리 강제 한도 아님")
     ap.add_argument("--access-mode", choices=["shared", "independent"], default="shared",
                     help="device-budget 전용: shared=공유 접속망(기본), independent=독립 접속 회선 2개를 명시")
+    ap.add_argument("--fixed-weights", default="1,1", help="fixed2 정책: 출구 A·B 고정 분할 비율, 예 '5,2' (접속 상한 비율)")
     ap.add_argument("--multipath", action="store_true", help="분할 전송 허용 — 조각 수신기를 주 포트+1 에 띄우고, 계획 층이 열린 경로 2개를 줄 수 있다 (클라는 --bind 주소 2개)")
     ap.add_argument("--edges", default="", help="실회선 리그: 엣지별 데이터 종점 '1=116.89.187.190:12000,2=116.89.187.190:12500,...'. "
                     "클라 i 출구 x 의 포트 = base + 2i + x. 있으면 모든 페이로드가 조각 채널로 엣지를 지나고, 엣지 변경은 재접속")

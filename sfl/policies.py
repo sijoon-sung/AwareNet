@@ -11,6 +11,7 @@
     static     ours 를 첫 실측 뒤 한 번만 결정하고 얼린다 (정적 프로파일링 기준선)
     joint      폭·양자화·파이프라인 깊이·시차 통합 계획 (예비 — 파이프라인은 정확도 대가 발견으로 기본 끔)
     widthpath  폭 × 경로 공동 결정 — 두 손잡이 체제의 본체
+    fixed2     고정 2연결 비교군 — 전폭·출구 A·B 를 서로 다른 엣지에 고정·고정 비율 분할 (판단 없음)
 """
 import json
 import random
@@ -316,9 +317,57 @@ class NetworkOnly(WidthPath):
         print(f"   [network] moved {result['moved']}; fixed widths {list(c.plan.values())}", flush=True)
 
 
+class FixedTwo(Policy):
+    """고정 2연결 비교군 (2026-10-07) — 연결 수 효과와 스케줄러 판단 효과를 나누기 위한 기준.
+
+    균등(uniform)과 같이 전원 전폭·폭 조절 없음·경로 이동 없음이다. 다른 점은 하나:
+    출구 A·B 두 연결을 모두 쓴다. 출구 A 는 균등과 같은 엣지(--init-sets rr), 출구 B 는 다른 VM 의
+    엣지(엣지 수의 절반만큼 떨어진 엣지)에 **처음 한 번** 배정하고 바꾸지 않는다. 엣지마다 출구 A 8대 + 출구 B 8대로
+    부하가 고르게 실린다. 조각은 --fixed-weights 비율(기본 '1,1', 실행 스크립트는 접속 상한 5/2 → '5,2')로 고정 분할한다.
+    비교: 균등(1연결) → fixed2 = 연결 수를 늘린 효과, fixed2 → widthpath = 폭·경로 판단의 효과."""
+    name = "fixed2"
+
+    def __init__(self, a):
+        super().__init__(a)
+        w = [float(x) for x in str(getattr(a, "fixed_weights", "1,1") or "1,1").split(",")]
+        if len(w) != 2 or min(w) <= 0:
+            raise ValueError(f"--fixed-weights 는 양수 두 개여야 한다: {w}")
+        self.weights = w
+
+    def apply(self, c):
+        if c.rnd.get("fixed2_done"):
+            return
+        if not c.edges:
+            raise RuntimeError("fixed2 는 실회선 리그(--edges)에서만 쓴다")
+        if not getattr(c.a, "multipath", False):
+            raise RuntimeError("fixed2 는 --multipath 가 필요하다 (출구 B 조각 수신기)")
+        from network_control import endpoints_for
+        paths = sorted(c.edges, key=int)
+        sets = {}
+        for i, k in enumerate(c.ids):
+            pk = c.allowed.get(k, paths) if c.allowed else paths
+            pa = pk[i % len(pk)] if getattr(c.a, "init_sets", "1") == "rr" else pk[0]
+            ia = pk.index(pa)
+            pb = pk[(ia + max(1, len(pk) // 2)) % len(pk)] if len(pk) > 1 else pa
+            sets[k] = (pa, pb)
+            c.dp[k] = endpoints_for(c.edges, sets[k], i)
+            c.mpplan[k] = list(self.weights)
+            c.plan[k] = 1.0
+        c.rnd["psets"] = sets
+        c.rnd["fixed2_done"] = True
+        load = {}
+        for pa, pb in sets.values():
+            load[pa] = load.get(pa, [0, 0]); load[pa][0] += 1
+            load[pb] = load.get(pb, [0, 0]); load[pb][1] += 1
+        print(f"   [fixed2] 출구 A·B 고정 배정 {['+'.join(sets[k]) for k in c.ids]} "
+              f"분할 비율 {self.weights[0]:g}:{self.weights[1]:g} — 엣지별 (출구A, 출구B) 기기 수 "
+              f"{{{', '.join(f'{e}:{tuple(load[e])}' for e in sorted(load, key=int))}}}. 이후 무개입", flush=True)
+
+
 _REGISTRY = {"uniform": Uniform, "oracle": Oracle, "random": Random,
              "ours": WidthOnly, "multi": WidthOnly, "static": Static,
-             "joint": Joint, "widthpath": WidthPath, "network": NetworkOnly}
+             "joint": Joint, "widthpath": WidthPath, "network": NetworkOnly,
+             "fixed2": FixedTwo}
 POLICY_NAMES = tuple(_REGISTRY)
 
 
