@@ -12,7 +12,7 @@ else
   LOW=$3; FULL=$4; R1=${5:-8}; R2=${6:-20}; SCHED="$R1:$LOW,$R2:$FULL"
 fi
 POLL=${POLL:-5}
-apply() { if [ "${DRY:-0}" = "1" ]; then echo "[dry] edge $E -> $1"; else bash sfl/net/real_rig.sh edge $E $1 > /dev/null 2>&1; fi; }
+apply() { if [ "${DRY:-0}" = "1" ]; then echo "[dry] edge $E -> $1"; else bash ${PERTURB_RIGSH:-sfl/net/real_rig.sh} edge $E $1 > /dev/null 2>&1; fi; }   # PERTURB_RIGSH=sfl/net/local_rig.sh 면 로컬 중계
 n() { if [ -f "$LOG" ]; then grep -c '"round"' "$LOG" || true; else echo 0; fi; }   # grep -c 는 0건이면 0 을 찍고 exit 1 (|| echo 0 은 두 줄이 된다)
 steps=$(echo "$SCHED" | tr ',' '\n' | sort -t: -k1,1n)
 # 로그 파일이 생길 때까지는 기다리기만 한다(계획 팔은 리그 기동 + 사전 프로브가 10분 넘게 걸린다 — 9/9 03~06시 실행에서 5분 idle 에 감시자가 먼저 죽어

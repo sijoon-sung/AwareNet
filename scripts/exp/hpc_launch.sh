@@ -24,9 +24,9 @@ case "$MODE" in
   sync) sync_code ;;
   fixed2)          # 고정 2연결 비교군: 코드 동기화 + 실행기 시작 (2026-10-07). SCEN·SEEDS 를 주면 그대로 넘긴다
     sync_code
-    ssh $H "cd ~/awarenet && SCEN='${SCEN:-traffic normal slow vary}' SEEDS='${SEEDS:-1 2 3}' bash run_fixed2_gpu.sh" ;;
+    ssh $H "cd ~/awarenet && SCEN='${SCEN:-traffic normal slow vary}' SEEDS='${SEEDS:-1 2 3}' bash run_fixed2_koren.sh" ;;
   fixed2-status)
-    ssh $H 'cd ~/awarenet && bash run_fixed2_gpu.sh status' ;;
+    ssh $H 'cd ~/awarenet && bash run_fixed2_koren.sh status' ;;
   status)
     ssh $H 'cd ~/awarenet && echo "== 프로세스 =="; pgrep -af "run_rw|fed_server|run_l" | grep -v pgrep || echo "(없음)"; echo "== rw 로그 =="; tail -5 out/rw_run.log 2>/dev/null; ls out/rw_*.jsonl 2>/dev/null | wc -l; nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader' ;;
   all)

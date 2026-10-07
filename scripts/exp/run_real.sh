@@ -13,7 +13,7 @@ eval "$("$PY" scripts/exp/cond.py --env "$COND" ${ARM:+--arm "$ARM"} ${SEED:+--s
 SEED=${SEED:-1}; TAG=${TAG:-"${COND}_s${SEED}_${ARM:-x}_"}
 export PYTHONPATH=sfl
 export BASE=${BASE:-12100} SRV_PORT=$PORT DEV=${DEV:-ens160} DELAY_MS=${DELAY_MS:-0}
-RIGSH=sfl/net/real_rig.sh
+RIGSH=${RIGSH:-sfl/net/real_rig.sh}   # RIGSH=sfl/net/local_rig.sh 면 KOREN VM 대신 같은 장비의 로컬 중계 (run_fixed2_gpu.sh)
 EDGE_GROUPS=""; [ "${VMCLI:-0}" = "1" -o "${SAME_GROUPS:-0}" = "1" ] && EDGE_GROUPS="--edge-groups 3,4:0-$((CLIENTS/2-1));1,2:$((CLIENTS/2))-$((CLIENTS-1))"   # VM 클라는 다른 VM 의 엣지만 (같은 VM 은 lo 라 tc 가 안 걸림)
 
 run_one() {  # $1 policy, $2 로그 이름, 이후 서버 추가 옵션

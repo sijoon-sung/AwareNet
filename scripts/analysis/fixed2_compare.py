@@ -6,7 +6,7 @@
 
 집계 기준은 보고서 그림 5 와 같다: 시드마다 '초기 SKIP 라운드를 뺀 makespan 평균'을 구한 뒤, fixed2 가 있는 시드끼리만 평균한다.
 분해:  기준 → AwareNet 단축(%) = 연결 수 효과(기준 → fixed2) + 판단 효과(fixed2 → AwareNet), 둘 다 기준 시간 대비 %.
-결과는 화면과 out/fixed2_compare.csv 에 남는다.
+결과는 화면과 out/fixed2_compare_<prefix>.csv 에 남는다 (KOREN: scen32, GPU 단독: --prefix scen32gpu).
 """
 import argparse
 import csv
@@ -42,13 +42,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="out")
     ap.add_argument("--skip", type=int, default=4)
+    ap.add_argument("--prefix", default="scen32", help="파일 머리 — KOREN 은 scen32, 로컬 GPU 는 scen32gpu")
     ap.add_argument("--min-rounds", type=int, default=24, help="이 라운드 수를 못 채운 실행은 뺀다")
     a = ap.parse_args()
     table = []
     for sc in ("normal", "traffic", "slow", "vary"):
         per_seed = {}
         for seed in range(1, 10):
-            fs = {arm: os.path.join(a.out, f"wp_scen32_{sc}_s{seed}_bothmp_{arm}.jsonl") for arm in ARMS}
+            fs = {arm: os.path.join(a.out, f"wp_{a.prefix}_{sc}_s{seed}_bothmp_{arm}.jsonl") for arm in ARMS}
             if not all(os.path.exists(f) for f in fs.values()):
                 continue
             s = {arm: summary(f, a.skip) for arm, f in fs.items()}
@@ -73,9 +74,9 @@ def main():
         print(f"   기준 대비 전체 단축 {row['total_pct']:5.1f}% = 연결 수 효과 {row['conn_pct']:5.1f}%p + 판단 효과 {row['sched_pct']:5.1f}%p"
               f"   (고정 2연결 대비 AwareNet {row['sched_vs_fixed2_pct']:5.1f}% 단축)")
     if not table:
-        print("fixed2 결과가 아직 없다 — scripts/exp/run_fixed2.sh 를 먼저 돌린다")
+        print(f"{a.prefix}: 세 방식 결과가 모두 있는 장면이 아직 없다")
         return
-    path = os.path.join(a.out, "fixed2_compare.csv")
+    path = os.path.join(a.out, f"fixed2_compare_{a.prefix}.csv")
     with io.open(path, "w", encoding="utf-8-sig", newline="") as fp:
         wr = csv.DictWriter(fp, fieldnames=list(table[0]))
         wr.writeheader()

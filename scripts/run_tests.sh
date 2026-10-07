@@ -53,6 +53,7 @@ run "집행 층 조각 왕복 (mpsend ↔ ChunkServer)" "$PY" tests/test_mp_act.
 run "기기·서버 소켓 왕복 마이크로배치 정합·전송 창" "$PY" -m unittest tests.test_micro_e2e
 run "네트워크 정책 실제 학습 라운드·경유 종점 완료 확인 (합성 데이터·루프백)" "$PY" -m unittest tests.test_network_runtime
 run "고정 2연결 비교군 실제 학습 2라운드 (합성 데이터·루프백 엣지 2개)" "$PY" -m unittest tests.test_fixed2_e2e
+run "로컬 중계 상한·실행 중 용량 변경·fixed2 학습 관통 (GPU 단독 버전)" "$PY" -m unittest tests.test_local_relay
 run "폭 복귀 시 서버 모델 상태 동기화" "$PY" -m unittest tests.test_aggregate_width_sync
 run "인지 층 sense.py (관측 단위·엣지 용량 추정·되먹임 방지)" "$PY" tests/test_sense.py
 run "서버 즉시 내보내기 조각 기울기 (클라별 버퍼)" "$PY" tests/test_micro_srv.py
